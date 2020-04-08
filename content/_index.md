@@ -8,47 +8,126 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
 
-<img src="/img/logo-content.svg" style="width: 50%;"/>
+<img src="/img/logo-content.svg" style="width: 40%;"/>
 
-# Macro-programming for everyone!
+# Macro programming for everyone!
 
-MISA++ (Modular Image Stack Analysis for C++) combines the high efficiency of C++
-with the user-friendliness of ImageJ with the option to extend its usage beyond
-image analysis.
-The framework consists of a high-performance C++ library and a standardized ImageJ
-plugin that provides a graphical user interface for any application built with
-our framework.
+ACAQ5 is a graphical programming language for [ImageJ](https://fiji.sc/).
+It comes with an easy-to-use graphical macro editor that requires no programming
+knowledge. Image processing steps can be added to the user interface and connected
+to form powerful and complex pipelines.
 
-# MISA++ ImageJ plugin
+<center>
+<button class="btn btn-success btn-large" type="button" onclick="location.href='/download'"> Download now  <i class="fa fa-windows"></i><i class="fa fa-linux"></i><i class="fa fa-apple"></i> </button>
+<button class="btn btn-info btn-large" type="button" onclick="location.href='/tutorials'"> Learn how to use it </button>
+</center>
 
-* Analyze images loaded in ImageJ
-* Import results back into ImageJ
-* Data and parameter management for **any** application developed with MISA++
-* Graphically create pipelines of MISA++ applications
-* Extract and evaluate quantification results
-* Create plots
+![Example of graphical programming](/img/features/graph_editor.png)
 
-{{< button href="https://applied-systems-biology.github.io/misa-framework/imagej/step-by-step/" theme="info" >}} Step-by-step tutorial {{< /button >}}
-{{< button href="https://applied-systems-biology.github.io/misa-framework/download" theme="success" >}} Download {{< /button >}}
+<div class="features-container">
+  <div>
+    <img src="/img/features/macro_support.png"/>
+    <div>
+      <h3>Macro support</h3>
+      You already developed custom <i>ImageJ</i> macros?
+      ACAQ allows you to re-use your macros via a <i>Macro node</i>. Copy and paste
+      your code, and add input and output slots.
+    </div>
+  </div>
+  <div>
+    <img src="/img/features/macro_support.png"/>
+    <div>
+      <h3>Algorithm finder</h3>
+      You do not know which should be the next processing step?
+      The ACAQ5 algorithm finder not only lists all compatible processing steps
+      for given data, but also rates them according to what kind of its properties.
+    </div>
+  </div>
+  <div>
+    <img src="/img/features/testbench.png"/>
+    <div>
+      <h3>Algorithm testbench</h3>
+      What are the best algorithm parameters?
+      Find those parameters can be very time-consuming - especially if you require comparison between different parameter sets or
+      there are many previous processing steps.
+      <br/>
+      ACAQ5 allows you to easily test multiple algorithm parameters without re-calculating the previous steps. You can go back to an older set of parameters and directly compare the results.
+    </div>
+  </div>
+  <div>
+    <img src="/img/features/graph_compartments.png"/>
+    <div>
+      <h3>Graph compartments</h3>
+      Graph-based programs get quickly confusing?
+      ACAQ5 allows you to separate the analysis into multiple compartments. You can create
+      as many compartments as you want, connect them, and also export and import them.
+    </div>
+  </div>
+</div>
 
-# MISA++ High-performance C++ framework
+# Powerful result analysis
 
-* Fully automated and standardized parallelization
-* Memory-efficient and standardized data management
-* Standardized algorithm and sample parameters
-* Standardized modularization
-* Included support for [OpenCV](http://opencv.org/)
-* Included support for [OME TIFF](https://www.openmicroscopy.org/ome-files/)
-* Can be easily extended with custom data types and algorithms
-* In-code documentation
-* Automatically generated human- and machine-readable documentation of data and parameters
+You can either analyze results directly after processing or load existing results
+directly into ACAQ5. The powerful result analysis tool lets you import data back
+into *ImageJ*, or summarize and plot them directly within ACAQ5.
 
-<p>
-{{< button href="https://applied-systems-biology.github.io/misa-framework/download" theme="success" >}} Download {{< /button >}}
-</p>
+![Example of result analysis](/img/features/result_analysis.png)
+
+<div class="features-container">
+  <div>
+    <img src="/img/features/table_analyzer.png"/>
+    <div>
+      <h3>Table analyzer</h3>
+      You want to quickly summarize a table of measurements?
+      ACAQ comes with a tool to summarize and concatenate tables without
+      any external tools. The tool can directly import table data generated
+      by <i>ImageJ</i>.
+    </div>
+  </div>
+  <div>
+    <img src="/img/features/plot_builder.png"/>
+    <div>
+      <h3>Plot builder</h3>
+      Need to quickly plot a table?
+      ACAQ5 comes with a powerful plot builder that supports a multitude of different plot types,
+      such as XY plots, bar charts, histograms, and box plots.
+    </div>
+  </div>
+</div>
+
+# Extending ACAQ5
+
+ACAQ5 can be extended by programmers and *non-programmers* via its *Java* API and
+its *JSON* extension API. *JSON extensions* can be easily created via a graphical user
+interface and allows you to publish your pipelines as algorithm node.
+You can also create a hierarchy of custom data annotation types using the built-in editor.
+
+![Plugin manager](/img/features/plugin_manager.png)
+
+<div class="features-container">
+  <div>
+    <img src="/img/features/extension-editor.png"/>
+    <div>
+      <h3>Extension builder</h3>
+      You want to publish your pipeline?
+      ACAQ comes with a graphical user interface to create plugins.
+      You can add custom algorithms and annotation types and export them as distributable <i>*.json</i> file.
+      Users just have to put this file into the <i>ImageJ</i> plugins folder.
+    </div>
+  </div>
+  <div>
+    <img src="/img/features/annotation-editor.png"/>
+    <div>
+      <h3>Annotation editor</h3>
+      You need a custom data annotation?
+      ACAQ5 comes with a graph-based editor to create new annotation types.
+    </div>
+  </div>
+</div>
+
 
 {{% panel %}}
-The MISA++ framework was developed
+ACAQ5 was developed
 by [Research Group Applied Systems Biology](https://www.leibniz-hki.de/en/applied-systems-biology.html) *- Head: Prof. Dr. Marc Thilo* Figge
 
 **HKI-Center for Systems Biology of Infection**

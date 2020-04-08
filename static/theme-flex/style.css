@@ -30,8 +30,8 @@ header {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #333;
-  color: #fff;
+  background-color: #f9f9f9;
+  color: #333;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,7 +45,7 @@ header {
   top: 0;
   z-index: 100; }
   header:after {
-    background: #a344b4;
+    background: #ff6600;
     content: '';
     height: .35rem;
     left: 0;
@@ -78,7 +78,7 @@ header {
     header nav.shortcuts li a:active,
     header nav.shortcuts li a:focus,
     header nav.shortcuts li a:hover {
-      background-color: #4d4d4d; }
+      background-color: #c2c2c2; }
     header nav.shortcuts li a {
       -webkit-box-align: center;
       -ms-flex-align: center;

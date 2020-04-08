@@ -50,6 +50,13 @@ enableGitInfo = false
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
 
+[[menu.main]]
+identifier = "about"
+name = "about hugo"
+pre = "<i class='fa fa-heart'></i>"
+url = "/about/"
+weight = -110
+
 [[menu.shortcuts]]
 name = "<i class='fa fa-cloud-download'></i> <label>Download</label>"
 url = "/download"

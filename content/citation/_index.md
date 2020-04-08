@@ -1,6 +1,6 @@
 +++
 title = "Citation"
-weight = 40
+weight = 60
 type="page"
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
@@ -11,15 +11,13 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 Please cite following publication if you use our framework:
 
 {{% panel %}}
-Gerst, R., Medyukhina, A., & Figge, M. T. (2020). MISA++: A standardized interface for automated bioimage analysis. SoftwareX, 11, 100405.
-
-https://doi.org/10.1016/j.softx.2020.100405
+The publication is currently in preparation. Please visit this page again later.
 {{% /panel %}}
 
 **Thanks!**
 
 {{% panel %}}
-The MISA++ framework was developed
+ACAQ5 was developed
 by [Research Group Applied Systems Biology](https://www.leibniz-hki.de/en/applied-systems-biology.html) *- Head: Prof. Dr. Marc Thilo* Figge
 
 **HKI-Center for Systems Biology of Infection**
