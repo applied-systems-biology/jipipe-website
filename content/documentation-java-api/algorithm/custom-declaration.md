@@ -1,6 +1,6 @@
 +++
 title = "Custom algorithm declaration"
-weight = 30
+weight = 40
 type="page"
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
@@ -43,3 +43,6 @@ that extract algorithm information from the class annotations.
 # Creating a custom declaration
 
 To create a custom declaration, inherit from [ACAQAlgorithmDeclaration](/external/apidocs/org/hkijena/acaq5/api/algorithm/ACAQAlgorithmDeclaration.html). The most important functions are `clone()` and `newInstance()`.
+
+Register the declaration either via a direct call to `registerAlgorithm(ACAQAlgorithmDeclaration)` or (recommended) via a task that inherits from [ACAQAlgorithmRegistrationTask](/external/apidocs/org/hkijena/acaq5/api/registries/ACAQAlgorithmRegistrationTask.html). You can inherit from the default implementation [ACAQDefaultAlgorithmRegistrationTask](/external/apidocs/org/hkijena/acaq5/api/registries/ACAQDefaultAlgorithmRegistrationTask.html) that comes with pre-made functionality to check for common dependencies.
+The reason behind using a task is that some algorithm-internal classes might require that data types or annotation types are already registered.
