@@ -12,8 +12,8 @@ This section is about the ACAQ JSON API that includes the API for creating JSON 
 but also other data types like a project.
 
 <center>
-<button class="btn btn-success btn-large" type="button" onclick="location.href='project'"> Project file specification  <i class="fa fa-file-o"></i> </button>
-<button class="btn btn-info btn-large" type="button" onclick="location.href='json-extension'"> JSON extension file specification <i class="fa fa-puzzle-piece"></i> </button>
+<button class="btn btn-success btn-large" type="button" onclick="location.href='project'"> <i class="fa fa-file-o"></i> Project file specification  </button>
+<button class="btn btn-info btn-large" type="button" onclick="location.href='json-extension'"> <i class="fa fa-puzzle-piece"></i> JSON extension file specification </button>
 </center>
 
 

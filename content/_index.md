@@ -18,8 +18,8 @@ knowledge. Image processing steps can be added to the user interface and connect
 to form powerful and complex pipelines.
 
 <center>
-<button class="btn btn-success btn-large" type="button" onclick="location.href='/download'"> Download now  <i class="fa fa-windows"></i><i class="fa fa-linux"></i><i class="fa fa-apple"></i> </button>
-<button class="btn btn-info btn-large" type="button" onclick="location.href='/tutorials'"> Learn how to use it <i class="fa fa-graduation-cap"></i> </button>
+<button class="btn btn-success btn-large" type="button" onclick="location.href='/download'"> <i class="fa fa-windows"></i><i class="fa fa-linux"></i><i class="fa fa-apple"></i> Download now </button>
+<button class="btn btn-info btn-large" type="button" onclick="location.href='/tutorials'"> <i class="fa fa-graduation-cap"></i> Learn how to use it </button>
 </center>
 
 ![Example of graphical programming](/img/features/graph_editor.png)
