@@ -11,6 +11,14 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 This section is about the ACAQ JSON API that includes the API for creating JSON extensions,
 but also other data types like a project.
 
+<center>
+<button class="btn btn-success btn-large" type="button" onclick="location.href='project'"> Project file specification  <i class="fa fa-file-o"></i> </button>
+<button class="btn btn-info btn-large" type="button" onclick="location.href='json-extension'"> JSON extension file specification <i class="fa fa-puzzle-piece"></i> </button>
+</center>
+
+
+# JSON objects
+
 The JSON API is object-oriented and re-uses different object types in multiple occasions.
 You will be referred to the specified documentation.
 

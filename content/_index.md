@@ -19,7 +19,7 @@ to form powerful and complex pipelines.
 
 <center>
 <button class="btn btn-success btn-large" type="button" onclick="location.href='/download'"> Download now  <i class="fa fa-windows"></i><i class="fa fa-linux"></i><i class="fa fa-apple"></i> </button>
-<button class="btn btn-info btn-large" type="button" onclick="location.href='/tutorials'"> Learn how to use it </button>
+<button class="btn btn-info btn-large" type="button" onclick="location.href='/tutorials'"> Learn how to use it <i class="fa fa-graduation-cap"></i> </button>
 </center>
 
 ![Example of graphical programming](/img/features/graph_editor.png)
