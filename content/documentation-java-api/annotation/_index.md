@@ -1,5 +1,6 @@
 +++
 title = "Creating an annotation"
+description = "Explains how to create a custom annotation type"
 weight = 40
 type="page"
 creatordisplayname = "Ruman Gerst"

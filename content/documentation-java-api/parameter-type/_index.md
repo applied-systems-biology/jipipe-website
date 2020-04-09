@@ -1,5 +1,6 @@
 +++
 title = "Creating a parameter type"
+description = "Explains how to create an UI for a parameter"
 weight = 60
 type="page"
 creatordisplayname = "Ruman Gerst"

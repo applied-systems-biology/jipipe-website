@@ -1,5 +1,6 @@
 +++
 title = "Creating a data type"
+description = "Explains how to create custom data types"
 weight = 50
 type="page"
 creatordisplayname = "Ruman Gerst"

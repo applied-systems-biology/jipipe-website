@@ -1,5 +1,6 @@
 +++
 title = "JavaDocs"
+description = "Provides a link to the JavaDocs"
 weight = 10
 type="page"
 creatordisplayname = "Ruman Gerst"

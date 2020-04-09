@@ -1,5 +1,6 @@
 +++
 title = "Creating an extension project"
+description = "Explains how to setup a SciJava plugin project to extend ACAQ5"
 weight = 20
 type="page"
 creatordisplayname = "Ruman Gerst"

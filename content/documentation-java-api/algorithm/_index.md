@@ -1,5 +1,6 @@
 +++
 title = "Creating an algorithm"
+description = "Explains how to create a custom algorithm"
 weight = 30
 type="page"
 creatordisplayname = "Ruman Gerst"
