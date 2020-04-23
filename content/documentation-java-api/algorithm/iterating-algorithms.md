@@ -12,7 +12,7 @@ ACAQ data slots store multiple data rows. This means that algorithms have to
 iterate their workload for each input row and generate equivalent output in the
 respective output slots.
 
-There can be issues if data from multiple input slots need to be combined (e.g. merge channels into RGB). [ACAQAlgorithm](/external/apidocs/org/hkijena/acaq5/api/algorithm/ACAQAlgorithm.html) has no capabilities to help with such cases.
+There can be issues if data from multiple input slots need to be combined (e.g. merge channels into RGB, see [user documentation](/documentation/data_flow#handling-multiple-inputs)). [ACAQAlgorithm](/external/apidocs/org/hkijena/acaq5/api/algorithm/ACAQAlgorithm.html) has no capabilities to help with such cases.
 
 A solution can be [ACAQIteratingAlgorithm](/external/apidocs/org/hkijena/acaq5/api/algorithm/ACAQIteratingAlgorithm.html) that uses the annotation attached during processing to find data rows that belong to the same data set. The implementation creates [ACAQDataInterface](/external/apidocs/org/hkijena/acaq5/api/algorithm/ACAQDataInterface.html) instances that represent one data set iteration.
 
