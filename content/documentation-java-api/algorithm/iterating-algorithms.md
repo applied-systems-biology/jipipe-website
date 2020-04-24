@@ -31,7 +31,7 @@ The only difference to [ACAQAlgorithm](/external/apidocs/org/hkijena/acaq5/api/a
 @ACAQDocumentation(name = "My Algorithm", description = "Does something")
 
 // Sets the algorithm category
-@ACAQAlgorithmMetadata(category = ACAQAlgorithmCategory.Enhancer)
+@ACAQOrganization(algorithmCategory = ACAQAlgorithmCategory.Processor)
 
 // Input and output slots
 @AlgorithmInputSlot(value = ImagePlusData.class, slotName = "Input", autoCreate = true)

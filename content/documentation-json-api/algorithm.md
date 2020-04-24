@@ -76,11 +76,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm.schem
      </span>
      ,
      <span class="json-property-enum-item">
-      Enhancer
-     </span>
-     ,
-     <span class="json-property-enum-item">
-      Segmentation
+      Processor
      </span>
      ,
      <span class="json-property-enum-item">
