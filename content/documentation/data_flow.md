@@ -9,7 +9,7 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-ACAQ5 processes data iteratively by default, meaning that algorithms always
+ACAQ5 was designed to always process data in batches, meaning that algorithms always
 work on multiple data sets at once. This greatly reduces the required work to
 upscale a processing pipeline from one or few to a large amount of data sets.
 
@@ -58,8 +58,9 @@ should be merged. For example, `image1_C1` and `image1_C2` should be merged to `
 
 ## Data annotations
 
-ACAQ5 solves this issue by allowing to **annotate** each data entry. Those annotations are
-automatically extracted and used to group input data.
+ACAQ5 solves this issue by allowing to **annotate** each data entry (shown as purple entries). Those annotations are
+in this case automatically extracted and used to group input data. There also can be algorithms that use the annotation information
+to for example filter or sort data.
 
 ![](/img/documentation/multi-input-annotated-pipeline.png)
 

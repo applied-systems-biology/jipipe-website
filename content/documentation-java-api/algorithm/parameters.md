@@ -53,7 +53,7 @@ Not all data types are supported. Data types are registered into ACAQ and availa
 
 # Parameter settings
 
-Some parameter types have different styles or other settings that can change the behavior of the parameter editor UI. An example is [StringParameterSettings] (http://localhost:1313/acaq5/external/apidocs/org/hkijena/acaq5/extensions/standardparametereditors/ui/parametereditors/StringParameterSettings.html) that allows to change between single-line and multi-line editors.
+Some parameter types have different styles or other settings that can change the behavior of the parameter editor UI. An example is [StringParameterSettings](/external/apidocs/org/hkijena/acaq5/extensions/standardparametereditors/ui/parametereditors/StringParameterSettings.html) that allows to change between single-line and multi-line editors.
 
 # Sub-parameters
 
@@ -75,10 +75,8 @@ Do not forget to deep-copy the ACAQDynamicParameterHolder. The class has a copy 
 such an operation.
 {{% /notice %}}
 {{% notice warning %}}
-We currently recommend only to use Java primitives in ACAQDynamicParameterHolder, as we cannot easily control the copying in other object types.
-{{% /notice %}}
-{{% notice warning %}}
 Please do not forget to listen for the ParameterStructureChangedEvent and pass it to the algorithm's event bus. Otherwise there can be issues with the extension builder.
+ACAQAlgorithm comes with a pre-made function registerSubParameters() that should be called in the constructors.
 {{% /notice %}}
 
 # Full control
