@@ -1,7 +1,7 @@
 +++
 title = "How data is processed"
 description = "Explains the concepts behind the ACAQ5 data model. We suggest that you read this section."
-weight = 10
+weight = 50
 type="page"
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
