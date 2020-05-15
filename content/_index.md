@@ -12,10 +12,10 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 
 # Macro programming for everyone!
 
-ACAQ5 is a graphical programming language for [ImageJ](https://fiji.sc/).
+ACAQ5 is a graphical batch processing programming language for [ImageJ](https://fiji.sc/).
 It comes with an easy-to-use graphical macro editor that requires no programming
 knowledge. Image processing steps can be added to the user interface and connected
-to form powerful and complex pipelines.
+to form powerful and complex pipelines that can be easily scaled up and down.
 
 <center>
 <button class="btn btn-success btn-large" type="button" onclick="location.href='/download'"> <i class="fa fa-windows"></i><i class="fa fa-linux"></i><i class="fa fa-apple"></i> Download now </button>
@@ -35,7 +35,7 @@ to form powerful and complex pipelines.
     </div>
   </div>
   <div>
-    <img src="/img/features/macro_support.png"/>
+    <img src="/img/features/algorithm_finder.png"/>
     <div>
       <h3>Algorithm finder</h3>
       You do not know which should be the next processing step?

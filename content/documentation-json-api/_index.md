@@ -22,4 +22,4 @@ but also other data types like a project.
 The JSON API is object-oriented and re-uses different object types in multiple occasions.
 You will be referred to the specified documentation.
 
-{{% children description="true" style="card" %}}
+{{% children description="true" %}}

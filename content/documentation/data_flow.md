@@ -1,7 +1,7 @@
 +++
-title = "How data is processed"
-description = "Explains the concepts behind the ACAQ5 data model. We suggest that you read this section."
-weight = 50
+title = "Batch pipelines"
+description = "Explains basic concepts about how data is processed within ACAQ5. We really recommend to take a look at this documentation."
+weight = 10
 type="page"
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"

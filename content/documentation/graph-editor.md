@@ -1,6 +1,6 @@
 +++
-title = "Graph editor"
-description = "Explains the graph editor."
+title = "Pipeline editor"
+description = "Explains the graph editor user interface, how to create a pipeline, and additional features like the algorithm finder tool."
 weight = 20
 type="page"
 creatordisplayname = "Ruman Gerst"
@@ -9,7 +9,7 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-The graph editor allows you to edit the processing steps of a [graph compartment](/documentation/graph-compartment).
+The graph editor (pipeline editor) allows you to edit the processing steps of a [graph compartment](/documentation/graph-compartment).
 Its user interface is separated into three sections:
 
 1. **The analysis graph** contains the processing steps (also referred as algorithms)
@@ -88,3 +88,5 @@ There are usually four categories:
 * {{< icon name="fa-edit" size="medium" >}} **Testbench** is a tool to run the analysis only up to the selected algorithm. It allows you to try and compare multiple parameters without creating new nodes. See the [testbench documentation](/documentation/testbench) for more info.
 
 # Toolbar
+
+The toolbar contains functions to add new algorithms into the graph, navigate to existing algorithms or search the list of available algorithms, and functions to control the algorithm graph display.

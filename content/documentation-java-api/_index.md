@@ -15,4 +15,4 @@ You can refer to the ACAQ5 JavaDocs for more information about the API specifics
 The following tutorials will show you to implement your own Java extensions via
 small examples.
 
-{{% children description="true" style="card" %}}
+{{% children description="true" %}}
