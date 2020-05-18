@@ -57,6 +57,10 @@ The user interface is separated into three sections:
 
 ![User interface overview](/img/documentation/general-ui.png)
 
+{{% notice tip %}}
+You can also close a tab by clicking it with the middle mouse button.
+{{% /notice %}}
+
 # Further reading
 
 {{% children description="true" %}}

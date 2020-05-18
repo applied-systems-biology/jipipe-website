@@ -21,7 +21,15 @@ Its user interface is separated into three sections:
 
 # Analysis graph
 
-The analysis graph contains *algorithms* that are represented by rectangles. Algorithms read data from their **input slots** and output the results into the **output slots**.
+The analysis graph contains *algorithms* that are represented by rectangles. The algorithm graph area will automatically grow depending on where you place the algorithms.
+Scroll bars will appear if the graph area is larger than the available screen size.
+
+{{% notice tip %}}
+An alternative to using the scroll bars is to hold the middle mouse button while dragging the your mouse.
+{{% /notice %}}
+
+
+Algorithms read data from their **input slots** and output the results into the **output slots**.
 There are some algorithms that do not have input slots - they produce output based on their current *parameters*. The algorithm user interface has three sections:
 
 1. **Input slots** are located on the top of the algorithm UI. Each slot has a unique name that is displayed below the arrow. The arrow opens a menu that allows you to make/modify connections or change other options specific to the slot. Depending on the algorithm, a `+` button is created that allows you to add more slots.
@@ -90,3 +98,17 @@ There are usually four categories:
 # Toolbar
 
 The toolbar contains functions to add new algorithms into the graph, navigate to existing algorithms or search the list of available algorithms, and functions to control the algorithm graph display.
+
+![Toolbar UI](/img/documentation/graph-editor-ui-toolbar.png)
+
+* On the left-hand side you can find a menu containing all **available algorithms**. On selecting an entry, the corresponding algorithm is added to the graph.
+* The **navigator** allows you to quickly navigate to an existing algorithm instance or create a new one. Just type one or multiple search terms into the field. On pressing the {{< icon name="fa-keyboard-o" size="medium" >}} *arrow down* key on your keyboard, the first entry is selected.
+* The **view options** control how the graph editor behaves and contains some additional utility functions.
+
+## View options
+
+* <img class="inline-image" src="/img/icons/view-horizontal.png" /> and <img class="inline-image" src="/img/icons/view-vertical.png"/> allow you to switch between horizontal and vertial view modes. This does not change the pipeline, but just how it is displayed in the editor. By default, a vertical view is enabled. If you prefer that data flows from left to right, choose the horizontal view mode.
+* <img class="inline-image" src="/img/icons/auto-layout-all.png" /> automatically aligns all nodes in the algorithm graph according to the algorithm by Sugiyama *et. al*
+* <img class="inline-image" src="/img/icons/cursor-arrow.png" /> allows you to change how dragging the middle mouse button changes the current view.
+* <img class="inline-image" src="/img/icons/auto-layout-connections.png" /> is enabled by default and makes it that nodes are automatically aligned on creating connections. This feature does not reorganize the whole graph, but only places the target algorithm to a location that better represents the data flow.
+* <img class="inline-image" src="/img/icons/filetype-image.png" /> creates a screenshot of the whole graph compartment that is currently being displayed.
