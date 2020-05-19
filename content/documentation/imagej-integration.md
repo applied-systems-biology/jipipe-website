@@ -58,3 +58,22 @@ There may be issues if multiple ROI or result table outputs are generated.
 There can be issues using the macro recorder depending on which ImageJ algorithm is executed.
 This issue is especially prevalent in ImageJ macro algorithm nodes.
 {{% /notice %}}
+
+To run the command via a macro, run:
+
+```
+run("Run ACAQ5 algorithm", "algorithmId=<Algorithm>, algorithmParameters=<Parameters>")
+```
+
+The algorithm ID can be looked up via the plugin manager.
+Algorithm parameters are provided as string in [JSON](https://json.org/) format.
+The JSON data should have following structure:
+
+* (Optional) An object `parameters` that contains the algorithm parameters. They are equal to the parameters saved in an ACAQ5 project file. We recommend to use the `Copy command` button to obtain the parameters. If you leave out parameters, the default value is assumed.
+* (Optional) An object `add-input` that contains additional input [slot definitions](/documentation-json-api/slot-definition/). The entry keys are the slot names.
+* (Optional) An object `add-output` that contains additional output [slot definitions](/documentation-json-api/slot-definition/). The entry keys are the slot names.
+* (Optional) An object `input`. Entry keys correspond to the slot name. The entry value is a string that corresponds to the Window name that contains the data. Only required for image data types, as ACAQ5 accesses the global ROI manager and global result table.
+
+{{% notice tip %}}
+Use the "Copy command" button in the "Run ACAQ5 algorithm" GUI command to quickly create a valid macro for your parameters.
+{{% /notice %}}

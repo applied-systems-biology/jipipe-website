@@ -3,6 +3,13 @@
   margin: 0!important;
 }
 
+.icon-image {
+  width: 16!important;
+  height: 16!important;
+  display: inline!important;
+  margin: 0!important;
+}
+
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -303,4 +310,34 @@ a.json-property-read-only:before:hover, a.json-property-read-only:before:focus {
 
 .json-schema--reference {
   font-size: 90%
+}
+
+.tutorial-item {
+  display: flex;
+  flex-grow: 0;
+  flex-wrap: wrap;
+}
+
+.tutorial-item-img {
+  flex: 50%;
+}
+
+.tutorial-item-content {
+  padding-top: 25px;
+  flex: 50%;
+}
+
+.tutorial-item-content .thumbnail {
+  display: inline!important;
+  margin: 0!important;
+  width: 25%;
+}
+
+@media (max-width: 600px) {
+  .tutorial-item-img {
+    flex: 1 1 auto;
+  }
+  .tutorial-item-content {
+    flex: 1 1 auto;
+  }
 }
