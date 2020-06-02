@@ -22,11 +22,13 @@ org.hkijena.acaq5.extensions.filesystem.api.dataypes
 org.hkijena.acaq5.extensions.filesystem.ui.resultanalysis
 org.hkijena.acaq5.extensions.imagejalgorithms
 org.hkijena.acaq5.extensions.imagejalgorithms.ij1
+org.hkijena.acaq5.extensions.imagejalgorithms.ij1.analyze
 org.hkijena.acaq5.extensions.imagejalgorithms.ij1.background
 org.hkijena.acaq5.extensions.imagejalgorithms.ij1.binary
 org.hkijena.acaq5.extensions.imagejalgorithms.ij1.blur
 org.hkijena.acaq5.extensions.imagejalgorithms.ij1.color
 org.hkijena.acaq5.extensions.imagejalgorithms.ij1.contrast
+org.hkijena.acaq5.extensions.imagejalgorithms.ij1.convolve
 org.hkijena.acaq5.extensions.imagejalgorithms.ij1.dimensions
 org.hkijena.acaq5.extensions.imagejalgorithms.ij1.edge
 org.hkijena.acaq5.extensions.imagejalgorithms.ij1.features
@@ -77,6 +79,7 @@ org.hkijena.acaq5.extensions.plots
 org.hkijena.acaq5.extensions.plots.datatypes
 org.hkijena.acaq5.extensions.plots.parameters
 org.hkijena.acaq5.extensions.plots.ui.resultanalysis
+org.hkijena.acaq5.extensions.settings
 org.hkijena.acaq5.extensions.standardalgorithms
 org.hkijena.acaq5.extensions.standardalgorithms.api.algorithms.annotation
 org.hkijena.acaq5.extensions.standardalgorithms.api.algorithms.converters
@@ -92,6 +95,7 @@ org.hkijena.acaq5.extensions.tables.ui.tableoperations
 org.hkijena.acaq5.ui
 org.hkijena.acaq5.ui.compartments
 org.hkijena.acaq5.ui.compat
+org.hkijena.acaq5.ui.compendium
 org.hkijena.acaq5.ui.components
 org.hkijena.acaq5.ui.events
 org.hkijena.acaq5.ui.extension
