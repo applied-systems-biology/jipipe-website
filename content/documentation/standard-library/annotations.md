@@ -9,7 +9,7 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-[Data annotations](/documentation/data_flow) allow ACAQ5 algorithms and users to
+[Data annotations](/documentation/batch-pipelines) allow ACAQ5 algorithms and users to
 assign an unique data set to the data located in a data slot. The standard library
 contains various algorithms that allow to generate, manipulate, and utilize those
 annotations.

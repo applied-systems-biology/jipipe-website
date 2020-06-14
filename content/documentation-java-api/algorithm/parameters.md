@@ -59,10 +59,11 @@ Some parameter types have different styles or other settings that can change the
 
 [ACAQAlgorithm](/external/apidocs/org/hkijena/acaq5/api/algorithm/ACAQAlgorithm.html), like any [ACAQParameterHolder](/external/apidocs/org/hkijena/acaq5/api/parameters/ACAQParameterHolder.html) allows sub-parameters.
 
-To create a sub-parameter create a getter to an [ACAQParameterHolder](/external/apidocs/org/hkijena/acaq5/api/parameters/ACAQParameterHolder.html) and annotate it with [@ACAQSubParameters](/external/apidocs/org/hkijena/acaq5/api/parameters/ACAQSubParameters.html). The key provided with the annotation should be an unique parameter key. The parameters in the sub-parameter instance are automatically displayed as new group in the parameter editor.
+To create a sub-parameter create a getter to an [ACAQParameterHolder](/external/apidocs/org/hkijena/acaq5/api/parameters/ACAQParameterHolder.html) and annotate it with [@ACAQParameter](/external/apidocs/org/hkijena/acaq5/api/parameters/ACAQSubParameters.html). The key provided with the annotation should be an unique parameter key. The parameters in the sub-parameter instance are automatically displayed as new group in the parameter editor.
 
 {{% notice warning %}}
 Please do not forget to listen for the ParameterStructureChangedEvent and pass it to the algorithm's event bus. Otherwise there can be issues with the extension builder.
+You can use the registerSubParameter() method in the constructor and copy constructor as a shortcut.
 {{% /notice %}}
 
 # User-defined parameters

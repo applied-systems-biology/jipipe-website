@@ -20,8 +20,14 @@ to form powerful and complex pipelines that can be easily scaled up and down.
 <center>
 <button class="btn btn-success btn-large" type="button" onclick="location.href='/download'"> <i class="fa fa-windows"></i><i class="fa fa-linux"></i><i class="fa fa-apple"></i> Download now </button>
 <button class="btn btn-info btn-large" type="button" onclick="location.href='/tutorials'"> <i class="fa fa-graduation-cap"></i> Learn how to use it </button>
+<button class="btn btn-default btn-large" type="button" onclick="location.href='/examples'"> <i class="fa fa-flask"></i> Show examples </button>
 </center>
 
+<!-- <center>
+  <video poster="./img/features/graph_editor.png" preload="none" loop style="margin-top: 5em;" controls >
+    <source src="/videos/acaq-example-fast.webm" />
+  </video>
+</center> -->
 ![Example of graphical programming](/img/features/graph_editor.png)
 
 <div class="features-container">
@@ -40,16 +46,15 @@ to form powerful and complex pipelines that can be easily scaled up and down.
       <h3>Algorithm finder</h3>
       You do not know which should be the next processing step?
       The ACAQ5 algorithm finder not only lists all compatible processing steps
-      for given data, but also rates them according to what kind of its properties.
+      for given data.
     </div>
   </div>
   <div>
-    <img src="/img/features/testbench.png"/>
+    <img src="/img/features/quick-run.png"/>
     <div>
-      <h3>Algorithm testbench</h3>
+      <h3>Quick run & caching</h3>
       What are the best algorithm parameters?
-      Find those parameters can be very time-consuming - especially if you require comparison between different parameter sets or
-      there are many previous processing steps.
+      Find those parameters can be very time-consuming.
       <br/>
       ACAQ5 allows you to easily test multiple algorithm parameters without re-calculating the previous steps. You can go back to an older set of parameters and directly compare the results.
     </div>
@@ -111,16 +116,8 @@ You can also create a hierarchy of custom data annotation types using the built-
       <h3>Extension builder</h3>
       You want to publish your pipeline?
       ACAQ comes with a graphical user interface to create plugins.
-      You can add custom algorithms and annotation types and export them as distributable <i>*.json</i> file.
+      You can add custom algorithms and export them as distributable <i>*.json</i> file.
       Users just have to put this file into the <i>ImageJ</i> plugins folder.
-    </div>
-  </div>
-  <div>
-    <img src="/img/features/annotation-editor.png"/>
-    <div>
-      <h3>Annotation editor</h3>
-      You need a custom data annotation?
-      ACAQ5 comes with a graph-based editor to create new annotation types.
     </div>
   </div>
 </div>

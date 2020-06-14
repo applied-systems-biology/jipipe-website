@@ -88,9 +88,10 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
       <h2>6. Annotating data</h2>
       ACAQ5 is designed as batch processing tool, meaning that it can be always scaled from small test data up to large data sets.
       It can be helpful for you and some algorithms to know which data belongs together. ACAQ5 introduces the concept of <i>data annotations</i> that
-      assign data to an unique data set and are passed through the pipeline. You can find more about this in the <a href="/documentation/data_flow">documentation about how ACAQ5 processes data</a>.
+      assign data to an unique data set and are passed through the pipeline. You can find more about this in the <a href="/documentation/batch-pipelines">documentation about how ACAQ5 processes data</a>.
       <br/>In this step we add the data annotation directly at the beginning by attaching the input folder name to each folder that was passed into the pipeline.
-      This is done via the <code>Annotation &gt; Generate &gt; Folders to annotations</code> algorithm. Just add this algorithm into the graph.
+      This is done via the <code>Annotation &gt; Generate &gt; Path to annotation</code> algorithm. Just add this algorithm into the graph.<br/>
+      For more advanced projects there are plenty of other sources for annotations, like importing them from tables, or extracting and modifying annotations.
   </div>
   <div class="tutorial-item">
     <div class="tutorial-item-img"><img src="/img/tutorials/analysis/step7.png" /></div>
@@ -100,57 +101,66 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
       like the <code>Folders to annotations</code> algorithm we added in the last step.<br/>
       To make a connection click the <i class="fa fa-chevron-up"></i> or <i class="fa fa-chevron-down"></i> button and select the available data slot.
       You can see that a connection between the two data slots was created.<br/>
+      This list is always sorted from the closest to the farthest away slot.
   </div>
   <div class="tutorial-item">
     <div class="tutorial-item-img"><img src="/img/tutorials/analysis/step8.png" /></div>
     <div class="tutorial-item-content">
       <h2>8. Annotation type</h2>
-      ACAQ5 comes with many pre-defined annotation types to fit as many experimental designs as possible. And you can combine as many annotations as you need.
-      This means that the <code>Folders to annotations</code> needs your input on which annotation it should generate. To do this, select the <code>Folders to annotations</code>
-      algorithm and click the button next to <code>Generated annotation</code> in the settings panel. Select any annotation you like. We decided to select <i class="fa fa-flask"></i> <strong>Sample</strong>.
+      Annotations are like columns in a table - only that our table contains complex data types. The <i>Path to annotation</i> algorithm automatically extracts
+      the path's file name (or directory name) and annotates it to the input row. By default, the algorithm creates a column <code>Dataset</code>. If you want you can
+      change it to another meaningful column name. And with more complex projects you will probably have many different columns.
   </div>
   <div class="tutorial-item">
     <div class="tutorial-item-img"><img src="/img/tutorials/analysis/step9.png" /></div>
     <div class="tutorial-item-content">
-      <h2>9. Navigating subfolders</h2>
-      Filesystem structures that contain experimental data can be quite complicated. In our example, we placed the input images into a subfolder <code>in</code>.
-      This means we have to further process our folders by <i>navigating into a sub-folder</i>. The ACAQ5 standard library contains an algorithm <code>Filesystem &gt; Navigate &gt; Subfolders</code>
-      to do such an operation for each input folder. Add this algorithm into the graph and connect it to the <code>Folders to annotations</code> output. Finally, input the folder name <code>in</code> into the <code>Subfolder name</code> parameter.
-  </div>
-  <div class="tutorial-item">
-    <div class="tutorial-item-img"><img src="/img/tutorials/analysis/step10.png" /></div>
-    <div class="tutorial-item-content">
-      <h2>10. Extracting the image file</h2>
-      We have now the correct folders and can extract the input image file from each one of them.
+      <h2>9. Extracting the image file</h2>
+      We have now the folders and can extract the input image file from each one of them.<br/>
       You can find an algorithm designed for such purposed in <code>Filesystem &gt; List &gt; List files</code>. Add it to the graph and connect it to the <code>Subfolder name</code> output.
       This algorithm is not only able to list files, but also filter them directly.<br/>
+      In this case, we exactly know that our files are located within a sub-folder <code>in</code>. Please update the <strong>Subfolder</strong> parameter by setting it to <code>in</code>.
       To filter the correct input files, click <i class="fa fa-plus"></i> <strong>Add</strong>. Then select <i class="fa fa-asterisk"></i> to switch to a <a href="https://en.wikipedia.org/wiki/Glob_(programming)" target="_blank">glob</a> filter and set the filter string to <code>*.tif</code>.
+      <div class="notices tip">
+        <p>
+          If you have more complicate folder structures, you can apply the "Navigate to sub-folder" operation with a distinct algorithm. You can find it in the Filesytem category.
+        </p>
+      </div>
   </div>
+
   <div class="tutorial-item">
     <div class="tutorial-item-img"><img src="/img/tutorials/analysis/step11.png" /></div>
     <div class="tutorial-item-content">
-      <h2>11. Testing if the pipeline is correct (Optional)</h2>
-      The <a href="/documentation/testbench">testbench</a> feature allows you to run the pipeline until the selected algorithm and compare multiple parameter sets.
-      It is a good way to test if the pipeline works so far. To create a testbench select the <code>List files</code> and
-      switch to the <i class="fa fa-edit"></i> <strong>Testbench</strong> tab. Click create to run the analysis.
+      <h2>10. Testing if the pipeline is correct (Optional)</h2>
+      The <a href="/documentation/quick-run">Quick Run</a> feature allows you to run the pipeline until the selected algorithm and compare multiple parameter sets.
+      It is a good way to test if the pipeline works so far. To create a quick run right-click the <code>List files</code> node and select <i class="fa fa-play"></i> <strong>Run &amp; show results</strong>.
       <div class="notices info">
         <p>
-          The testbench will check if the pipeline is valid might show some error. If you think that the pipeline is valid, click <i class="fa fa-refresh"></i> <strong>Retry</strong>
+          The quick run will check if the pipeline is valid might show some error. If you think that the pipeline is valid, click <i class="fa fa-refresh"></i> <strong>Retry</strong>
           to check the pipeline again. It sometimes does not update for performance reasons.
+        </p>
+      </div>
+      <div class="notices tip">
+        <p>
+          You can also do a quick-run that just refreshes the <a href="/documentation/cache">Cache</a>.
+        </p>
+      </div>
+      <div class="notices tip">
+        <p>
+          You can also start a Quick Run from the parameter panel if you select the algorithm.
         </p>
       </div>
   </div>
   <div class="tutorial-item">
     <div class="tutorial-item-img"><img src="/img/tutorials/analysis/step12.png" /></div>
     <div class="tutorial-item-content">
-      <h2>12. Testing if the pipeline is correct - results (Optional)</h2>
+      <h2>11. Testing if the pipeline is correct - results (Optional)</h2>
       Navigate to the output if the <code>List files</code> algorithm and check if the file paths are correct.
-      See our <a href="/documentation/testbench">testbench documentation</a> for more information about the testbench and its features.
+      See our <a href="/documentation/quick-run">Quick Run documentation</a> for more information about the testbench and its features.
   </div>
   <div class="tutorial-item">
     <div class="tutorial-item-img"><img src="/img/tutorials/analysis/step13.png" /></div>
     <div class="tutorial-item-content">
-      <h2>13. Importing the images</h2>
+      <h2>12. Importing the images</h2>
       After correctly setting up the files, you can import them as images. You can find importers for
       various image types in <code>Add data &gt; Images</code>.
       As we know that our images are greyscale and do not need BioFormats, we choose <code>Add data &gt; Images &gt; 2D &gt; Greyscale &gt; 2D image (greyscale) &gt; Import 2D image (greyscale)</code>. Connect it to the output of <code>List files</code>.
@@ -158,7 +168,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
   <div class="tutorial-item">
     <div class="tutorial-item-img"><img src="/img/tutorials/analysis/step14.png" /></div>
     <div class="tutorial-item-content">
-      <h2>14. Preprocessing output</h2>
+      <h2>13. Preprocessing output</h2>
       You could continue with the analysis directly from the <code>Import 2D image (greyscale)</code> node. But to showcase the graph compartments feature, we decide to
       have the imported greyscale image as output for of the <code>Preprocessing</code> compartment. The output of a graph compartment is <i>only</i> interfaced through a special node,
       in this case <code>Preprocessing output</code>.<br/>We first have to define an output slot by clicking the <i class="fa fa-add"></i> button. Select <code>2D image (greyscale)</code>,
@@ -167,13 +177,13 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
   <div class="tutorial-item">
     <div class="tutorial-item-img"><img src="/img/tutorials/analysis/step15.png" /></div>
     <div class="tutorial-item-content">
-      <h2>15. Connecting the output</h2>
+      <h2>14. Connecting the output</h2>
       Finally, connect the output of <code>Import 2D image (greyscale)</code> to the new input slot of <code>Preprocessing output</code>.
   </div>
   <div class="tutorial-item">
     <div class="tutorial-item-img"><img src="/img/tutorials/analysis/step16.png" /></div>
     <div class="tutorial-item-content">
-      <h2>16. The analysis</h2>
+      <h2>15. The analysis</h2>
       Now we are finished with the preprocessing. Switch to the <code>Analysis</code> graph compartment by selecting the tab in the tab bar.
       You see that it also contains a node called <code>Preprocessing output</code>. This is the same node as in the preprocessing compartment, but
       it only contains output data this time.<br/>
@@ -183,7 +193,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
   <div class="tutorial-item">
     <div class="tutorial-item-img"><img src="/img/tutorials/analysis/step17.png" /></div>
     <div class="tutorial-item-content">
-      <h2>17. Finding the particles</h2>
+      <h2>16. Finding the particles</h2>
       Add following algorithms to the graph and connect them the the previous output:
       <ul>
         <li><code>Process &gt; Threshold &gt; Auto Threshold 2D</code></li>
@@ -197,14 +207,14 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
   <div class="tutorial-item">
     <div class="tutorial-item-img"><img src="/img/tutorials/analysis/step18.png" /></div>
     <div class="tutorial-item-content">
-      <h2>18. Analysis output</h2>
+      <h2>17. Analysis output</h2>
       Create multiple analysis output slots via the <i class="fa fa-add"></i> button. Export at least the measurements table.
       In our example, we exported the mask, ROI, and the measurements.
   </div>
   <div class="tutorial-item">
     <div class="tutorial-item-img"><img src="/img/tutorials/analysis/step19.png" /></div>
     <div class="tutorial-item-content">
-      <h2>19. Postprocessing</h2>
+      <h2>18. Postprocessing</h2>
       The postprocessing consists of generating a histogram plot of the spore particle areas.
       You can find a node that generates plots in <code>Analyze &gt; Plot &gt; Plot tables</code>.
       Connect the measurements to the plotting node and set its plot type to <i class="fa fa-bar-chart"></i> <strong>Histogram plot</strong>.
@@ -229,7 +239,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
   <div class="tutorial-item">
     <div class="tutorial-item-img"><img src="/img/tutorials/analysis/step20.png" /></div>
     <div class="tutorial-item-content">
-      <h2>20. Running the pipeline</h2>
+      <h2>19. Running the pipeline</h2>
       To run the pipeline, click the <i class="fa fa-cog"></i> <strong>Run</strong> button at the top right corner. This will open a new tab where you can select the output directory.
       You can also generate a random folder that will be located on your operating system's temporary directory
       by clicking the <img class="icon-image" src="/img/icons/random.png" /> button.
@@ -253,7 +263,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
   <div class="tutorial-item">
     <div class="tutorial-item-img"><img src="/img/tutorials/analysis/step22.png" /></div>
     <div class="tutorial-item-content">
-      <h2>20. Displaying plots</h2>
+      <h2>21. Displaying plots</h2>
       To open the generated plots, navigate to <code>Results &gt; Postprocessing &gt; Plot tables &gt; Output</code> and double-click an entry in the list.
       Alternatively, you can also select the row and click <code>Open in ACAQ5</code>. This will open a new tab with a plot builder tool.
       Please take a look at the <a href="/documentation/standard-library/plots-tables">plots and tables documentation</a> for more information how the tool works.

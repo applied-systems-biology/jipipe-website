@@ -1,21 +1,4 @@
-# MISA++: A standardized interface for automated bioimage analysis
-[doi.org/10.1016/j.softx.2020.100405](https://doi.org/10.1016/j.softx.2020.100405)
-
-Ruman Gerst (1,2), Anna Medyukhina (1), Marc Thilo Figge(1,2,\*)
-
-(1) Applied Systems Biology, Leibniz Institute for Natural Product Research and Infection Biology - Hans-Knöll-Institute, Jena, Germany
-
-(2) Faculty of Biological Sciences, Friedrich-Schiller-University Jena, Germany
-
-\* To whom correspondence should be addressed.
-
-https://applied-systems-biology.github.io/misa-framework/
-
-# About
-
-This repository contains the MISA++ framework website and binary downloads.
-The subfolder "src" contains all source codes associated to the publication.
-The subfolder "docs" contains the website, including documentation as HTML site.
+# ACAQ5
 
 # Copyright
 
@@ -35,6 +18,8 @@ The project code is licensed under BSD 2-Clause.
 See the LICENSE file provided with the code for the full license.
 
 # Editing the website
+
+The HTML documentation for the JSON schemas was generated with https://github.com/bootprint/bootprint-json-schema
 
 The website is built using [Hugo](https://gohugo.io/) that builds the final website into the `docs` folder.
 Use following command to obtain the website source:

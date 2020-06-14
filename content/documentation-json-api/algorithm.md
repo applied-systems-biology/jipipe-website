@@ -46,7 +46,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm.schem
      metadata:
     </span>
     <span class="json-property-type">
-     <a class="json-schema-ref" href="../metadata">
+     <a class="json-schema-ref" href="/documentation-json-api/metadata">
       See metadata
      </a>
     </span>
@@ -80,7 +80,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm.schem
      </span>
      ,
      <span class="json-property-enum-item">
-      Quantifier
+      Analysis
      </span>
      ,
      <span class="json-property-enum-item">
@@ -176,7 +176,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm.schem
      graph:
     </span>
     <span class="json-property-type">
-     <a class="json-schema-ref" href="../graph">
+     <a class="json-schema-ref" href="/documentation-json-api/graph">
       See graph
      </a>
     </span>
@@ -211,63 +211,6 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm.schem
     <div class="json-inner-schema">
     </div>
    </dd>
-   <dt data-property-name="unwanted-traits">
-    <span class="json-property-name">
-     unwanted-traits:
-    </span>
-    <span class="json-property-type">
-     object[]
-    </span>
-    <span class="json-property-range" title="Value limits">
-    </span>
-    <span class="json-property-required">
-    </span>
-   </dt>
-   <dd>
-    <p>
-     List of annotation IDs that are bad for the algorithm
-    </p>
-    <div class="json-inner-schema">
-    </div>
-   </dd>
-   <dt data-property-name="added-traits">
-    <span class="json-property-name">
-     added-traits:
-    </span>
-    <span class="json-property-type">
-     object[]
-    </span>
-    <span class="json-property-range" title="Value limits">
-    </span>
-    <span class="json-property-required">
-    </span>
-   </dt>
-   <dd>
-    <p>
-     Annotations added by the algorithm
-    </p>
-    <div class="json-inner-schema">
-    </div>
-   </dd>
-   <dt data-property-name="removed-traits">
-    <span class="json-property-name">
-     removed-traits:
-    </span>
-    <span class="json-property-type">
-     object[]
-    </span>
-    <span class="json-property-range" title="Value limits">
-    </span>
-    <span class="json-property-required">
-    </span>
-   </dt>
-   <dd>
-    <p>
-     Annotations removed by the algorithm. They are removed via RemoveCategory.
-    </p>
-    <div class="json-inner-schema">
-    </div>
-   </dd>
    <dt data-property-name="acaq:project-type">
     <span class="json-property-name">
      acaq:project-type:
@@ -296,28 +239,10 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm.schem
     <div class="json-inner-schema">
     </div>
    </dd>
-   <dt data-property-name="preferred-traits">
-    <span class="json-property-name">
-     preferred-traits:
-    </span>
-    <span class="json-property-type">
-     object[]
-    </span>
-    <span class="json-property-range" title="Value limits">
-    </span>
-    <span class="json-property-required">
-    </span>
-   </dt>
-   <dd>
-    <p>
-     List of annotation IDs that are good for the algorithm
-    </p>
-    <div class="json-inner-schema">
-    </div>
-   </dd>
   </dl>
  </section>
 </div>
+
 
 # Example
 

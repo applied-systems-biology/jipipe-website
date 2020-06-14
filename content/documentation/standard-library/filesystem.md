@@ -43,6 +43,6 @@ devices easier.
 
 # Annotation
 
-It is helpful to add [data annotations](/documentation/data_flow) to the file data at some point.
+It is helpful to add [data annotations](/documentation/batch-pipelines) to the file data at some point.
 This allows algorithms and users to assign data rows to an unique data set.
 See the [annotation standard library documentation](/documentation/standard-library/annotations) for more information.

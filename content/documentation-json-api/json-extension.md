@@ -73,7 +73,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [json-extension.
      metadata:
     </span>
     <span class="json-property-type">
-     <a class="json-schema-ref" href="../metadata">
+     <a class="json-schema-ref" href="/documentation-json-api/metadata">
       See metadata
      </a>
     </span>
@@ -108,38 +108,8 @@ the document in [JSON Schema](https://json-schema.org/) format: [json-extension.
     <div class="json-inner-schema">
      <section class="json-schema-array-items">
       <span class="json-property-type">
-       <a class="json-schema-ref" href="../algorithm">
+       <a class="json-schema-ref" href="/documentation-json-api/algorithm">
         See algorithm
-       </a>
-      </span>
-      <span class="json-property-range" title="Value limits">
-      </span>
-      <div class="json-inner-schema">
-      </div>
-     </section>
-    </div>
-   </dd>
-   <dt data-property-name="annotations">
-    <span class="json-property-name">
-     annotations:
-    </span>
-    <span class="json-property-type">
-     object[]
-    </span>
-    <span class="json-property-range" title="Value limits">
-    </span>
-    <span class="json-property-required">
-    </span>
-   </dt>
-   <dd>
-    <p>
-     List of added annotations
-    </p>
-    <div class="json-inner-schema">
-     <section class="json-schema-array-items">
-      <span class="json-property-type">
-       <a class="json-schema-ref" href="../trait">
-        See trait
        </a>
       </span>
       <span class="json-property-range" title="Value limits">
@@ -152,6 +122,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [json-extension.
   </dl>
  </section>
 </div>
+
 
 # Example
 
@@ -284,7 +255,6 @@ the document in [JSON Schema](https://json-schema.org/) format: [json-extension.
     "added-traits" : [ ],
     "removed-traits" : [ ]
   } ],
-  "annotations" : [ ],
   "dependencies" : [ {
     "metadata" : {
       "name" : "Filesystem types and algorithms",

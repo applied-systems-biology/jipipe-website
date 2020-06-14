@@ -9,8 +9,6 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-
-
 This document describes the properties of the JSON API object. You also can access
 the document in [JSON Schema](https://json-schema.org/) format: [algorithm-node.schema.json](https://applied-systems-biology.github.io/acaq5/schemas/algorithm-node.schema.json)
 
@@ -45,7 +43,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm-node.
      <section class="json-schema-additionalProperties">
       <span class="json-property-type">
        <span class="json-property-type">
-        <a class="json-schema-ref" href="../slot-definition">
+        <a class="json-schema-ref" href="/documentation-json-api/slot-definition">
          See slot-definition
         </a>
        </span>
@@ -76,7 +74,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm-node.
      <section class="json-schema-additionalProperties">
       <span class="json-property-type">
        <span class="json-property-type">
-        <a class="json-schema-ref" href="../point">
+        <a class="json-schema-ref" href="/documentation-json-api/point">
          See point
         </a>
        </span>
@@ -165,27 +163,10 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm-node.
     <div class="json-inner-schema">
     </div>
    </dd>
-   <dt data-property-name="acaq:trait-generation">
-    <span class="json-property-name">
-     acaq:trait-generation:
-    </span>
-    <span class="json-property-type">
-     <a class="json-schema-ref" href="../point">
-      See point
-     </a>
-    </span>
-    <span class="json-property-range" title="Value limits">
-    </span>
-    <span class="json-property-required">
-    </span>
-   </dt>
-   <dd>
-    <div class="json-inner-schema">
-    </div>
-   </dd>
   </dl>
  </section>
 </div>
+
 
 # Example
 
@@ -228,18 +209,6 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm-node.
   "generated-annotation" : "project-sample",
   "name" : "Folders to annotations",
   "description" : null,
-  "acaq:trait-generation" : {
-    "modification" : {
-      "per-slot" : { },
-      "global" : {
-        "project-sample" : "Add"
-      }
-    },
-    "transfer" : {
-      "transfers" : [ ],
-      "transfer-all-to-all" : true
-    }
-  },
   "acaq:dynamic-parameters" : { }
 }
 ```

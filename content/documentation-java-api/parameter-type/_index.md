@@ -15,6 +15,11 @@ identifier. This is done to allow future refactoring without breaking a user's p
 A custom parameter type must be JSON-serializable via the [Jackson](https://github.com/FasterXML/jackson) library.
 It is associated to an editor UI that is responsible for updating the parameter value from the GUI.
 
+{{% notice warning %}}
+A parameter type cannot be a generic class. This is due to restrictions in the JVM. We recommend to create a sub-class for a list of
+a parameter if you require a list of it down the line. The list parameter inherits from the ListParameter class.
+{{% /notice %}}
+
 ## Creating an editor
 
 To create an editor UI, you have to inherit from [ACAQParameterEditorUI](/external/apidocs/org/hkijena/acaq5/ui/grapheditor/settings/ACAQParameterEditorUI.html).
@@ -59,6 +64,16 @@ public class MyExtension extends ACAQDefaultJavaExtension {
 
 {{% notice warning %}}
 Do not forget to register all algorithm parameter types. ACAQ5 will throw an error if it detects a missing parameter registration.
+{{% /notice %}}
+{{% notice tip %}}
+There is an overload of registerParameterType that takes the matching list directly and automatically generates the ID, name, and description.
+{{% /notice %}}
+{{% notice tip %}}
+You can set the instance creation function to null if the parameter is default-constructable. You can set the clone function to null if the parameter type can
+be copied via a copy constructor.
+{{% /notice %}}
+{{% notice tip %}}
+You can review your parameter UI via Tools > Development > Show all parameter types.
 {{% /notice %}}
 
 ## Making use of the parameter registration

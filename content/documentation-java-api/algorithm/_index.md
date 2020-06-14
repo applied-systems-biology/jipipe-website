@@ -14,7 +14,6 @@ All algorithms inherit from [ACAQAlgorithm](/external/apidocs/org/hkijena/acaq5/
 * A `run()` function that runs the workload
 * A reference to an [algorithm declaration](/external/apidocs/org/hkijena/acaq5/api/algorithm/ACAQAlgorithmDeclaration.html) that describes the general properties of the algorithm
 * A [slot configuration](/external/apidocs/org/hkijena/acaq5/api/data/ACAQSlotConfiguration.html) that describes which slots the algorithm should have
-* A [trait configuration](/external/apidocs/org/hkijena/acaq5/api/data/traits/ACAQTraitConfiguration.html) that describes how annotations are passed from input to output
 
 For developing algorithms in Java, you can either directly inherit from [ACAQAlgorithm](/external/apidocs/org/hkijena/acaq5/api/algorithm/ACAQAlgorithm.html) or inherit from [ACAQIteratingAlgorithm](/external/apidocs/org/hkijena/acaq5/api/algorithm/ACAQIteratingAlgorithm.html).
 
@@ -27,17 +26,9 @@ Any algorithm should have the following basic structure:
 // Sets the algorithm category
 @ACAQOrganization(algorithmCategory = ACAQAlgorithmCategory.Processor)
 
-// Input and output slots
+// Input and output slots autoCreate automatically creates the slots if set to true and no slot configuration was provided
 @AlgorithmInputSlot(value = ImagePlusData.class, slotName = "Input", autoCreate = true)
 @AlgorithmOutputSlot(value = ImagePlusData.class, slotName = "Output", autoCreate = true)
-
-// Optional: Annotate with annotation Ids (you can look up the Ids in the plugin manager)
-@GoodForTrait("bioobject-preparations-labeling-uniform")
-@BadForTrait("bioobject-preparations-labeling-membrane")
-
-// Optional: Adds / Removes annotations from input
-@AddsTrait("bioobject-count-cluster")
-@RemovesTrait("image-quality")
 public class MyAlgorithm extends ACAQAlgorithm {
 
     /*

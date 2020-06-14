@@ -30,7 +30,7 @@ graph LR;
 {{< /mermaid >}}
 
 To design efficient and scalable pipelines yourself, it is a good idea to
-look into the [ACAQ5 data model](/documentation/data_flow).
+look into the [ACAQ5 data model](/documentation/batch-pipelines).
 
 # Graph compartments
 
