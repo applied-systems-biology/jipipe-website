@@ -1,5 +1,6 @@
 +++
 title = "Standard library"
+description = "Contains some explanations about the algorithms that are included in the ACAQ5 standard distribution."
 weight = 80
 type="page"
 creatordisplayname = "Ruman Gerst"
