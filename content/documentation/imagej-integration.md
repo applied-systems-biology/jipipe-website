@@ -23,12 +23,22 @@ the project file and the output directory.
 To run the command via a macro, run:
 
 ```
-run("Run ACAQ5 project", "parameterFile=<Project>, outputDirectory=<Directory>")
+run("Run ACAQ5 project", "projectFile=<Project>, outputDirectory=<Directory>, threads=<Threads>")
 ```
 
 {{% notice info %}}
 There can be issues using the macro recorder depending on which ImageJ algorithms are used.
 This issue is especially prevalent in ImageJ macro algorithm nodes.
+{{% /notice %}}
+
+You can also run ACAQ5 in headless-mode just like any ImageJ2 algorithm:
+
+```bash
+./ImageJ-linux64 --headless --ij2 --run "Run ACAQ5 project" 'projectFile="<Project>", outputDirectory="<Directory>", threads=<Threads>'
+```
+
+{{% notice info %}}
+While ACAQ5 works in Headless-mode, some ImageJ algorithms don't. You will get an error message if an algorithm requires a graphical environment.
 {{% /notice %}}
 
 # Running a single algorithm
@@ -52,6 +62,7 @@ Just as in a graph, images are converted automatically to the data type specifie
 
 {{% notice warning %}}
 There may be issues if multiple ROI or result table outputs are generated.
+ACAQ5 will merge multiple ROI List data items into one Results Table.
 {{% /notice %}}
 
 {{% notice info %}}
