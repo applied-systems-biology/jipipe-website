@@ -14,8 +14,9 @@ The common use case is to extract the list of input files for the following algo
 
 The filesystem library has two basic data types:
 
-* A {{< icon name="fa-file-o" size="medium" >}} **file** contains a path to a file
-* A {{< icon name="fa-folder-o" size="medium" >}} **folder** contains a path to a folder
+* A {{< icon name="fa-file-o" size="medium" >}} **File** contains a path to a file
+* A {{< icon name="fa-folder-o" size="medium" >}} **Folder** contains a path to a folder
+* A <img class="inline-image" src="/img/icons/path.png" /> **Path** contains a path to a file or folder
 
 In the `Add data` menu you can define one file/folder or a list of files/folders.
 

@@ -61,28 +61,13 @@ the data types of the source and target.
 Hover with your mouse over a slot's name to show information about its data type.
 {{% /notice %}}
 
-## Slot annotations
-
-Next to the slot names is a set of icons. Those icons are referred as **slot annotations** and are passed through the processing pipeline.
-Slot annotations are assigned manually or by algorithms to quickly categorize the data for users and the *algorithm finder* (see below).
-
-![Slot annotations](/img/documentation/graph-algorithm-annotation.png)
-
-Some algorithms allow you to manually modify the list of annotations via a {{< icon name="fa-tag" size="medium" >}} button.
-
-When passing through algorithms, annotations might be modified by algorithms: For example a thresholding algorithm might remove
-all information about the image quality, but add the information that the output might contain clusters.
-
-Many algorithms provide information whether it is known to work generally well or not so well with a *slot annotation*. You can
-use this as reference to build your algorithm pipeline more efficiently.
-
 ## Slot options
 
 The slot context menu opened by {{< icon name="fa-chevron-up" size="medium" >}} or {{< icon name="fa-chevron-down" size="medium" >}} contain
 additional entries to managing connections.
 
 * {{< icon name="fa-tag" size="medium" >}} **Label this slot** allows you to give the slot a custom name without changing the internal workings of the algorithm (As many algorithms are designed to adress specific slots). On selecting the entry, you can give a custom name that is displayed in *cursive*. To remove the custom label, label it with an empty text.
-* {{< icon name="fa-search" size="medium" >}} **Find matching algorithm ...** (only output slots) opens a tool that lists all compatible algorithms that can receive the output data as input. The algorithm finder also attempts to score each algorithm based on *slot annotations* (see above), giving you a reference on how to continue the analysis of your data.
+* {{< icon name="fa-search" size="medium" >}} **Find matching algorithm ...** (only output slots) opens a tool that lists all compatible algorithms that can receive the output data as input.
 * Depending on the algorithm, you can remove a slot from within this menu
 
 # Algorithm settings
@@ -93,7 +78,7 @@ There are usually four categories:
 * {{< icon name="fa-cog" size="medium" >}} **Parameters** contains general parameters, like the name displayed in the drag area, and algorithm-specific parameters like thresholds, the selection of methods, and other parameters.
 * {{< icon name="fa-database" size="medium" >}} **Slots** is an alternative to modifying slots via the algorithm UI. Here, you can also re-order slots.
 * {{< icon name="fa-tag" size="medium" >}} **Annotations** is an alternative to modifying slot annotations via the algorithm UI. See above for more info about annotations.
-* {{< icon name="fa-edit" size="medium" >}} **Testbench** is a tool to run the analysis only up to the selected algorithm. It allows you to try and compare multiple parameters without creating new nodes. See the [testbench documentation](/documentation/testbench) for more info.
+* {{< icon name="fa-play" size="medium" >}} **Quick run** is a tool to run the analysis only up to the selected algorithm. It allows you to try and compare multiple parameters without creating new nodes. See the [testbench documentation](/documentation/testbench) for more info.
 
 # Toolbar
 
@@ -111,4 +96,5 @@ The toolbar contains functions to add new algorithms into the graph, navigate to
 * <img class="inline-image" src="/img/icons/auto-layout-all.png" /> automatically aligns all nodes in the algorithm graph according to the algorithm by Sugiyama *et. al*
 * <img class="inline-image" src="/img/icons/cursor-arrow.png" /> allows you to change how dragging the middle mouse button changes the current view.
 * <img class="inline-image" src="/img/icons/auto-layout-connections.png" /> is enabled by default and makes it that nodes are automatically aligned on creating connections. This feature does not reorganize the whole graph, but only places the target algorithm to a location that better represents the data flow.
+* <img class="inline-image" src="/img/icons/view-restore.png" /> crops the graph area to the area taken by the algorithm nodes. Use this tool to find your nodes after scrolling too far away.
 * <img class="inline-image" src="/img/icons/filetype-image.png" /> creates a screenshot of the whole graph compartment that is currently being displayed.

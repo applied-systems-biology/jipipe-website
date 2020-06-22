@@ -73,6 +73,8 @@ The standard library provides a selection of common ImageJ algorithms as ACAQ5 a
 Those algorithms wrap around the respective ImageJ methods and have the same feature set, aside
 from some changes that are required to make algorithms usable in a batch-environment like ACAQ5.
 
+You can find a list of all algorithms via the {{< icon name="fa-question-circle-o" size="medium" >}} **Help** menu on the top right corner and the item <code>Algorithm compendium</code>.
+
 {{% notice tip %}}
 You can run ImageJ macro code as node. The input slot names correspond to the image windows that are created. Macro nodes do not work in a headless (server) environment, so be careful
 when including them.

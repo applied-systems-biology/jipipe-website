@@ -37,7 +37,7 @@ Instead, if enabled, data will just be stored into the [Cache](/documentation/ca
 
 ![Testbench UI](/img/documentation/testbench-ui.png)
 
-# Testbench result UI
+# Result UI
 
 After clicking {{< icon name="fa-cog" size="medium" >}} **Run & open results** and generating the
 results, ACAQ5 will open a new tab in its user interface. It contains a modified
