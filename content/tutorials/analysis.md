@@ -9,6 +9,12 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
+<div class="notices tip">
+  <p>
+    This tutorial is also available as <a href="/tutorials/analysis_video">video</a>.
+  </p>
+</div>
+
 <div class=tutorial-list>
   <div class="tutorial-item">
     <div class="tutorial-item-img"><img src="/img/tutorials/analysis/step0.png" /></div>
