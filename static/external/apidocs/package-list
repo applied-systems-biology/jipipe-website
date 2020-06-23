@@ -8,6 +8,9 @@ org.hkijena.acaq5.api.compat
 org.hkijena.acaq5.api.data
 org.hkijena.acaq5.api.events
 org.hkijena.acaq5.api.exceptions
+org.hkijena.acaq5.api.grouping
+org.hkijena.acaq5.api.grouping.events
+org.hkijena.acaq5.api.grouping.parameters
 org.hkijena.acaq5.api.parameters
 org.hkijena.acaq5.api.registries
 org.hkijena.acaq5.api.testbench
@@ -44,7 +47,6 @@ org.hkijena.acaq5.extensions.imagejalgorithms.ij1.sharpen
 org.hkijena.acaq5.extensions.imagejalgorithms.ij1.statistics
 org.hkijena.acaq5.extensions.imagejalgorithms.ij1.threshold
 org.hkijena.acaq5.extensions.imagejalgorithms.ij1.transform
-org.hkijena.acaq5.extensions.imagejalgorithms.ij2
 org.hkijena.acaq5.extensions.imagejalgorithms.parameters
 org.hkijena.acaq5.extensions.imagejdatatypes
 org.hkijena.acaq5.extensions.imagejdatatypes.algorithms
@@ -87,6 +89,7 @@ org.hkijena.acaq5.extensions.parameters.primitives
 org.hkijena.acaq5.extensions.parameters.references
 org.hkijena.acaq5.extensions.parameters.roi
 org.hkijena.acaq5.extensions.parameters.table
+org.hkijena.acaq5.extensions.parameters.util
 org.hkijena.acaq5.extensions.plots
 org.hkijena.acaq5.extensions.plots.datatypes
 org.hkijena.acaq5.extensions.plots.parameters
@@ -94,7 +97,6 @@ org.hkijena.acaq5.extensions.plots.ui.resultanalysis
 org.hkijena.acaq5.extensions.settings
 org.hkijena.acaq5.extensions.standardalgorithms
 org.hkijena.acaq5.extensions.standardalgorithms.api.algorithms
-org.hkijena.acaq5.extensions.standardalgorithms.api.registries
 org.hkijena.acaq5.extensions.tables
 org.hkijena.acaq5.extensions.tables.algorithms
 org.hkijena.acaq5.extensions.tables.datatypes
@@ -118,7 +120,9 @@ org.hkijena.acaq5.ui.extensionbuilder
 org.hkijena.acaq5.ui.extensions
 org.hkijena.acaq5.ui.grapheditor
 org.hkijena.acaq5.ui.grapheditor.algorithmfinder
+org.hkijena.acaq5.ui.grapheditor.contextmenu
 org.hkijena.acaq5.ui.grapheditor.settings
+org.hkijena.acaq5.ui.grouping
 org.hkijena.acaq5.ui.parameters
 org.hkijena.acaq5.ui.plotbuilder
 org.hkijena.acaq5.ui.project
