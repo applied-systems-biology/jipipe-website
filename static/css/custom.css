@@ -341,3 +341,35 @@ a.json-property-read-only:before:hover, a.json-property-read-only:before:focus {
     flex: 1 1 auto;
   }
 }
+
+/*
+  Example items
+*/
+
+.example-item {
+  display: flex;
+  flex-grow: 0;
+  flex-wrap: wrap;
+}
+
+.example-item-img {
+  flex: 12%;
+}
+
+.example-item-img img {
+  padding: 10px;
+}
+
+.example-item-content {
+  padding-top: 25px;
+  flex: 76%;
+}
+
+@media (max-width: 600px) {
+  .example-item-img {
+    flex: 1 1 auto;
+  }
+  .example-item-content {
+    flex: 1 1 auto;
+  }
+}

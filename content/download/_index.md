@@ -10,6 +10,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 
 # Binary distribution
 
+The download is not available, yet. Please come back later!
 
 
 # Source code
