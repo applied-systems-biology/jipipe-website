@@ -1,4 +1,4 @@
-# ACAQ5
+# JIPipe
 
 # Copyright
 

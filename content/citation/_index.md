@@ -17,7 +17,7 @@ The publication is currently in preparation. Please visit this page again later.
 **Thanks!**
 
 {{% panel %}}
-ACAQ5 was developed
+JIPipe was developed
 by [Research Group Applied Systems Biology](https://www.leibniz-hki.de/en/applied-systems-biology.html) *- Head: Prof. Dr. Marc Thilo* Figge
 
 **HKI-Center for Systems Biology of Infection**

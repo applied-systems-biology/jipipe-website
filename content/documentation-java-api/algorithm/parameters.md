@@ -9,7 +9,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
 You can add parameters to your algorithm by creating a property with a getter and setter.
-Then you annotate the getter **and** setter with the same [@ACAQParameter](/external/apidocs/org/hkijena/acaq5/api/parameters/ACAQParameter.html) keys. Also add an [@ACAQDocumentation](/external/apidocs/org/hkijena/acaq5/api/ACAQDocumentation.html) annotation to **either** the getter or setter.
+Then you annotate the getter **and** setter with the same [@ACAQParameter](/external/apidocs/org/hkijena/jipipe/api/parameters/ACAQParameter.html) keys. Also add an [@ACAQDocumentation](/external/apidocs/org/hkijena/jipipe/api/ACAQDocumentation.html) annotation to **either** the getter or setter.
 
 Parameters are automatically serialized and deserialized.
 
@@ -53,13 +53,13 @@ Not all data types are supported. Data types are registered into ACAQ and availa
 
 # Parameter settings
 
-Some parameter types have different styles or other settings that can change the behavior of the parameter editor UI. An example is [StringParameterSettings](/external/apidocs/org/hkijena/acaq5/extensions/standardparametereditors/ui/parametereditors/StringParameterSettings.html) that allows to change between single-line and multi-line editors.
+Some parameter types have different styles or other settings that can change the behavior of the parameter editor UI. An example is [StringParameterSettings](/external/apidocs/org/hkijena/jipipe/extensions/standardparametereditors/ui/parametereditors/StringParameterSettings.html) that allows to change between single-line and multi-line editors.
 
 # Sub-parameters
 
-[ACAQAlgorithm](/external/apidocs/org/hkijena/acaq5/api/algorithm/ACAQAlgorithm.html), like any [ACAQParameterHolder](/external/apidocs/org/hkijena/acaq5/api/parameters/ACAQParameterHolder.html) allows sub-parameters.
+[ACAQAlgorithm](/external/apidocs/org/hkijena/jipipe/api/algorithm/ACAQAlgorithm.html), like any [ACAQParameterHolder](/external/apidocs/org/hkijena/jipipe/api/parameters/ACAQParameterHolder.html) allows sub-parameters.
 
-To create a sub-parameter create a getter to an [ACAQParameterHolder](/external/apidocs/org/hkijena/acaq5/api/parameters/ACAQParameterHolder.html) and annotate it with [@ACAQParameter](/external/apidocs/org/hkijena/acaq5/api/parameters/ACAQSubParameters.html). The key provided with the annotation should be an unique parameter key. The parameters in the sub-parameter instance are automatically displayed as new group in the parameter editor.
+To create a sub-parameter create a getter to an [ACAQParameterHolder](/external/apidocs/org/hkijena/jipipe/api/parameters/ACAQParameterHolder.html) and annotate it with [@ACAQParameter](/external/apidocs/org/hkijena/jipipe/api/parameters/ACAQSubParameters.html). The key provided with the annotation should be an unique parameter key. The parameters in the sub-parameter instance are automatically displayed as new group in the parameter editor.
 
 {{% notice warning %}}
 Please do not forget to listen for the ParameterStructureChangedEvent and pass it to the algorithm's event bus. Otherwise there can be issues with the extension builder.
@@ -68,7 +68,7 @@ You can use the registerSubParameter() method in the constructor and copy constr
 
 # User-defined parameters
 
-If you want to make it possible for users to create custom parameters, create an [ACAQDynamicParameterHolder](/external/apidocs/org/hkijena/acaq5/api/parameters/ACAQDynamicParameterHolder.html) as sub-parameter.
+If you want to make it possible for users to create custom parameters, create an [ACAQDynamicParameterHolder](/external/apidocs/org/hkijena/jipipe/api/parameters/ACAQDynamicParameterHolder.html) as sub-parameter.
 You can control the list of allowed parameter types and other settings.
 
 {{% notice warning %}}
@@ -82,4 +82,4 @@ ACAQAlgorithm comes with a pre-made function registerSubParameters() that should
 
 # Full control
 
-You can inherit from [ACAQCustomParameterHolder](/external/apidocs/org/hkijena/acaq5/api/parameters/ACAQCustomParameterHolder.html) to define all parameters manually without the need for an [ACAQDynamicParameterHolder](/external/apidocs/org/hkijena/acaq5/api/parameters/ACAQDynamicParameterHolder.html) or annotations.
+You can inherit from [ACAQCustomParameterHolder](/external/apidocs/org/hkijena/jipipe/api/parameters/ACAQCustomParameterHolder.html) to define all parameters manually without the need for an [ACAQDynamicParameterHolder](/external/apidocs/org/hkijena/jipipe/api/parameters/ACAQDynamicParameterHolder.html) or annotations.

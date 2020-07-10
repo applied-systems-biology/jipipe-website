@@ -9,10 +9,10 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-Custom ACAQ5 data types must inherit from [ACAQData](/external/apidocs/org/hkijena/acaq5/api/data/ACAQData.html). It is required to add an [@ACAQDocumentation](/external/apidocs/org/hkijena/acaq5/api/ACAQDocumentation.html) annotation that provides a name and brief description of the data type.
+Custom JIPipe data types must inherit from [ACAQData](/external/apidocs/org/hkijena/jipipe/api/data/ACAQData.html). It is required to add an [@ACAQDocumentation](/external/apidocs/org/hkijena/jipipe/api/ACAQDocumentation.html) annotation that provides a name and brief description of the data type.
 
 ACAQ requires that data can be saved to a folder within the output directory. We also
-recommend that you include code that can load the data back into ACAQ5 or ImageJ in some form.
+recommend that you include code that can load the data back into JIPipe or ImageJ in some form.
 
 There are no requirements on the constructor of the data type.
 
@@ -75,7 +75,7 @@ public class MyData implements ACAQData {
 You can use ACAQ's JsonUtils class to get access to a Jackson JSON ObjectMapper.
 {{% /notice %}}
 
-To register the data type and provide it with an id, and icon, use [ACAQJavaExtension](/external/apidocs/org/hkijena/acaq5/ACAQJavaExtension.html):
+To register the data type and provide it with an id, and icon, use [ACAQJavaExtension](/external/apidocs/org/hkijena/jipipe/ACAQJavaExtension.html):
 
 ```java
 @Plugin(type = ACAQJavaExtension.class)

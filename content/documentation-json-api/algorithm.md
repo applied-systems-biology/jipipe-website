@@ -12,7 +12,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 
 
 This document describes the properties of the JSON API object. You also can access
-the document in [JSON Schema](https://json-schema.org/) format: [algorithm.schema.json](https://applied-systems-biology.github.io/acaq5/schemas/algorithm.schema.json)
+the document in [JSON Schema](https://json-schema.org/) format: [algorithm.schema.json](https://applied-systems-biology.github.io/jipipe/schemas/algorithm.schema.json)
 
 <div class="panel-body">
  <section class="json-schema-description">
@@ -211,9 +211,9 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm.schem
     <div class="json-inner-schema">
     </div>
    </dd>
-   <dt data-property-name="acaq:project-type">
+   <dt data-property-name="jipipe:project-type">
     <span class="json-property-name">
-     acaq:project-type:
+     jipipe:project-type:
     </span>
     <span class="json-property-type">
      string
@@ -264,7 +264,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm.schem
   "graph" : {
     "nodes" : {
       "default-preprocessing-filter-files" : {
-        "acaq:slot-configuration" : {
+        "jipipe:slot-configuration" : {
           "Files" : {
             "slot-data-type" : "file",
             "slot-type" : "Input",
@@ -282,21 +282,21 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm.schem
             "inheritance-conversions" : { }
           }
         },
-        "acaq:algorithm-ui-location" : {
+        "jipipe:algorithm-ui-location" : {
           "{Vertical}" : {
             "x" : 25,
             "y" : 250
           }
         },
-        "acaq:algorithm-type" : "file-filter",
-        "acaq:algorithm-compartment" : "DEFAULT",
+        "jipipe:algorithm-type" : "file-filter",
+        "jipipe:algorithm-compartment" : "DEFAULT",
         "name" : "Filter *.tif",
         "description" : null,
         "filters" : [ {
           "mode" : "Glob",
           "filterString" : "*.tif"
         } ],
-        "acaq:trait-generation" : {
+        "jipipe:trait-generation" : {
           "modification" : {
             "per-slot" : { },
             "global" : { }
@@ -306,10 +306,10 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm.schem
             "transfer-all-to-all" : true
           }
         },
-        "acaq:dynamic-parameters" : { }
+        "jipipe:dynamic-parameters" : { }
       },
       "default-preprocessing-list-files" : {
-        "acaq:slot-configuration" : {
+        "jipipe:slot-configuration" : {
           "Folders" : {
             "slot-data-type" : "folder",
             "slot-type" : "Input",
@@ -327,17 +327,17 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm.schem
             "inheritance-conversions" : { }
           }
         },
-        "acaq:algorithm-ui-location" : {
+        "jipipe:algorithm-ui-location" : {
           "{Vertical}" : {
             "x" : 25,
             "y" : 50
           }
         },
-        "acaq:algorithm-type" : "folder-list-files",
-        "acaq:algorithm-compartment" : "DEFAULT",
+        "jipipe:algorithm-type" : "folder-list-files",
+        "jipipe:algorithm-compartment" : "DEFAULT",
         "name" : "List files",
         "description" : null,
-        "acaq:trait-generation" : {
+        "jipipe:trait-generation" : {
           "modification" : {
             "per-slot" : { },
             "global" : { }
@@ -347,7 +347,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm.schem
             "transfer-all-to-all" : true
           }
         },
-        "acaq:dynamic-parameters" : { }
+        "jipipe:dynamic-parameters" : { }
       }
     },
     "edges" : [ {
@@ -358,7 +358,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm.schem
     } ]
   },
   "menu-path" : "",
-  "acaq:project-type" : "graph-wrapper-algorithm",
+  "jipipe:project-type" : "graph-wrapper-algorithm",
   "preferred-traits" : [ ],
   "unwanted-traits" : [ ],
   "added-traits" : [ ],

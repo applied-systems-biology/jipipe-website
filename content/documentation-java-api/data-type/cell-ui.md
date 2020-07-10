@@ -11,7 +11,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 For some data types, it is more convenient to display a short summary or the whole data
 directly within the corresponding cell in result data slot table.
 
-To create such a cell renderer, inherit from [ACAQResultDataSlotCellUI](http://localhost:1313/acaq5/external/apidocs/org/hkijena/acaq5/ui/resultanalysis/ACAQResultDataSlotCellUI.html)
+To create such a cell renderer, inherit from [ACAQResultDataSlotCellUI](http://localhost:1313/jipipe/external/apidocs/org/hkijena/jipipe/ui/resultanalysis/ACAQResultDataSlotCellUI.html)
 
 ```java
 public class MyDataSlotCellUI extends ACAQResultDataSlotCellUI {

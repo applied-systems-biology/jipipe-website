@@ -13,7 +13,7 @@ Many algorithms require plenty of user-defined parameters to create the expected
 Finding those parameters on the other hand can be very time-consuming due to
 the requirement of repeating all previous and following processing steps.
 
-ACAQ5 comes with a feature termed **Quick Run** that makes it easier to
+JIPipe comes with a feature termed **Quick Run** that makes it easier to
 only test a part of an analysis pipeline. You can find the testbench
 by selecting an algorithm in the algorithm graph and selecting the {{< icon name="fa-play" size="medium" >}} **Quick Run** tab.
 
@@ -21,7 +21,7 @@ It will ask for a folder where to store algorithm outputs. For most cases,
 you can leave the folder as is - but if you expect to generate large amounts
 of output data, you should select a folder on a drive that can store as much data.
 Click {{< icon name="fa-cog" size="medium" >}} **Run & open results** to create the testbench.
-ACAQ5 then will run the pipeline up until the selected algorithm and open a new tab.
+JIPipe then will run the pipeline up until the selected algorithm and open a new tab.
 
 {{% notice info %}}
 The Quick Run expects that all relevant algorithms are valid and will tell you
@@ -40,7 +40,7 @@ Instead, if enabled, data will just be stored into the [Cache](/documentation/ca
 # Result UI
 
 After clicking {{< icon name="fa-cog" size="medium" >}} **Run & open results** and generating the
-results, ACAQ5 will open a new tab in its user interface. It contains a modified
+results, JIPipe will open a new tab in its user interface. It contains a modified
 version of the [result analysis interface](/documentation/result-analysis) that
 also allows you to change the algorithm parameters and create and load result snapshots
 of the current algorithm.

@@ -1,6 +1,6 @@
 +++
 title = "Data caching"
-description = "Explains the how ACAQ5 caches intermediate results and how to access them."
+description = "Explains the how JIPipe caches intermediate results and how to access them."
 weight = 55
 type="page"
 creatordisplayname = "Ruman Gerst"
@@ -9,7 +9,7 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-ACAQ5 has a project-wide cache for generated results. This cache can be accessed
+JIPipe has a project-wide cache for generated results. This cache can be accessed
 by algorithms to prevent repeating previous calculation steps.
 
 Cache items are assigned a unique identifier (<i class="fa fa-camera"></i> <strong>Snapshot</strong>)

@@ -20,7 +20,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
     <div class="tutorial-item-img"><img src="/img/tutorials/analysis/step0.png" /></div>
     <div class="tutorial-item-content">
     <h2>1. First start</h2>
-    On starting ACAQ5, you will see such a screen: It contains a short introduction, the <a href="/documentation/graph-compartment">graph compartment editor</a>,
+    On starting JIPipe, you will see such a screen: It contains a short introduction, the <a href="/documentation/graph-compartment">graph compartment editor</a>,
     an three pre-defined graph compartments <i>Preprocessing</i>, <i>Analysis</i>, and <i>Postprocessing</i>. As described in the graph compartment documentation, you
     can ignore graph graph compartments. But in this tutorial we will make use of its capabilities to clearly separate the pipeline into the mentioned tree steps.
     </div>
@@ -56,7 +56,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
     <div class="tutorial-item-img"><img src="/img/tutorials/analysis/step3.png" /></div>
     <div class="tutorial-item-content">
       <h2>4. Adding a data source</h2>
-      The most common way how data is provided is to load them from files or folders. ACAQ5 comes preinstalled with data-types and algorithms
+      The most common way how data is provided is to load them from files or folders. JIPipe comes preinstalled with data-types and algorithms
       that handle <a href="/documentation/standard-library/filesystem">filesystem operations</a>. The tutorial data is supplied as set of folders
       that contain the input images as TIFF files in a sub-directory.<br/>We begin by adding a <strong>data source</strong> that supplies a list of folders.
       You can find it in <code>Add data &gt; Folder &gt; Folder list</code>. After selecting the item, it will appear in the graph.
@@ -83,7 +83,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
       <div class="notices tip">
         <p>
           You can save the current project at any time and re-load it later. If you save it in a parent directory relative to where your data is located,
-          ACAQ5 automatically saves all paths relative to the project file. This means you can just move all your data, including the project to other machines or
+          JIPipe automatically saves all paths relative to the project file. This means you can just move all your data, including the project to other machines or
           hard drive partitions without breaking anything.
         </p>
       </div>
@@ -92,9 +92,9 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
     <div class="tutorial-item-img"><img src="/img/tutorials/analysis/step6.png" /></div>
     <div class="tutorial-item-content">
       <h2>6. Annotating data</h2>
-      ACAQ5 is designed as batch processing tool, meaning that it can be always scaled from small test data up to large data sets.
-      It can be helpful for you and some algorithms to know which data belongs together. ACAQ5 introduces the concept of <i>data annotations</i> that
-      assign data to an unique data set and are passed through the pipeline. You can find more about this in the <a href="/documentation/batch-pipelines">documentation about how ACAQ5 processes data</a>.
+      JIPipe is designed as batch processing tool, meaning that it can be always scaled from small test data up to large data sets.
+      It can be helpful for you and some algorithms to know which data belongs together. JIPipe introduces the concept of <i>data annotations</i> that
+      assign data to an unique data set and are passed through the pipeline. You can find more about this in the <a href="/documentation/batch-pipelines">documentation about how JIPipe processes data</a>.
       <br/>In this step we add the data annotation directly at the beginning by attaching the input folder name to each folder that was passed into the pipeline.
       This is done via the <code>Annotation &gt; Generate &gt; Path to annotation</code> algorithm. Just add this algorithm into the graph.<br/>
       For more advanced projects there are plenty of other sources for annotations, like importing them from tables, or extracting and modifying annotations.
@@ -103,7 +103,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
     <div class="tutorial-item-img"><img src="/img/tutorials/analysis/step7.png" /></div>
     <div class="tutorial-item-content">
       <h2>7. Connecting slots</h2>
-      The input folders are converted into a format understandable by ACAQ5 by the <code>Folder list</code> algorithm. The output then can be passed to following algorithms
+      The input folders are converted into a format understandable by JIPipe by the <code>Folder list</code> algorithm. The output then can be passed to following algorithms
       like the <code>Folders to annotations</code> algorithm we added in the last step.<br/>
       To make a connection click the <i class="fa fa-chevron-up"></i> or <i class="fa fa-chevron-down"></i> button and select the available data slot.
       You can see that a connection between the two data slots was created.<br/>
@@ -231,7 +231,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
       <br/>You can also change various plot-specific settings and determine how output images are generated.
       <div class="notices tip">
         <p>
-          The plot node automatically generates SVG and PNG renders in the selected resolution. This is not a definite choice, as ACAQ5 has its own plot builder that
+          The plot node automatically generates SVG and PNG renders in the selected resolution. This is not a definite choice, as JIPipe has its own plot builder that
           can import generated plots from within the results UI.
         </p>
       </div>
@@ -252,7 +252,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
       <br/>After setting up the parameters, click <i class="fa fa-cog"></i> <strong>Run now</strong>.
       <div class="notices info">
         <p>
-          ACAQ5 attempts to prevent the most common errors (such as wrong parameters) and displays a message if something was found. Please follow the instructions of those messages.
+          JIPipe attempts to prevent the most common errors (such as wrong parameters) and displays a message if something was found. Please follow the instructions of those messages.
           Depending on the data and algorithms, the behavior might not be forseeable and a crash occurs during the processing. A similar easy-to-understand message is shown on how
           to proceed or repair the issue.
         </p>
@@ -271,7 +271,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
     <div class="tutorial-item-content">
       <h2>21. Displaying plots</h2>
       To open the generated plots, navigate to <code>Results &gt; Postprocessing &gt; Plot tables &gt; Output</code> and double-click an entry in the list.
-      Alternatively, you can also select the row and click <code>Open in ACAQ5</code>. This will open a new tab with a plot builder tool.
+      Alternatively, you can also select the row and click <code>Open in JIPipe</code>. This will open a new tab with a plot builder tool.
       Please take a look at the <a href="/documentation/standard-library/plots-tables">plots and tables documentation</a> for more information how the tool works.
   </div>
 </div>

@@ -37,7 +37,7 @@ There are some algorithms that do not have input slots - they produce output bas
 3. **Output slots** are located on the bottom and allow you to connect your output data to the input of another algorithm.
 
 {{% notice info %}}
-Any output data is always saved automatically by ACAQ5. After generating the final output data, there is no need to connect it to any input.
+Any output data is always saved automatically by JIPipe. After generating the final output data, there is no need to connect it to any input.
 {{% /notice %}}
 
 ![User interface overview](/img/documentation/graph-algorithm.png)
@@ -54,7 +54,7 @@ A connection is shows as line between the connected slots. The color of the line
 the data types of the source and target.
 
 * A **black** line indicates that the data types match exactly.
-* A <span style="color: blue;"><strong>blue</strong></span> line indicates that the types dont match exactly, but can be converted by ACAQ5
+* A <span style="color: blue;"><strong>blue</strong></span> line indicates that the types dont match exactly, but can be converted by JIPipe
 * A <span style="color: red;"><strong>red</strong></span> line indicates that the types are incompatible. You will probably get an error message during the calculation.
 
 {{% notice tip %}}

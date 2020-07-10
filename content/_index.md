@@ -1,5 +1,5 @@
 +++
-title = "ACAQ5"
+title = "JIPipe"
 type="page"
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
@@ -12,7 +12,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 
 # Macro programming for everyone!
 
-ACAQ5 is a graphical batch processing programming language for [ImageJ](https://fiji.sc/).
+JIPipe is a graphical batch processing programming language for [ImageJ](https://fiji.sc/).
 It comes with an easy-to-use graphical macro editor that requires no programming
 knowledge. Image processing steps can be added to the user interface and connected
 to form powerful and complex pipelines that can be easily scaled up and down.
@@ -25,7 +25,7 @@ to form powerful and complex pipelines that can be easily scaled up and down.
 
 <!-- <center>
   <video poster="./img/features/graph_editor.png" preload="none" loop style="margin-top: 5em;" controls >
-    <source src="/videos/acaq-example-fast.webm" />
+    <source src="/videos/jipipe-example-fast.webm" />
   </video>
 </center> -->
 ![Example of graphical programming](/img/features/graph_editor.png)
@@ -45,7 +45,7 @@ to form powerful and complex pipelines that can be easily scaled up and down.
     <div>
       <h3>Algorithm finder</h3>
       You do not know which should be the next processing step?
-      The ACAQ5 algorithm finder not only lists all compatible processing steps
+      The JIPipe algorithm finder not only lists all compatible processing steps
       for given data.
     </div>
   </div>
@@ -56,7 +56,7 @@ to form powerful and complex pipelines that can be easily scaled up and down.
       What are the best algorithm parameters?
       Find those parameters can be very time-consuming.
       <br/>
-      ACAQ5 allows you to easily test multiple algorithm parameters without re-calculating the previous steps. You can go back to an older set of parameters and directly compare the results.
+      JIPipe allows you to easily test multiple algorithm parameters without re-calculating the previous steps. You can go back to an older set of parameters and directly compare the results.
     </div>
   </div>
   <div>
@@ -64,7 +64,7 @@ to form powerful and complex pipelines that can be easily scaled up and down.
     <div>
       <h3>Graph compartments</h3>
       Graph-based programs get quickly confusing?
-      ACAQ5 allows you to separate the analysis into multiple compartments. You can create
+      JIPipe allows you to separate the analysis into multiple compartments. You can create
       as many compartments as you want, connect them, and also export and import them.
     </div>
   </div>
@@ -73,8 +73,8 @@ to form powerful and complex pipelines that can be easily scaled up and down.
 # Powerful result analysis
 
 You can either analyze results directly after processing or load existing results
-directly into ACAQ5. The powerful result analysis tool lets you import data back
-into *ImageJ*, or summarize and plot them directly within ACAQ5.
+directly into JIPipe. The powerful result analysis tool lets you import data back
+into *ImageJ*, or summarize and plot them directly within JIPipe.
 
 ![Example of result analysis](/img/features/result_analysis.png)
 
@@ -94,15 +94,15 @@ into *ImageJ*, or summarize and plot them directly within ACAQ5.
     <div>
       <h3>Plot builder</h3>
       Need to quickly plot a table?
-      ACAQ5 comes with a powerful plot builder that supports a multitude of different plot types,
+      JIPipe comes with a powerful plot builder that supports a multitude of different plot types,
       such as XY plots, bar charts, histograms, and box plots.
     </div>
   </div>
 </div>
 
-# Extending ACAQ5
+# Extending JIPipe
 
-ACAQ5 can be extended by programmers and *non-programmers* via its *Java* API and
+JIPipe can be extended by programmers and *non-programmers* via its *Java* API and
 its *JSON* extension API. *JSON extensions* can be easily created via a graphical user
 interface and allows you to publish your pipelines as algorithm node.
 You can also create a hierarchy of custom data annotation types using the built-in editor.
@@ -124,7 +124,7 @@ You can also create a hierarchy of custom data annotation types using the built-
 
 
 {{% panel %}}
-ACAQ5 was developed
+JIPipe was developed
 by [Research Group Applied Systems Biology](https://www.leibniz-hki.de/en/applied-systems-biology.html) *- Head: Prof. Dr. Marc Thilo* Figge
 
 **HKI-Center for Systems Biology of Infection**

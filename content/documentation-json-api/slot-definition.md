@@ -12,7 +12,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 
 
 This document describes the properties of the JSON API object. You also can access
-the document in [JSON Schema](https://json-schema.org/) format: [slot-definition.schema.json](https://applied-systems-biology.github.io/acaq5/schemas/slot-definition.schema.json)
+the document in [JSON Schema](https://json-schema.org/) format: [slot-definition.schema.json](https://applied-systems-biology.github.io/jipipe/schemas/slot-definition.schema.json)
 
 <div class="panel-body">
  <section class="json-schema-description">

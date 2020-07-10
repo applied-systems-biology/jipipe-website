@@ -10,13 +10,13 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 
 You might need to develop an algorithm that does not simply iterate through its input(s),
 but organize it into groups to be merged.
-ACAQ5 comes with [ACAQMergingAlgorithm](/external/apidocs/org/hkijena/acaq5/api/algorithm/ACAQMergingAlgorithm.html) that uses the annotation attached during processing to find data rows that belong to the same data set. The implementation creates [ACAQMultiDataInterface](/external/apidocs/org/hkijena/acaq5/api/algorithm/ACAQMultiDataInterface.html) instances that represent multiple data rows merged into one group.
+JIPipe comes with [ACAQMergingAlgorithm](/external/apidocs/org/hkijena/jipipe/api/algorithm/ACAQMergingAlgorithm.html) that uses the annotation attached during processing to find data rows that belong to the same data set. The implementation creates [ACAQMultiDataInterface](/external/apidocs/org/hkijena/jipipe/api/algorithm/ACAQMultiDataInterface.html) instances that represent multiple data rows merged into one group.
 
 {{% notice warning %}}
 Please access data via the data interface.
 {{% /notice %}}
 
-The only difference to [ACAQAlgorithm](/external/apidocs/org/hkijena/acaq5/api/algorithm/ACAQAlgorithm.html) is that you need to override a different function called `runIteration`.
+The only difference to [ACAQAlgorithm](/external/apidocs/org/hkijena/jipipe/api/algorithm/ACAQAlgorithm.html) is that you need to override a different function called `runIteration`.
 
 ```java
 // Annotates documentation to the algorithm

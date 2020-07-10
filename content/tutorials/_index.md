@@ -8,10 +8,10 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-This section contains video and text tutorials for the most common tasks done with ACAQ5.
-First, let's describe what ACAQ5 is and what it does for you.
+This section contains video and text tutorials for the most common tasks done with JIPipe.
+First, let's describe what JIPipe is and what it does for you.
 
-ACAQ5 is short for **a**lgorithm for **c**onfrontation **a**ssay **q**uantification version **5** and
+JIPipe is short for **a**lgorithm for **c**onfrontation **a**ssay **q**uantification version **5** and
 is the 5th generation of an image analysis pipeline designed for quantitative image analysis of host‐pathogen confrontation assays.
 Over the previous generations, the original tool was extended with optional modules to handle various data sets.
 We expanded the newest generation to solve following issues:
@@ -28,15 +28,15 @@ The 5th generation ACAQ tool solves the issues by:
 
 # Why ACAQ?
 
-ACAQ5 is a user-friendly alternative to ImageJ macro or script programming that brings following benefits to you:
+JIPipe is a user-friendly alternative to ImageJ macro or script programming that brings following benefits to you:
 
-* ACAQ5 is a batch processing tool. This means that you can scale your analyses up to larger or down to smaller data sets without modifying the whole pipeline
-* ACAQ5 runs headless. Your pipelines generally work in environments without a graphical interface, like compute servers
-* ACAQ5 has strong typing. Data types are well defined and you immediately see if and how data is converted into another format, bit depth, or dimensionality
-* ACAQ5 standardizes parameters and output. A common issue is the question how to arrange the generated analysis outputs and how to save parameters. ACAQ5 does all of this for you completely automatically. For example, output files are written into a standardized filesystem hierarchy that allows third-party programs to read results automatically.
-* ACAQ5 standardizes metadata. It comes with an powerful functionality to attach metadata to your data that can be queried and manipulated. All metadata is stored automatically in the results in standardized formats.
-* ACAQ5 has a powerful standard library. It comes with many common ImageJ algorithms - with enhanced usability and designed for batch-processing, as well as tools for handling tables and creating or modifying plots.
-* ACAQ5 can be extended without programming. You do not need programming knowledge to publish your own algorithms. Just export your pipeline or parts of it as extension from within a GUI
+* JIPipe is a batch processing tool. This means that you can scale your analyses up to larger or down to smaller data sets without modifying the whole pipeline
+* JIPipe runs headless. Your pipelines generally work in environments without a graphical interface, like compute servers
+* JIPipe has strong typing. Data types are well defined and you immediately see if and how data is converted into another format, bit depth, or dimensionality
+* JIPipe standardizes parameters and output. A common issue is the question how to arrange the generated analysis outputs and how to save parameters. JIPipe does all of this for you completely automatically. For example, output files are written into a standardized filesystem hierarchy that allows third-party programs to read results automatically.
+* JIPipe standardizes metadata. It comes with an powerful functionality to attach metadata to your data that can be queried and manipulated. All metadata is stored automatically in the results in standardized formats.
+* JIPipe has a powerful standard library. It comes with many common ImageJ algorithms - with enhanced usability and designed for batch-processing, as well as tools for handling tables and creating or modifying plots.
+* JIPipe can be extended without programming. You do not need programming knowledge to publish your own algorithms. Just export your pipeline or parts of it as extension from within a GUI
 
 # Tutorial list
 

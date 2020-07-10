@@ -1,12 +1,12 @@
 ## Configuration for online website:
-baseURL = "https://applied-systems-biology.github.io/acaq5/"
+baseURL = "https://applied-systems-biology.github.io/jipipe/"
 
 ## Configuration for offline website:
 #uglyURLs = true
 
 languageCode = "en-us"
 DefaultContentLanguage = "en"
-title = "ACAQ5 for ImageJ"
+title = "JIPipe for ImageJ"
 theme = "hugo-theme-docdock"
 # themesdir = "../.."
 pygmentsCodeFences = true

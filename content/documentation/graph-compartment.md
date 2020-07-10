@@ -10,16 +10,16 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
 A common issue with graphical programming languages is that large graphs are
-hard to navigate. ACAQ5 solves this issue by separating the pipeline graph
+hard to navigate. JIPipe solves this issue by separating the pipeline graph
 into sub-graphs. Each sub-graph has a predetermined output node that is visible
 to other compartments. Other nodes on the other hand are not visible to other compartments.
 
 ![Graph compartments schema](/img/documentation/graph-compartments.png)
 
 The difference between compartments and simple node groups is that compartments
-only communicate with each other via the *compartment output node*. ACAQ5 also only
+only communicate with each other via the *compartment output node*. JIPipe also only
 allows you to edit a specific compartment, instead of the whole graph.
-By default, ACAQ5 creates three compartments: Preprocessing, Analysis, and Postprocessing.
+By default, JIPipe creates three compartments: Preprocessing, Analysis, and Postprocessing.
 
 {{% notice info %}}
 By default a compartment's output node is not visible in any other compartment.
@@ -38,7 +38,7 @@ Compartments behave similar to algorithms. This means you can create a directed 
 
 # Creating and connecting compartments
 
-ACAQ5 comes with an editor that allows to control the graph compartments.
+JIPipe comes with an editor that allows to control the graph compartments.
 This editor is similar to the [pipeline editor](/documentation/graph-editor) and allows
 you to create new compartments, connect them, as well as import or export compartments.
 Instead of containg algorithms, the editor contains *graph compartment nodes* that can be connected

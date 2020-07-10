@@ -10,7 +10,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
 This document describes the properties of the JSON API object. You also can access
-the document in [JSON Schema](https://json-schema.org/) format: [algorithm-node.schema.json](https://applied-systems-biology.github.io/acaq5/schemas/algorithm-node.schema.json)
+the document in [JSON Schema](https://json-schema.org/) format: [algorithm-node.schema.json](https://applied-systems-biology.github.io/jipipe/schemas/algorithm-node.schema.json)
 
 <div class="panel-body">
  <section class="json-schema-description">
@@ -20,9 +20,9 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm-node.
  </section>
  <section class="json-schema-properties">
   <dl>
-   <dt data-property-name="acaq:slot-configuration">
+   <dt data-property-name="jipipe:slot-configuration">
     <span class="json-property-name">
-     acaq:slot-configuration:
+     jipipe:slot-configuration:
     </span>
     <span class="json-property-type">
      object
@@ -53,9 +53,9 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm-node.
      </section>
     </div>
    </dd>
-   <dt data-property-name="acaq:algorithm-ui-location">
+   <dt data-property-name="jipipe:algorithm-ui-location">
     <span class="json-property-name">
-     acaq:algorithm-ui-location:
+     jipipe:algorithm-ui-location:
     </span>
     <span class="json-property-type">
      object
@@ -84,9 +84,9 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm-node.
      </section>
     </div>
    </dd>
-   <dt data-property-name="acaq:algorithm-type">
+   <dt data-property-name="jipipe:algorithm-type">
     <span class="json-property-name">
-     acaq:algorithm-type:
+     jipipe:algorithm-type:
     </span>
     <span class="json-property-type">
      string
@@ -103,9 +103,9 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm-node.
     <div class="json-inner-schema">
     </div>
    </dd>
-   <dt data-property-name="acaq:algorithm-compartment">
+   <dt data-property-name="jipipe:algorithm-compartment">
     <span class="json-property-name">
-     acaq:algorithm-compartment:
+     jipipe:algorithm-compartment:
     </span>
     <span class="json-property-type">
      string
@@ -172,7 +172,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm-node.
 
 ```json
 {
-  "acaq:slot-configuration" : {
+  "jipipe:slot-configuration" : {
     "Folders" : {
       "slot-data-type" : "folder",
       "slot-type" : "Input",
@@ -190,7 +190,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm-node.
       "inheritance-conversions" : { }
     }
   },
-  "acaq:algorithm-ui-location" : {
+  "jipipe:algorithm-ui-location" : {
     "default-preprocessing" : {
       "x" : 525,
       "y" : 100
@@ -204,11 +204,11 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm-node.
       "y" : 50
     }
   },
-  "acaq:algorithm-type" : "folder-annotate-by-name",
-  "acaq:algorithm-compartment" : "default-preprocessing",
+  "jipipe:algorithm-type" : "folder-annotate-by-name",
+  "jipipe:algorithm-compartment" : "default-preprocessing",
   "generated-annotation" : "project-sample",
   "name" : "Folders to annotations",
   "description" : null,
-  "acaq:dynamic-parameters" : { }
+  "jipipe:dynamic-parameters" : { }
 }
 ```

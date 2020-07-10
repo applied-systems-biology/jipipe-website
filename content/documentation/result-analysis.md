@@ -9,14 +9,14 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-ACAQ5 stores its results in a user-defined *output folder*. After clicking
+JIPipe stores its results in a user-defined *output folder*. After clicking
 {{< icon name="fa-cog" size="medium" >}} **Run** (located at the top right corner of a project window)
-ACAQ5 will query the output folder from you.
+JIPipe will query the output folder from you.
 You can also generate a random folder that will be located on your operating system's temporary directory
 by clicking the <img class="inline-image" src="/img/icons/random.png" /> button.
 
 After confirming the settings by clicking {{< icon name="fa-cog" size="medium" >}} **Run now**,
-ACAQ5 will start processing the pipeline.
+JIPipe will start processing the pipeline.
 
 ![Run settings UI](/img/documentation/run-ui.png)
 
@@ -26,7 +26,7 @@ until the current run finishes.
 {{% /notice %}}
 
 {{% notice tip %}}
-The ACAQ5 output folder is automatically organized in a standardized way, so ACAQ5 can open a result folder.
+The JIPipe output folder is automatically organized in a standardized way, so JIPipe can open a result folder.
 You find the "Open analysis output ..."  button in the "Project" menu.
 {{% /notice %}}
 
@@ -38,7 +38,7 @@ It allows you to navigate through the results, and import them back into ImageJ 
 The UI has two main components:
 
 1. The **slot tree** shows a hierarchy of all data slots. It is organized by [compartment](/documentation/graph-compartment), then [algorithm](/documentation/batch-pipelines), and finally [data slot](/documentation/batch-pipelines). By selecting any of the entries, all data associated to the selection or any n-child is displayed.
-2. The **output data table** lists the stored data of the selected slot(s) as table (if you are unfamiliar why this is, please take a look at the explanation on [how ACAQ5 processes data](/documentation/batch-pipelines))
+2. The **output data table** lists the stored data of the selected slot(s) as table (if you are unfamiliar why this is, please take a look at the explanation on [how JIPipe processes data](/documentation/batch-pipelines))
 
 ![Result analysis UI](/img/documentation/result-analysis-ui.png)
 
@@ -51,10 +51,10 @@ The table has following columns:
 * **Data** shows a string representation of the data row. The contents vary depending on the slot data type. For example, file system data display their path at this location.
 * Additional columns correspond to the [data annotations](/documentation/batch-pipelines/#data-annotations) that were attached by various algorithms
 
-## Importing results back into ACAQ5/ImageJ/...
+## Importing results back into JIPipe/ImageJ/...
 
 On selecting one or multiple rows, additional UI elements are displayed below the table. They contain various actions that can be applied to the output data, such
-as opening the results directory, importing the data back into ImageJ or ACAQ5, or any other operation.
+as opening the results directory, importing the data back into ImageJ or JIPipe, or any other operation.
 
 {{% notice tip %}}
 Double-click a row to execute the default action, which is the one most commonly used.

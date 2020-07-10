@@ -15,12 +15,12 @@ algorithms for an unknown list of data types.
 
 # How algorithms are registered
 
-Algorithm instances are created by an [ACAQAlgorithmDeclaration](/external/apidocs/org/hkijena/acaq5/api/algorithm/ACAQAlgorithmDeclaration.html). This declaration
-is the object that is actually registered into ACAQ5. It is able to create
+Algorithm instances are created by an [ACAQAlgorithmDeclaration](/external/apidocs/org/hkijena/jipipe/api/algorithm/ACAQAlgorithmDeclaration.html). This declaration
+is the object that is actually registered into JIPipe. It is able to create
 new instances of the declared algorithm, or copy it. It also carries basic metadata
 such as a name, description, or annotation preferences.
 
-Declarations should be unique and have a unique ID within the ACAQ5 algorithm registry.
+Declarations should be unique and have a unique ID within the JIPipe algorithm registry.
 
 On registering an algorithm like in previous tutorials, following code is run:
 
@@ -37,12 +37,12 @@ If all dependencies are available, the task runs:
 ACAQAlgorithmRegistry.getInstance().register(new ACAQJavaAlgorithmDeclaration(id, algorithmClass), source);
 ```
 
-The important bit is [ACAQJavaAlgorithmDeclaration](/external/apidocs/org/hkijena/acaq5/api/algorithm/ACAQJavaAlgorithmDeclaration.html). In the end an algorithm declaration is created
+The important bit is [ACAQJavaAlgorithmDeclaration](/external/apidocs/org/hkijena/jipipe/api/algorithm/ACAQJavaAlgorithmDeclaration.html). In the end an algorithm declaration is created
 that extract algorithm information from the class annotations.
 
 # Creating a custom declaration
 
-To create a custom declaration, inherit from [ACAQAlgorithmDeclaration](/external/apidocs/org/hkijena/acaq5/api/algorithm/ACAQAlgorithmDeclaration.html). The most important functions are `clone()` and `newInstance()`.
+To create a custom declaration, inherit from [ACAQAlgorithmDeclaration](/external/apidocs/org/hkijena/jipipe/api/algorithm/ACAQAlgorithmDeclaration.html). The most important functions are `clone()` and `newInstance()`.
 
-Register the declaration either via a direct call to `registerAlgorithm(ACAQAlgorithmDeclaration)` or (recommended) via a task that inherits from [ACAQAlgorithmRegistrationTask](/external/apidocs/org/hkijena/acaq5/api/registries/ACAQAlgorithmRegistrationTask.html). You can inherit from the default implementation [ACAQDefaultAlgorithmRegistrationTask](/external/apidocs/org/hkijena/acaq5/api/registries/ACAQDefaultAlgorithmRegistrationTask.html) that comes with pre-made functionality to check for common dependencies.
+Register the declaration either via a direct call to `registerAlgorithm(ACAQAlgorithmDeclaration)` or (recommended) via a task that inherits from [ACAQAlgorithmRegistrationTask](/external/apidocs/org/hkijena/jipipe/api/registries/ACAQAlgorithmRegistrationTask.html). You can inherit from the default implementation [ACAQDefaultAlgorithmRegistrationTask](/external/apidocs/org/hkijena/jipipe/api/registries/ACAQDefaultAlgorithmRegistrationTask.html) that comes with pre-made functionality to check for common dependencies.
 The reason behind using a task is that some algorithm-internal classes might require that data types or annotation types are already registered.

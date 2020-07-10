@@ -9,7 +9,7 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-The ACAQ5 standard library contains data types and algorithms to apply file system operations.
+The JIPipe standard library contains data types and algorithms to apply file system operations.
 The common use case is to extract the list of input files for the following algorithms.
 
 The filesystem library has two basic data types:

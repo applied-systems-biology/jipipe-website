@@ -12,7 +12,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 
 
 This document describes the properties of the JSON API object. You also can access
-the document in [JSON Schema](https://json-schema.org/) format: [project.schema.json](https://applied-systems-biology.github.io/acaq5/schemas/project.schema.json)
+the document in [JSON Schema](https://json-schema.org/) format: [project.schema.json](https://applied-systems-biology.github.io/jipipe/schemas/project.schema.json)
 
 <div class="panel-body">
  <section class="json-schema-description">
@@ -22,9 +22,9 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
  </section>
  <section class="json-schema-properties">
   <dl>
-   <dt data-property-name="acaq:project-type">
+   <dt data-property-name="jipipe:project-type">
     <span class="json-property-name">
-     acaq:project-type:
+     jipipe:project-type:
     </span>
     <span class="json-property-type">
      string
@@ -45,7 +45,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
    </dt>
    <dd>
     <p>
-     Used to identify this JSON as ACAQ5 project
+     Used to identify this JSON as JIPipe project
     </p>
     <div class="json-inner-schema">
     </div>
@@ -186,10 +186,10 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
 
 ```json
 {
-  "acaq:project-type" : "project",
+  "jipipe:project-type" : "project",
   "metadata" : {
     "name" : "New project",
-    "description" : "An ACAQ5 project",
+    "description" : "An JIPipe project",
     "authors" : "",
     "website" : "",
     "license" : "",
@@ -200,72 +200,72 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
       "name" : "Image property annotations",
       "description" : "Commonly used annotations for describing image properties",
       "authors" : "Zoltán Cseresnyés, Ruman Gerst",
-      "website" : "https://applied-systems-biology.github.io/acaq5/",
+      "website" : "https://applied-systems-biology.github.io/jipipe/",
       "license" : "BSD-2",
       "citation" : ""
     },
-    "id" : "org.hkijena.acaq5:image-traits",
+    "id" : "org.hkijena.jipipe:image-traits",
     "version" : "1.0.0"
   }, {
     "metadata" : {
       "name" : "Filesystem types and algorithms",
       "description" : "Data types and algorithms for interacting with files and folders",
       "authors" : "Zoltán Cseresnyés, Ruman Gerst",
-      "website" : "https://applied-systems-biology.github.io/acaq5/",
+      "website" : "https://applied-systems-biology.github.io/jipipe/",
       "license" : "BSD-2",
       "citation" : ""
     },
-    "id" : "org.hkijena.acaq5:filesystem",
+    "id" : "org.hkijena.jipipe:filesystem",
     "version" : "1.0.0"
   }, {
     "metadata" : {
       "name" : "Project management annotations",
-      "description" : "An ACAQ5 project",
+      "description" : "An JIPipe project",
       "authors" : "Zoltán Cseresnyés, Ruman Gerst",
-      "website" : "https://applied-systems-biology.github.io/acaq5/",
+      "website" : "https://applied-systems-biology.github.io/jipipe/",
       "license" : "BSD-2",
       "citation" : ""
     },
-    "id" : "org.hkijena.acaq5:project-management-traits",
+    "id" : "org.hkijena.jipipe:project-management-traits",
     "version" : "1.0.0"
   }, {
     "metadata" : {
       "name" : "Bioimage analysis annotations",
       "description" : "Commonly used annotations for biological image analysis",
       "authors" : "Zoltán Cseresnyés, Ruman Gerst",
-      "website" : "https://applied-systems-biology.github.io/acaq5/",
+      "website" : "https://applied-systems-biology.github.io/jipipe/",
       "license" : "BSD-2",
       "citation" : ""
     },
-    "id" : "org.hkijena.acaq5:bioobjects-traits",
+    "id" : "org.hkijena.jipipe:bioobjects-traits",
     "version" : "1.0.0"
   }, {
     "metadata" : {
       "name" : "ImageJ integration",
       "description" : "Adds support for commonly used ImageJ data types",
       "authors" : "Zoltán Cseresnyés, Ruman Gerst",
-      "website" : "https://applied-systems-biology.github.io/acaq5/",
+      "website" : "https://applied-systems-biology.github.io/jipipe/",
       "license" : "BSD-2",
       "citation" : ""
     },
-    "id" : "org.hkijena.acaq5:imagej-integration",
+    "id" : "org.hkijena.jipipe:imagej-integration",
     "version" : "1.0.0"
   }, {
     "metadata" : {
       "name" : "Compartment management",
       "description" : "Data types required for graph compartment management",
       "authors" : "Zoltán Cseresnyés, Ruman Gerst",
-      "website" : "https://applied-systems-biology.github.io/acaq5/",
+      "website" : "https://applied-systems-biology.github.io/jipipe/",
       "license" : "BSD-2",
       "citation" : ""
     },
-    "id" : "org.hkijena.acaq5:compartments",
+    "id" : "org.hkijena.jipipe:compartments",
     "version" : "1.0.0"
   } ],
   "algorithm-graph" : {
     "nodes" : {
       "default-preprocessing-preprocessing-output" : {
-        "acaq:slot-configuration" : {
+        "jipipe:slot-configuration" : {
           "Spores" : {
             "slot-data-type" : "imagej-imgplus-2d-greyscale",
             "slot-type" : "Input",
@@ -283,7 +283,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
             "inheritance-conversions" : { }
           }
         },
-        "acaq:algorithm-ui-location" : {
+        "jipipe:algorithm-ui-location" : {
           "default-preprocessing" : {
             "x" : 2900,
             "y" : 100
@@ -301,11 +301,11 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
             "y" : 50
           }
         },
-        "acaq:algorithm-type" : "acaq:compartment-output",
-        "acaq:algorithm-compartment" : "default-preprocessing",
+        "jipipe:algorithm-type" : "jipipe:compartment-output",
+        "jipipe:algorithm-compartment" : "default-preprocessing",
         "name" : "Preprocessing output",
         "description" : null,
-        "acaq:trait-generation" : {
+        "jipipe:trait-generation" : {
           "modification" : {
             "per-slot" : { },
             "global" : { }
@@ -315,10 +315,10 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
             "transfer-all-to-all" : true
           }
         },
-        "acaq:dynamic-parameters" : { }
+        "jipipe:dynamic-parameters" : { }
       },
       "default-preprocessing-folder-list" : {
-        "acaq:slot-configuration" : {
+        "jipipe:slot-configuration" : {
           "Folder paths" : {
             "slot-data-type" : "folder",
             "slot-type" : "Output",
@@ -328,7 +328,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
             "inheritance-conversions" : { }
           }
         },
-        "acaq:algorithm-ui-location" : {
+        "jipipe:algorithm-ui-location" : {
           "default-preprocessing" : {
             "x" : 100,
             "y" : 100
@@ -342,12 +342,12 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
             "y" : 50
           }
         },
-        "acaq:algorithm-type" : "import-folder-list",
-        "acaq:algorithm-compartment" : "default-preprocessing",
+        "jipipe:algorithm-type" : "import-folder-list",
+        "jipipe:algorithm-compartment" : "default-preprocessing",
         "folder-paths" : [ "ATTC_IµL_3rdReplicate-Experiment-5518", "ATTC_IµL_3rdReplicate-Experiment-5517", "ATTC_IµL_3rdReplicate-Experiment-5516" ],
         "name" : "Folder list",
         "description" : null,
-        "acaq:trait-generation" : {
+        "jipipe:trait-generation" : {
           "modification" : {
             "per-slot" : { },
             "global" : { }
@@ -357,10 +357,10 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
             "transfer-all-to-all" : true
           }
         },
-        "acaq:dynamic-parameters" : { }
+        "jipipe:dynamic-parameters" : { }
       },
       "default-preprocessing-subfolders" : {
-        "acaq:slot-configuration" : {
+        "jipipe:slot-configuration" : {
           "Folders" : {
             "slot-data-type" : "folder",
             "slot-type" : "Input",
@@ -378,7 +378,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
             "inheritance-conversions" : { }
           }
         },
-        "acaq:algorithm-ui-location" : {
+        "jipipe:algorithm-ui-location" : {
           "default-preprocessing" : {
             "x" : 1150,
             "y" : 100
@@ -392,12 +392,12 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
             "y" : 50
           }
         },
-        "acaq:algorithm-type" : "folder-navigate-subfolders",
-        "acaq:algorithm-compartment" : "default-preprocessing",
+        "jipipe:algorithm-type" : "folder-navigate-subfolders",
+        "jipipe:algorithm-compartment" : "default-preprocessing",
         "name" : "Subfolders",
         "subfolder" : "in",
         "description" : null,
-        "acaq:trait-generation" : {
+        "jipipe:trait-generation" : {
           "modification" : {
             "per-slot" : { },
             "global" : { }
@@ -407,10 +407,10 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
             "transfer-all-to-all" : true
           }
         },
-        "acaq:dynamic-parameters" : { }
+        "jipipe:dynamic-parameters" : { }
       },
       "default-preprocessing-list-and-filter-files" : {
-        "acaq:slot-configuration" : {
+        "jipipe:slot-configuration" : {
           "Folders" : {
             "slot-data-type" : "folder",
             "slot-type" : "Input",
@@ -428,7 +428,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
             "inheritance-conversions" : { }
           }
         },
-        "acaq:algorithm-ui-location" : {
+        "jipipe:algorithm-ui-location" : {
           "default-preprocessing" : {
             "x" : 1700,
             "y" : 100
@@ -442,15 +442,15 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
             "y" : 50
           }
         },
-        "acaq:algorithm-type" : "list-and-filter-files",
-        "acaq:algorithm-compartment" : "default-preprocessing",
+        "jipipe:algorithm-type" : "list-and-filter-files",
+        "jipipe:algorithm-compartment" : "default-preprocessing",
         "name" : "List and filter files",
         "default-preprocessing-filter-files/filters" : [ {
           "mode" : "Glob",
           "filterString" : "*.tif"
         } ],
         "description" : null,
-        "acaq:trait-generation" : {
+        "jipipe:trait-generation" : {
           "modification" : {
             "per-slot" : { },
             "global" : { }
@@ -460,10 +460,10 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
             "transfer-all-to-all" : true
           }
         },
-        "acaq:dynamic-parameters" : { }
+        "jipipe:dynamic-parameters" : { }
       },
       "default-preprocessing-import-2d-image-(greyscale)" : {
-        "acaq:slot-configuration" : {
+        "jipipe:slot-configuration" : {
           "Files" : {
             "slot-data-type" : "file",
             "slot-type" : "Input",
@@ -481,7 +481,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
             "inheritance-conversions" : { }
           }
         },
-        "acaq:algorithm-ui-location" : {
+        "jipipe:algorithm-ui-location" : {
           "default-preprocessing" : {
             "x" : 2275,
             "y" : 100
@@ -495,11 +495,11 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
             "y" : 50
           }
         },
-        "acaq:algorithm-type" : "imagej-imgplus-2d-greyscale-from-file",
-        "acaq:algorithm-compartment" : "default-preprocessing",
+        "jipipe:algorithm-type" : "imagej-imgplus-2d-greyscale-from-file",
+        "jipipe:algorithm-compartment" : "default-preprocessing",
         "name" : "Import 2D image (greyscale)",
         "description" : null,
-        "acaq:trait-generation" : {
+        "jipipe:trait-generation" : {
           "modification" : {
             "per-slot" : {
               "Image" : {
@@ -515,10 +515,10 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
             "transfer-all-to-all" : true
           }
         },
-        "acaq:dynamic-parameters" : { }
+        "jipipe:dynamic-parameters" : { }
       },
       "default-preprocessing-folders-to-annotations" : {
-        "acaq:slot-configuration" : {
+        "jipipe:slot-configuration" : {
           "Folders" : {
             "slot-data-type" : "folder",
             "slot-type" : "Input",
@@ -536,7 +536,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
             "inheritance-conversions" : { }
           }
         },
-        "acaq:algorithm-ui-location" : {
+        "jipipe:algorithm-ui-location" : {
           "default-preprocessing" : {
             "x" : 525,
             "y" : 100
@@ -550,12 +550,12 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
             "y" : 50
           }
         },
-        "acaq:algorithm-type" : "folder-annotate-by-name",
-        "acaq:algorithm-compartment" : "default-preprocessing",
+        "jipipe:algorithm-type" : "folder-annotate-by-name",
+        "jipipe:algorithm-compartment" : "default-preprocessing",
         "generated-annotation" : "project-sample",
         "name" : "Folders to annotations",
         "description" : null,
-        "acaq:trait-generation" : {
+        "jipipe:trait-generation" : {
           "modification" : {
             "per-slot" : { },
             "global" : {
@@ -567,7 +567,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
             "transfer-all-to-all" : true
           }
         },
-        "acaq:dynamic-parameters" : { }
+        "jipipe:dynamic-parameters" : { }
       }
     },
     "edges" : [ {
@@ -601,9 +601,9 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
     "compartment-graph" : {
       "nodes" : {
         "default-preprocessing" : {
-          "acaq:slot-configuration" : {
+          "jipipe:slot-configuration" : {
             "Output" : {
-              "slot-data-type" : "acaq:compartment-output",
+              "slot-data-type" : "jipipe:compartment-output",
               "slot-type" : "Output",
               "inherited-slot" : null,
               "name" : "Output",
@@ -611,7 +611,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
               "inheritance-conversions" : { }
             }
           },
-          "acaq:algorithm-ui-location" : {
+          "jipipe:algorithm-ui-location" : {
             "DEFAULT" : {
               "x" : 200,
               "y" : 100
@@ -621,11 +621,11 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
               "y" : 50
             }
           },
-          "acaq:algorithm-type" : "acaq:project-compartment",
-          "acaq:algorithm-compartment" : "DEFAULT",
+          "jipipe:algorithm-type" : "jipipe:project-compartment",
+          "jipipe:algorithm-compartment" : "DEFAULT",
           "name" : "Preprocessing",
           "description" : null,
-          "acaq:trait-generation" : {
+          "jipipe:trait-generation" : {
             "modification" : {
               "per-slot" : { },
               "global" : { }
@@ -635,7 +635,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
               "transfer-all-to-all" : true
             }
           },
-          "acaq:dynamic-parameters" : { }
+          "jipipe:dynamic-parameters" : { }
         }
       },
       "edges" : [ ]

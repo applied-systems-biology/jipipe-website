@@ -8,13 +8,13 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-The current version of ACAQ5 supports parallelization via a fixed thread pool.
+The current version of JIPipe supports parallelization via a fixed thread pool.
 Parallelization is done on an **per-algorithm-level**, meaning that
 the algorithms are responsible for providing parallelization capabilities.
 
-The included base algorithms [ACAQIteratingAlgorithm](/external/apidocs/org/hkijena/acaq5/api/algorithm/ACAQIteratingAlgorithm.html), [ACAQSimpleIteratingAlgorithm](/external/apidocs/org/hkijena/acaq5/api/algorithm/ACAQSimpleIteratingAlgorithm.html), and [ACAQMergingAlgorithm](/external/apidocs/org/hkijena/acaq5/api/algorithm/ACAQMergingAlgorithm.html)
+The included base algorithms [ACAQIteratingAlgorithm](/external/apidocs/org/hkijena/jipipe/api/algorithm/ACAQIteratingAlgorithm.html), [ACAQSimpleIteratingAlgorithm](/external/apidocs/org/hkijena/jipipe/api/algorithm/ACAQSimpleIteratingAlgorithm.html), and [ACAQMergingAlgorithm](/external/apidocs/org/hkijena/jipipe/api/algorithm/ACAQMergingAlgorithm.html)
 already come with support for parallelization that **has to be manually enabled via code**.
-The inherit from [ACAQParallelizedAlgorithm](/external/apidocs/org/hkijena/acaq5/api/algorithm/ACAQParallelizedAlgorithm.html) and
+The inherit from [ACAQParallelizedAlgorithm](/external/apidocs/org/hkijena/jipipe/api/algorithm/ACAQParallelizedAlgorithm.html) and
 completely apply parallelization automatically.
 
 # Automated parallelization (ACAQParallelizedAlgorithm)
@@ -28,7 +28,7 @@ The automated parallelization is controlled by three factors:
 To enable parallelization, let `supportsParallelization()` return `true` (defaults to false).
 This will parallelize the processing of data interfaces (see previous chapters).
 As sometimes third-party algorithms apply their own parallelization, you can restrict how
-many threads are allocated by ACAQ5 by setting `getParallelizationBatchSize`.
+many threads are allocated by JIPipe by setting `getParallelizationBatchSize`.
 
 For example, there are many image analysis algorithm implementations that use `Runtime.getRuntime().availableProcessors()`
 for their own parallelization. To ensure that only as many threads as the user selected are allocated, return
@@ -48,7 +48,7 @@ public class MyAlgorithm extends ACAQIteratingAlgorithm {
 
   /*
   Assume that each runIteration() executes a third-party algorithm with its own parallelization based on Runtime.getRuntime().availableProcessors() threads.
-  Tell this to the ACAQ5 implementation to limit the number of threads.
+  Tell this to the JIPipe implementation to limit the number of threads.
   */
   @Override
   getParallelizationBatchSize() {

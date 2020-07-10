@@ -9,13 +9,13 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-All algorithms inherit from [ACAQAlgorithm](/external/apidocs/org/hkijena/acaq5/api/algorithm/ACAQAlgorithm.html). An algorithm consists of following parts:
+All algorithms inherit from [ACAQAlgorithm](/external/apidocs/org/hkijena/jipipe/api/algorithm/ACAQAlgorithm.html). An algorithm consists of following parts:
 
 * A `run()` function that runs the workload
-* A reference to an [algorithm declaration](/external/apidocs/org/hkijena/acaq5/api/algorithm/ACAQAlgorithmDeclaration.html) that describes the general properties of the algorithm
-* A [slot configuration](/external/apidocs/org/hkijena/acaq5/api/data/ACAQSlotConfiguration.html) that describes which slots the algorithm should have
+* A reference to an [algorithm declaration](/external/apidocs/org/hkijena/jipipe/api/algorithm/ACAQAlgorithmDeclaration.html) that describes the general properties of the algorithm
+* A [slot configuration](/external/apidocs/org/hkijena/jipipe/api/data/ACAQSlotConfiguration.html) that describes which slots the algorithm should have
 
-For developing algorithms in Java, you can either directly inherit from [ACAQAlgorithm](/external/apidocs/org/hkijena/acaq5/api/algorithm/ACAQAlgorithm.html) or inherit from [ACAQIteratingAlgorithm](/external/apidocs/org/hkijena/acaq5/api/algorithm/ACAQIteratingAlgorithm.html).
+For developing algorithms in Java, you can either directly inherit from [ACAQAlgorithm](/external/apidocs/org/hkijena/jipipe/api/algorithm/ACAQAlgorithm.html) or inherit from [ACAQIteratingAlgorithm](/external/apidocs/org/hkijena/jipipe/api/algorithm/ACAQIteratingAlgorithm.html).
 
 Any algorithm should have the following basic structure:
 
@@ -62,7 +62,7 @@ public class MyAlgorithm extends ACAQAlgorithm {
 }
 ```
 
-To register the algorithm and provide it with an Id, use [ACAQJavaExtension](/external/apidocs/org/hkijena/acaq5/ACAQJavaExtension.html):
+To register the algorithm and provide it with an Id, use [ACAQJavaExtension](/external/apidocs/org/hkijena/jipipe/ACAQJavaExtension.html):
 
 ```java
 @Plugin(type = ACAQJavaExtension.class)

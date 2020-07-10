@@ -8,17 +8,17 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-This section explains the ACAQ5 user interface, how to create an analysis pipeline,
+This section explains the JIPipe user interface, how to create an analysis pipeline,
 and some concepts behind how analysis pipelines work.
 
 # Batch processing
 
-ACAQ5 is a tool to create data processing workflows via a graphical language.
-A special feature of ACAQ5 processing is always done in *batches*, meaning that workflows
+JIPipe is a tool to create data processing workflows via a graphical language.
+A special feature of JIPipe processing is always done in *batches*, meaning that workflows
 are always designed to scale for large amounts of data without the need of external scripts or
 major changes in a pipeline.
 
-The ACAQ5 graphical language is graph-based where nodes represent data processing algorithms
+The JIPipe graphical language is graph-based where nodes represent data processing algorithms
 and edges represent that data is transferred from an algorithm output to another algorithm's input.
 
 An example is the application of a gaussian filter to an image after loading it:
@@ -30,7 +30,7 @@ graph LR;
 {{< /mermaid >}}
 
 To design efficient and scalable pipelines yourself, it is a good idea to
-look into the [ACAQ5 data model](/documentation/batch-pipelines).
+look into the [JIPipe data model](/documentation/batch-pipelines).
 
 # Graph compartments
 
@@ -38,7 +38,7 @@ A common issue with graphical programming languages is that larger pipelines are
 hard to navigate. Another issue with such languages is that it is hard to separate functional
 units for easier readability.
 
-ACAQ5 solves both issues with the concept of strongly separated *graph components* that
+JIPipe solves both issues with the concept of strongly separated *graph components* that
 group a set of algorithms together. Components only can interact via special interface algorithms,
 making it easier to structure the pipeline.
 
@@ -46,7 +46,7 @@ Please take a look at our [graph compartment documentation](/documentation/graph
 
 # User interface overview
 
-The ACAQ5 user interface is designed around managing an *analysis project*.
+The JIPipe user interface is designed around managing an *analysis project*.
 A project contains all information to run an analysis, outside of the input data and
 can be saved into [JSON](https://www.json.org/json-en.html) files.
 The user interface is separated into three sections:

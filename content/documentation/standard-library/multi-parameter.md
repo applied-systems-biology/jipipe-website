@@ -9,9 +9,9 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-The ACAQ5 standard library comes with algorithms that can create and manage parameter sets.
+The JIPipe standard library comes with algorithms that can create and manage parameter sets.
 An algorithm called `Apply parameters` then consumes those parameters and
-applies each one to the specified algorithm. Like any ACAQ5 data, parameter sets can
+applies each one to the specified algorithm. Like any JIPipe data, parameter sets can
 be split and merged. We also provide an easy way to create a table of parameters, including
 ways to generate multiple parameter sets at once.
 

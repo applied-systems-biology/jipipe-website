@@ -9,7 +9,7 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-ACAQ5 allows the creation of extensions that contain additional algorithms without
+JIPipe allows the creation of extensions that contain additional algorithms without
 the need for writing [Java code](/documentation-java-api). We recommend starting from
 a functional pipeline project and export the whole pipeline or a part of it into a **JSON Extension**.
 Alternatively, you can create custom algorithms from scratch within the extension builder.
@@ -18,12 +18,12 @@ If you want a step-by-step guideline on how to create a custom algorithm, please
 
 # Exporting from an existing pipeline
 
-Within the ACAQ5 interface, you can find contextual menu items and buttons that allow to generate
+Within the JIPipe interface, you can find contextual menu items and buttons that allow to generate
 an exported algorithm.
 
 * To export the whole pipeline as algorithm, select `Project > Export as custom algorithm`
 * To export a graph compartment, select it and click the <img class="inline-image" src="/img/icons/export.png" /> **Export** button at the top-right corner. Then select {{< icon name="fa-cog" size="medium" >}} **As custom algorithm**
-* To export a selection of nodes, click the <img class="inline-image" src="/img/icons/export.png" /> **Export** button at the top-right corner. ACAQ5 ensures that connections within the selected nodes are exported as well.
+* To export a selection of nodes, click the <img class="inline-image" src="/img/icons/export.png" /> **Export** button at the top-right corner. JIPipe ensures that connections within the selected nodes are exported as well.
 * To export a single algorithm, click the <img class="inline-image" src="/img/icons/export.png" /> **Export** button at the top-right corner. Please note that if the algorithm is a {{< icon name="fa-cubes" size="medium" >}} **Group** algorithm, the group contents are exported instead of the group iself.
 
 This will open a tab showing a preview of the pipeline. Select <img class="inline-image" src="/img/icons/export.png" /> **Export to extension** to copy the custom algorithm into
@@ -47,8 +47,8 @@ The extension builder opens three tabs:
 
 All extension metadata can be changed from within this tab. There are only three fields that are mandatory and one where you have to put special care in deciding about the value:
 
-* **Unique extension ID** is the most important field. It contains a unique identifier that is utilized by ACAQ5 to figure out project and algorithm dependencies. It must have following format: `[Author]:[Id]` where `[Author]` contains information about the author (ideally in [Maven-compatible format](https://maven.apache.org/guides/mini/guide-naming-conventions.html)) and `[Id]` is the identifier if this extension within the author's group.
-* **Version** is not used by ACAQ5 but can be helpful for users to find issues
+* **Unique extension ID** is the most important field. It contains a unique identifier that is utilized by JIPipe to figure out project and algorithm dependencies. It must have following format: `[Author]:[Id]` where `[Author]` contains information about the author (ideally in [Maven-compatible format](https://maven.apache.org/guides/mini/guide-naming-conventions.html)) and `[Id]` is the identifier if this extension within the author's group.
+* **Version** is not used by JIPipe but can be helpful for users to find issues
 * **Name** is displayed in the plugin manager
 
 You can write anything you want into the other metadata fields or leave them out.
@@ -60,7 +60,7 @@ You can write anything you want into the other metadata fields or leave them out
 This interface allows you to manage the list of algorithms that are contained within the extension. If you want, you can also create algorithms from scratch (although we do not recommend this as
 you cannot test pipelines within the extension builder). On selecting an algorithm, you can edit its metadata.
 
-* **Algorithm ID** is the most important field. It uniquely identifies the algorithm within ACAQ5. The ID is not namespaced (meaning that it is independent of the extension ID). We recommend to choose a meaningful name that can be easily expanded for specialized algorithms.
+* **Algorithm ID** is the most important field. It uniquely identifies the algorithm within JIPipe. The ID is not namespaced (meaning that it is independent of the extension ID). We recommend to choose a meaningful name that can be easily expanded for specialized algorithms.
 * **Category** determines in which menu the algorithm is shown. Please note that if you select `DataSource`, the algorithm will be placed in a menu based on the output data type. Choosing `Internal` is not allowed.
 
 You can edit the graph that defines the algorithm's workload by clicking {{< icon name="fa-pencil" size="medium" >}} **Edit algorithm**. Use this to

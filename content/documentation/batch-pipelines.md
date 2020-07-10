@@ -1,6 +1,6 @@
 +++
 title = "Batch pipelines"
-description = "Explains basic concepts about how data is processed within ACAQ5. We really recommend to take a look at this documentation."
+description = "Explains basic concepts about how data is processed within JIPipe. We really recommend to take a look at this documentation."
 weight = 10
 type="page"
 creatordisplayname = "Ruman Gerst"
@@ -9,7 +9,7 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-ACAQ5 was designed to always process data in batches, meaning that algorithms always
+JIPipe was designed to always process data in batches, meaning that algorithms always
 work on multiple data sets at once. This greatly reduces the required work to
 upscale a processing pipeline from one or few to a large amount of data sets.
 
@@ -30,7 +30,7 @@ The exception is the algorithm that loads a user-defined file path into the pipe
 
 ![](/img/documentation/simple-pipeline.png)
 
-ACAQ5 extends on this concept by allowing input and output *slots* contain
+JIPipe extends on this concept by allowing input and output *slots* contain
 **multiple** data sets at once. And depending on the algorithm, it either processes
 each data set individually, or splits, merges, or transforms the **list** of input
 data.
@@ -51,14 +51,14 @@ The `Merge channels` algorithm merges the two image channels into one image with
 channels. If each data slot only contains one entry, finding image channels
 that belong to the same data set is trivial.
 
-For list-based data slots, like in ACAQ5, it is not trivial to find images that
+For list-based data slots, like in JIPipe, it is not trivial to find images that
 should be merged. For example, `image1_C1` and `image1_C2` should be merged to `image1_merged`:
 
 ![](/img/documentation/multi-input-pipeline.png)
 
 ## Data annotations
 
-ACAQ5 solves this issue by allowing to **annotate** each data entry (shown as purple entries). Those annotations are
+JIPipe solves this issue by allowing to **annotate** each data entry (shown as purple entries). Those annotations are
 in this case automatically extracted and used to group input data. There also can be algorithms that use the annotation information
 to for example filter or sort data.
 
@@ -66,9 +66,9 @@ to for example filter or sort data.
 
 
 There are predefined algorithms located within the `Annotate` menu that
-for example create annotations based on filenames. ACAQ5 supports an unlimited amount of annotations that can be attached to data.
+for example create annotations based on filenames. JIPipe supports an unlimited amount of annotations that can be attached to data.
 
-Following ACAQ5 pipeline provides an example of making use of annotations to
+Following JIPipe pipeline provides an example of making use of annotations to
 allow multiple inputs:
 
 ![](/img/documentation/multi-input-pipeline-example.png)

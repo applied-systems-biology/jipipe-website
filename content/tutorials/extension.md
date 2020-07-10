@@ -1,6 +1,6 @@
 +++
 title = "Creating an extension"
-description = "This step-by-step tutorial explains how to create an ACAQ5 extension from parts of an existing pipeline without the need for programming."
+description = "This step-by-step tutorial explains how to create an JIPipe extension from parts of an existing pipeline without the need for programming."
 weight = 20
 type="page"
 creatordisplayname = "Ruman Gerst"
@@ -50,7 +50,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
       <li>Group output</li>
     </ul>
     Those two nodes respectively act as input and output of the whole exported algorithm. Its input and output slots will be accessible to users of your custom algorithm.
-    ACAQ5 automatically creates matching input and output slots based on the selected algorithms, but you can choose to modify your pipeline in this step.<br/>
+    JIPipe automatically creates matching input and output slots based on the selected algorithms, but you can choose to modify your pipeline in this step.<br/>
     Now click <code>Export to extension</code> and then <code>New extension</code>.
     <div class="notices tip">
       <p>
@@ -63,8 +63,8 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
     <div class="tutorial-item-img"><img src="/img/tutorials/extension/step3.png" /></div>
     <div class="tutorial-item-content">
     <h2>4. Extension builder</h2>
-    This will open the ACAQ5 extension builder tool that allows you to package one or multiple custom algorithms into an extension. Such extensions can be just put
-    into the ImageJ plugin directory and will be automatically picked up by ACAQ5 just like any ImageJ plugin.<br/>
+    This will open the JIPipe extension builder tool that allows you to package one or multiple custom algorithms into an extension. Such extensions can be just put
+    into the ImageJ plugin directory and will be automatically picked up by JIPipe just like any ImageJ plugin.<br/>
     An extension has a set of metadata that you need to set up. To do this, switch to <code>Extension settings</code>.
     <div class="notices tip">
       <p>
@@ -77,13 +77,13 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
     <div class="tutorial-item-img"><img src="/img/tutorials/extension/step4.png" /></div>
     <div class="tutorial-item-content">
     <h2>5. Extension metadata</h2>
-    ACAQ5 utilizes a unique extension ID to identify an extension. This is the most important setting and should be chosen carefully. The format must follow a specific structure: <code>[Author]:[Extension]</code>, where <code>[Author]</code> provides information about the extension author, and <code>[Extension]</code> contains some identifier. We recommend to let the <code>[Author]</code> information follow the <a href="https://maven.apache.org/guides/mini/guide-naming-conventions.html" target="_blank">Maven naming conventions</a>.<br/>
+    JIPipe utilizes a unique extension ID to identify an extension. This is the most important setting and should be chosen carefully. The format must follow a specific structure: <code>[Author]:[Extension]</code>, where <code>[Author]</code> provides information about the extension author, and <code>[Extension]</code> contains some identifier. We recommend to let the <code>[Author]</code> information follow the <a href="https://maven.apache.org/guides/mini/guide-naming-conventions.html" target="_blank">Maven naming conventions</a>.<br/>
     All the other metadata can be freely chosen or left out (with the exception of the name). Use the other metadata to add authors (including affiliations), a website, define a license, and cite
     work your pipeline is depending on.
     <br/><br/>Finally, you can review or modify the extension contents by going to <code>Extension contents</code>.
     <div class="notices tip">
       <p>
-        Any dependency to other ACAQ5 extensions are automatically stored within any project or extension file. ACAQ5 uses this information to figure out a valid load order.
+        Any dependency to other JIPipe extensions are automatically stored within any project or extension file. JIPipe uses this information to figure out a valid load order.
       </p>
     </div>
     </div>
@@ -93,7 +93,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
     <div class="tutorial-item-content">
       <h2>6. Extension content</h2>
       Our custom algorithm is already included in the list of extension contents (left-hand side). You only need to provide metadata. The most important setting is the unique algorithm ID that is
-      used by ACAQ5 to identify your algorithm. Please choose a meaningful string that avoids having duplicate identifiers. Then you can provide a name, category, icon and menu location.
+      used by JIPipe to identify your algorithm. Please choose a meaningful string that avoids having duplicate identifiers. Then you can provide a name, category, icon and menu location.
       <div class="notices info">
         <p>
           The extension builder will warn you if an algorithm ID already exists (we will show this function later). You can choose to ignore this if a duplicate ID is intentional - this will

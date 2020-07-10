@@ -1,7 +1,7 @@
 +++
 title = "Dependency"
 weight = 30
-description = "Project or extension dependency. Refers to an ACAQ5 extension."
+description = "Project or extension dependency. Refers to an JIPipe extension."
 type="page"
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
@@ -12,12 +12,12 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 
 
 This document describes the properties of the JSON API object. You also can access
-the document in [JSON Schema](https://json-schema.org/) format: [dependency.schema.json](https://applied-systems-biology.github.io/acaq5/schemas/dependency.schema.json)
+the document in [JSON Schema](https://json-schema.org/) format: [dependency.schema.json](https://applied-systems-biology.github.io/jipipe/schemas/dependency.schema.json)
 
 <div class="panel-body">
  <section class="json-schema-description">
   <p>
-   Project or extension dependency. Refers to an ACAQ5 extension.
+   Project or extension dependency. Refers to an JIPipe extension.
   </p>
  </section>
  <section class="json-schema-properties">
@@ -99,11 +99,11 @@ the document in [JSON Schema](https://json-schema.org/) format: [dependency.sche
     "name" : "Filesystem types and algorithms",
     "description" : "Data types and algorithms for interacting with files and folders",
     "authors" : "Zoltán Cseresnyés, Ruman Gerst",
-    "website" : "https://applied-systems-biology.github.io/acaq5/",
+    "website" : "https://applied-systems-biology.github.io/jipipe/",
     "license" : "BSD-2",
     "citation" : ""
   },
-  "id" : "org.hkijena.acaq5:filesystem",
+  "id" : "org.hkijena.jipipe:filesystem",
   "version" : "1.0.0"
 }
 ```

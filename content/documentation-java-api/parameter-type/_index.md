@@ -9,7 +9,7 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-ACAQ5 requires you to register custom parameter types, where they are assigned an unique
+JIPipe requires you to register custom parameter types, where they are assigned an unique
 identifier. This is done to allow future refactoring without breaking a user's project.
 
 A custom parameter type must be JSON-serializable via the [Jackson](https://github.com/FasterXML/jackson) library.
@@ -22,9 +22,9 @@ a parameter if you require a list of it down the line. The list parameter inheri
 
 ## Creating an editor
 
-To create an editor UI, you have to inherit from [ACAQParameterEditorUI](/external/apidocs/org/hkijena/acaq5/ui/grapheditor/settings/ACAQParameterEditorUI.html).
+To create an editor UI, you have to inherit from [ACAQParameterEditorUI](/external/apidocs/org/hkijena/jipipe/ui/grapheditor/settings/ACAQParameterEditorUI.html).
 
-The UI class provides access to the [ACAQParameterHolder](/external/apidocs/org/hkijena/acaq5/api/parameters/ACAQParameterHolder.html) object and the [ACAQParameterAccess](/external/apidocs/org/hkijena/acaq5/api/parameters/ACAQParameterAccess.html) object that encapsulates the getter and setters, as well as additional annotations.
+The UI class provides access to the [ACAQParameterHolder](/external/apidocs/org/hkijena/jipipe/api/parameters/ACAQParameterHolder.html) object and the [ACAQParameterAccess](/external/apidocs/org/hkijena/jipipe/api/parameters/ACAQParameterAccess.html) object that encapsulates the getter and setters, as well as additional annotations.
 
 There is also access to the SciJava context object.
 
@@ -34,7 +34,7 @@ Please be careful to avoid infinite loops between reloading and setting paramete
 
 ## Registering a parameter
 
-Register the parameter type and its UI in [ACAQJavaExtension](/external/apidocs/org/hkijena/acaq5/ACAQJavaExtension.html):
+Register the parameter type and its UI in [ACAQJavaExtension](/external/apidocs/org/hkijena/jipipe/ACAQJavaExtension.html):
 
 ```java
 @Plugin(type = ACAQJavaExtension.class)
@@ -63,7 +63,7 @@ public class MyExtension extends ACAQDefaultJavaExtension {
 ```
 
 {{% notice warning %}}
-Do not forget to register all algorithm parameter types. ACAQ5 will throw an error if it detects a missing parameter registration.
+Do not forget to register all algorithm parameter types. JIPipe will throw an error if it detects a missing parameter registration.
 {{% /notice %}}
 {{% notice tip %}}
 There is an overload of registerParameterType that takes the matching list directly and automatically generates the ID, name, and description.
@@ -78,8 +78,8 @@ You can review your parameter UI via Tools > Development > Show all parameter ty
 
 ## Making use of the parameter registration
 
-You can use the [parameter type registry](/external/apidocs/org/hkijena/acaq5/api/registries/ACAQParameterTypeRegistry.html) to get a
-[parameter type declaration](/external/apidocs/org/hkijena/acaq5/api/parameters/ACAQParameterTypeDeclaration.html). The declaration
+You can use the [parameter type registry](/external/apidocs/org/hkijena/jipipe/api/registries/ACAQParameterTypeRegistry.html) to get a
+[parameter type declaration](/external/apidocs/org/hkijena/jipipe/api/parameters/ACAQParameterTypeDeclaration.html). The declaration
 provides access to all metadata from the registry.
 
-ACAQ5 comes preinstalled with some common Java types (String, numerics, file and folder paths). You can take a look at the [Parameters Extension package](/external/apidocs/org/hkijena/acaq5/extensions/parameters/package-summary.html) for all default parameters that are provided by ACAQ5.
+JIPipe comes preinstalled with some common Java types (String, numerics, file and folder paths). You can take a look at the [Parameters Extension package](/external/apidocs/org/hkijena/jipipe/extensions/parameters/package-summary.html) for all default parameters that are provided by JIPipe.

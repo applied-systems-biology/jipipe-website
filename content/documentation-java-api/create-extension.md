@@ -1,6 +1,6 @@
 +++
 title = "Creating an extension project"
-description = "Explains how to setup a SciJava plugin project to extend ACAQ5"
+description = "Explains how to setup a SciJava plugin project to extend JIPipe"
 weight = 20
 type="page"
 creatordisplayname = "Ruman Gerst"
@@ -32,7 +32,7 @@ Both the `java` and `resources` folder should contain a folder structure that is
 the `groupId` and `artifactId` of the project. This is done to prevent conflicts with other
 plugins.
 
-ACAQ5 is based on [SciJava](https://scijava.org) and requires libraries provided
+JIPipe is based on [SciJava](https://scijava.org) and requires libraries provided
 by the [SciJava Maven repository](https://maven.scijava.org/).
 
 Here is an example `*.pom` file that makes use of SciJava:
@@ -131,10 +131,10 @@ Here is an example `*.pom` file that makes use of SciJava:
             <groupId>org.scijava</groupId>
             <artifactId>scijava-log-slf4j</artifactId>
         </dependency>
-        <!-- ACAQ5 plugin -->
+        <!-- JIPipe plugin -->
         <dependency>
             <groupId>org.hkijena</groupId>
-            <artifactId>acaq5</artifactId>
+            <artifactId>jipipe</artifactId>
         </dependency>
     </dependencies>
 
@@ -214,12 +214,12 @@ Here is an example `*.pom` file that makes use of SciJava:
 
 # Creating an extension service
 
-ACAQ5 uses the SciJava plugin API to register Java extensions. In your project,
+JIPipe uses the SciJava plugin API to register Java extensions. In your project,
 you can create as many extensions as you want.
 
-Java extension inherit from [ACAQJavaExtension](/external/apidocs/org/hkijena/acaq5/ACAQJavaExtension.html) and require a [@Plugin](https://javadoc.scijava.org/SciJava/org/scijava/plugin/Plugin.html) annotation.
+Java extension inherit from [ACAQJavaExtension](/external/apidocs/org/hkijena/jipipe/ACAQJavaExtension.html) and require a [@Plugin](https://javadoc.scijava.org/SciJava/org/scijava/plugin/Plugin.html) annotation.
 
-We recommend to inherit from [ACAQDefaultJavaExtension](/external/apidocs/org/hkijena/acaq5/ACAQDefaultJavaExtension.html) that comes with some convenience-functions.
+We recommend to inherit from [ACAQDefaultJavaExtension](/external/apidocs/org/hkijena/jipipe/ACAQDefaultJavaExtension.html) that comes with some convenience-functions.
 
 A minimal extension can be found here:
 
@@ -241,7 +241,7 @@ public class MyExtension extends ACAQDefaultJavaExtension {
     public String getDependencyId() {
         // We recommend the following structure: <groupId>.<artifactId>:<dependencyId>
         // (!) The dependency Id should be unique for your plugin (!)
-        return "org.hkijena.acaq5:my-extension";
+        return "org.hkijena.jipipe:my-extension";
     }
 
     @Override
@@ -256,7 +256,7 @@ public class MyExtension extends ACAQDefaultJavaExtension {
 
     @Override
     public String getWebsite() {
-        return "https://applied-systems-biology.github.io/acaq5/";
+        return "https://applied-systems-biology.github.io/jipipe/";
     }
 
     @Override
@@ -266,9 +266,9 @@ public class MyExtension extends ACAQDefaultJavaExtension {
 
     @Override
     public URL getLogo() {
-        // This code loads the default ACAQ5 logo from ACAQ5 resources
+        // This code loads the default JIPipe logo from JIPipe resources
         // You can replace it with your own logo if you want
-        // Just do not use ACAQ5's ResourceUtils for this, as its always pointing to ACAQ resource directories
+        // Just do not use JIPipe's ResourceUtils for this, as its always pointing to ACAQ resource directories
         return ResourceUtils.getPluginResource("logo-400.png");
     }
 
@@ -288,7 +288,7 @@ public class MyExtension extends ACAQDefaultJavaExtension {
 
 # Testing your extension
 
-Use following code to create an ImageJ2 instance that immediately loads ACAQ5:
+Use following code to create an ImageJ2 instance that immediately loads JIPipe:
 
 ```java
 public static void main(final String... args) {

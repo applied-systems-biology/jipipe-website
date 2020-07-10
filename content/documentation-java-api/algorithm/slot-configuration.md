@@ -8,7 +8,7 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-In the previous examples, we used the [@AlgorithmInputSlot](/external/apidocs/org/hkijena/acaq5/api/algorithm/AlgorithmInputSlot.html) and [@AlgorithmOutputSlot](/external/apidocs/org/hkijena/acaq5/api/algorithm/AlgorithmOutputSlot.html) annotations with `autoCreate = true`
+In the previous examples, we used the [@AlgorithmInputSlot](/external/apidocs/org/hkijena/jipipe/api/algorithm/AlgorithmInputSlot.html) and [@AlgorithmOutputSlot](/external/apidocs/org/hkijena/jipipe/api/algorithm/AlgorithmOutputSlot.html) annotations with `autoCreate = true`
 to automatically configure the slots.
 
 This is not sufficient for more complicated algorithms that require
@@ -17,9 +17,9 @@ This is not sufficient for more complicated algorithms that require
 * Restricting the allowed data types
 * Users to add more slots or remove existing ones
 
-A custom [ACAQSlotConfiguration](/external/apidocs/org/hkijena/acaq5/api/data/ACAQSlotConfiguration.html) can be used to implement such more advanced behaviors.
+A custom [ACAQSlotConfiguration](/external/apidocs/org/hkijena/jipipe/api/data/ACAQSlotConfiguration.html) can be used to implement such more advanced behaviors.
 
-For many cases, the default implementation [ACAQMutableSlotConfiguration](/external/apidocs/org/hkijena/acaq5/api/data/ACAQMutableSlotConfiguration.html) is sufficient.
+For many cases, the default implementation [ACAQMutableSlotConfiguration](/external/apidocs/org/hkijena/jipipe/api/data/ACAQMutableSlotConfiguration.html) is sufficient.
 
 The slot configuration can be overriden during instantiation of the algorithm:
 
