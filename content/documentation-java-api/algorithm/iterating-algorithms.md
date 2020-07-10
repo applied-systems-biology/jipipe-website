@@ -8,43 +8,43 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-ACAQ data slots store multiple data rows. This means that algorithms have to
+JIPipe data slots store multiple data rows. This means that algorithms have to
 iterate their workload for each input row and generate equivalent output in the
 respective output slots.
 
-There can be issues if data from multiple input slots need to be combined (e.g. merge channels into RGB, see [user documentation](/documentation/batch-pipelines#handling-multiple-inputs)). [ACAQAlgorithm](/external/apidocs/org/hkijena/jipipe/api/algorithm/ACAQAlgorithm.html) has no capabilities to help with such cases.
+There can be issues if data from multiple input slots need to be combined (e.g. merge channels into RGB, see [user documentation](/documentation/batch-pipelines#handling-multiple-inputs)). [JIPipeAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeAlgorithm.html) has no capabilities to help with such cases.
 
-A solution can be [ACAQIteratingAlgorithm](/external/apidocs/org/hkijena/jipipe/api/algorithm/ACAQIteratingAlgorithm.html) or [ACAQSimpleIteratingAlgorithm](/external/apidocs/org/hkijena/jipipe/api/algorithm/ACAQSimpleIteratingAlgorithm.html) that use the annotation attached during processing to find data rows that belong to the same data set. The implementation creates [ACAQDataInterface](/external/apidocs/org/hkijena/jipipe/api/algorithm/ACAQDataInterface.html) instances that represent one data set iteration.
+A solution can be [JIPipeIteratingAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeIteratingAlgorithm.html) or [JIPipeSimpleIteratingAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeSimpleIteratingAlgorithm.html) that use the annotation attached during processing to find data rows that belong to the same data set. The implementation creates [JIPipeDataInterface](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeDataInterface.html) instances that represent one data set iteration.
 
 {{% notice tip %}}
-For simple algorithms, we recommend ACAQSimpleIteratingAlgorithm. It does not have the additional parameters that might confuse some users, but creates the same runIteration(...) command
-as ACAQIteratingAlgorithm. It only works for algorithms with at most one input and will generate error messages if you have more than one input.
+For simple algorithms, we recommend JIPipeSimpleIteratingAlgorithm. It does not have the additional parameters that might confuse some users, but creates the same runIteration(...) command
+as JIPipeIteratingAlgorithm. It only works for algorithms with at most one input and will generate error messages if you have more than one input.
 {{% /notice %}}
 
 {{% notice warning %}}
-Please access data via the data interface. It reads exactly one ACAQData for each input.
+Please access data via the data interface. It reads exactly one JIPipeData for each input.
 {{% /notice %}}
 
-The only difference to [ACAQAlgorithm](/external/apidocs/org/hkijena/jipipe/api/algorithm/ACAQAlgorithm.html) is that you need to override a different function called `runIteration`.
+The only difference to [JIPipeAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeAlgorithm.html) is that you need to override a different function called `runIteration`.
 
 ```java
 // Annotates documentation to the algorithm
-@ACAQDocumentation(name = "My Algorithm", description = "Does something")
+@JIPipeDocumentation(name = "My Algorithm", description = "Does something")
 
 // Sets the algorithm category
-@ACAQOrganization(algorithmCategory = ACAQAlgorithmCategory.Processor)
+@JIPipeOrganization(algorithmCategory = JIPipeAlgorithmCategory.Processor)
 
 // Input and output slots
 @AlgorithmInputSlot(value = ImagePlusData.class, slotName = "Input", autoCreate = true)
 @AlgorithmOutputSlot(value = ImagePlusData.class, slotName = "Output", autoCreate = true)
-public class MyAlgorithm extends ACAQIteratingAlgorithm {
+public class MyAlgorithm extends JIPipeIteratingAlgorithm {
 
     /*
     This is the main constructor of the algorithm.
     It contains a reference to the algorithm declaration that contains
     some important metadata
     */
-    public MyAlgorithm(ACAQAlgorithmDeclaration declaration) {
+    public MyAlgorithm(JIPipeAlgorithmDeclaration declaration) {
         super(declaration);
     }
 
@@ -66,7 +66,7 @@ public class MyAlgorithm extends ACAQIteratingAlgorithm {
     Please read and write only via the data interface.
     */
     @Override
-    public runIteration(ACAQDataInterface dataInterface, ACAQRunnerSubStatus subProgress, Consumer<ACAQRunnerSubStatus> algorithmProgress, Supplier<Boolean> isCancelled) {
+    public runIteration(JIPipeDataInterface dataInterface, JIPipeRunnerSubStatus subProgress, Consumer<JIPipeRunnerSubStatus> algorithmProgress, Supplier<Boolean> isCancelled) {
         // Run your workload here
     }
 }

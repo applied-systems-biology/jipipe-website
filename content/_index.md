@@ -36,7 +36,7 @@ to form powerful and complex pipelines that can be easily scaled up and down.
     <div>
       <h3>Macro support</h3>
       You already developed custom <i>ImageJ</i> macros?
-      ACAQ allows you to re-use your macros via a <i>Macro node</i>. Copy and paste
+      JIPipe allows you to re-use your macros via a <i>Macro node</i>. Copy and paste
       your code, and add input and output slots.
     </div>
   </div>
@@ -84,7 +84,7 @@ into *ImageJ*, or summarize and plot them directly within JIPipe.
     <div>
       <h3>Table analyzer</h3>
       You want to quickly summarize a table of measurements?
-      ACAQ comes with a tool to summarize and concatenate tables without
+      JIPipe comes with a tool to summarize and concatenate tables without
       any external tools. The tool can directly import table data generated
       by <i>ImageJ</i>.
     </div>
@@ -115,7 +115,7 @@ You can also create a hierarchy of custom data annotation types using the built-
     <div>
       <h3>Extension builder</h3>
       You want to publish your pipeline?
-      ACAQ comes with a graphical user interface to create plugins.
+      JIPipe comes with a graphical user interface to create plugins.
       You can add custom algorithms and export them as distributable <i>*.json</i> file.
       Users just have to put this file into the <i>ImageJ</i> plugins folder.
     </div>

@@ -11,22 +11,15 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 This section contains video and text tutorials for the most common tasks done with JIPipe.
 First, let's describe what JIPipe is and what it does for you.
 
-JIPipe is short for **a**lgorithm for **c**onfrontation **a**ssay **q**uantification version **5** and
-is the 5th generation of an image analysis pipeline designed for quantitative image analysis of host‐pathogen confrontation assays.
-Over the previous generations, the original tool was extended with optional modules to handle various data sets.
-We expanded the newest generation to solve following issues:
-
-1. Limited flexibility due to constraints caused by the ImageJ macro language
-2. Increasing amount of code that is solely responsible for handling various input data formats
-3. Usability problems caused by different branching algorithms and handling of their parameters
-
-The 5th generation ACAQ tool solves the issues by:
+JIPipe is short for **J**ava **I**mage **P**rocessing **Pipe**line and provides a graphical programming language
+to design batch image processing pipelines, while solving some of the scalability issues that arise with other
+graphical programming languages.
 
 1. Introducing a powerful extension system that can integrate image analysis algorithms without losing usability
 2. Introduction of powerful filesystem handling that can be adapted to any data organization
 3. A powerful, yet easy-to-understand graphical programming language that was designed from the get-go for flexible scaling, and assisting the user as much as possible
 
-# Why ACAQ?
+# Why JIPipe?
 
 JIPipe is a user-friendly alternative to ImageJ macro or script programming that brings following benefits to you:
 

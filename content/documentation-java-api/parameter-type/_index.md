@@ -22,9 +22,9 @@ a parameter if you require a list of it down the line. The list parameter inheri
 
 ## Creating an editor
 
-To create an editor UI, you have to inherit from [ACAQParameterEditorUI](/external/apidocs/org/hkijena/jipipe/ui/grapheditor/settings/ACAQParameterEditorUI.html).
+To create an editor UI, you have to inherit from [JIPipeParameterEditorUI](/apidocs/org/hkijena/jipipe/ui/grapheditor/settings/JIPipeParameterEditorUI.html).
 
-The UI class provides access to the [ACAQParameterHolder](/external/apidocs/org/hkijena/jipipe/api/parameters/ACAQParameterHolder.html) object and the [ACAQParameterAccess](/external/apidocs/org/hkijena/jipipe/api/parameters/ACAQParameterAccess.html) object that encapsulates the getter and setters, as well as additional annotations.
+The UI class provides access to the [JIPipeParameterHolder](/apidocs/org/hkijena/jipipe/api/parameters/JIPipeParameterHolder.html) object and the [JIPipeParameterAccess](/apidocs/org/hkijena/jipipe/api/parameters/JIPipeParameterAccess.html) object that encapsulates the getter and setters, as well as additional annotations.
 
 There is also access to the SciJava context object.
 
@@ -34,11 +34,11 @@ Please be careful to avoid infinite loops between reloading and setting paramete
 
 ## Registering a parameter
 
-Register the parameter type and its UI in [ACAQJavaExtension](/external/apidocs/org/hkijena/jipipe/ACAQJavaExtension.html):
+Register the parameter type and its UI in [JIPipeJavaExtension](/apidocs/org/hkijena/jipipe/JIPipeJavaExtension.html):
 
 ```java
-@Plugin(type = ACAQJavaExtension.class)
-public class MyExtension extends ACAQDefaultJavaExtension {
+@Plugin(type = JIPipeJavaExtension.class)
+public class MyExtension extends JIPipeDefaultJavaExtension {
 
     // ... See previous tutorial for other methods
     @Override
@@ -78,8 +78,8 @@ You can review your parameter UI via Tools > Development > Show all parameter ty
 
 ## Making use of the parameter registration
 
-You can use the [parameter type registry](/external/apidocs/org/hkijena/jipipe/api/registries/ACAQParameterTypeRegistry.html) to get a
-[parameter type declaration](/external/apidocs/org/hkijena/jipipe/api/parameters/ACAQParameterTypeDeclaration.html). The declaration
+You can use the [parameter type registry](/apidocs/org/hkijena/jipipe/api/registries/JIPipeParameterTypeRegistry.html) to get a
+[parameter type declaration](/apidocs/org/hkijena/jipipe/api/parameters/JIPipeParameterTypeDeclaration.html). The declaration
 provides access to all metadata from the registry.
 
-JIPipe comes preinstalled with some common Java types (String, numerics, file and folder paths). You can take a look at the [Parameters Extension package](/external/apidocs/org/hkijena/jipipe/extensions/parameters/package-summary.html) for all default parameters that are provided by JIPipe.
+JIPipe comes preinstalled with some common Java types (String, numerics, file and folder paths). You can take a look at the [Parameters Extension package](/apidocs/org/hkijena/jipipe/extensions/parameters/package-summary.html) for all default parameters that are provided by JIPipe.

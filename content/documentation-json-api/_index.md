@@ -8,7 +8,7 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-This section is about the ACAQ JSON API that includes the API for creating JSON extensions,
+This section is about the JIPipe JSON API that includes the API for creating JSON extensions,
 but also other data types like a project.
 
 <center>

@@ -3,7 +3,7 @@
     "$id": "https://applied-systems-biology.github.io/jipipe/schemas/metadata.schema.json",
     "type": "object",
     "title": "Metadata",
-    "description": "Commonly used metadata type in ACAQ.",
+    "description": "Commonly used metadata type in JIPipe.",
     "required": [
         "name",
         "description",

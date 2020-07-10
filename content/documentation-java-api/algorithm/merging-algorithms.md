@@ -10,32 +10,32 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 
 You might need to develop an algorithm that does not simply iterate through its input(s),
 but organize it into groups to be merged.
-JIPipe comes with [ACAQMergingAlgorithm](/external/apidocs/org/hkijena/jipipe/api/algorithm/ACAQMergingAlgorithm.html) that uses the annotation attached during processing to find data rows that belong to the same data set. The implementation creates [ACAQMultiDataInterface](/external/apidocs/org/hkijena/jipipe/api/algorithm/ACAQMultiDataInterface.html) instances that represent multiple data rows merged into one group.
+JIPipe comes with [JIPipeMergingAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeMergingAlgorithm.html) that uses the annotation attached during processing to find data rows that belong to the same data set. The implementation creates [JIPipeMultiDataInterface](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeMultiDataInterface.html) instances that represent multiple data rows merged into one group.
 
 {{% notice warning %}}
 Please access data via the data interface.
 {{% /notice %}}
 
-The only difference to [ACAQAlgorithm](/external/apidocs/org/hkijena/jipipe/api/algorithm/ACAQAlgorithm.html) is that you need to override a different function called `runIteration`.
+The only difference to [JIPipeAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeAlgorithm.html) is that you need to override a different function called `runIteration`.
 
 ```java
 // Annotates documentation to the algorithm
-@ACAQDocumentation(name = "My Algorithm", description = "Does something")
+@JIPipeDocumentation(name = "My Algorithm", description = "Does something")
 
 // Sets the algorithm category
-@ACAQOrganization(algorithmCategory = ACAQAlgorithmCategory.Processor)
+@JIPipeOrganization(algorithmCategory = JIPipeAlgorithmCategory.Processor)
 
 // Input and output slots
 @AlgorithmInputSlot(value = ImagePlusData.class, slotName = "Input", autoCreate = true)
 @AlgorithmOutputSlot(value = ImagePlusData.class, slotName = "Output", autoCreate = true)
-public class MyAlgorithm extends ACAQIteratingAlgorithm {
+public class MyAlgorithm extends JIPipeIteratingAlgorithm {
 
     /*
     This is the main constructor of the algorithm.
     It contains a reference to the algorithm declaration that contains
     some important metadata
     */
-    public MyAlgorithm(ACAQAlgorithmDeclaration declaration) {
+    public MyAlgorithm(JIPipeAlgorithmDeclaration declaration) {
         super(declaration);
     }
 
@@ -57,7 +57,7 @@ public class MyAlgorithm extends ACAQIteratingAlgorithm {
     Please read and write only via the data interface.
     */
     @Override
-    public runIteration(ACAQMultiDataInterface dataInterface, ACAQRunnerSubStatus subProgress, Consumer<ACAQRunnerSubStatus> algorithmProgress, Supplier<Boolean> isCancelled) {
+    public runIteration(JIPipeMultiDataInterface dataInterface, JIPipeRunnerSubStatus subProgress, Consumer<JIPipeRunnerSubStatus> algorithmProgress, Supplier<Boolean> isCancelled) {
         // Run your workload here
     }
 }

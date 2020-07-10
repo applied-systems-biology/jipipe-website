@@ -1,7 +1,7 @@
 +++
 title = "Metadata"
 weight = 70
-description = "Commonly used metadata type in ACAQ."
+description = "Commonly used metadata type in JIPipe."
 type="page"
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
@@ -17,7 +17,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [metadata.schema
 <div class="panel-body">
  <section class="json-schema-description">
   <p>
-   Commonly used metadata type in ACAQ.
+   Commonly used metadata type in JIPipe.
   </p>
  </section>
  <section class="json-schema-properties">

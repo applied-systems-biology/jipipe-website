@@ -9,34 +9,43 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-All algorithms inherit from [ACAQAlgorithm](/external/apidocs/org/hkijena/jipipe/api/algorithm/ACAQAlgorithm.html). An algorithm consists of following parts:
+All algorithms inherit from [JIPipeAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeAlgorithm.html). An algorithm consists of following parts:
 
 * A `run()` function that runs the workload
-* A reference to an [algorithm declaration](/external/apidocs/org/hkijena/jipipe/api/algorithm/ACAQAlgorithmDeclaration.html) that describes the general properties of the algorithm
-* A [slot configuration](/external/apidocs/org/hkijena/jipipe/api/data/ACAQSlotConfiguration.html) that describes which slots the algorithm should have
+* A reference to an [algorithm declaration](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeAlgorithmDeclaration.html) that describes the general properties of the algorithm
+* A [slot configuration](/apidocs/org/hkijena/jipipe/api/data/JIPipeSlotConfiguration.html) that describes which slots the algorithm should have
 
-For developing algorithms in Java, you can either directly inherit from [ACAQAlgorithm](/external/apidocs/org/hkijena/jipipe/api/algorithm/ACAQAlgorithm.html) or inherit from [ACAQIteratingAlgorithm](/external/apidocs/org/hkijena/jipipe/api/algorithm/ACAQIteratingAlgorithm.html).
+JIPipe comes with different base algorithms that provide different feature sets:
+
+| Algorithm type                                                                                              | Purpose                                                                                                                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [JIPipeAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeAlgorithm.html)                           | The base class of all algorithms. It provides no included functionality outside of absolutely necessary ones.                                                                                                                   |
+| [JIPipeParameterSlotAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeParameterSlotAlgorithm.html) | This algorithm allows users to run multiple parameter sets by optionally enabling an additional slot `Parameters`.                                                                                                              |
+| [JIPipeSimpleIteratingAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeAlgorithm.html)            | A JIPipeParameterSlotAlgorithm that has one input slot and iterates over the input rows.                                                                                                                                        |
+| [JIPipeIteratingAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeIteratingAlgorithm.html)         | A JIPipeParameterSlotAlgorithm that can have multiple input slots and match annotations of the input data to create data batches.                                                                                               |
+| [JIPipeMergingAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeMergingAlgorithm.html)             | A JIPipeParameterSlotAlgorithm that can have multiple input slots and match annotations of the input data to create data batches. The difference to JIPipeIteratingAlgorithm is that a batch can have duplicate items per slot. |
+
 
 Any algorithm should have the following basic structure:
 
 ```java
 // Annotates documentation to the algorithm
-@ACAQDocumentation(name = "My Algorithm", description = "Does something")
+@JIPipeDocumentation(name = "My Algorithm", description = "Does something")
 
 // Sets the algorithm category
-@ACAQOrganization(algorithmCategory = ACAQAlgorithmCategory.Processor)
+@JIPipeOrganization(algorithmCategory = JIPipeAlgorithmCategory.Processor)
 
 // Input and output slots autoCreate automatically creates the slots if set to true and no slot configuration was provided
 @AlgorithmInputSlot(value = ImagePlusData.class, slotName = "Input", autoCreate = true)
 @AlgorithmOutputSlot(value = ImagePlusData.class, slotName = "Output", autoCreate = true)
-public class MyAlgorithm extends ACAQAlgorithm {
+public class MyAlgorithm extends JIPipeAlgorithm {
 
     /*
     This is the main constructor of the algorithm.
     It contains a reference to the algorithm declaration that contains
     some important metadata
     */
-    public MyAlgorithm(ACAQAlgorithmDeclaration declaration) {
+    public MyAlgorithm(JIPipeAlgorithmDeclaration declaration) {
         super(declaration);
     }
 
@@ -56,17 +65,17 @@ public class MyAlgorithm extends ACAQAlgorithm {
     You can also query if the user requested cancellation
     */
     @Override
-    public run(ACAQRunnerSubStatus subProgress, Consumer<ACAQRunnerSubStatus> algorithmProgress, Supplier<Boolean> isCancelled) {
+    public run(JIPipeRunnerSubStatus subProgress, Consumer<JIPipeRunnerSubStatus> algorithmProgress, Supplier<Boolean> isCancelled) {
         // Run your workload here
     }
 }
 ```
 
-To register the algorithm and provide it with an Id, use [ACAQJavaExtension](/external/apidocs/org/hkijena/jipipe/ACAQJavaExtension.html):
+To register the algorithm and provide it with an Id, use [JIPipeJavaExtension](/apidocs/org/hkijena/jipipe/JIPipeJavaExtension.html):
 
 ```java
-@Plugin(type = ACAQJavaExtension.class)
-public class MyExtension extends ACAQDefaultJavaExtension {
+@Plugin(type = JIPipeJavaExtension.class)
+public class MyExtension extends JIPipeDefaultJavaExtension {
 
     // ... See previous tutorial for other methods
     @Override

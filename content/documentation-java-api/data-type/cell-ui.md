@@ -11,10 +11,10 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 For some data types, it is more convenient to display a short summary or the whole data
 directly within the corresponding cell in result data slot table.
 
-To create such a cell renderer, inherit from [ACAQResultDataSlotCellUI](http://localhost:1313/jipipe/external/apidocs/org/hkijena/jipipe/ui/resultanalysis/ACAQResultDataSlotCellUI.html)
+To create such a cell renderer, inherit from [JIPipeResultDataSlotCellUI](http://localhost:1313/jipipe/apidocs/org/hkijena/jipipe/ui/resultanalysis/JIPipeResultDataSlotCellUI.html)
 
 ```java
-public class MyDataSlotCellUI extends ACAQResultDataSlotCellUI {
+public class MyDataSlotCellUI extends JIPipeResultDataSlotCellUI {
 
     public MyDataSlotCellUI() {
         setOpaque(true);
@@ -22,17 +22,17 @@ public class MyDataSlotCellUI extends ACAQResultDataSlotCellUI {
     }
 
     // This is very similar as in MyDataDataSlotRowUI
-    private Path findJsonFile(ACAQDataSlot slot, ACAQExportedDataTable.Row row) {
-        if (ACAQResultDataSlotCellUI.getRowStorageFolder(slot, row) != null && Files.isDirectory(getRowStorageFolder())) {
+    private Path findJsonFile(JIPipeDataSlot slot, JIPipeExportedDataTable.Row row) {
+        if (JIPipeResultDataSlotCellUI.getRowStorageFolder(slot, row) != null && Files.isDirectory(getRowStorageFolder())) {
             return PathUtils.findFileByExtensionIn(getRowStorageFolder(), ".json");
         }
         return null;
     }
 
     @Override
-    public void render(ACAQProjectWorkbench workbenchUI, ACAQDataSlot slot, ACAQExportedDataTable.Row row) {
+    public void render(JIPipeProjectWorkbench workbenchUI, JIPipeDataSlot slot, JIPipeExportedDataTable.Row row) {
         // Set the icon
-        setIcon(ACAQUIDatatypeRegistry.getInstance().getIconFor(slot.getAcceptedDataType()));
+        setIcon(JIPipeUIDatatypeRegistry.getInstance().getIconFor(slot.getAcceptedDataType()));
         Path jsonFile = findListFile(slot, row);
         if (jsonFile != null) {
             MyData data = MyData.fromJson(jsonFile);

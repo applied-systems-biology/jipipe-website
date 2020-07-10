@@ -21,4 +21,4 @@ The software is Open Source and licensed under [BSD-2-Clause](https://opensource
 
 You can find a documentation of the Java API here:
 
-<button class="btn btn-info" type="button" onclick="location.href='/external/apidocs/index.html'"> Open JavaDocs</button>
+<button class="btn btn-info" type="button" onclick="location.href='/apidocs/index.html'"> Open JavaDocs</button>

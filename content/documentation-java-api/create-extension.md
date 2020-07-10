@@ -131,19 +131,29 @@ Here is an example `*.pom` file that makes use of SciJava:
             <groupId>org.scijava</groupId>
             <artifactId>scijava-log-slf4j</artifactId>
         </dependency>
-        <!-- JIPipe plugin -->
+        <!-- JIPipe core library -->
         <dependency>
             <groupId>org.hkijena</groupId>
-            <artifactId>jipipe</artifactId>
+            <artifactId>jipipe-core</artifactId>
+        </dependency>
+        <!-- Tables, plots, etc. -->
+        <dependency>
+            <groupId>org.hkijena</groupId>
+            <artifactId>jipipe-algorithms</artifactId>
+        </dependency>
+        <!-- ImageJ integration -->
+        <dependency>
+            <groupId>org.hkijena</groupId>
+            <artifactId>jipipe-ij</artifactId>
         </dependency>
     </dependencies>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <license.licenseName>BSD-2-Clause</license.licenseName>
+        <license.licenseName><!-- Please insert a value --></license.licenseName>
         <license.copyrightOwners>N/A</license.copyrightOwners>
-        <license.projectName>MISA ImageJ</license.projectName>
+        <license.projectName><!-- Please insert a value --></license.projectName>
     </properties>
 
     <build>
@@ -217,15 +227,15 @@ Here is an example `*.pom` file that makes use of SciJava:
 JIPipe uses the SciJava plugin API to register Java extensions. In your project,
 you can create as many extensions as you want.
 
-Java extension inherit from [ACAQJavaExtension](/external/apidocs/org/hkijena/jipipe/ACAQJavaExtension.html) and require a [@Plugin](https://javadoc.scijava.org/SciJava/org/scijava/plugin/Plugin.html) annotation.
+Java extension inherit from [JIPipeJavaExtension](/apidocs/org/hkijena/jipipe/JIPipeJavaExtension.html) and require a [@Plugin](https://javadoc.scijava.org/SciJava/org/scijava/plugin/Plugin.html) annotation.
 
-We recommend to inherit from [ACAQDefaultJavaExtension](/external/apidocs/org/hkijena/jipipe/ACAQDefaultJavaExtension.html) that comes with some convenience-functions.
+We recommend to inherit from [JIPipeDefaultJavaExtension](/apidocs/org/hkijena/jipipe/JIPipeDefaultJavaExtension.html) that comes with some convenience-functions.
 
 A minimal extension can be found here:
 
 ```java
-@Plugin(type = ACAQJavaExtension.class)
-public class MyExtension extends ACAQDefaultJavaExtension {
+@Plugin(type = JIPipeJavaExtension.class)
+public class MyExtension extends JIPipeDefaultJavaExtension {
 
     @Override
     public String getName() {
@@ -268,7 +278,7 @@ public class MyExtension extends ACAQDefaultJavaExtension {
     public URL getLogo() {
         // This code loads the default JIPipe logo from JIPipe resources
         // You can replace it with your own logo if you want
-        // Just do not use JIPipe's ResourceUtils for this, as its always pointing to ACAQ resource directories
+        // Just do not use JIPipe's ResourceUtils for this, as its always pointing to JIPipe resource directories
         return ResourceUtils.getPluginResource("logo-400.png");
     }
 
@@ -293,7 +303,7 @@ Use following code to create an ImageJ2 instance that immediately loads JIPipe:
 ```java
 public static void main(final String... args) {
     final ImageJ ij = new ImageJ();
-    ij.ui().showUI();
-    ij.command().run(ACAQGUICommand.class, true);
+    ij.ui().showUI(); // If your ImageJ freezes, you can leave this out. JIPipe will show anyways.
+    ij.command().run(JIPipeGUICommand.class, true);
 }
 ```

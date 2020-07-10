@@ -91,7 +91,7 @@ In a group, you can use the {{< icon name="fa-add" size="medium" >}} **Add param
 </div>
 <div class="notices info">
   <p>
-    Each parameter can only be referenced once. You will get a warning if you have duplicate references. If you ignore the warning, ACAQ will just skip them when creating the parameter UI.
+    Each parameter can only be referenced once. You will get a warning if you have duplicate references. If you ignore the warning, JIPipe will just skip them when creating the parameter UI.
   </p>
 </div>
 <div class="notices info">

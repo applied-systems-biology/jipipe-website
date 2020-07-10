@@ -12,12 +12,12 @@ The current version of JIPipe supports parallelization via a fixed thread pool.
 Parallelization is done on an **per-algorithm-level**, meaning that
 the algorithms are responsible for providing parallelization capabilities.
 
-The included base algorithms [ACAQIteratingAlgorithm](/external/apidocs/org/hkijena/jipipe/api/algorithm/ACAQIteratingAlgorithm.html), [ACAQSimpleIteratingAlgorithm](/external/apidocs/org/hkijena/jipipe/api/algorithm/ACAQSimpleIteratingAlgorithm.html), and [ACAQMergingAlgorithm](/external/apidocs/org/hkijena/jipipe/api/algorithm/ACAQMergingAlgorithm.html)
+The included base algorithms [JIPipeIteratingAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeIteratingAlgorithm.html), [JIPipeSimpleIteratingAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeSimpleIteratingAlgorithm.html), and [JIPipeMergingAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeMergingAlgorithm.html)
 already come with support for parallelization that **has to be manually enabled via code**.
-The inherit from [ACAQParallelizedAlgorithm](/external/apidocs/org/hkijena/jipipe/api/algorithm/ACAQParallelizedAlgorithm.html) and
+The inherit from [JIPipeParallelizedAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeParallelizedAlgorithm.html) and
 completely apply parallelization automatically.
 
-# Automated parallelization (ACAQParallelizedAlgorithm)
+# Automated parallelization (JIPipeParallelizedAlgorithm)
 
 The automated parallelization is controlled by three factors:
 
@@ -36,7 +36,7 @@ for their own parallelization. To ensure that only as many threads as the user s
 to this value.
 
 ```java
-public class MyAlgorithm extends ACAQIteratingAlgorithm {
+public class MyAlgorithm extends JIPipeIteratingAlgorithm {
 
   /*
   Enable parallelization. By default false.
@@ -60,7 +60,7 @@ public class MyAlgorithm extends ACAQIteratingAlgorithm {
 # Manual parallelization
 
 You can choose to do your own parallelization (leave `isParallelizationEnabled()` to return `false`).
-Each `ACAQAlgorithm` object has a method `getThreadPool()` that returns the thread pool assigned to the current run.
+Each `JIPipeAlgorithm` object has a method `getThreadPool()` that returns the thread pool assigned to the current run.
 Please note that this thread pool can be null.
 
 The thread pool provides methods to schedule workloads. If the number of threads is set to 1, the thread pool

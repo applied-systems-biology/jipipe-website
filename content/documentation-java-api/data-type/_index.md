@@ -9,9 +9,9 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-Custom JIPipe data types must inherit from [ACAQData](/external/apidocs/org/hkijena/jipipe/api/data/ACAQData.html). It is required to add an [@ACAQDocumentation](/external/apidocs/org/hkijena/jipipe/api/ACAQDocumentation.html) annotation that provides a name and brief description of the data type.
+Custom JIPipe data types must inherit from [JIPipeData](/apidocs/org/hkijena/jipipe/api/data/JIPipeData.html). It is required to add an [@JIPipeDocumentation](/apidocs/org/hkijena/jipipe/api/JIPipeDocumentation.html) annotation that provides a name and brief description of the data type.
 
-ACAQ requires that data can be saved to a folder within the output directory. We also
+JIPipe requires that data can be saved to a folder within the output directory. We also
 recommend that you include code that can load the data back into JIPipe or ImageJ in some form.
 
 There are no requirements on the constructor of the data type.
@@ -21,7 +21,7 @@ The name parameter in `storageFilePath` is usually the data slot name and can be
 
 
 ```java
-public class MyData implements ACAQData {
+public class MyData implements JIPipeData {
     String value;
 
     public MyData() {
@@ -44,7 +44,7 @@ public class MyData implements ACAQData {
 
     // This should return a deep copy
     @Override
-    public ACAQData duplicate() {
+    public JIPipeData duplicate() {
         return new MyData(value);
     }
 
@@ -72,14 +72,14 @@ public class MyData implements ACAQData {
 ```
 
 {{% notice tip %}}
-You can use ACAQ's JsonUtils class to get access to a Jackson JSON ObjectMapper.
+You can use JIPipe's JsonUtils class to get access to a Jackson JSON ObjectMapper.
 {{% /notice %}}
 
-To register the data type and provide it with an id, and icon, use [ACAQJavaExtension](/external/apidocs/org/hkijena/jipipe/ACAQJavaExtension.html):
+To register the data type and provide it with an id, and icon, use [JIPipeJavaExtension](/apidocs/org/hkijena/jipipe/JIPipeJavaExtension.html):
 
 ```java
-@Plugin(type = ACAQJavaExtension.class)
-public class MyExtension extends ACAQDefaultJavaExtension {
+@Plugin(type = JIPipeJavaExtension.class)
+public class MyExtension extends JIPipeDefaultJavaExtension {
 
     // ... See previous tutorial for other methods
     @Override

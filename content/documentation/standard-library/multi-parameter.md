@@ -9,15 +9,13 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-The JIPipe standard library comes with algorithms that can create and manage parameter sets.
-An algorithm called `Apply parameters` then consumes those parameters and
-applies each one to the specified algorithm. Like any JIPipe data, parameter sets can
-be split and merged. We also provide an easy way to create a table of parameters, including
-ways to generate multiple parameter sets at once.
+Most algorithms allow handling of multiple parameters via an additional slot that can be optionally enabled.
+You can find the setting in an algorithm's settings as `Multiple parameters`.
+On selecting the item, a new slot will appear that consumes parameter data.
 
 ![Multi-parameter algorithm](/img/documentation/multi-parameters.png)
 
-The parameter data types can be found in `Add data > Parameters`. There are currently two
+To define parameters, use the algorithms found in  `Add data > Parameters`. There are currently two
 data source algorithms available:
 
 1. **Define parameter** defines a single set of parameters
@@ -29,10 +27,17 @@ Use Process > Merge > Merge slots to merge multiple parameter sets.
 
 # Defining parameters
 
-Independent of the data source, you have to select which kind of algorithm the parameters should be generated for.
-If you are defining a single parameter, you can just input the parameters directly.
+Both data sources require you to determine which parameters should be created.
+To do this, add parameters into the `Parameters` section (red box).
 
-If you are defining multiple parameters at once, create or generate additional rows.
+For `Define multiple parameters`, there is an additional element (blue box)
+that contains a parameter table. Each row represents a parameter set, while a column
+represents a parameter type. Columns can be added by adding parameters into the `Parameters` section.
+
+{{% notice tip %}}
+You can leave the table empty. In this case, the parameters are extracted from the 'Parameters' section.
+{{% /notice %}}
+
 Select a table cell to open the parameter editor below the table.
 
 There are following buttons available:
@@ -42,19 +47,3 @@ There are following buttons available:
 * **Replace cells** allows you to replace the selected cells in one column with a set of generated parameters
 
 ![Multi-parameter algorithm](/img/documentation/multi-parameter-definition.png)
-
-# Applying parameters
-
-The `Apply parameters` algorithm wrap around another algorithm and executes it with each parameter set.
-It comes with a set of standard parameters that are used if a parameter is not defined by an incoming parameter data.
-
-Just connect the input and output slots as usual.
-
-{{% notice info %}}
-Parameter data does not store the information about which algorithm it is intended for, meaning that you can mix and match parameters.
-Parameters that are not existing in the selected algorithm are ignored by the 'Apply parameters' node.
-Just be sure that the parameter data types match - otherwise this can cause crashes or unexpected behavior.
-{{% /notice %}}
-{{% notice info %}}
-Some algorithms have complicated data slot rules that might not work with the 'Apply parameters' node.
-{{% /notice %}}

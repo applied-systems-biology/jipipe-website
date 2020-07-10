@@ -15,21 +15,21 @@ the data needs to be loaded from its output folder after processing.
 An user interface is shown when a user select a row in the results table.
 This UI can be replaced with a custom one that is designed to handle this specific data type.
 
-Such UIs inherit from [ACAQResultDataSlotRowUI](/external/apidocs/org/hkijena/jipipe/ui/resultanalysis/ACAQResultDataSlotRowUI.html), which is a panel that has access to
+Such UIs inherit from [JIPipeResultDataSlotRowUI](/apidocs/org/hkijena/jipipe/ui/resultanalysis/JIPipeResultDataSlotRowUI.html), which is a panel that has access to
 
 * the data location
 * the annotation of this data row
 * the project workbench UI
 
-We recommend to inherit from [ACAQDefaultResultDataSlotRowUI](/external/apidocs/org/hkijena/jipipe/ui/resultanalysis/ACAQDefaultResultDataSlotRowUI.html) that allows to inherit actions
+We recommend to inherit from [JIPipeDefaultResultDataSlotRowUI](/apidocs/org/hkijena/jipipe/ui/resultanalysis/JIPipeDefaultResultDataSlotRowUI.html) that allows to inherit actions
 from inherited data types.
 
-[ACAQDefaultResultDataSlotRowUI](/external/apidocs/org/hkijena/jipipe/ui/resultanalysis/ACAQDefaultResultDataSlotRowUI.html) requires you to register actions with a name, description and function. The action that was added last is shown in the main UI and triggered by double-clicking the data row in the table. All other actions are put into the `...` menu.
+[JIPipeDefaultResultDataSlotRowUI](/apidocs/org/hkijena/jipipe/ui/resultanalysis/JIPipeDefaultResultDataSlotRowUI.html) requires you to register actions with a name, description and function. The action that was added last is shown in the main UI and triggered by double-clicking the data row in the table. All other actions are put into the `...` menu.
 
 ```java
-public class MyDataDataSlotRowUI extends ACAQDefaultResultDataSlotRowUI {
+public class MyDataDataSlotRowUI extends JIPipeDefaultResultDataSlotRowUI {
 
-    public MyDataDataSlotRowUI(ACAQProjectWorkbench workbenchUI, ACAQDataSlot slot, ACAQExportedDataTable.Row row) {
+    public MyDataDataSlotRowUI(JIPipeProjectWorkbench workbenchUI, JIPipeDataSlot slot, JIPipeExportedDataTable.Row row) {
         super(workbenchUI, slot, row);
     }
 
@@ -58,11 +58,11 @@ public class MyDataDataSlotRowUI extends ACAQDefaultResultDataSlotRowUI {
 }
 ```
 
-The UI class can be directly registered in [ACAQJavaExtension](/external/apidocs/org/hkijena/jipipe/ACAQJavaExtension.html):
+The UI class can be directly registered in [JIPipeJavaExtension](/apidocs/org/hkijena/jipipe/JIPipeJavaExtension.html):
 
 ```java
-@Plugin(type = ACAQJavaExtension.class)
-public class MyExtension extends ACAQDefaultJavaExtension {
+@Plugin(type = JIPipeJavaExtension.class)
+public class MyExtension extends JIPipeDefaultJavaExtension {
 
     // ... See previous tutorial for other methods
     @Override
