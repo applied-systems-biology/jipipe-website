@@ -20,7 +20,7 @@ org.hkijena.jipipe.extensions
 org.hkijena.jipipe.extensions.annotation
 org.hkijena.jipipe.extensions.annotation.algorithms
 org.hkijena.jipipe.extensions.annotation.datasources
-org.hkijena.jipipe.extensions.annotation.datatypes
+org.hkijena.jipipe.extensions.core
 org.hkijena.jipipe.extensions.filesystem
 org.hkijena.jipipe.extensions.filesystem.algorithms
 org.hkijena.jipipe.extensions.filesystem.compat
@@ -101,6 +101,7 @@ org.hkijena.jipipe.extensions.python
 org.hkijena.jipipe.extensions.settings
 org.hkijena.jipipe.extensions.tables
 org.hkijena.jipipe.extensions.tables.algorithms
+org.hkijena.jipipe.extensions.tables.datatypes
 org.hkijena.jipipe.extensions.tables.operations.converting
 org.hkijena.jipipe.extensions.tables.operations.integrating
 org.hkijena.jipipe.extensions.tables.parameters
