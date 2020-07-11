@@ -10,7 +10,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 
 You might need to develop an algorithm that does not simply iterate through its input(s),
 but organize it into groups to be merged.
-JIPipe comes with [JIPipeMergingAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeMergingAlgorithm.html) that uses the annotation attached during processing to find data rows that belong to the same data set. The implementation creates [JIPipeMultiDataInterface](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeMultiDataInterface.html) instances that represent multiple data rows merged into one group.
+JIPipe comes with [JIPipeMergingAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeMergingAlgorithm.html) that uses the annotation attached during processing to find data rows that belong to the same data set. The implementation creates [JIPipeMergingDataBatch](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeMergingDataBatch.html) instances that represent multiple data rows merged into one group.
 
 {{% notice warning %}}
 Please access data via the data interface.
@@ -28,7 +28,7 @@ The only difference to [JIPipeAlgorithm](/apidocs/org/hkijena/jipipe/api/algorit
 // Input and output slots
 @AlgorithmInputSlot(value = ImagePlusData.class, slotName = "Input", autoCreate = true)
 @AlgorithmOutputSlot(value = ImagePlusData.class, slotName = "Output", autoCreate = true)
-public class MyAlgorithm extends JIPipeIteratingAlgorithm {
+public class MyAlgorithm extends JIPipeMergingAlgorithm {
 
     /*
     This is the main constructor of the algorithm.
@@ -57,7 +57,7 @@ public class MyAlgorithm extends JIPipeIteratingAlgorithm {
     Please read and write only via the data interface.
     */
     @Override
-    public runIteration(JIPipeMultiDataInterface dataInterface, JIPipeRunnerSubStatus subProgress, Consumer<JIPipeRunnerSubStatus> algorithmProgress, Supplier<Boolean> isCancelled) {
+    public runIteration(JIPipeMergingDataBatch dataInterface, JIPipeRunnerSubStatus subProgress, Consumer<JIPipeRunnerSubStatus> algorithmProgress, Supplier<Boolean> isCancelled) {
         // Run your workload here
     }
 }

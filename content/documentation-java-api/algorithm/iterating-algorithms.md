@@ -14,7 +14,7 @@ respective output slots.
 
 There can be issues if data from multiple input slots need to be combined (e.g. merge channels into RGB, see [user documentation](/documentation/batch-pipelines#handling-multiple-inputs)). [JIPipeAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeAlgorithm.html) has no capabilities to help with such cases.
 
-A solution can be [JIPipeIteratingAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeIteratingAlgorithm.html) or [JIPipeSimpleIteratingAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeSimpleIteratingAlgorithm.html) that use the annotation attached during processing to find data rows that belong to the same data set. The implementation creates [JIPipeDataInterface](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeDataInterface.html) instances that represent one data set iteration.
+A solution can be [JIPipeIteratingAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeIteratingAlgorithm.html) or [JIPipeSimpleIteratingAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeSimpleIteratingAlgorithm.html) that use the annotation attached during processing to find data rows that belong to the same data set. The implementation creates [JIPipeDataBatch](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeDataBatch.html) instances that represent one data set iteration.
 
 {{% notice tip %}}
 For simple algorithms, we recommend JIPipeSimpleIteratingAlgorithm. It does not have the additional parameters that might confuse some users, but creates the same runIteration(...) command
@@ -66,7 +66,7 @@ public class MyAlgorithm extends JIPipeIteratingAlgorithm {
     Please read and write only via the data interface.
     */
     @Override
-    public runIteration(JIPipeDataInterface dataInterface, JIPipeRunnerSubStatus subProgress, Consumer<JIPipeRunnerSubStatus> algorithmProgress, Supplier<Boolean> isCancelled) {
+    public runIteration(JIPipeDataBatch dataInterface, JIPipeRunnerSubStatus subProgress, Consumer<JIPipeRunnerSubStatus> algorithmProgress, Supplier<Boolean> isCancelled) {
         // Run your workload here
     }
 }
