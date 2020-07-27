@@ -1,5 +1,5 @@
 +++
-title = "Algorithm graph"
+title = "Graph"
 weight = 50
 description = "A graph"
 type="page"
@@ -45,8 +45,8 @@ the document in [JSON Schema](https://json-schema.org/) format: [graph.schema.js
      <section class="json-schema-additionalProperties">
       <span class="json-property-type">
        <span class="json-property-type">
-        <a class="json-schema-ref" href="../algorithm-node">
-         See algorithm-node
+        <a class="json-schema-ref" href="https://applied-systems-biology.github.io/jipipe/documentation-json-api/graph-node">
+         See graph-node
         </a>
        </span>
        <span class="json-property-range" title="Value limits">
@@ -74,7 +74,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [graph.schema.js
     <div class="json-inner-schema">
      <section class="json-schema-array-items">
       <span class="json-property-type">
-       <a class="json-schema-ref" href="../graph-edge">
+       <a class="json-schema-ref" href="https://applied-systems-biology.github.io/jipipe/documentation-json-api/graph-edge">
         See graph-edge
        </a>
       </span>
@@ -88,6 +88,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [graph.schema.js
   </dl>
  </section>
 </div>
+
 
 # Example
 

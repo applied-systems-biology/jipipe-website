@@ -22,15 +22,14 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
     <div class="tutorial-item-img"><img src="/img/tutorials/extension/step1.png" /></div>
     <div class="tutorial-item-content">
     <h2>2. Selecting the algorithms</h2>
-    Please select the following algorithms (you can either do this by holding the <code>Shift</code> keyboard button and clicking the nodes or right-clicking them
-    and selecting <code>Add to selection</code>):
+    Please select the following algorithms (you can either do this by holding the <code>Shift</code> keyboard button and clicking the nodes or dragging a selection around the nodes):
     <ul>
       <li>Folder list</li>
       <li>Path to annotation</li>
       <li>List files</li>
-      <li>Import 2D image (greyscale)</li>
+      <li>Import image</li>
     </ul>
-    After selecting the algorithms, click the <strong>Export</strong> button on the top-right corner.
+    After selecting the algorithms, right-click a selected node and click <strong>Export</strong>.
     <div class="notices info">
       <p>
         Selecting one or multiple algorithms is only <strong>one</strong> way to create a custom algorithm. You can also export a whole project compartment (via the <code>Compartments</code> tab) or

@@ -61,4 +61,4 @@ Double-click a row to execute the default action, which is the one most commonly
 {{% /notice %}}
 
 
-<p><video src="/img/documentation/result-analysis-navigation.webm" controls loop/></p>
+<!-- <p><video src="/img/documentation/result-analysis-navigation.webm" controls loop/></p> -->

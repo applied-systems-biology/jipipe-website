@@ -17,7 +17,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm.schem
 <div class="panel-body">
  <section class="json-schema-description">
   <p>
-   Defines a new algorithm
+   Defines a new node type
   </p>
  </section>
  <section class="json-schema-properties">
@@ -46,7 +46,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm.schem
      metadata:
     </span>
     <span class="json-property-type">
-     <a class="json-schema-ref" href="/documentation-json-api/metadata">
+     <a class="json-schema-ref" href="https://applied-systems-biology.github.io/jipipe/documentation-json-api/metadata">
       See metadata
      </a>
     </span>
@@ -69,52 +69,24 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm.schem
     <span class="json-property-type">
      string
     </span>
-    <span class="json-property-enum" title="Possible values">
-     , x ∈ {
-     <span class="json-property-enum-item">
-      Converter
-     </span>
-     ,
-     <span class="json-property-enum-item">
-      Processor
-     </span>
-     ,
-     <span class="json-property-enum-item">
-      Analysis
-     </span>
-     ,
-     <span class="json-property-enum-item">
-      DataSource
-     </span>
-     ,
-     <span class="json-property-enum-item">
-      FileSystem
-     </span>
-     ,
-     <span class="json-property-enum-item">
-      Annotation
-     </span>
-     ,
-     <span class="json-property-enum-item">
-      Miscellaneous
-     </span>
-     }
-    </span>
     <span class="json-property-range" title="Value limits">
+    </span>
+    <span class="json-property-default-value">
+     org.hkijena.jipipe:miscellaneous
     </span>
     <span class="json-property-required">
     </span>
    </dt>
    <dd>
     <p>
-     An algorithm category
+     The category
     </p>
     <div class="json-inner-schema">
     </div>
    </dd>
-   <dt data-property-name="parameter-visibilities">
+   <dt data-property-name="exported-parameters">
     <span class="json-property-name">
-     parameter-visibilities:
+     exported-parameters:
     </span>
     <span class="json-property-type">
      object
@@ -124,51 +96,12 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm.schem
     <span class="json-property-default-value">
      [object Object]
     </span>
-    <span class="json-property-required">
-    </span>
    </dt>
    <dd>
     <p>
-     Determines which parameters are visible to the user
+     List of parameters that will be exported to users of the node
     </p>
     <div class="json-inner-schema">
-     <section class="json-schema-properties">
-      <dl>
-       <dt data-property-name="visible-keys">
-        <span class="json-property-name">
-         visible-keys:
-        </span>
-        <span class="json-property-type">
-         string[]
-        </span>
-        <span class="json-property-range" title="Value limits">
-        </span>
-        <span class="json-property-required">
-        </span>
-       </dt>
-       <dd>
-        <p>
-         Determines the parameter keys that are visible
-        </p>
-        <div class="json-inner-schema">
-         <section class="json-schema-array-items">
-          <span class="json-property-type">
-           string
-          </span>
-          <span class="json-property-range" title="Value limits">
-          </span>
-          <div class="json-inner-schema">
-           <section class="json-schema-description">
-            <p>
-             Consists of [Algorithm instance ID]/[Parameter key in algorithm]
-            </p>
-           </section>
-          </div>
-         </section>
-        </div>
-       </dd>
-      </dl>
-     </section>
     </div>
    </dd>
    <dt data-property-name="graph">
@@ -176,7 +109,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm.schem
      graph:
     </span>
     <span class="json-property-type">
-     <a class="json-schema-ref" href="/documentation-json-api/graph">
+     <a class="json-schema-ref" href="https://applied-systems-biology.github.io/jipipe/documentation-json-api/graph">
       See graph
      </a>
     </span>
@@ -224,7 +157,6 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm.schem
       graph-wrapper-algorithm
      </span>
      (default)
-
                                                 }
     </span>
     <span class="json-property-range" title="Value limits">
@@ -242,6 +174,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm.schem
   </dl>
  </section>
 </div>
+
 
 
 # Example

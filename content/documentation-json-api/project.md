@@ -35,7 +35,6 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
       project
      </span>
      (default)
-
                                                 }
     </span>
     <span class="json-property-range" title="Value limits">
@@ -55,7 +54,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
      metadata:
     </span>
     <span class="json-property-type">
-     <a class="json-schema-ref" href="../metadata">
+     <a class="json-schema-ref" href="https://applied-systems-biology.github.io/jipipe/documentation-json-api/metadata">
       See metadata
      </a>
     </span>
@@ -93,7 +92,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
     <div class="json-inner-schema">
      <section class="json-schema-array-items">
       <span class="json-property-type">
-       <a class="json-schema-ref" href="../dependency">
+       <a class="json-schema-ref" href="https://applied-systems-biology.github.io/jipipe/documentation-json-api/dependency">
         See dependency
        </a>
       </span>
@@ -104,12 +103,12 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
      </section>
     </div>
    </dd>
-   <dt data-property-name="algorithm-graph">
+   <dt data-property-name="graph">
     <span class="json-property-name">
-     algorithm-graph:
+     graph:
     </span>
     <span class="json-property-type">
-     <a class="json-schema-ref" href="../graph">
+     <a class="json-schema-ref" href="https://applied-systems-biology.github.io/jipipe/documentation-json-api/graph">
       See graph
      </a>
     </span>
@@ -123,7 +122,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
    </dt>
    <dd>
     <p>
-     Contains the algorithms
+     Contains the pipeline nodes
     </p>
     <div class="json-inner-schema">
     </div>
@@ -155,7 +154,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
          compartment-graph:
         </span>
         <span class="json-property-type">
-         <a class="json-schema-ref" href="../graph">
+         <a class="json-schema-ref" href="https://applied-systems-biology.github.io/jipipe/documentation-json-api/graph">
           See graph
          </a>
         </span>
@@ -182,463 +181,744 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
  </section>
 </div>
 
+
 # Example
 
 ```json
 {
   "jipipe:project-type" : "project",
   "metadata" : {
-    "name" : "New project",
-    "description" : "An JIPipe project",
-    "authors" : "",
+    "name" : "Empty (3 compartments)",
+    "description" : "This template contains three compartments 'Preprocessing', 'Analysis', and 'Postprocessing' that are connected to each other.",
+    "authors" : [ ],
     "website" : "",
     "license" : "",
     "citation" : ""
   },
   "dependencies" : [ {
     "metadata" : {
-      "name" : "Image property annotations",
-      "description" : "Commonly used annotations for describing image properties",
-      "authors" : "Zoltán Cseresnyés, Ruman Gerst",
+      "name" : "Standard plots",
+      "description" : "Commonly used plot types",
+      "authors" : [ {
+        "first-name" : "Zoltán",
+        "last-name" : "Cseresnyés",
+        "affiliations" : "Applied Systems Biology, Leibniz Institute for Natural Product Research and Infection Biology – Hans-Knöll-Institute, Jena, Germany"
+      }, {
+        "first-name" : "Ruman",
+        "last-name" : "Gerst",
+        "affiliations" : "Applied Systems Biology, Leibniz Institute for Natural Product Research and Infection Biology – Hans-Knöll-Institute, Jena, Germany\nFaculty of Biological Sciences, Friedrich-Schiller-University Jena, Germany"
+      } ],
       "website" : "https://applied-systems-biology.github.io/jipipe/",
-      "license" : "BSD-2",
+      "license" : "BSD 2-Clause",
       "citation" : ""
     },
-    "id" : "org.hkijena.jipipe:image-traits",
+    "id" : "org.hkijena.jipipe:plots",
+    "version" : "1.0.0"
+  }, {
+    "metadata" : {
+      "name" : "ImageJ algorithms",
+      "description" : "Integrates ImageJ algorithms into JIPipe",
+      "authors" : [ {
+        "first-name" : "Zoltán",
+        "last-name" : "Cseresnyés",
+        "affiliations" : "Applied Systems Biology, Leibniz Institute for Natural Product Research and Infection Biology – Hans-Knöll-Institute, Jena, Germany"
+      }, {
+        "first-name" : "Ruman",
+        "last-name" : "Gerst",
+        "affiliations" : "Applied Systems Biology, Leibniz Institute for Natural Product Research and Infection Biology – Hans-Knöll-Institute, Jena, Germany\nFaculty of Biological Sciences, Friedrich-Schiller-University Jena, Germany"
+      } ],
+      "website" : "https://applied-systems-biology.github.io/jipipe/",
+      "license" : "BSD 2-Clause",
+      "citation" : ""
+    },
+    "id" : "org.hkijena.jipipe:imagej-algorithms",
     "version" : "1.0.0"
   }, {
     "metadata" : {
       "name" : "Filesystem types and algorithms",
       "description" : "Data types and algorithms for interacting with files and folders",
-      "authors" : "Zoltán Cseresnyés, Ruman Gerst",
+      "authors" : [ {
+        "first-name" : "Zoltán",
+        "last-name" : "Cseresnyés",
+        "affiliations" : "Applied Systems Biology, Leibniz Institute for Natural Product Research and Infection Biology – Hans-Knöll-Institute, Jena, Germany"
+      }, {
+        "first-name" : "Ruman",
+        "last-name" : "Gerst",
+        "affiliations" : "Applied Systems Biology, Leibniz Institute for Natural Product Research and Infection Biology – Hans-Knöll-Institute, Jena, Germany\nFaculty of Biological Sciences, Friedrich-Schiller-University Jena, Germany"
+      } ],
       "website" : "https://applied-systems-biology.github.io/jipipe/",
-      "license" : "BSD-2",
+      "license" : "BSD 2-Clause",
       "citation" : ""
     },
     "id" : "org.hkijena.jipipe:filesystem",
     "version" : "1.0.0"
   }, {
     "metadata" : {
-      "name" : "Project management annotations",
-      "description" : "An JIPipe project",
-      "authors" : "Zoltán Cseresnyés, Ruman Gerst",
+      "name" : "Compartment management",
+      "description" : "Data types required for graph compartment management",
+      "authors" : [ {
+        "first-name" : "Zoltán",
+        "last-name" : "Cseresnyés",
+        "affiliations" : "Applied Systems Biology, Leibniz Institute for Natural Product Research and Infection Biology – Hans-Knöll-Institute, Jena, Germany"
+      }, {
+        "first-name" : "Ruman",
+        "last-name" : "Gerst",
+        "affiliations" : "Applied Systems Biology, Leibniz Institute for Natural Product Research and Infection Biology – Hans-Knöll-Institute, Jena, Germany\nFaculty of Biological Sciences, Friedrich-Schiller-University Jena, Germany"
+      } ],
       "website" : "https://applied-systems-biology.github.io/jipipe/",
-      "license" : "BSD-2",
+      "license" : "BSD 2-Clause",
       "citation" : ""
     },
-    "id" : "org.hkijena.jipipe:project-management-traits",
-    "version" : "1.0.0"
-  }, {
-    "metadata" : {
-      "name" : "Bioimage analysis annotations",
-      "description" : "Commonly used annotations for biological image analysis",
-      "authors" : "Zoltán Cseresnyés, Ruman Gerst",
-      "website" : "https://applied-systems-biology.github.io/jipipe/",
-      "license" : "BSD-2",
-      "citation" : ""
-    },
-    "id" : "org.hkijena.jipipe:bioobjects-traits",
+    "id" : "org.hkijena.jipipe:compartments",
     "version" : "1.0.0"
   }, {
     "metadata" : {
       "name" : "ImageJ integration",
       "description" : "Adds support for commonly used ImageJ data types",
-      "authors" : "Zoltán Cseresnyés, Ruman Gerst",
+      "authors" : [ {
+        "first-name" : "Zoltán",
+        "last-name" : "Cseresnyés",
+        "affiliations" : "Applied Systems Biology, Leibniz Institute for Natural Product Research and Infection Biology – Hans-Knöll-Institute, Jena, Germany"
+      }, {
+        "first-name" : "Ruman",
+        "last-name" : "Gerst",
+        "affiliations" : "Applied Systems Biology, Leibniz Institute for Natural Product Research and Infection Biology – Hans-Knöll-Institute, Jena, Germany\nFaculty of Biological Sciences, Friedrich-Schiller-University Jena, Germany"
+      } ],
       "website" : "https://applied-systems-biology.github.io/jipipe/",
-      "license" : "BSD-2",
+      "license" : "BSD 2-Clause",
       "citation" : ""
     },
     "id" : "org.hkijena.jipipe:imagej-integration",
     "version" : "1.0.0"
-  }, {
-    "metadata" : {
-      "name" : "Compartment management",
-      "description" : "Data types required for graph compartment management",
-      "authors" : "Zoltán Cseresnyés, Ruman Gerst",
-      "website" : "https://applied-systems-biology.github.io/jipipe/",
-      "license" : "BSD-2",
-      "citation" : ""
-    },
-    "id" : "org.hkijena.jipipe:compartments",
-    "version" : "1.0.0"
   } ],
-  "algorithm-graph" : {
+  "additional-metadata" : {
+    "pipeline-parameters" : {
+      "jipipe:type" : "org.hkijena.jipipe.ui.settings.JIPipeProjectInfoParameters",
+      "exported-parameters" : {
+        "parameter-reference-groups" : [ ]
+      }
+    },
+    "org.hkijena.jipipe:pipeline-parameters" : {
+      "jipipe:type" : "org.hkijena.jipipe.ui.settings.JIPipeProjectInfoParameters",
+      "exported-parameters" : {
+        "parameter-reference-groups" : [ ]
+      }
+    },
+    "org.hkijena.jipipe.ui:project-tabs" : {
+      "jipipe:type" : "org.hkijena.jipipe.ui.project.JIPipeProjectTabMetadata",
+      "data" : {
+        "open-tabs" : [ "singleton:INTRODUCTION", "singleton:COMPARTMENT_EDITOR", "graph-compartment:preprocessing", "graph-compartment:analysis", "graph-compartment:postprocessing" ],
+        "selected-tab" : null
+      }
+    }
+  },
+  "graph" : {
     "nodes" : {
-      "default-preprocessing-preprocessing-output" : {
-        "jipipe:slot-configuration" : {
-          "Spores" : {
-            "slot-data-type" : "imagej-imgplus-2d-greyscale",
-            "slot-type" : "Input",
-            "inherited-slot" : null,
-            "name" : "Spores",
-            "custom-name" : null,
-            "inheritance-conversions" : { }
-          },
-          "Output Spores" : {
-            "slot-data-type" : "imagej-imgplus-2d-greyscale",
-            "slot-type" : "Output",
-            "inherited-slot" : null,
-            "name" : "Output Spores",
-            "custom-name" : null,
-            "inheritance-conversions" : { }
-          }
-        },
+      "preprocessing-folder-list" : {
+        "jipipe:slot-configuration" : { },
         "jipipe:algorithm-ui-location" : {
-          "default-preprocessing" : {
-            "x" : 2900,
-            "y" : 100
-          },
-          "default-analysis" : {
-            "x" : 200,
-            "y" : 100
-          },
-          "default-preprocessing{Vertical}" : {
-            "x" : 25,
-            "y" : 1050
-          },
-          "default-preprocessing{Horizontal}" : {
-            "x" : 2825,
-            "y" : 50
+          "preprocessing" : {
+            "Vertical" : {
+              "x" : 400,
+              "y" : 300
+            }
           }
         },
-        "jipipe:algorithm-type" : "jipipe:compartment-output",
-        "jipipe:algorithm-compartment" : "default-preprocessing",
-        "name" : "Preprocessing output",
-        "description" : null,
-        "jipipe:trait-generation" : {
-          "modification" : {
-            "per-slot" : { },
-            "global" : { }
-          },
-          "transfer" : {
-            "transfers" : [ ],
-            "transfer-all-to-all" : true
-          }
-        },
-        "jipipe:dynamic-parameters" : { }
+        "jipipe:node-info-id" : "import-folder-list",
+        "jipipe:algorithm-compartment" : "preprocessing",
+        "jipipe:algorithm:save-outputs" : true,
+        "jipipe:algorithm:enabled" : true,
+        "folder-paths" : [ "ATTC_IµL_3rdReplicate-Experiment-5516", "ATTC_IµL_3rdReplicate-Experiment-5517", "ATTC_IµL_3rdReplicate-Experiment-5518" ],
+        "jipipe:algorithm:pass-through" : false,
+        "jipipe:node:name" : "Folder list",
+        "jipipe:node:description" : null
       },
-      "default-preprocessing-folder-list" : {
-        "jipipe:slot-configuration" : {
-          "Folder paths" : {
-            "slot-data-type" : "folder",
-            "slot-type" : "Output",
-            "inherited-slot" : null,
-            "name" : "Folder paths",
-            "custom-name" : null,
-            "inheritance-conversions" : { }
-          }
-        },
+      "preprocessing-path-to-annotation" : {
+        "jipipe:slot-configuration" : { },
         "jipipe:algorithm-ui-location" : {
-          "default-preprocessing" : {
-            "x" : 100,
-            "y" : 100
-          },
-          "default-preprocessing{Vertical}" : {
-            "x" : 25,
-            "y" : 50
-          },
-          "default-preprocessing{Horizontal}" : {
-            "x" : 25,
-            "y" : 50
+          "preprocessing" : {
+            "Vertical" : {
+              "x" : 400,
+              "y" : 500
+            }
           }
         },
-        "jipipe:algorithm-type" : "import-folder-list",
-        "jipipe:algorithm-compartment" : "default-preprocessing",
-        "folder-paths" : [ "ATTC_IµL_3rdReplicate-Experiment-5518", "ATTC_IµL_3rdReplicate-Experiment-5517", "ATTC_IµL_3rdReplicate-Experiment-5516" ],
-        "name" : "Folder list",
-        "description" : null,
-        "jipipe:trait-generation" : {
-          "modification" : {
-            "per-slot" : { },
-            "global" : { }
-          },
-          "transfer" : {
-            "transfers" : [ ],
-            "transfer-all-to-all" : true
-          }
-        },
-        "jipipe:dynamic-parameters" : { }
+        "jipipe:node-info-id" : "path-to-annotation-simple",
+        "jipipe:algorithm-compartment" : "preprocessing",
+        "annotation-merge-strategy" : "OverwriteExisting",
+        "remove-extensions" : true,
+        "jipipe:algorithm:save-outputs" : true,
+        "jipipe:algorithm:enabled" : true,
+        "jipipe:parallelization:enabled" : true,
+        "generated-annotation" : "Dataset",
+        "full-path" : false,
+        "jipipe:algorithm:pass-through" : false,
+        "jipipe:node:name" : "Path to annotation",
+        "jipipe:node:description" : null,
+        "jipipe:parameter-slot-algorithm/has-parameter-slot" : false,
+        "jipipe:parameter-slot-algorithm/attach-parameter-annotations" : true,
+        "jipipe:parameter-slot-algorithm/attach-only-non-default-parameter-annotations" : true,
+        "jipipe:parameter-slot-algorithm/parameter-annotations-prefix" : "",
+        "jipipe:parameter-slot-algorithm/parameter-annotations-use-internal-names" : false
       },
-      "default-preprocessing-subfolders" : {
-        "jipipe:slot-configuration" : {
-          "Folders" : {
-            "slot-data-type" : "folder",
-            "slot-type" : "Input",
-            "inherited-slot" : null,
-            "name" : "Folders",
-            "custom-name" : null,
-            "inheritance-conversions" : { }
-          },
-          "Subfolders" : {
-            "slot-data-type" : "folder",
-            "slot-type" : "Output",
-            "inherited-slot" : null,
-            "name" : "Subfolders",
-            "custom-name" : null,
-            "inheritance-conversions" : { }
-          }
-        },
+      "preprocessing-list-files" : {
+        "jipipe:slot-configuration" : { },
         "jipipe:algorithm-ui-location" : {
-          "default-preprocessing" : {
-            "x" : 1150,
-            "y" : 100
-          },
-          "default-preprocessing{Vertical}" : {
-            "x" : 25,
-            "y" : 450
-          },
-          "default-preprocessing{Horizontal}" : {
-            "x" : 1075,
-            "y" : 50
+          "preprocessing" : {
+            "Vertical" : {
+              "x" : 425,
+              "y" : 700
+            }
           }
         },
-        "jipipe:algorithm-type" : "folder-navigate-subfolders",
-        "jipipe:algorithm-compartment" : "default-preprocessing",
-        "name" : "Subfolders",
+        "jipipe:node-info-id" : "folder-list-files",
+        "jipipe:algorithm-compartment" : "preprocessing",
+        "jipipe:algorithm:save-outputs" : true,
+        "jipipe:algorithm:enabled" : true,
+        "jipipe:parallelization:enabled" : true,
         "subfolder" : "in",
-        "description" : null,
-        "jipipe:trait-generation" : {
-          "modification" : {
-            "per-slot" : { },
-            "global" : { }
-          },
-          "transfer" : {
-            "transfers" : [ ],
-            "transfer-all-to-all" : true
-          }
-        },
-        "jipipe:dynamic-parameters" : { }
-      },
-      "default-preprocessing-list-and-filter-files" : {
-        "jipipe:slot-configuration" : {
-          "Folders" : {
-            "slot-data-type" : "folder",
-            "slot-type" : "Input",
-            "inherited-slot" : null,
-            "name" : "Folders",
-            "custom-name" : null,
-            "inheritance-conversions" : { }
-          },
-          "Filtered files" : {
-            "slot-data-type" : "file",
-            "slot-type" : "Output",
-            "inherited-slot" : null,
-            "name" : "Filtered files",
-            "custom-name" : null,
-            "inheritance-conversions" : { }
-          }
-        },
-        "jipipe:algorithm-ui-location" : {
-          "default-preprocessing" : {
-            "x" : 1700,
-            "y" : 100
-          },
-          "default-preprocessing{Vertical}" : {
-            "x" : 25,
-            "y" : 650
-          },
-          "default-preprocessing{Horizontal}" : {
-            "x" : 1625,
-            "y" : 50
-          }
-        },
-        "jipipe:algorithm-type" : "list-and-filter-files",
-        "jipipe:algorithm-compartment" : "default-preprocessing",
-        "name" : "List and filter files",
-        "default-preprocessing-filter-files/filters" : [ {
+        "recursive-follows-links" : true,
+        "filters" : [ {
           "mode" : "Glob",
-          "filterString" : "*.tif"
+          "filter-string" : "*.tif",
+          "invert" : false
         } ],
-        "description" : null,
-        "jipipe:trait-generation" : {
-          "modification" : {
-            "per-slot" : { },
-            "global" : { }
-          },
-          "transfer" : {
-            "transfers" : [ ],
-            "transfer-all-to-all" : true
-          }
-        },
-        "jipipe:dynamic-parameters" : { }
+        "only-filenames" : true,
+        "jipipe:algorithm:pass-through" : false,
+        "recursive" : false,
+        "jipipe:node:name" : "List files",
+        "jipipe:node:description" : null,
+        "jipipe:parameter-slot-algorithm/has-parameter-slot" : false,
+        "jipipe:parameter-slot-algorithm/attach-parameter-annotations" : true,
+        "jipipe:parameter-slot-algorithm/attach-only-non-default-parameter-annotations" : true,
+        "jipipe:parameter-slot-algorithm/parameter-annotations-prefix" : "",
+        "jipipe:parameter-slot-algorithm/parameter-annotations-use-internal-names" : false
       },
-      "default-preprocessing-import-2d-image-(greyscale)" : {
-        "jipipe:slot-configuration" : {
-          "Files" : {
-            "slot-data-type" : "file",
-            "slot-type" : "Input",
-            "inherited-slot" : null,
-            "name" : "Files",
-            "custom-name" : null,
-            "inheritance-conversions" : { }
-          },
-          "Image" : {
-            "slot-data-type" : "imagej-imgplus-2d-greyscale",
-            "slot-type" : "Output",
-            "inherited-slot" : null,
-            "name" : "Image",
-            "custom-name" : null,
-            "inheritance-conversions" : { }
-          }
-        },
+      "preprocessing-import-image" : {
+        "jipipe:slot-configuration" : { },
         "jipipe:algorithm-ui-location" : {
-          "default-preprocessing" : {
-            "x" : 2275,
-            "y" : 100
-          },
-          "default-preprocessing{Vertical}" : {
-            "x" : 25,
-            "y" : 850
-          },
-          "default-preprocessing{Horizontal}" : {
-            "x" : 2200,
-            "y" : 50
+          "preprocessing" : {
+            "Vertical" : {
+              "x" : 425,
+              "y" : 900
+            }
           }
         },
-        "jipipe:algorithm-type" : "imagej-imgplus-2d-greyscale-from-file",
-        "jipipe:algorithm-compartment" : "default-preprocessing",
-        "name" : "Import 2D image (greyscale)",
-        "description" : null,
-        "jipipe:trait-generation" : {
-          "modification" : {
-            "per-slot" : {
-              "Image" : {
-                "image-quality-brightness-uniform" : "Add",
-                "bioobject-morphology-round" : "Add",
-                "bioobject-preparations-labeling-uniform" : "Add"
-              }
-            },
-            "global" : { }
-          },
-          "transfer" : {
-            "transfers" : [ ],
-            "transfer-all-to-all" : true
-          }
+        "jipipe:node-info-id" : "import-imagej-imgplus-from-file",
+        "jipipe:algorithm-compartment" : "preprocessing",
+        "jipipe:algorithm:save-outputs" : true,
+        "generated-image-type" : "imagej-imgplus",
+        "title-annotation" : {
+          "content" : "Image title",
+          "enabled" : false
         },
-        "jipipe:dynamic-parameters" : { }
+        "jipipe:algorithm:enabled" : true,
+        "jipipe:parallelization:enabled" : true,
+        "jipipe:algorithm:pass-through" : false,
+        "jipipe:node:name" : "Import image",
+        "jipipe:node:description" : null,
+        "jipipe:parameter-slot-algorithm/has-parameter-slot" : false,
+        "jipipe:parameter-slot-algorithm/attach-parameter-annotations" : true,
+        "jipipe:parameter-slot-algorithm/attach-only-non-default-parameter-annotations" : true,
+        "jipipe:parameter-slot-algorithm/parameter-annotations-prefix" : "",
+        "jipipe:parameter-slot-algorithm/parameter-annotations-use-internal-names" : false
       },
-      "default-preprocessing-folders-to-annotations" : {
+      "preprocessing-preprocessing-output" : {
         "jipipe:slot-configuration" : {
-          "Folders" : {
-            "slot-data-type" : "folder",
-            "slot-type" : "Input",
-            "inherited-slot" : null,
-            "name" : "Folders",
-            "custom-name" : null,
-            "inheritance-conversions" : { }
-          },
-          "Annotated folders" : {
-            "slot-data-type" : "folder",
-            "slot-type" : "Output",
-            "inherited-slot" : null,
-            "name" : "Annotated folders",
-            "custom-name" : null,
-            "inheritance-conversions" : { }
-          }
-        },
-        "jipipe:algorithm-ui-location" : {
-          "default-preprocessing" : {
-            "x" : 525,
-            "y" : 100
-          },
-          "default-preprocessing{Vertical}" : {
-            "x" : 25,
-            "y" : 250
-          },
-          "default-preprocessing{Horizontal}" : {
-            "x" : 450,
-            "y" : 50
-          }
-        },
-        "jipipe:algorithm-type" : "folder-annotate-by-name",
-        "jipipe:algorithm-compartment" : "default-preprocessing",
-        "generated-annotation" : "project-sample",
-        "name" : "Folders to annotations",
-        "description" : null,
-        "jipipe:trait-generation" : {
-          "modification" : {
-            "per-slot" : { },
-            "global" : {
-              "project-sample" : "Add"
+          "input" : {
+            "Data" : {
+              "slot-data-type" : "imagej-imgplus-2d-greyscale",
+              "slot-type" : "Input",
+              "inherited-slot" : null,
+              "name" : "Data",
+              "custom-name" : null,
+              "inheritance-conversions" : { }
             }
           },
-          "transfer" : {
-            "transfers" : [ ],
-            "transfer-all-to-all" : true
+          "output" : {
+            "Data" : {
+              "slot-data-type" : "imagej-imgplus-2d-greyscale",
+              "slot-type" : "Output",
+              "inherited-slot" : null,
+              "name" : "Data",
+              "custom-name" : null,
+              "inheritance-conversions" : { }
+            }
           }
         },
-        "jipipe:dynamic-parameters" : { }
+        "jipipe:algorithm-ui-location" : {
+          "preprocessing" : {
+            "Vertical" : {
+              "x" : 425,
+              "y" : 1100
+            }
+          },
+          "analysis" : {
+            "Vertical" : {
+              "x" : 100,
+              "y" : 50
+            }
+          }
+        },
+        "jipipe:node-info-id" : "jipipe:compartment-output",
+        "jipipe:algorithm-compartment" : "preprocessing",
+        "jipipe:algorithm:save-outputs" : true,
+        "jipipe:algorithm:enabled" : true,
+        "jipipe:algorithm:pass-through" : false,
+        "jipipe:node:name" : "Preprocessing output",
+        "jipipe:node:description" : null
+      },
+      "analysis-gaussian-blur-2d" : {
+        "jipipe:slot-configuration" : { },
+        "jipipe:algorithm-ui-location" : {
+          "analysis" : {
+            "Vertical" : {
+              "x" : 100,
+              "y" : 250
+            }
+          }
+        },
+        "jipipe:node-info-id" : "ij1-blur-gaussian2d",
+        "jipipe:algorithm-compartment" : "analysis",
+        "jipipe:algorithm:save-outputs" : true,
+        "jipipe:algorithm:enabled" : true,
+        "jipipe:parallelization:enabled" : true,
+        "sigma-y" : -1.0,
+        "sigma-x" : 1.0,
+        "jipipe:algorithm:pass-through" : false,
+        "jipipe:node:name" : "Gaussian blur 2D",
+        "jipipe:node:description" : null,
+        "jipipe:parameter-slot-algorithm/has-parameter-slot" : false,
+        "jipipe:parameter-slot-algorithm/attach-parameter-annotations" : true,
+        "jipipe:parameter-slot-algorithm/attach-only-non-default-parameter-annotations" : true,
+        "jipipe:parameter-slot-algorithm/parameter-annotations-prefix" : "",
+        "jipipe:parameter-slot-algorithm/parameter-annotations-use-internal-names" : false
+      },
+      "analysis-auto-threshold-2d" : {
+        "jipipe:slot-configuration" : { },
+        "jipipe:algorithm-ui-location" : {
+          "analysis" : {
+            "Vertical" : {
+              "x" : 100,
+              "y" : 450
+            }
+          }
+        },
+        "jipipe:node-info-id" : "ij1-threshold-auto2d",
+        "jipipe:algorithm-compartment" : "analysis",
+        "jipipe:algorithm:save-outputs" : true,
+        "jipipe:algorithm:enabled" : true,
+        "method" : "Default",
+        "jipipe:parallelization:enabled" : true,
+        "dark-background" : true,
+        "jipipe:algorithm:pass-through" : false,
+        "jipipe:node:name" : "Auto threshold 2D",
+        "jipipe:node:description" : null,
+        "jipipe:parameter-slot-algorithm/has-parameter-slot" : false,
+        "jipipe:parameter-slot-algorithm/attach-parameter-annotations" : true,
+        "jipipe:parameter-slot-algorithm/attach-only-non-default-parameter-annotations" : true,
+        "jipipe:parameter-slot-algorithm/parameter-annotations-prefix" : "",
+        "jipipe:parameter-slot-algorithm/parameter-annotations-use-internal-names" : false
+      },
+      "analysis-distance-transform-watershed-2d" : {
+        "jipipe:slot-configuration" : { },
+        "jipipe:algorithm-ui-location" : {
+          "analysis" : {
+            "Vertical" : {
+              "x" : 100,
+              "y" : 650
+            }
+          }
+        },
+        "jipipe:node-info-id" : "ij1-binary-dtwatershed2d",
+        "jipipe:algorithm-compartment" : "analysis",
+        "jipipe:algorithm:save-outputs" : true,
+        "jipipe:algorithm:enabled" : true,
+        "jipipe:parallelization:enabled" : true,
+        "jipipe:algorithm:pass-through" : false,
+        "jipipe:node:name" : "Distance transform watershed 2D",
+        "jipipe:node:description" : null,
+        "jipipe:parameter-slot-algorithm/has-parameter-slot" : false,
+        "jipipe:parameter-slot-algorithm/attach-parameter-annotations" : true,
+        "jipipe:parameter-slot-algorithm/attach-only-non-default-parameter-annotations" : true,
+        "jipipe:parameter-slot-algorithm/parameter-annotations-prefix" : "",
+        "jipipe:parameter-slot-algorithm/parameter-annotations-use-internal-names" : false
+      },
+      "analysis-find-particles-2d" : {
+        "jipipe:slot-configuration" : { },
+        "jipipe:algorithm-ui-location" : {
+          "analysis" : {
+            "Vertical" : {
+              "x" : 100,
+              "y" : 850
+            }
+          }
+        },
+        "jipipe:node-info-id" : "ij1-analyze-find-particles2d",
+        "jipipe:algorithm-compartment" : "analysis",
+        "min-particle-circularity" : 0.0,
+        "jipipe:algorithm:enabled" : true,
+        "jipipe:parallelization:enabled" : true,
+        "jipipe:algorithm:pass-through" : false,
+        "jipipe:node:name" : "Find particles 2D",
+        "jipipe:node:description" : null,
+        "min-particle-size" : 0.0,
+        "jipipe:algorithm:save-outputs" : true,
+        "annotation-type" : {
+          "content" : "Image index",
+          "enabled" : false
+        },
+        "max-particle-circularity" : 1.0,
+        "split-slices" : true,
+        "exclude-edges" : false,
+        "measurements" : {
+          "values" : [ "Centroid", "PixelValueMinMax", "Area" ]
+        },
+        "max-particle-size" : "Infinity",
+        "jipipe:parameter-slot-algorithm/has-parameter-slot" : false,
+        "jipipe:parameter-slot-algorithm/attach-parameter-annotations" : true,
+        "jipipe:parameter-slot-algorithm/attach-only-non-default-parameter-annotations" : true,
+        "jipipe:parameter-slot-algorithm/parameter-annotations-prefix" : "",
+        "jipipe:parameter-slot-algorithm/parameter-annotations-use-internal-names" : false
+      },
+      "analysis-analysis-output" : {
+        "jipipe:slot-configuration" : {
+          "input" : {
+            "Spore Mask" : {
+              "slot-data-type" : "imagej-imgplus-2d-greyscale-mask",
+              "slot-type" : "Input",
+              "inherited-slot" : null,
+              "name" : "Spore Mask",
+              "custom-name" : null,
+              "inheritance-conversions" : { }
+            },
+            "Spore ROI" : {
+              "slot-data-type" : "imagej-roi",
+              "slot-type" : "Input",
+              "inherited-slot" : null,
+              "name" : "Spore ROI",
+              "custom-name" : null,
+              "inheritance-conversions" : { }
+            },
+            "Spore measurements" : {
+              "slot-data-type" : "imagej-results-table",
+              "slot-type" : "Input",
+              "inherited-slot" : null,
+              "name" : "Spore measurements",
+              "custom-name" : null,
+              "inheritance-conversions" : { }
+            }
+          },
+          "output" : {
+            "Spore Mask" : {
+              "slot-data-type" : "imagej-imgplus-2d-greyscale-mask",
+              "slot-type" : "Output",
+              "inherited-slot" : null,
+              "name" : "Spore Mask",
+              "custom-name" : null,
+              "inheritance-conversions" : { }
+            },
+            "Spore ROI" : {
+              "slot-data-type" : "imagej-roi",
+              "slot-type" : "Output",
+              "inherited-slot" : null,
+              "name" : "Spore ROI",
+              "custom-name" : null,
+              "inheritance-conversions" : { }
+            },
+            "Spore measurements" : {
+              "slot-data-type" : "imagej-results-table",
+              "slot-type" : "Output",
+              "inherited-slot" : null,
+              "name" : "Spore measurements",
+              "custom-name" : null,
+              "inheritance-conversions" : { }
+            }
+          }
+        },
+        "jipipe:algorithm-ui-location" : {
+          "postprocessing" : {
+            "Vertical" : {
+              "x" : 100,
+              "y" : 50
+            }
+          },
+          "analysis" : {
+            "Vertical" : {
+              "x" : 50,
+              "y" : 1050
+            }
+          }
+        },
+        "jipipe:node-info-id" : "jipipe:compartment-output",
+        "jipipe:algorithm-compartment" : "analysis",
+        "jipipe:algorithm:save-outputs" : true,
+        "jipipe:algorithm:enabled" : true,
+        "jipipe:algorithm:pass-through" : false,
+        "jipipe:node:name" : "Analysis output",
+        "jipipe:node:description" : null
+      },
+      "postprocessing-plot-tables" : {
+        "jipipe:slot-configuration" : { },
+        "jipipe:algorithm-ui-location" : {
+          "postprocessing" : {
+            "Vertical" : {
+              "x" : 550,
+              "y" : 250
+            }
+          }
+        },
+        "jipipe:node-info-id" : "plot-from-table",
+        "jipipe:algorithm-compartment" : "postprocessing",
+        "plot-type" : "plot-histogram",
+        "jipipe:algorithm:save-outputs" : true,
+        "jipipe:algorithm:enabled" : true,
+        "jipipe:algorithm:pass-through" : false,
+        "jipipe:node:name" : "Plot tables",
+        "jipipe:node:description" : null,
+        "plot-parameters/export-height" : 768,
+        "plot-parameters/value-axis-label" : "Value",
+        "plot-parameters/bins" : 10,
+        "plot-parameters/export-width" : 1024,
+        "plot-parameters/bin-axis-label" : "Bin",
+        "plot-parameters/histogram-type" : "Frequency",
+        "plot-parameters/title" : "Histogram plot",
+        "column-assignments" : {
+          "parameters" : {
+            "Value" : {
+              "name" : "Value",
+              "description" : "Values to generate a histogram from. (Numeric column)",
+              "visibility" : "TransitiveVisible",
+              "field-class" : "org.hkijena.jipipe.extensions.tables.parameters.TableColumnSourceParameter",
+              "value" : {
+                "mode" : "PickColumn",
+                "column-source" : {
+                  "mode" : "Equals",
+                  "filter-string" : "Area",
+                  "invert" : false
+                },
+                "generator-source" : {
+                  "generator-type" : null,
+                  "generated-type" : "NumericColumn"
+                }
+              },
+              "short-key" : "Value",
+              "ui-order" : 0,
+              "field-class-id" : "table-column-source"
+            }
+          }
+        }
+      },
+      "postprocessing-postprocessing-output" : {
+        "jipipe:slot-configuration" : {
+          "input" : { },
+          "output" : { }
+        },
+        "jipipe:algorithm-ui-location" : {
+          "postprocessing" : {
+            "Vertical" : {
+              "x" : 1100,
+              "y" : 50
+            }
+          }
+        },
+        "jipipe:node-info-id" : "jipipe:compartment-output",
+        "jipipe:algorithm-compartment" : "postprocessing",
+        "jipipe:algorithm:save-outputs" : true,
+        "jipipe:algorithm:enabled" : true,
+        "jipipe:algorithm:pass-through" : false,
+        "jipipe:node:name" : "Postprocessing output",
+        "jipipe:node:description" : null
       }
     },
     "edges" : [ {
-      "source-algorithm" : "default-preprocessing-subfolders",
-      "target-algorithm" : "default-preprocessing-list-and-filter-files",
-      "source-slot" : "Subfolders",
-      "target-slot" : "Folders"
+      "source-algorithm" : "analysis-analysis-output",
+      "target-algorithm" : "postprocessing-plot-tables",
+      "source-slot" : "Spore measurements",
+      "target-slot" : "Input",
+      "metadata" : {
+        "ui-hidden" : false
+      }
     }, {
-      "source-algorithm" : "default-preprocessing-import-2d-image-(greyscale)",
-      "target-algorithm" : "default-preprocessing-preprocessing-output",
+      "source-algorithm" : "preprocessing-import-image",
+      "target-algorithm" : "preprocessing-preprocessing-output",
       "source-slot" : "Image",
-      "target-slot" : "Spores"
+      "target-slot" : "Data",
+      "metadata" : {
+        "ui-hidden" : false
+      }
     }, {
-      "source-algorithm" : "default-preprocessing-folder-list",
-      "target-algorithm" : "default-preprocessing-folders-to-annotations",
+      "source-algorithm" : "analysis-gaussian-blur-2d",
+      "target-algorithm" : "analysis-auto-threshold-2d",
+      "source-slot" : "Output",
+      "target-slot" : "Input",
+      "metadata" : {
+        "ui-hidden" : false
+      }
+    }, {
+      "source-algorithm" : "analysis-distance-transform-watershed-2d",
+      "target-algorithm" : "analysis-analysis-output",
+      "source-slot" : "Output",
+      "target-slot" : "Spore Mask",
+      "metadata" : {
+        "ui-hidden" : true
+      }
+    }, {
+      "source-algorithm" : "preprocessing-list-files",
+      "target-algorithm" : "preprocessing-import-image",
+      "source-slot" : "Files",
+      "target-slot" : "Files",
+      "metadata" : {
+        "ui-hidden" : false
+      }
+    }, {
+      "source-algorithm" : "preprocessing-preprocessing-output",
+      "target-algorithm" : "analysis-gaussian-blur-2d",
+      "source-slot" : "Data",
+      "target-slot" : "Input",
+      "metadata" : {
+        "ui-hidden" : false
+      }
+    }, {
+      "source-algorithm" : "analysis-distance-transform-watershed-2d",
+      "target-algorithm" : "analysis-find-particles-2d",
+      "source-slot" : "Output",
+      "target-slot" : "Mask",
+      "metadata" : {
+        "ui-hidden" : false
+      }
+    }, {
+      "source-algorithm" : "analysis-auto-threshold-2d",
+      "target-algorithm" : "analysis-distance-transform-watershed-2d",
+      "source-slot" : "Output",
+      "target-slot" : "Input",
+      "metadata" : {
+        "ui-hidden" : false
+      }
+    }, {
+      "source-algorithm" : "preprocessing-path-to-annotation",
+      "target-algorithm" : "preprocessing-list-files",
+      "source-slot" : "Annotated paths",
+      "target-slot" : "Folders",
+      "metadata" : {
+        "ui-hidden" : false
+      }
+    }, {
+      "source-algorithm" : "analysis-find-particles-2d",
+      "target-algorithm" : "analysis-analysis-output",
+      "source-slot" : "Measurements",
+      "target-slot" : "Spore measurements",
+      "metadata" : {
+        "ui-hidden" : false
+      }
+    }, {
+      "source-algorithm" : "preprocessing-folder-list",
+      "target-algorithm" : "preprocessing-path-to-annotation",
       "source-slot" : "Folder paths",
-      "target-slot" : "Folders"
+      "target-slot" : "Paths",
+      "metadata" : {
+        "ui-hidden" : false
+      }
     }, {
-      "source-algorithm" : "default-preprocessing-list-and-filter-files",
-      "target-algorithm" : "default-preprocessing-import-2d-image-(greyscale)",
-      "source-slot" : "Filtered files",
-      "target-slot" : "Files"
-    }, {
-      "source-algorithm" : "default-preprocessing-folders-to-annotations",
-      "target-algorithm" : "default-preprocessing-subfolders",
-      "source-slot" : "Annotated folders",
-      "target-slot" : "Folders"
+      "source-algorithm" : "analysis-find-particles-2d",
+      "target-algorithm" : "analysis-analysis-output",
+      "source-slot" : "ROI",
+      "target-slot" : "Spore ROI",
+      "metadata" : {
+        "ui-hidden" : false
+      }
     } ]
   },
   "compartments" : {
     "compartment-graph" : {
       "nodes" : {
-        "default-preprocessing" : {
+        "preprocessing" : {
           "jipipe:slot-configuration" : {
-            "Output" : {
-              "slot-data-type" : "jipipe:compartment-output",
-              "slot-type" : "Output",
-              "inherited-slot" : null,
-              "name" : "Output",
-              "custom-name" : null,
-              "inheritance-conversions" : { }
+            "input" : { }
+          },
+          "jipipe:algorithm-ui-location" : {
+            "DEFAULT" : {
+              "Vertical" : {
+                "x" : 50,
+                "y" : 50
+              }
+            }
+          },
+          "jipipe:node-info-id" : "jipipe:project-compartment",
+          "jipipe:algorithm-compartment" : "DEFAULT",
+          "jipipe:node:name" : "Preprocessing",
+          "jipipe:node:description" : null
+        },
+        "analysis" : {
+          "jipipe:slot-configuration" : {
+            "input" : {
+              "Preprocessing" : {
+                "slot-data-type" : "jipipe:compartment-output",
+                "slot-type" : "Input",
+                "inherited-slot" : null,
+                "name" : "Preprocessing",
+                "custom-name" : null,
+                "inheritance-conversions" : { }
+              }
             }
           },
           "jipipe:algorithm-ui-location" : {
             "DEFAULT" : {
-              "x" : 200,
-              "y" : 100
-            },
-            "DEFAULT{Vertical}" : {
-              "x" : 25,
-              "y" : 50
+              "Vertical" : {
+                "x" : 50,
+                "y" : 250
+              }
             }
           },
-          "jipipe:algorithm-type" : "jipipe:project-compartment",
+          "jipipe:node-info-id" : "jipipe:project-compartment",
           "jipipe:algorithm-compartment" : "DEFAULT",
-          "name" : "Preprocessing",
-          "description" : null,
-          "jipipe:trait-generation" : {
-            "modification" : {
-              "per-slot" : { },
-              "global" : { }
-            },
-            "transfer" : {
-              "transfers" : [ ],
-              "transfer-all-to-all" : true
+          "jipipe:node:name" : "Analysis",
+          "jipipe:node:description" : null
+        },
+        "postprocessing" : {
+          "jipipe:slot-configuration" : {
+            "input" : {
+              "Analysis" : {
+                "slot-data-type" : "jipipe:compartment-output",
+                "slot-type" : "Input",
+                "inherited-slot" : null,
+                "name" : "Analysis",
+                "custom-name" : null,
+                "inheritance-conversions" : { }
+              }
             }
           },
-          "jipipe:dynamic-parameters" : { }
+          "jipipe:algorithm-ui-location" : {
+            "DEFAULT" : {
+              "Vertical" : {
+                "x" : 188,
+                "y" : 450
+              }
+            }
+          },
+          "jipipe:node-info-id" : "jipipe:project-compartment",
+          "jipipe:algorithm-compartment" : "DEFAULT",
+          "jipipe:node:name" : "Postprocessing",
+          "jipipe:node:description" : null
         }
       },
-      "edges" : [ ]
+      "edges" : [ {
+        "source-algorithm" : "analysis",
+        "target-algorithm" : "postprocessing",
+        "source-slot" : "Output",
+        "target-slot" : "Analysis",
+        "metadata" : {
+          "ui-hidden" : false
+        }
+      }, {
+        "source-algorithm" : "preprocessing",
+        "target-algorithm" : "analysis",
+        "source-slot" : "Output",
+        "target-slot" : "Preprocessing",
+        "metadata" : {
+          "ui-hidden" : false
+        }
+      } ]
     }
   }
 }

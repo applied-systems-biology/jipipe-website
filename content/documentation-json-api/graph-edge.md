@@ -22,9 +22,9 @@ the document in [JSON Schema](https://json-schema.org/) format: [graph-edge.sche
  </section>
  <section class="json-schema-properties">
   <dl>
-   <dt data-property-name="source-algorithm">
+   <dt data-property-name="source-node">
     <span class="json-property-name">
-     source-algorithm:
+     source-node:
     </span>
     <span class="json-property-type">
      string
@@ -41,9 +41,9 @@ the document in [JSON Schema](https://json-schema.org/) format: [graph-edge.sche
     <div class="json-inner-schema">
     </div>
    </dd>
-   <dt data-property-name="target-algorithm">
+   <dt data-property-name="target-node">
     <span class="json-property-name">
-     target-algorithm:
+     target-node:
     </span>
     <span class="json-property-type">
      string
@@ -102,12 +102,13 @@ the document in [JSON Schema](https://json-schema.org/) format: [graph-edge.sche
  </section>
 </div>
 
+
 # Example
 
 ```json
 {
-  "source-algorithm" : "default-preprocessing-list-files",
-  "target-algorithm" : "default-preprocessing-filter-files",
+  "source-node" : "default-preprocessing-list-files",
+  "target-node" : "default-preprocessing-filter-files",
   "source-slot" : "Files",
   "target-slot" : "Files"
 }

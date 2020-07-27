@@ -73,7 +73,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [json-extension.
      metadata:
     </span>
     <span class="json-property-type">
-     <a class="json-schema-ref" href="/documentation-json-api/metadata">
+     <a class="json-schema-ref" href="https://applied-systems-biology.github.io/jipipe/documentation-json-api/metadata">
       See metadata
      </a>
     </span>
@@ -108,7 +108,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [json-extension.
     <div class="json-inner-schema">
      <section class="json-schema-array-items">
       <span class="json-property-type">
-       <a class="json-schema-ref" href="/documentation-json-api/algorithm">
+       <a class="json-schema-ref" href="https://applied-systems-biology.github.io/jipipe/documentation-json-api/algorithm">
         See algorithm
        </a>
       </span>
@@ -122,6 +122,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [json-extension.
   </dl>
  </section>
 </div>
+
 
 
 # Example
@@ -149,9 +150,6 @@ the document in [JSON Schema](https://json-schema.org/) format: [json-extension.
       "citation" : ""
     },
     "category" : "Converter",
-    "parameter-visibilities" : {
-      "visible-keys" : [ ]
-    },
     "graph" : {
       "nodes" : {
         "default-preprocessing-filter-files" : {

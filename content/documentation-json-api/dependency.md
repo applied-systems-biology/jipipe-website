@@ -17,7 +17,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [dependency.sche
 <div class="panel-body">
  <section class="json-schema-description">
   <p>
-   Project or extension dependency. Refers to an JIPipe extension.
+   Project or extension dependency. Refers to a JIPipe extension.
   </p>
  </section>
  <section class="json-schema-properties">
@@ -27,7 +27,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [dependency.sche
      metadata:
     </span>
     <span class="json-property-type">
-     <a class="json-schema-ref" href="../metadata">
+     <a class="json-schema-ref" href="https://applied-systems-biology.github.io/jipipe/documentation-json-api/metadata">
       See metadata
      </a>
     </span>
@@ -89,6 +89,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [dependency.sche
   </dl>
  </section>
 </div>
+
 
 
 # Example
