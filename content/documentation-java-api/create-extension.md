@@ -136,16 +136,12 @@ Here is an example `*.pom` file that makes use of SciJava:
             <groupId>org.hkijena</groupId>
             <artifactId>jipipe-core</artifactId>
         </dependency>
-        <!-- Tables, plots, etc. -->
-        <dependency>
-            <groupId>org.hkijena</groupId>
-            <artifactId>jipipe-algorithms</artifactId>
-        </dependency>
         <!-- ImageJ integration -->
         <dependency>
             <groupId>org.hkijena</groupId>
             <artifactId>jipipe-ij</artifactId>
         </dependency>
+        <!-- Add more JIPipe libraries if you need -->
     </dependencies>
 
     <properties>

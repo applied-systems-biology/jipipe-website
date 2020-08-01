@@ -79,7 +79,7 @@ You can review your parameter UI via Tools > Development > Show all parameter ty
 ## Making use of the parameter registration
 
 You can use the [parameter type registry](/apidocs/org/hkijena/jipipe/api/registries/JIPipeParameterTypeRegistry.html) to get a
-[parameter type declaration](/apidocs/org/hkijena/jipipe/api/parameters/JIPipeParameterTypeDeclaration.html). The declaration
+[parameter type info](/apidocs/org/hkijena/jipipe/api/parameters/JIPipeParameterTypeDeclaration.html). The info
 provides access to all metadata from the registry.
 
 JIPipe comes preinstalled with some common Java types (String, numerics, file and folder paths). You can take a look at the [Parameters Extension package](/apidocs/org/hkijena/jipipe/extensions/parameters/package-summary.html) for all default parameters that are provided by JIPipe.

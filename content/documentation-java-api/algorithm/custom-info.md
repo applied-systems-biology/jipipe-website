@@ -1,5 +1,5 @@
 +++
-title = "Custom algorithm declaration"
+title = "Custom algorithm info"
 weight = 40
 type="page"
 creatordisplayname = "Ruman Gerst"
@@ -15,7 +15,7 @@ algorithms for an unknown list of data types.
 
 # How algorithms are registered
 
-Algorithm instances are created by an [JIPipeAlgorithmDeclaration](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeAlgorithmDeclaration.html). This declaration
+Algorithm instances are created by an [JIPipeNodeInfo](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeNodeInfo.html). This info
 is the object that is actually registered into JIPipe. It is able to create
 new instances of the declared algorithm, or copy it. It also carries basic metadata
 such as a name, description, or annotation preferences.
@@ -25,8 +25,8 @@ Declarations should be unique and have a unique ID within the JIPipe algorithm r
 On registering an algorithm like in previous tutorials, following code is run:
 
 ```java
-public void registerAlgorithm(String id, Class<? extends JIPipeAlgorithm> algorithmClass) {
-    registerAlgorithm(new JIPipeJavaAlgorithmRegistrationTask(id, algorithmClass, this));
+public void registerNodeType(String id, Class<? extends JIPipeAlgorithm> algorithmClass) {
+    registerNodeType(new JIPipeJavaAlgorithmRegistrationTask(id, algorithmClass, this));
 }
 ```
 
@@ -37,12 +37,12 @@ If all dependencies are available, the task runs:
 JIPipeAlgorithmRegistry.getInstance().register(new JIPipeJavaAlgorithmDeclaration(id, algorithmClass), source);
 ```
 
-The important bit is [JIPipeJavaAlgorithmDeclaration](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeJavaAlgorithmDeclaration.html). In the end an algorithm declaration is created
+The important bit is [JIPipeJavaAlgorithmDeclaration](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeJavaAlgorithmDeclaration.html). In the end an algorithm info is created
 that extract algorithm information from the class annotations.
 
-# Creating a custom declaration
+# Creating a custom info
 
-To create a custom declaration, inherit from [JIPipeAlgorithmDeclaration](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeAlgorithmDeclaration.html). The most important functions are `clone()` and `newInstance()`.
+To create a custom info, inherit from [JIPipeNodeInfo](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeNodeInfo.html). The most important functions are `clone()` and `newInstance()`.
 
-Register the declaration either via a direct call to `registerAlgorithm(JIPipeAlgorithmDeclaration)` or (recommended) via a task that inherits from [JIPipeAlgorithmRegistrationTask](/apidocs/org/hkijena/jipipe/api/registries/JIPipeAlgorithmRegistrationTask.html). You can inherit from the default implementation [JIPipeDefaultAlgorithmRegistrationTask](/apidocs/org/hkijena/jipipe/api/registries/JIPipeDefaultAlgorithmRegistrationTask.html) that comes with pre-made functionality to check for common dependencies.
+Register the info either via a direct call to `registerNodeType(JIPipeNodeInfo)` or (recommended) via a task that inherits from [JIPipeAlgorithmRegistrationTask](/apidocs/org/hkijena/jipipe/api/registries/JIPipeAlgorithmRegistrationTask.html). You can inherit from the default implementation [JIPipeDefaultAlgorithmRegistrationTask](/apidocs/org/hkijena/jipipe/api/registries/JIPipeDefaultAlgorithmRegistrationTask.html) that comes with pre-made functionality to check for common dependencies.
 The reason behind using a task is that some algorithm-internal classes might require that data types or annotation types are already registered.

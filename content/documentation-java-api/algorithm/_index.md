@@ -9,21 +9,21 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-All algorithms inherit from [JIPipeAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeAlgorithm.html). An algorithm consists of following parts:
+All algorithms inherit from [JIPipeAlgorithm](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeAlgorithm.html). An algorithm consists of following parts:
 
 * A `run()` function that runs the workload
-* A reference to an [algorithm declaration](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeAlgorithmDeclaration.html) that describes the general properties of the algorithm
+* A reference to an [algorithm info](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeNodeInfo.html) that describes the general properties of the algorithm
 * A [slot configuration](/apidocs/org/hkijena/jipipe/api/data/JIPipeSlotConfiguration.html) that describes which slots the algorithm should have
 
 JIPipe comes with different base algorithms that provide different feature sets:
 
 | Algorithm type                                                                                              | Purpose                                                                                                                                                                                                                         |
 | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [JIPipeAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeAlgorithm.html)                           | The base class of all algorithms. It provides no included functionality outside of absolutely necessary ones.                                                                                                                   |
-| [JIPipeParameterSlotAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeParameterSlotAlgorithm.html) | This algorithm allows users to run multiple parameter sets by optionally enabling an additional slot `Parameters`.                                                                                                              |
-| [JIPipeSimpleIteratingAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeAlgorithm.html)            | A JIPipeParameterSlotAlgorithm that has one input slot and iterates over the input rows.                                                                                                                                        |
-| [JIPipeIteratingAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeIteratingAlgorithm.html)         | A JIPipeParameterSlotAlgorithm that can have multiple input slots and match annotations of the input data to create data batches.                                                                                               |
-| [JIPipeMergingAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeMergingAlgorithm.html)             | A JIPipeParameterSlotAlgorithm that can have multiple input slots and match annotations of the input data to create data batches. The difference to JIPipeIteratingAlgorithm is that a batch can have duplicate items per slot. |
+| [JIPipeAlgorithm](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeAlgorithm.html)                           | The base class of all algorithms. It provides no included functionality outside of absolutely necessary ones.                                                                                                                   |
+| [JIPipeParameterSlotAlgorithm](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeParameterSlotAlgorithm.html) | This algorithm allows users to run multiple parameter sets by optionally enabling an additional slot `Parameters`.                                                                                                              |
+| [JIPipeSimpleIteratingAlgorithm](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeAlgorithm.html)            | A JIPipeParameterSlotAlgorithm that has one input slot and iterates over the input rows.                                                                                                                                        |
+| [JIPipeIteratingAlgorithm](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeIteratingAlgorithm.html)         | A JIPipeParameterSlotAlgorithm that can have multiple input slots and match annotations of the input data to create data batches.                                                                                               |
+| [JIPipeMergingAlgorithm](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeMergingAlgorithm.html)             | A JIPipeParameterSlotAlgorithm that can have multiple input slots and match annotations of the input data to create data batches. The difference to JIPipeIteratingAlgorithm is that a batch can have duplicate items per slot. |
 
 
 Any algorithm should have the following basic structure:
@@ -33,7 +33,7 @@ Any algorithm should have the following basic structure:
 @JIPipeDocumentation(name = "My Algorithm", description = "Does something")
 
 // Sets the algorithm category
-@JIPipeOrganization(algorithmCategory = JIPipeAlgorithmCategory.Processor)
+@JIPipeOrganization(nodeTypeCategory = MiscellaneousNodeTypeCategory.class)
 
 // Input and output slots autoCreate automatically creates the slots if set to true and no slot configuration was provided
 @AlgorithmInputSlot(value = ImagePlusData.class, slotName = "Input", autoCreate = true)
@@ -42,11 +42,11 @@ public class MyAlgorithm extends JIPipeAlgorithm {
 
     /*
     This is the main constructor of the algorithm.
-    It contains a reference to the algorithm declaration that contains
+    It contains a reference to the algorithm info that contains
     some important metadata
     */
-    public MyAlgorithm(JIPipeAlgorithmDeclaration declaration) {
-        super(declaration);
+    public MyAlgorithm(JIPipeNodeInfo info) {
+        super(info);
     }
 
     /*
@@ -80,7 +80,8 @@ public class MyExtension extends JIPipeDefaultJavaExtension {
     // ... See previous tutorial for other methods
     @Override
     public void register() {
-        registerAlgorithm("my-algorithm", MyAlgorithm.class);
+        // Registers our algorithm with a unique ID and an icon
+        registerNodeType("my-algorithm", MyAlgorithm.class, UIUtils.getIconURLFromResources("actions/viewimage.png"));
     }
 
 }

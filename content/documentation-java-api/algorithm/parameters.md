@@ -19,7 +19,7 @@ Please make sure to send an event when the parameter is set, so the UI can updat
 // ... see previous tutorials
 public class MyAlgorithm extends JIPipeIteratingAlgorithm {
 
-    float roundness = 0.5f;
+    private float roundness = 0.5f;
 
     // ... see previous tutorials
 
@@ -57,7 +57,7 @@ Some parameter types have different styles or other settings that can change the
 
 # Sub-parameters
 
-[JIPipeAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeAlgorithm.html), like any [JIPipeParameterHolder](/apidocs/org/hkijena/jipipe/api/parameters/JIPipeParameterHolder.html) allows sub-parameters.
+[JIPipeAlgorithm](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeAlgorithm.html), like any [JIPipeParameterHolder](/apidocs/org/hkijena/jipipe/api/parameters/JIPipeParameterHolder.html) allows sub-parameters.
 
 To create a sub-parameter create a getter to an [JIPipeParameterHolder](/apidocs/org/hkijena/jipipe/api/parameters/JIPipeParameterHolder.html) and annotate it with [@JIPipeParameter](/apidocs/org/hkijena/jipipe/api/parameters/JIPipeSubParameters.html). The key provided with the annotation should be an unique parameter key. The parameters in the sub-parameter instance are automatically displayed as new group in the parameter editor.
 

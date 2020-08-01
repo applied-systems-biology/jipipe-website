@@ -108,7 +108,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [json-extension.
     <div class="json-inner-schema">
      <section class="json-schema-array-items">
       <span class="json-property-type">
-       <a class="json-schema-ref" href="https://applied-systems-biology.github.io/jipipe/documentation-json-api/algorithm">
+       <a class="json-schema-ref" href="https://applied-systems-biology.github.io/jipipe/documentation-json-api/nodes">
         See algorithm
        </a>
       </span>

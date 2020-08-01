@@ -8,7 +8,7 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-In the previous examples, we used the [@AlgorithmInputSlot](/apidocs/org/hkijena/jipipe/api/algorithm/AlgorithmInputSlot.html) and [@AlgorithmOutputSlot](/apidocs/org/hkijena/jipipe/api/algorithm/AlgorithmOutputSlot.html) annotations with `autoCreate = true`
+In the previous examples, we used the [@AlgorithmInputSlot](/apidocs/org/hkijena/jipipe/api/nodes/AlgorithmInputSlot.html) and [@AlgorithmOutputSlot](/apidocs/org/hkijena/jipipe/api/nodes/AlgorithmOutputSlot.html) annotations with `autoCreate = true`
 to automatically configure the slots.
 
 This is not sufficient for more complicated algorithms that require
@@ -24,8 +24,11 @@ For many cases, the default implementation [JIPipeMutableSlotConfiguration](/api
 The slot configuration can be overriden during instantiation of the algorithm:
 
 ```java
-public MyAlgorithm(JIPipeAlgorithmDeclaration declaration) {
-    super(declaration, JIPipeMutableSlotConfiguration.builder().addInputSlot("Input", ImagePlusData.class).restrictOutputTo(ImagePlusData.class).build());
+public MyAlgorithm(JIPipeNodeInfo info) {
+    super(info, JIPipeMutableSlotConfiguration.builder()
+    .addInputSlot("Input", ImagePlusData.class)
+    .restrictOutputTo(ImagePlusData.class)
+    .build());
 }
 ```
 

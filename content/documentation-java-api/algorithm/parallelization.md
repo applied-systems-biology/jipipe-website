@@ -12,9 +12,9 @@ The current version of JIPipe supports parallelization via a fixed thread pool.
 Parallelization is done on an **per-algorithm-level**, meaning that
 the algorithms are responsible for providing parallelization capabilities.
 
-The included base algorithms [JIPipeIteratingAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeIteratingAlgorithm.html), [JIPipeSimpleIteratingAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeSimpleIteratingAlgorithm.html), and [JIPipeMergingAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeMergingAlgorithm.html)
+The included base algorithms [JIPipeIteratingAlgorithm](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeIteratingAlgorithm.html), [JIPipeSimpleIteratingAlgorithm](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeSimpleIteratingAlgorithm.html), and [JIPipeMergingAlgorithm](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeMergingAlgorithm.html)
 already come with support for parallelization that **has to be manually enabled via code**.
-The inherit from [JIPipeParallelizedAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeParallelizedAlgorithm.html) and
+The inherit from [JIPipeParallelizedAlgorithm](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeParallelizedAlgorithm.html) and
 completely apply parallelization automatically.
 
 # Automated parallelization (JIPipeParallelizedAlgorithm)

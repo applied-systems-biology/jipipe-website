@@ -12,9 +12,9 @@ JIPipe data slots store multiple data rows. This means that algorithms have to
 iterate their workload for each input row and generate equivalent output in the
 respective output slots.
 
-There can be issues if data from multiple input slots need to be combined (e.g. merge channels into RGB, see [user documentation](/documentation/batch-pipelines#handling-multiple-inputs)). [JIPipeAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeAlgorithm.html) has no capabilities to help with such cases.
+There can be issues if data from multiple input slots need to be combined (e.g. merge channels into RGB, see [user documentation](/documentation/batch-pipelines#handling-multiple-inputs)). [JIPipeAlgorithm](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeAlgorithm.html) has no capabilities to help with such cases.
 
-A solution can be [JIPipeIteratingAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeIteratingAlgorithm.html) or [JIPipeSimpleIteratingAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeSimpleIteratingAlgorithm.html) that use the annotation attached during processing to find data rows that belong to the same data set. The implementation creates [JIPipeDataBatch](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeDataBatch.html) instances that represent one data set iteration.
+A solution can be [JIPipeIteratingAlgorithm](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeIteratingAlgorithm.html) or [JIPipeSimpleIteratingAlgorithm](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeSimpleIteratingAlgorithm.html) that use the annotation attached during processing to find data rows that belong to the same data set. The implementation creates [JIPipeDataBatch](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeDataBatch.html) instances that represent one data set iteration.
 
 {{% notice tip %}}
 For simple algorithms, we recommend JIPipeSimpleIteratingAlgorithm. It does not have the additional parameters that might confuse some users, but creates the same runIteration(...) command
@@ -25,14 +25,14 @@ as JIPipeIteratingAlgorithm. It only works for algorithms with at most one input
 Please access data via the data interface. It reads exactly one JIPipeData for each input.
 {{% /notice %}}
 
-The only difference to [JIPipeAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeAlgorithm.html) is that you need to override a different function called `runIteration`.
+The only difference to [JIPipeAlgorithm](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeAlgorithm.html) is that you need to override a different function called `runIteration`.
 
 ```java
 // Annotates documentation to the algorithm
 @JIPipeDocumentation(name = "My Algorithm", description = "Does something")
 
 // Sets the algorithm category
-@JIPipeOrganization(algorithmCategory = JIPipeAlgorithmCategory.Processor)
+@JIPipeOrganization(nodeTypeCategory = MiscellaneousNodeTypeCategory.class)
 
 // Input and output slots
 @AlgorithmInputSlot(value = ImagePlusData.class, slotName = "Input", autoCreate = true)
@@ -41,11 +41,11 @@ public class MyAlgorithm extends JIPipeIteratingAlgorithm {
 
     /*
     This is the main constructor of the algorithm.
-    It contains a reference to the algorithm declaration that contains
+    It contains a reference to the algorithm info that contains
     some important metadata
     */
-    public MyAlgorithm(JIPipeAlgorithmDeclaration declaration) {
-        super(declaration);
+    public MyAlgorithm(JIPipeNodeInfo info) {
+        super(info);
     }
 
     /*
@@ -66,7 +66,7 @@ public class MyAlgorithm extends JIPipeIteratingAlgorithm {
     Please read and write only via the data interface.
     */
     @Override
-    public runIteration(JIPipeDataBatch dataInterface, JIPipeRunnerSubStatus subProgress, Consumer<JIPipeRunnerSubStatus> algorithmProgress, Supplier<Boolean> isCancelled) {
+    public runIteration(JIPipeDataBatch dataBatch, JIPipeRunnerSubStatus subProgress, Consumer<JIPipeRunnerSubStatus> algorithmProgress, Supplier<Boolean> isCancelled) {
         // Run your workload here
     }
 }

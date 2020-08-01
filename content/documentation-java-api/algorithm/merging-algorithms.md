@@ -10,20 +10,20 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 
 You might need to develop an algorithm that does not simply iterate through its input(s),
 but organize it into groups to be merged.
-JIPipe comes with [JIPipeMergingAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeMergingAlgorithm.html) that uses the annotation attached during processing to find data rows that belong to the same data set. The implementation creates [JIPipeMergingDataBatch](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeMergingDataBatch.html) instances that represent multiple data rows merged into one group.
+JIPipe comes with [JIPipeMergingAlgorithm](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeMergingAlgorithm.html) that uses the annotation attached during processing to find data rows that belong to the same data set. The implementation creates [JIPipeMergingDataBatch](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeMergingDataBatch.html) instances that represent multiple data rows merged into one group.
 
 {{% notice warning %}}
 Please access data via the data interface.
 {{% /notice %}}
 
-The only difference to [JIPipeAlgorithm](/apidocs/org/hkijena/jipipe/api/algorithm/JIPipeAlgorithm.html) is that you need to override a different function called `runIteration`.
+The only difference to [JIPipeAlgorithm](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeAlgorithm.html) is that you need to override a different function called `runIteration`.
 
 ```java
 // Annotates documentation to the algorithm
 @JIPipeDocumentation(name = "My Algorithm", description = "Does something")
 
 // Sets the algorithm category
-@JIPipeOrganization(algorithmCategory = JIPipeAlgorithmCategory.Processor)
+@JIPipeOrganization(nodeTypeCategory = MiscellaneousNodeTypeCategory.class)
 
 // Input and output slots
 @AlgorithmInputSlot(value = ImagePlusData.class, slotName = "Input", autoCreate = true)
@@ -32,11 +32,11 @@ public class MyAlgorithm extends JIPipeMergingAlgorithm {
 
     /*
     This is the main constructor of the algorithm.
-    It contains a reference to the algorithm declaration that contains
+    It contains a reference to the algorithm info that contains
     some important metadata
     */
-    public MyAlgorithm(JIPipeAlgorithmDeclaration declaration) {
-        super(declaration);
+    public MyAlgorithm(JIPipeNodeInfo info) {
+        super(info);
     }
 
     /*
@@ -57,7 +57,7 @@ public class MyAlgorithm extends JIPipeMergingAlgorithm {
     Please read and write only via the data interface.
     */
     @Override
-    public runIteration(JIPipeMergingDataBatch dataInterface, JIPipeRunnerSubStatus subProgress, Consumer<JIPipeRunnerSubStatus> algorithmProgress, Supplier<Boolean> isCancelled) {
+    public runIteration(JIPipeMergingDataBatch dataBatch, JIPipeRunnerSubStatus subProgress, Consumer<JIPipeRunnerSubStatus> algorithmProgress, Supplier<Boolean> isCancelled) {
         // Run your workload here
     }
 }

@@ -19,6 +19,11 @@ There are no requirements on the constructor of the data type.
 The folder that is provided in `storageFilePath` is unique to the data and empty.
 The name parameter in `storageFilePath` is usually the data slot name and can be used as template for file names or ignored.
 
+There are two optional functions that you can override:
+
+* `display()` shows the data in ImageJ, JIPipe, or any other GUI
+* `preview()` generates a GUI component that acts as thumbnail/preview of the contained data
+
 
 ```java
 public class MyData implements JIPipeData {
@@ -48,6 +53,28 @@ public class MyData implements JIPipeData {
         return new MyData(value);
     }
 
+    // The display method is optional, but recommended
+    @Override
+    public void display(String displayName, JIPipeWorkbench workbench) {
+        JIPipeTextEditor editor = JIPipeTextEditor.openInNewTab(workbench, displayName);
+        editor.setMimeType(getMimeType());
+        editor.setText(data);
+    }
+
+    // The preview method is optional, but recommended for many cases
+    // The width and height are guidelines you should adhere to (especially the height)
+    @Override
+    public Component preview(int width, int height) {
+        // This example would overlap with toString()
+        return new JLabel(value);
+    }
+
+    // Do not forget to override this
+    @Override
+   public String toString() {
+       return StringUtils.orElse(value, "");
+   }
+
     @Override
     public void saveTo(Path storageFilePath, String name) {
         try {
@@ -73,6 +100,10 @@ public class MyData implements JIPipeData {
 
 {{% notice tip %}}
 You can use JIPipe's JsonUtils class to get access to a Jackson JSON ObjectMapper.
+{{% /notice %}}
+
+{{% notice info %}}
+Do not forget to override toString(), as the string representation will be displayed in the cache browser.
 {{% /notice %}}
 
 To register the data type and provide it with an id, and icon, use [JIPipeJavaExtension](/apidocs/org/hkijena/jipipe/JIPipeJavaExtension.html):
