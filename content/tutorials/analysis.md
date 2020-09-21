@@ -215,7 +215,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
       <ul>
         <li><code>Images &gt; Threshold &gt; Auto Threshold 2D</code></li>
         <li><code>Images &gt; Binary &gt; Distance transform watershed 2D</code></li>
-        <li><code>Images &gt; Particles &gt; Find particles 2D</code></li>
+        <li><code>Images &gt; Analyze &gt; Find particles 2D</code></li>
       </ul>
       <br/>
       This will create a more or less accurate segmentation of the objects (spores) that are visible in the data.
