@@ -13,6 +13,104 @@ JIPipe. The data instances are cleared from memory after processing, meaning tha
 the data needs to be loaded from its output folder after processing.
 
 An user interface is shown when a user select a row in the results table.
+There are two ways to modify the user interface:
+
+1. Registering additional operations that will be available to users (recommended)
+2. Replacing the interface with a custom one
+
+# Adding custom operations
+
+JIPipe already comes with some default operations, such as opening the containing folder.
+Any other operation must be added manually to each data type.
+
+There are two types of operations: one for importing data written into a results folder, and one
+for displaying already loaded data from memory.
+The corresponding interfaces are [JIPipeDataImportOperation](/apidocs/org/hkijena/jipipe/api/data/JIPipeDataImportOperation.html) and [JIPipeDataDisplayOperation](/apidocs/org/hkijena/jipipe/api/data/JIPipeDataDisplayOperation.html).
+
+You can implement one or both interfaces as shown here:
+
+```java
+public class MyOperation implements JIPipeDataImportOperation, JIPipeDataDisplayOperation {
+    @Override
+    public void display(JIPipeData data, String displayName, JIPipeWorkbench workbench) {
+        // Here you can pu a custom display function
+        // Currently it just uses the default function
+        data.display(displayName, workbench);
+    }
+
+    @Override
+    public String getName() {
+        // Name as shown in the menu
+        // The name should be unique
+        return "Open in JIPipe";
+    }
+
+    @Override
+    public String getDescription() {
+        return "Opens the table in JIPipe";
+    }
+
+    @Override
+    public int getOrder() {
+        // The lower the order the higher it is placed in the menu
+        // The lowest ist used as default
+        return 100;
+    }
+
+    @Override
+    public Icon getIcon() {
+        return UIUtils.getIconFromResources("apps/jipipe.png");
+    }
+
+    @Override
+    public JIPipeData show(JIPipeDataSlot slot, JIPipeExportedDataTable.Row row, Path rowStorageFolder, String compartmentName, String algorithmName, String displayName, JIPipeWorkbench workbench) {
+        // This function should import the data contained in the rowStorageFolder and display it
+        // You can return the data (which is currently not used) or return null
+        if (rowStorageFolder == null || !Files.isDirectory(rowStorageFolder))
+            return null;
+        Path csvFile = PathUtils.findFileByExtensionIn(rowStorageFolder, ".csv");
+        if (csvFile != null) {
+            ResultsTableData result = JIPipeTableEditor.importTableFromCSV(csvFile, (JIPipeProjectWorkbench) workbench);
+            workbench.getDocumentTabPane().switchToLastTab();
+            return result;
+        }
+        return null;
+    }
+}
+```
+
+The operations must be registered in [JIPipeJavaExtension](/apidocs/org/hkijena/jipipe/JIPipeJavaExtension.html) either via the data type ID or when registering a new data type.
+
+{{% notice warning %}}
+Currently you have to register all your operations per data type. It its not enough to register them for the base class only.
+{{% /notice %}}
+
+```java
+@Plugin(type = JIPipeJavaExtension.class)
+public class MyExtension extends JIPipeDefaultJavaExtension {
+
+    // ... See previous tutorial for other methods
+    @Override
+    public void register() {
+
+        // Registering the operation when registering the data type
+        registerDataType("my-data", MyData.class, ResourceUtils.getPluginResource("/icons/data-types/data-type.png"), null, null, new MyOperation());
+
+        // alternative ...
+
+        // Registering the operation by itself
+        registerDatatypeOperation("my-data", new MyOperation());
+    }
+
+}
+```
+
+{{% notice tip %}}
+You can register an operation for all data types by leaving the data type ID empty.
+{{% /notice %}}
+
+# Using a custom interface
+
 This UI can be replaced with a custom one that is designed to handle this specific data type.
 
 Such UIs inherit from [JIPipeResultDataSlotRowUI](/apidocs/org/hkijena/jipipe/ui/resultanalysis/JIPipeResultDataSlotRowUI.html), which is a panel that has access to
