@@ -29,6 +29,7 @@ to form powerful and complex pipelines that can be easily scaled up and down.
   </video>
 </center> -->
 
+<div class="landing-features-container">
 <div class="landing-features">
   <div>
     <div class="feature-description">
@@ -95,20 +96,45 @@ to form powerful and complex pipelines that can be easily scaled up and down.
     <img src="/img/features/plot_builder.png" />
   </div>
 </div>
+</div>
 
+<div class="landing-page-try">
+  <h1>Do you want to try it?</h1>
+  <span>
+  You can try JIPipe right now in three simple steps!
+  </span>
+  <ol>
+    <li><a href="https://fiji.sc/" target="_blank">Download</a> ImageJ or open your existing ImageJ installation</li>
+    <li>Activate the JIPipe update site (<i>Help &gt; Update ...</i>)</li>
+    <li>Run the JIPipe GUI from within the plugin menu</li>
+  </ol>
+  <span>
+  After starting JIPipe, we recommend you to follow our <a href="/tutorials/analysis">tutorial</a> or load an <a href="/examples">example pipeline</a>.
+  </span>
+</div>
 
-{{% panel %}}
-JIPipe was developed
-by [Research Group Applied Systems Biology](https://www.leibniz-hki.de/en/applied-systems-biology.html) *- Head: Prof. Dr. Marc Thilo* Figge
+<div class="landing-page-contact">
+  <h1>Do you have a question or require some help?</h1>
+  <span>
+  Please do not hesitate to contact us! You can always contact the JIPipe developers via the community, or via E-Mail.
+  If you find a bug, you can also report it directly on GitHub.
+  </span>
+  <center>
+  <button class="btn btn-success btn-large" type="button" onclick="location.href='https://forum.image.sc/tag/jipipe'"> <i class="fa fa-comments"></i> Community </button>
+  <button class="btn btn-success btn-large" type="button" onclick="location.href='mailto:thilo.figge@leibniz-hki.de'"> <i class="fa fa-envelope"></i> Send E-Mail </button>
+  <button class="btn btn-info btn-large" type="button" onclick="location.href='https://github.com/applied-systems-biology/jipipe/issues'"> <i class="fa fa-bug"></i> Report a bug </button>
+  </center>
+</div>
 
-**HKI-Center for Systems Biology of Infection**
-
-Leibniz Institute for Natural Product Research and Infection Biology - Hans Knöll Insitute (HKI)
-
+<div class="landing-page-credits">
+<div style="margin: 1rem;">
+JIPipe was developed by <a href="https://www.leibniz-hki.de/en/applied-systems-biology.html">Research Group Applied Systems Biology</a><br/>Head: Prof. Dr. Marc Thilo Figge
+<strong>HKI-Center for Systems Biology of Infection</strong></br>
+Leibniz Institute for Natural Product Research and Infection Biology - Hans Knöll Insitute (HKI)</br>
 Adolf-Reichwein-Straße 23, 07745 Jena, Germany
-
+</div>
 <a href="https://www.leibniz-hki.de/en/" target="_blank"><img src="/img/credits/hki.jpg" style="height: 4em; display: inline;"/></a>
 <a href="https://www.ilrs.de/" target="_blank"><img src="/img/credits/ilrs.svg" style="height: 6em; display: inline;"/></a>
 <a href="https://www.uni-jena.de/en/" target="_blank"><img src="/img/credits/uni-jena.png" style="height: 7em; display: inline;"/></a>
 <a href="https://www.polytarget.uni-jena.de/" target="_blank"><img src="/img/credits/PolyTarget_logo.png" style="height: 6em; display: inline;"/></a>
-{{% /panel %}}
+</div>
