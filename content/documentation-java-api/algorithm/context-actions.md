@@ -8,7 +8,8 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-Context actions allow you to add custom buttons into an algorithm's parameter group.
+Context actions allow you to add custom buttons into an algorithm's parameter group that by default
+will also appear within a node's context menu.
 They can be used for multiple purposes such as loading example data, applying
 an auto-configuration, opening websites, or displaying documentation or data in a new tab.
 

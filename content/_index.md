@@ -28,97 +28,55 @@ to form powerful and complex pipelines that can be easily scaled up and down.
     <source src="/videos/jipipe-example-fast.webm" />
   </video>
 </center> -->
-![Example of graphical programming](/img/features/graph_editor.png)
 
-<div class="features-container">
+<div class="landing-features">
   <div>
-    <img src="/img/features/macro_support.png"/>
-    <div>
-      <h3>Macro support</h3>
-      You already developed custom <i>ImageJ</i> macros?
-      JIPipe allows you to re-use your macros via a <i>Macro node</i>. Copy and paste
-      your code, and add input and output slots.
-    </div>
+    <h2>Intuitive user interface</h2>
+    <span>JIPipe comes with a modern and easy to use interface that is simple by default, but powerful when needed.
+    All options are logically organized and located where you expect them to be.</span>
+    <img src="/img/features/graph_editor.png" />
   </div>
   <div>
-    <img src="/img/features/algorithm_finder.png"/>
-    <div>
-      <h3>Algorithm finder</h3>
-      You do not know which should be the next processing step?
-      The JIPipe algorithm finder not only lists all compatible processing steps
-      for given data.
-    </div>
+    <h2>Easy to learn</h2>
+    <span>JIPipe comes with helpful tools such as the <strong>Algorithm finder</strong> that guides you in creating a pipeline by offering compatible processing steps for your current data.</span>
+    <img src="/img/features/macro_support.png" />
   </div>
   <div>
-    <img src="/img/features/quick-run.png"/>
-    <div>
-      <h3>Quick run & caching</h3>
-      What are the best algorithm parameters?
-      Find those parameters can be very time-consuming.
-      <br/>
-      JIPipe allows you to easily test multiple algorithm parameters without re-calculating the previous steps. You can go back to an older set of parameters and directly compare the results.
-    </div>
+    <h2>Easy to organize &amp; document</h2>
+    <span>JIPipe allows you to organize your pipelines into <strong>compartments</strong> and node groups to help you to keep track of your analysis. Furthermore, you can document your pipeline by adding
+    labels, names, and custom descriptions to inputs, outputs, and nodes.</span>
+    <img src="/img/features/graph_compartments.png" />
   </div>
   <div>
-    <img src="/img/features/graph_compartments.png"/>
-    <div>
-      <h3>Graph compartments</h3>
-      Graph-based programs get quickly confusing?
-      JIPipe allows you to separate the analysis into multiple compartments. You can create
-      as many compartments as you want, connect them, and also export and import them.
-    </div>
-  </div>
-</div>
-
-# Powerful result analysis
-
-You can either analyze results directly after processing or load existing results
-directly into JIPipe. The powerful result analysis tool lets you import data back
-into *ImageJ*, or summarize and plot them directly within JIPipe.
-
-![Example of result analysis](/img/features/result_analysis.png)
-
-<div class="features-container">
-  <div>
-    <img src="/img/features/table_analyzer.png"/>
-    <div>
-      <h3>Table analyzer</h3>
-      You want to quickly summarize a table of measurements?
-      JIPipe comes with a tool to summarize and concatenate tables without
-      any external tools. The tool can directly import table data generated
-      by <i>ImageJ</i>.
-    </div>
+    <h2>Built on ImageJ</h2>
+    <span>JIPipe is built on the established ImageJ software and comes with commonly used ImageJ functions and plugins, just as CLIJ2 and MorphoLibJ.
+    You can re-use your existing macros and ImageJ2 scripts and create easy-to-use graphical interfaces for them, which will also be available directly within ImageJ via JIPipe's two-way integration.</span>
+    <img src="/img/features/macro_support.png" />
   </div>
   <div>
-    <img src="/img/features/plot_builder.png"/>
-    <div>
-      <h3>Plot builder</h3>
-      Need to quickly plot a table?
-      JIPipe comes with a powerful plot builder that supports a multitude of different plot types,
-      such as XY plots, bar charts, histograms, and box plots.
-    </div>
+    <h2>Easy sharing &amp; extending</h2>
+    <span>JIPipe allows you to export your pipelines as custom nodes that can be installed just like any other ImageJ plugin. Programmers can make use of the powerful API to enhance the feature set even more.</span>
+    <img src="/img/features/plugin_manager.png" />
   </div>
-</div>
-
-# Extending JIPipe
-
-JIPipe can be extended by programmers and *non-programmers* via its *Java* API and
-its *JSON* extension API. *JSON extensions* can be easily created via a graphical user
-interface and allows you to publish your pipelines as algorithm node.
-You can also create a hierarchy of custom data annotation types using the built-in editor.
-
-![Plugin manager](/img/features/plugin_manager.png)
-
-<div class="features-container">
   <div>
-    <img src="/img/features/extension-editor.png"/>
-    <div>
-      <h3>Extension builder</h3>
-      You want to publish your pipeline?
-      JIPipe comes with a graphical user interface to create plugins.
-      You can add custom algorithms and export them as distributable <i>*.json</i> file.
-      Users just have to put this file into the <i>ImageJ</i> plugins folder.
-    </div>
+    <h2>Powerful result evaluation</h2>
+    <span>You can either analyze results directly after processing or load existing results
+    directly into JIPipe. The powerful result analysis tool lets you import data back
+    into ImageJ, or summarize and plot them directly within JIPipe.</span>
+    <img src="/img/features/result_analysis.png" />
+  </div>
+  <div>
+    <h2>Integrated table editor</h2>
+    <span>JIPipe comes with a tool to summarize and concatenate tables without
+    any external tools. The tool can directly import table data generated
+    by <i>ImageJ</i>.</span>
+    <img src="/img/features/table_analyzer.png" />
+  </div>
+  <div>
+    <h2>Integrated plot editor</h2>
+    <span>JIPipe comes with a powerful plot builder that supports a multitude of different plot types,
+    such as XY plots, bar charts, histograms, and box plots.</span>
+    <img src="/img/features/plot_builder.png" />
   </div>
 </div>
 
