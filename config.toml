@@ -1,5 +1,5 @@
 ## Configuration for online website:
-baseURL = "https://applied-systems-biology.github.io/jipipe/"
+baseURL = "https://www.jipipe.org/"
 
 ## Configuration for offline website:
 #uglyURLs = true
