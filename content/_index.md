@@ -12,12 +12,12 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 
 # Macro programming for everyone!
 
-JIPipe is a graphical batch processing programming language for [ImageJ](https://fiji.sc/).
-It comes with an easy-to-use graphical macro editor that requires no programming
-knowledge. Image processing steps can be added to the user interface and connected
-to form powerful and complex pipelines that can be easily scaled up and down.
-
 <center>
+JIPipe is a graphical batch processing programming language for <a href="https://fiji.sc/">ImageJ</a> that
+allows you to create macros <strong>without any programming </strong> by just creating a flowchart!
+</center>
+
+<center style="margin-top: 4rem;">
 <button class="btn btn-success btn-large" type="button" onclick="location.href='/download'"> <i class="fa fa-windows"></i><i class="fa fa-linux"></i><i class="fa fa-apple"></i> Download now </button>
 <button class="btn btn-info btn-large" type="button" onclick="location.href='/tutorials'"> <i class="fa fa-graduation-cap"></i> Learn how to use it </button>
 <button class="btn btn-default btn-large" type="button" onclick="location.href='/examples'"> <i class="fa fa-flask"></i> Show examples </button>
