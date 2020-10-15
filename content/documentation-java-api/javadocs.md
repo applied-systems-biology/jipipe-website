@@ -9,8 +9,6 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-The JavaDocs of the Java API can be found here:
+The JavaDocs of the Java API can also be found <a href="/apidocs/index.html" target="_blank">here</a>
 
-<center>
-<button class="btn btn-info btn-large" type="button" onclick="location.href='/apidocs/index.html'"> Open JavaDocs</button>
-</center>
+<iframe src="/apidocs/index.html" width="100%" height="100%"/>
