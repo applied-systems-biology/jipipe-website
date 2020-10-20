@@ -24,15 +24,10 @@ public static void main(String[] args) {
   final ImageJ ij = new ImageJ();
   Context context = ij.context();
 
-  // Load the settings that can modify the initialization
-  // Please note that you cannot use ExtensionSettings.getInstance() yet as it is not available at this point
-  ExtensionSettings extensionSettings = ExtensionSettings.getInstanceFromRaw();
-
   // Execute the JIPipe registration if necessary
-  JIPipeRegistryIssues issues = new JIPipeRegistryIssues();
-  if (JIPipeDefaultRegistry.getInstance() == null) {
-      JIPipeDefaultRegistry.createInstance(context);
-      JIPipeDefaultRegistry.getInstance().discover(extensionSettings, issues);
+  if (JIPipe.getInstance() == null) {
+      JIPipe.createInstance(context);
+      JIPipe.getInstance().initialize();
   }
 
   // JIPipe is now ready to use
