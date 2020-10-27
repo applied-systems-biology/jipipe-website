@@ -112,7 +112,7 @@ A simple [graph runner](/apidocs/org/hkijena/jipipe/api/JIPipeGraphRunner.html) 
     // There are multiple ways to instantiate a new node:
 
     // Option 1: Utility function
-    JIPipeGraphNode first = JIPipeGraphNode.newInstance("import-file");
+    JIPipeGraphNode first = JIPipe.createNode("import-file", JIPipeGraphNode.class);
 
     // Option 2: Using the registry
     JIPipeGraphNode second = JIPipeNodeRegistry.getInstance().getInfoById("import-imagej-imgplus-from-file").newInstance();
@@ -145,7 +145,7 @@ You can run single algorithm nodes without involving a project or a graph:
 public static void main(String[] args) {
   // First initialize JIPipe before this line!
 
-  JIPipeSimpleIteratingAlgorithm node = (JIPipeSimpleIteratingAlgorithm)JIPipeGraphNode.newInstance("import-imagej-imgplus-from-file");
+  JIPipeSimpleIteratingAlgorithm node = JIPipe.createNode("import-imagej-imgplus-from-file", JIPipeSimpleIteratingAlgorithm.class);
 
   // Always clear the node first (allows you to re-use it)
   node.clearSlotData();
