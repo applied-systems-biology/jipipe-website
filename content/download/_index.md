@@ -94,3 +94,15 @@ Please choose how you want to install JIPipe
 
 The software is Open Source and licensed under [BSD-2-Clause](https://opensource.org/licenses/BSD-2-Clause).
 You can find the source code on GitHub at https://github.com/applied-systems-biology/jipipe.
+
+
+<script type="text/javascript">
+// Download page menus
+$(".download-panel-content").css("display", "none");
+$('input:radio[name="download-options"]').change(function(){
+  $(".download-panel-content").css("display", "none");
+  $("#" + $(this).val() + "-content").css("display", "block");
+});
+$('input:radio[value="download-via-update-site"]').change();
+$('input:radio[value="download-via-update-site"]').prop("checked", true);
+</script>
