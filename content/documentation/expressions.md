@@ -75,48 +75,84 @@ STRING_MATCHES_GLOB(name, "*.tif") AND ("data" IN name)
 
 # Operators
 
+There are many operators with alternative ways to write them available. There are two kinds of operators:
+
+1. Symbolic operators are using symbols like `$`, `&` or `*`
+2. Textual operators are written words like `AND` or `CONTAINS`
+
+The difference between the operators is that symbolic operators can be written without spaces. For example you can write `5+5` or `!x`.
+Textual operators require spaces to be separated. For example you cannot write `NOTx`. You have to write `NOT x`.
+
+| Operator                                | Description                                                                                                              | Usage                      |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | -------------------------- |
+| Logical AND                             | Returns TRUE if both operands are TRUE                                                                                   | `x AND y` or `x & y`       |
+| Logical OR                              | Returns TRUE if one of the operands is TRUE                                                                              | `x OR y` or `x | y`        |
+| Logical XOR                             | Returns TRUE if exactly one operand is TRUE                                                                              | `x XOR y`                  |
+| Logical NOT                             | Returns TRUE if input is FALSE and vice versa                                                                            | `NOT x` or `! x`           |
+| Numeric division                        | Divides the left by the right operand                                                                                    | `x / y`                    |
+| Numeric exponent                        | Calculates left to the power of the right operand                                                                        | `x ^ y`                    |
+| Numeric subtraction                     | Subtracts right from left                                                                                                | `x - y`                    |
+| Numeric multiplication                  | Multiplies the two operands                                                                                              | `x * y`                    |
+| Numeric addition / String concatenation | Adds two numbers. Concatenates if the operands are strings.                                                              | `x + y`                    |
+| Numeric greater than                    | Returns TRUE if the left operand is greater than the right one                                                           | `x > y`                    |
+| Numeric greater or equal                | Returns TRUE if the left operand is greater or equal to the right                                                        | `x >= y`                   |
+| Numeric less than                       | Returns TRUE if the left operand is less than the right one                                                              | `x < y`                    |
+| Numeric less or equal                   | Returns TRUE if the left operand is less or equal to the right one                                                       | `x <= y`                   |
+| Numeric / String / Boolean equality     | Returns TRUE if the operands are equal                                                                                   | `x == y` or `x EQUALS y`   |
+| Numeric / String / Boolean inequality   | Returns TRUE if the operands are unequal                                                                                 | `x != y` or `x UNEQUAL y`  |
+| Numeric negation                        | This is technically an operator                                                                                          | `-x`                       |
+| Numeric modulo                          | Calculates the modulo                                                                                                    | `x % y`                    |
+| String contains                         | Returns TRUE if the one string is contained in the other one                                                             | `x IN y` or `y CONTAINS x` |
+| Variable exists                         | Returns TRUE if the a variable with the name exists                                                                      | `x EXISTS`                 |
+| Resolve variable                        | Returns the value of the variable with name. Useful for variables that have spaces in their names or special characters. | `$ x`                      |
+
 ## Precedence
 
 The operators are ordered according to a precedence table. You might need to use brackets (`()`) to force the order you expect:
 
 The higher the number is the more the operator is preferred.
 
-| 1   | 2   | 3   | 4   | 5                              | 6                        | 7                | 8   | 9           | 10          |
-| --- | --- | --- | --- | ------------------------------ | ------------------------ | ---------------- | --- | ----------- | ----------- |
-| OR  | AND | NOT |     |                                |                          |                  |     |             |             |
-|     | XOR |     |     |                                |                          |                  |     |             |             |
-|     |     |     |     |                                | Subtraction (x - y)      | Divide (x / y)   |     | Power (x^y) | Negate (-x) |
-|     |     |     |     |                                |                          | Modulo (x % y)   |     |             |             |
-|     |     |     |     |                                |                          | Multiply (x * y) |     |             |             |
-|     |     |     |     | Greater than or equal (x >= y) |                          |                  |     |             |             |
-|     |     |     |     | Greater than (x > y)           |                          |                  |     |             |             |
-|     |     |     |     | Less than or equal (x <= y)    |                          |                  |     |             |             |
-|     |     |     |     | Less than (x < y)              |                          |                  |     |             |             |
-|     |     |     |     | Equal (x == y)                 |                          |                  |     |             |             |
-|     |     |     |     | Unequal (x != y)               |                          |                  |     |             |             |
-|     |     |     |     |                                | String contains (x IN y) |                  |     |             |             |
-|     |     |     |     |                                | Addition (x + y)         |                  |     |             |             |
+| 1   | 2   | 3   | 4   | 5                              | 6                              | 7                          | 8   | 9           | 10                     |
+| --- | --- | --- | --- | ------------------------------ | ------------------------------ | -------------------------- | --- | ----------- | ---------------------- |
+| OR  | AND | NOT |     |                                |                                |                            |     |             |                        |
+|     | XOR |     |     |                                |                                |                            |     |             |                        |
+|     |     |     |     |                                | Subtraction (x - y)            | Divide (x / y)             |     | Power (x^y) | Negate (-x)            |
+|     |     |     |     |                                |                                | Modulo (x % y)             |     |             |                        |
+|     |     |     |     |                                |                                | Multiply (x * y)           |     |             |                        |
+|     |     |     |     | Greater than or equal (x >= y) |                                |                            |     |             |                        |
+|     |     |     |     | Greater than (x > y)           |                                |                            |     |             |                        |
+|     |     |     |     | Less than or equal (x <= y)    |                                |                            |     |             |                        |
+|     |     |     |     | Less than (x < y)              |                                |                            |     |             |                        |
+|     |     |     |     | Equal (x == y)                 |                                |                            |     |             |                        |
+|     |     |     |     | Unequal (x != y)               |                                |                            |     |             |                        |
+|     |     |     |     |                                | String contains (x IN y)       |                            |     |             |                        |
+|     |     |     |     |                                | Addition (x + y)               |                            |     |             |                        |
+|     |     |     |     |                                | String contains (x CONTAINS y) |                            |     |             |                        |
+|     |     |     |     |                                |                                | Variable exists (x EXISTS) |     |             |                        |
+|     |     |     |     |                                |                                |                            |     |             | Variable resolve ($ x) |
 
 
 ## Compatible types
 
 Not all operators are compatible to all types. See following table for the operator's behavior:
 
-| Operator                       | Number | Boolean              | String                                           |
-| ------------------------------ | ------ | -------------------- | ------------------------------------------------ |
-| AND                            | Error  | OK                   | Error                                            |
-| NOT                            | Error  | OK                   | Error                                            |
-| OR                             | Error  | OK                   | Error                                            |
-| XOR                            | Error  | OK                   | Error                                            |
-| Divide (x / y)                 | OK     | OK (TRUE=1, FALSE=0) | Works (If can be converted to number)            |
-| Multiply (x * y)               | OK     | OK (TRUE=1, FALSE=0) | Works (If can be converted to number)            |
-| Modulo (x % y)                 | OK     | OK (TRUE=1, FALSE=0) | Works (If can be converted to number)            |
-| Subtract (x - y)               | OK     | OK (TRUE=1, FALSE=0) | Works (If can be converted to number)            |
-| Addition (x + y)               | OK     | OK (TRUE=1, FALSE=0) | OK (Conversion to strings, string concatenation) |
-| Equality (x == y)              | OK     | OK                   | OK (If types differ, conversion to strings)      |
-| Inequality (x != y)            | OK     | OK                   | OK                                               |
-| String contains (x IN y)       | Error  | Error                | OK                                               |
-| Less than (x < y)              | OK     | OK (TRUE=1, FALSE=0) | Error                                            |
-| Less than or equal (x <= y)    | OK     | OK (TRUE=1, FALSE=0) | Error                                            |
-| Greater than (x > y)           | OK     | OK (TRUE=1, FALSE=0) | Error                                            |
-| Greater than or equal (x >= y) | OK     | OK (TRUE=1, FALSE=0) | Error                                            |
+| Operator                                | Number                      | Boolean                     | String                                           |
+| --------------------------------------- | --------------------------- | --------------------------- | ------------------------------------------------ |
+| AND                                     | Error                       | OK                          | Error                                            |
+| NOT                                     | Error                       | OK                          | Error                                            |
+| OR                                      | Error                       | OK                          | Error                                            |
+| XOR                                     | Error                       | OK                          | Error                                            |
+| Divide (x / y)                          | OK                          | OK (TRUE=1, FALSE=0)        | Works (If can be converted to number)            |
+| Multiply (x * y)                        | OK                          | OK (TRUE=1, FALSE=0)        | Works (If can be converted to number)            |
+| Modulo (x % y)                          | OK                          | OK (TRUE=1, FALSE=0)        | Works (If can be converted to number)            |
+| Subtract (x - y)                        | OK                          | OK (TRUE=1, FALSE=0)        | Works (If can be converted to number)            |
+| Addition (x + y)                        | OK                          | OK (TRUE=1, FALSE=0)        | OK (Conversion to strings, string concatenation) |
+| Equality (x == y)                       | OK                          | OK                          | OK (If types differ, conversion to strings)      |
+| Inequality (x != y)                     | OK                          | OK                          | OK                                               |
+| String contains (x IN y / x CONTAINS y) | Error                       | Error                       | OK                                               |
+| Less than (x < y)                       | OK                          | OK (TRUE=1, FALSE=0)        | Error                                            |
+| Less than or equal (x <= y)             | OK                          | OK (TRUE=1, FALSE=0)        | Error                                            |
+| Greater than (x > y)                    | OK                          | OK (TRUE=1, FALSE=0)        | Error                                            |
+| Greater than or equal (x >= y)          | OK                          | OK (TRUE=1, FALSE=0)        | Error                                            |
+| Variable exists (x EXISTS)              | Works (Converted to string) | Works (Converted to string) | OK                                               |
+| Variable resolve ($ x)                  | Works (Converted to string) | Works (Converted to string) | OK                                               |
