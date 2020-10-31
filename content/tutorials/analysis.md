@@ -130,10 +130,16 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
       You can find an algorithm designed for such purposed in <code>File system &gt; List &gt; List files</code>. Add it to the graph and connect it to the <code>Subfolder name</code> output.
       This algorithm is not only able to list files, but also filter them directly.<br/>
       In this case, we exactly know that our files are located within a sub-folder <code>in</code>. Please update the <strong>Subfolder</strong> parameter by setting it to <code>in</code>.
-      To filter the correct input files, click <i class="fa fa-plus"></i> <strong>Add</strong>. Then select <i class="fa fa-asterisk"></i> to switch to a <a href="https://en.wikipedia.org/wiki/Glob_(programming)" target="_blank">glob</a>/wildcard filter and set the filter string to <code>*.tif</code>.
+      The filter uses an <a href="/documentation/expressions">expression</a> that allows highly flexible filters. But for this example, we only want to test if the filename contains <code>.tif</code>.
+      To do this, type <code>name CONTAINS ".tif"</code> into the filter box.
       <div class="notices tip">
         <p>
           If you have more complicate folder structures, you can apply the "Navigate to sub-folder" operation with a distinct algorithm. You can find it in the Filesytem category.
+        </p>
+      </div>
+      <div class="notices tip">
+        <p>
+          We highly recommend that you get familiar with expressions, as they are present in most filtering or generation nodes. They are easy to learn and write, but also allow extremely powerful operations.
         </p>
       </div>
   </div>
