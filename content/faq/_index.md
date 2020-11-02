@@ -8,7 +8,20 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
+# General
+
+## Can I make the startup faster?
+
+Many JIPipe extensions rely on other ImageJ plugins to work. That is why JIPipe always checks if all necessary ImageJ plugins are available.
+If you are sure that you have everything installed, you can disable this check at `Project > Application settings > General > Extensions`.
+Disable `Validate ImageJ dependencies`.
+
 # User interface
+
+## Does JIPipe have a dark mode?
+
+Yes, you can enable it in `Project > Application settings > UI > General > Theme`.
+Set the theme to `Modern dark` and restart JIPipe/ImageJ.
 
 ## How can I make long connections without zooming out?
 
@@ -156,3 +169,10 @@ JIPipe will even remember the last setting for you.
 
 Yes, use the node `Miscellaneous > Export data`. It will export all incoming data into one or multiple folders and
 generates names based on metadata.
+
+# OMERO
+
+## I do not want to always put in the credentials into each OMERO node. What can I do?
+
+Go to `Project > Application settings > Extensions > OMERO` and set your credentials there.
+Any OMERO node will supplement unset credentials by those settings.
