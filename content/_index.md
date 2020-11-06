@@ -44,7 +44,7 @@ allows you to create macros <strong>without any programming </strong> by just cr
       <h2>Easy to learn</h2>
       <span>JIPipe comes with helpful tools such as the <strong>Algorithm finder</strong> that guides you in creating a pipeline by offering compatible processing steps for your current data.</span>
     </div>
-    <img src="/img/features/macro_support.png" />
+    <img src="/img/features/algorithm_finder_2.png" />
   </div>
   <div>
     <div class="feature-description">
