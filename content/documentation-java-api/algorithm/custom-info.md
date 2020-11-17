@@ -34,15 +34,15 @@ The code generates a task that just checks if all algorithm dependencies are loa
 If all dependencies are available, the task runs:
 
 ```java
-JIPipeAlgorithmRegistry.getInstance().register(new JIPipeJavaAlgorithmDeclaration(id, algorithmClass), source);
+JIPipeAlgorithmRegistry.getInstance().register(new JIPipeNodeInfo(id, algorithmClass), source);
 ```
 
-The important bit is [JIPipeJavaAlgorithmDeclaration](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeJavaAlgorithmDeclaration.html). In the end an algorithm info is created
+The important bit is [JIPipeNodeInfo](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeNodeInfo.html). In the end an algorithm info is created
 that extract algorithm information from the class annotations.
 
 # Creating a custom info
 
 To create a custom info, inherit from [JIPipeNodeInfo](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeNodeInfo.html). The most important functions are `clone()` and `newInstance()`.
 
-Register the info either via a direct call to `registerNodeType(JIPipeNodeInfo)` or (recommended) via a task that inherits from [JIPipeAlgorithmRegistrationTask](/apidocs/org/hkijena/jipipe/api/registries/JIPipeAlgorithmRegistrationTask.html). You can inherit from the default implementation [JIPipeDefaultAlgorithmRegistrationTask](/apidocs/org/hkijena/jipipe/api/registries/JIPipeDefaultAlgorithmRegistrationTask.html) that comes with pre-made functionality to check for common dependencies.
+Register the info either via a direct call to `registerNodeType(JIPipeNodeInfo)` or (recommended) via a task that inherits from [JIPipeNodeRegistrationTask](/apidocs/org/hkijena/jipipe/api/registries/JIPipeNodeRegistrationTask.html). You can inherit from the default implementation [JIPipeDefaultNodeRegistrationTask](/apidocs/org/hkijena/jipipe/api/registries/JIPipeDefaultNodeRegistrationTask.html) that comes with pre-made functionality to check for common dependencies.
 The reason behind using a task is that some algorithm-internal classes might require that data types or annotation types are already registered.

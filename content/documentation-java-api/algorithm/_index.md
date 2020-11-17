@@ -65,7 +65,7 @@ public class MyAlgorithm extends JIPipeAlgorithm {
     You can also query if the user requested cancellation
     */
     @Override
-    public run(JIPipeRunnerSubStatus subProgress, Consumer<JIPipeRunnerSubStatus> algorithmProgress, Supplier<Boolean> isCancelled) {
+    public run(JIPipeProgressInfo progress) {
         // Run your workload here
     }
 }

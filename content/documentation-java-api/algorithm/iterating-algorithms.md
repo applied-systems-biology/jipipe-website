@@ -66,7 +66,7 @@ public class MyAlgorithm extends JIPipeIteratingAlgorithm {
     Please read and write only via the data interface.
     */
     @Override
-    public runIteration(JIPipeDataBatch dataBatch, JIPipeRunnerSubStatus subProgress, Consumer<JIPipeRunnerSubStatus> algorithmProgress, Supplier<Boolean> isCancelled) {
+    public runIteration(JIPipeDataBatch dataBatch, JIPipeProgressInfo progress) {
         // Run your workload here
     }
 }

@@ -96,9 +96,9 @@ Here is an example `*.pom` file that makes use of SciJava:
     </ciManagement>
 
     <parent>
-        <groupId>org.scijava</groupId>
-        <artifactId>pom-scijava</artifactId>
-        <version>28.0.0</version>
+        <groupId>org.hkijena</groupId>
+        <artifactId>pom-jipipe</artifactId>
+        <version>2020.11</version> <!-- Update the version accordingly -->
         <relativePath/>
     </parent>
 
@@ -106,11 +106,6 @@ Here is an example `*.pom` file that makes use of SciJava:
         <repository>
             <id>imagej.public</id>
             <url>http://maven.imagej.net/content/groups/public</url>
-        </repository>
-        <repository>
-            <id>external-jars</id>
-            <name>External JAR files</name>
-            <url>file://${project.basedir}/external-dependencies</url>
         </repository>
     </repositories>
 

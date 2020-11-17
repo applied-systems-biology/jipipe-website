@@ -60,8 +60,8 @@ public static void main(String[] args) {
   JIPipeRunnerQueue.getInstance().enqueue(run);
 
   // Option 2: Run it on the current thread
-  // You need to supply callbacks for progress and cancelling
-  run.run(status -> System.out.println(status.getProgress() + "/" + status.getMaxProgress()), () -> false);
+  // The run itself has a property getProgressInfo() that allows access to the progress & log
+  run.run();
 }
 ```
 
@@ -87,14 +87,11 @@ Row data is always stored in folders that correspond to the row index. For examp
     // You can now access the run's graph and access the data slots
     JIPipeDataSlot slot = run.getGraph().getNodes().get("some-node").getOutputSlot("Output");
 
-    // Get the slot data path
-    Path slotDataPath = slot.getStoragePath();
-
     // Load the slot's data table
-    JIPipeExportedDataTable table = JIPipeExportedDataTable.loadFromJson(slotDataPath.resolve("data-table.json"));
+    JIPipeExportedDataTable table = slot.getStorageDataTable();
 
     // Example: Get the folder where the first row stores its data
-    Path firstRowStorage = slotDataPath.resolve("0");
+    Path firstRowStorage = slot.getRowStoragePath(0);
   }
 ```
 
@@ -132,8 +129,8 @@ A simple [graph runner](/apidocs/org/hkijena/jipipe/api/JIPipeGraphRunner.html) 
     JIPipeRunnerQueue.getInstance().enqueue(run);
 
     // Option 2: Run it on the current thread
-    // You need to supply callbacks for progress and cancelling
-    run.run(status -> System.out.println(status.getProgress() + "/" + status.getMaxProgress()), () -> false);
+    // The run itself has a property getProgressInfo() that allows access to the progress & log
+    run.run();
   }
 ```
 
@@ -153,8 +150,11 @@ public static void main(String[] args) {
   // Add inputs
   node.getFirstInputSlot().addData(new FileData(Paths.get("/data/image.tif")));
 
+  // The node requires a progress info 
+  JIPipeProgressInfo progress = new JIPipeProgressInfo();
+
   // Run the node
-  node.run(new JIPipeRunnerSubStatus(), status -> System.out.println(status.getProgress() + "/" + status.getMaxProgress()), () -> false);
+  node.run(progress);
 
   // Extract the output
   ImagePlusData image = node.getFirstOutputSlot().getData(0, ImagePlusData.class);
