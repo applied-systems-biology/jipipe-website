@@ -9,25 +9,24 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
 While [JIPipeData](/apidocs/org/hkijena/jipipe/api/data/JIPipeData.html) allows you to
-define a function for previewing, this only works for data already present in memory.
-To allow previewing of data stored in a results folder, you need to suppy a [JIPipeResultDataSlotPreviewUI](/apidocs/org/hkijena/jipipe/ui/resultanalysis/JIPipeResultDataSlotPreviewUI.html) that loads the data from disk and
+define a custom function for previewing, this only works for data already present in memory.
+To allow previewing of data stored in a results folder, you need to suppy a [JIPipeResultDataSlotPreviewUI](/apidocs/org/hkijena/jipipe/ui/resultanalysis/JIPipeAsyncResultDataPlotPreview.html) that loads the data from disk and
 generates a preview.
-We recommend to use [JIPipeAsyncResultDataPlotPreviewUI](/apidocs/org/hkijena/jipipe/ui/resultanalysis/JIPipeAsyncResultDataPlotPreviewUI.html),
-which only requires you to supply a method for loading the data from disk. This class will offload the loading and
-preview generation into a separate thread to prevent the UI from freezing.
+We recommend to use [JIPipeAsyncResultDataPlotPreviewUI](/apidocs/org/hkijena/jipipe/ui/resultanalysis/JIPipeAsyncResultDataPlotPreview.html)
+This class will offload the loading and preview generation into a separate thread to prevent the UI from freezing. By default it will use the already defined `importFrom(Path)` method present in the `JIPipeData` class
+and use its already defined preview function.
+
+You can override the data loading and other methods for customization.
+
+
 
 ```java
-public class MyDataPreviewUI extends JIPipeAsyncResultDataPlotPreviewUI {
+public class MyDataPreviewUI extends JIPipeAsyncResultDataPlotPreview {
 
     public MyDataPreviewUI(JTable table) {
       super(table);
     }
 
-    @Override
-    protected JIPipeData loadData(Path storageFolder) {
-        Path jsonFile = PathUtils.findFileByExtensionIn(storageFolder, ".json");
-        return MyData.fromJson(jsonFile);
-    }
 }
 ```
 

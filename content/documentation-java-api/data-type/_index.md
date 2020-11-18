@@ -15,9 +15,12 @@ JIPipe requires that data can be saved to a folder within the output directory. 
 recommend that you include code that can load the data back into JIPipe or ImageJ in some form.
 
 There are no requirements on the constructor of the data type.
+The only requirement is that there is a function `importFrom(Path)` that imports `JIPipeData` from a row storage folder.
 
 The folder that is provided in `storageFilePath` is unique to the data and empty.
-The name parameter in `storageFilePath` is usually the data slot name and can be used as template for file names or ignored.
+The name parameter in `storageFilePath` is usually the data slot name and can be used as template for file names. It can be ignored **undless** `forceName` is true.
+The reason behind this is that then the name is pre-generated in a unique way for saving the data at a non-standard location (e.g. exporting the data).
+In such cases **all file or folder names** within the storage path should contain the name in some way, **even if the import function cannot load the exported data anymore**.
 
 There are two optional functions that you can override:
 
@@ -76,7 +79,7 @@ public class MyData implements JIPipeData {
    }
 
     @Override
-    public void saveTo(Path storageFilePath, String name) {
+    public void saveTo(Path storageFilePath, String name, boolean forceName, JIPipeProgressInfo progress) {
         try {
             JsonUtils.getObjectMapper().writeValue(storageFilePath.resolve(name + ".json").toFile(), this);
         }
@@ -95,6 +98,12 @@ public class MyData implements JIPipeData {
       }
     }
 
+    // Do not forget to add this method or JIPipe will refuse to start
+    public static MyData importFrom(Path rowStorageFolder) {
+        // You can use the PathUtils
+        Path targetFile = PathUtils.findFileByExtensionIn(storageFilePath, ".json");
+        return fromJson(targetFile);
+    }
 }
 ```
 
