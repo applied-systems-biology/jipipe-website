@@ -43,6 +43,84 @@ final outputs, not intermediate steps.
 
 # Data processing
 
+## What happens if I put multiple inputs into a slot?
+
+Because each slot holds a table of data and metadata, those tables are merged row-wise.
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        Show example
+    </div>
+    <div class="expand-content" style="display: none;">
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>C1_1</td>
+        </tr>
+        <tr>
+          <td>C1_2</td>
+        </tr>
+        <tr>
+          <td>C1_3</td>
+        </tr>
+        </tbody>
+      </table>
+      <div>and</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>C1_4</td>
+        </tr>
+        <tr>
+          <td>C1_5</td>
+        </tr>
+        <tr>
+          <td>C1_6</td>
+        </tr>
+        </tbody>
+      </table>
+      <div>are merged into</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>C1_1</td>
+        </tr>
+        <tr>
+          <td>C1_2</td>
+        </tr>
+        <tr>
+          <td>C1_3</td>
+        </tr>
+        <tr>
+          <td>C1_4</td>
+        </tr>
+        <tr>
+          <td>C1_5</td>
+        </tr>
+        <tr>
+          <td>C1_6</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+
 ## Why should I care to add those annotations?
 
 Annotations are optional for single data analyses or pipelines without multi-input nodes, but helpful anyways.
@@ -156,6 +234,27 @@ macros and the GUI.
 JIPipe has a very general data model that makes it possible to develop pipelines for processing **any** kind of data.
 The communication between JIPipe's data types and ImageJ is handled by adaptors that will handle the "translation" back & forth.
 For some of such data types, there is no adaptor. The reason behind this is that ImageJ might not have an equivalent data type or feature.
+
+# Performance
+
+## How does JIPipe store its data during the analysis?
+
+JIPipe stores all necessary inputs and the outputs of each processing step. This means that any kind of large data set will be loaded into the memory at the
+same time if you set up an iteration.
+
+For example, an `Import image` step will load **all** the images and then continue with the next steps.
+
+## I have a very large data set. How can I prevent loading it at the same time?
+
+You can run JIPipe projects within other JIPipe projects. This will separate them and into individual runs that are iterated one-by-one.
+JIPipe comes with nodes to extract specific results from those outputs.
+
+Create the analysis for only one data set and export project-wide parameters via its project settings. Those parameters will be later modified and should contain anything you need for the project setup.
+Save it into a `*.jip` project. 
+
+
+Then create a separate project and add the nodes `Run JIPipe project` and `Define JIPipe project parameters`.
+In both nodes, you load the main analysis projects.
 
 # Result analysis
 
