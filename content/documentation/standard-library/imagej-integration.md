@@ -77,4 +77,4 @@ You can find a list of all algorithms via the {{< icon name="fa-question-circle-
 
 ## Macro node
 
-If an algorithm is not available as JIPipe node, you can use the [Macro node](macro-node).
+If an algorithm is not available as JIPipe node, you can use the [Macro node](../macro-node).
