@@ -75,7 +75,6 @@ from some changes that are required to make algorithms usable in a batch-environ
 
 You can find a list of all algorithms via the {{< icon name="fa-question-circle-o" size="medium" >}} **Help** menu on the top right corner and the item <code>Algorithm compendium</code>.
 
-{{% notice tip %}}
-You can run ImageJ macro code as node. The input slot names correspond to the image windows that are created. Macro nodes do not work in a headless (server) environment, so be careful
-when including them.
-{{% /notice %}}
+## Macro node
+
+If an algorithm is not available as JIPipe node, you can use the [Macro node](macro-node).

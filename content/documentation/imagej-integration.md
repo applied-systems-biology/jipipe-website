@@ -9,13 +9,21 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
+# ImageJ to JIPipe
+
+JIPipe integrates commonly used data types and popular algorithms from ImageJ.
+If an algorithm is not available for JIPipe, you can still run them via the [Macro node](standard-library/macro-node).
+There is also a Python script node available that behaves similar to the macro node.
+
+# JIPipe to ImageJ
+
 JIPipe algorithms and pipelines can be executed from within an ImageJ environment.
 There are two ways JIPipe integrates back into ImageJ:
 
 1. You can run a pipeline project from a macro/command
 2. You can run JIPipe algorithms from a macro/command if the slot data types are supported by ImageJ
 
-# Running a pipeline
+## Running a pipeline
 
 You can run an JIPipe pipeline via the command `Plugins > JIPipe > Run JIPipe project`. It will ask you
 the project file and the output directory.
@@ -41,7 +49,7 @@ You can also run JIPipe in headless-mode just like any ImageJ2 algorithm:
 While JIPipe works in Headless-mode, some ImageJ algorithms don't. You will get an error message if an algorithm requires a graphical environment.
 {{% /notice %}}
 
-# Running a single algorithm
+## Running a single algorithm
 
 JIPipe algorithms can be run from ImageJ macros/commands if the slot data types are compatible with ImageJ.
 By default, this includes any image data type, result tables, and regions of interest (via ROIManager).
