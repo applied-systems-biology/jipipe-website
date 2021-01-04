@@ -128,7 +128,7 @@ They will allow you to quickly find out from which data set your data was genera
 
 If you have a multi-input node, you **will** need annotations, as JIPipe needs to figure out which data from which input belongs together.
 
-You will find more information [here](/documentation/batch-pipelines).
+You will find more information [here]({{< ref "/documentation/batch-pipelines" >}}).
 
 ## Can you give me an example of multi-input processing?
 

@@ -10,11 +10,11 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
 JIPipe allows the creation of extensions that contain additional algorithms without
-the need for writing [Java code](/documentation-java-api). We recommend starting from
+the need for writing [Java code]({{< ref "/documentation-java-api" >}}). We recommend starting from
 a functional pipeline project and export the whole pipeline or a part of it into a **JSON Extension**.
 Alternatively, you can create custom algorithms from scratch within the extension builder.
 
-If you want a step-by-step guideline on how to create a custom algorithm, please check out our [tutorial](/tutorials/extension).
+If you want a step-by-step guideline on how to create a custom algorithm, please check out our [tutorial]({{< ref "/tutorials/extension" >}}).
 
 # Exporting from an existing pipeline
 

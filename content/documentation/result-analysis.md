@@ -37,8 +37,8 @@ It allows you to navigate through the results, and import them back into ImageJ 
 
 The UI has two main components:
 
-1. The **slot tree** shows a hierarchy of all data slots. It is organized by [compartment](/documentation/graph-compartment), then [algorithm](/documentation/batch-pipelines), and finally [data slot](/documentation/batch-pipelines). By selecting any of the entries, all data associated to the selection or any n-child is displayed.
-2. The **output data table** lists the stored data of the selected slot(s) as table (if you are unfamiliar why this is, please take a look at the explanation on [how JIPipe processes data](/documentation/batch-pipelines))
+1. The **slot tree** shows a hierarchy of all data slots. It is organized by [compartment]({{< ref "/documentation/graph-compartment" >}}), then [algorithm]({{< ref "/documentation/batch-pipelines" >}}), and finally [data slot]({{< ref "/documentation/batch-pipelines" >}}). By selecting any of the entries, all data associated to the selection or any n-child is displayed.
+2. The **output data table** lists the stored data of the selected slot(s) as table (if you are unfamiliar why this is, please take a look at the explanation on [how JIPipe processes data]({{< ref "/documentation/batch-pipelines" >}}))
 
 ![Result analysis UI](/img/documentation/result-analysis-ui.png)
 
@@ -49,7 +49,7 @@ The table has following columns:
 * (Optional) **Algorithm** shows the name of the algorithm that generated the data.
 * **Location** is the folder name where the data is located relative to the slot directory
 * **Data** shows a string representation of the data row. The contents vary depending on the slot data type. For example, file system data display their path at this location.
-* Additional columns correspond to the [data annotations](/documentation/batch-pipelines/#data-annotations) that were attached by various algorithms
+* Additional columns correspond to the [data annotations]({{< ref "/documentation/batch-pipelines#data-annotations" >}}) that were attached by various algorithms
 
 ## Importing results back into JIPipe/ImageJ/...
 

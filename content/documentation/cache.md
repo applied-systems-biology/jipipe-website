@@ -15,7 +15,7 @@ by algorithms to prevent repeating previous calculation steps.
 # Load data into the cache
 
 To cache data, right click a node and click <i class="fa fa-database"></i> <strong>Update cache</strong>.
-This will execute a [Quick run](../quick-run) and store all results into the cache.
+This will execute a [Quick run]({{< ref "/documentation/quick-run" >}}) and store all results into the cache.
 
 # Accessing the cache
 

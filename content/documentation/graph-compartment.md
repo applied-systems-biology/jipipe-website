@@ -39,7 +39,7 @@ Compartments behave similar to algorithms. This means you can create a directed 
 # Creating and connecting compartments
 
 JIPipe comes with an editor that allows to control the graph compartments.
-This editor is similar to the [pipeline editor](/documentation/graph-editor) and allows
+This editor is similar to the [pipeline editor]({{< ref "/documentation/graph-editor" >}}) and allows
 you to create new compartments, connect them, as well as import or export compartments.
 Instead of containg algorithms, the editor contains *graph compartment nodes* that can be connected
 similar to how algorithms are connected.
@@ -47,7 +47,7 @@ similar to how algorithms are connected.
 ![Graph compartment editor](/img/documentation/graph-compartment-editor-ui.png)
 
 You can one or multiple compartments in the editor. Click the {{< icon name="fa-pencil" size="medium" >}} **Edit** button to
-open the compartment in the [pipeline editor](/documentation/graph-editor).
+open the compartment in the [pipeline editor]({{< ref "/documentation/graph-editor" >}}).
 
 {{% notice tip %}}
 You can also double-click a compartment node to open the editor.

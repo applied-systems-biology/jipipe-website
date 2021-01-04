@@ -16,7 +16,7 @@ The ImageJ integration library integrates common data types from ImageJ into JIP
 * Region of interest (ROI Manager). JIPipe handles ROI as \*.zip files.
 
 The ImageJ data types are marked as accessible from outside JIPipe, meaning that
-algorithms that only use those types can be executed [standalone](/documentation/imagej-integration)
+algorithms that only use those types can be executed [standalone]({{< ref "/documentation/imagej-integration" >}})
 
 # Image data types
 
@@ -77,4 +77,4 @@ You can find a list of all algorithms via the {{< icon name="fa-question-circle-
 
 ## Macro node
 
-If an algorithm is not available as JIPipe node, you can use the [Macro node](../macro-node).
+If an algorithm is not available as JIPipe node, you can use the [Macro node]({{< ref "/documentation/standard-library/macro-node" >}}).
