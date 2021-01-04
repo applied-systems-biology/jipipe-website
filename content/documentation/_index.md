@@ -55,8 +55,6 @@ The user interface is separated into three sections:
 2. **The tab bar** allows you to switch between different interfaces associated to the current project. You can close thabs by clicking the `x` icon. If a tab contains some data that will be lost after closing it, you will have to confirm the action. If no question is asked on closing a tab, you will be able to open it later again without losing data.
 3. **The current content** depends on the selected tab
 
-![User interface overview](/img/documentation/general-ui.png)
-
 {{% notice tip %}}
 You can also close a tab by clicking it with the middle mouse button.
 {{% /notice %}}

@@ -1,5 +1,5 @@
 +++
-title = "Testing algorithm parameters"
+title = "Running a single node"
 description = "Explains the Quick Run feature that allows to test and compare different algorithm parameters without recalculating the whole pipeline."
 weight = 50
 type="page"
@@ -30,10 +30,12 @@ if it finds issues. Please fix the issues and click "Retry".
 
 {{% notice tip %}}
 You can also do a Quick Run from an algorithm's right-click context menu.
+Here you will also find a related option called "Update cache" that just updates the cache of the selected node.
 {{% /notice %}}
 
-If you click {< icon name="fa-cog" size="medium" >}} **Run**, the results will **not** be shown.
+If you click {{< icon name="fa-cog" size="medium" >}} **Run**, the results will **not** be shown.
 Instead, if enabled, data will just be stored into the [Cache](/documentation/cache)
+
 
 ![Testbench UI](/img/documentation/testbench-ui.png)
 

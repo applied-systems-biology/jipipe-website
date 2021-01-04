@@ -250,7 +250,7 @@ You can run JIPipe projects within other JIPipe projects. This will separate the
 JIPipe comes with nodes to extract specific results from those outputs.
 
 Create the analysis for only one data set and export project-wide parameters via its project settings. Those parameters will be later modified and should contain anything you need for the project setup.
-Save it into a `*.jip` project. 
+Save it into a `*.jip` project.
 
 
 Then create a separate project and add the nodes `Run JIPipe project` and `Define JIPipe project parameters`.
