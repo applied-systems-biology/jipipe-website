@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JIPipe for ImageJ</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="revised" content="2021-01-05T11:23:58 CET">
+<title> :: JIPipe for ImageJ</title>
+<link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+<link href="./css/font-awesome.min.css" rel="stylesheet">
+<link href="./css/nucleus.css" rel="stylesheet">
+<link href="./theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<script src="./js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "";
+</script>
+<link rel="stylesheet" type="text/css" href="./css/custom.css">
+<link rel="stylesheet" type="text/css" href="./css/slick.css">
+<link rel="stylesheet" type="text/css" href="./css/slick-theme.css">
+
+
+    
+  </head>
+  <body data-url="./_footer.html">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p><a href="./" target="_self"><img src="./img/logo.svg" /></a></p>
+
+  
+
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://forum.image.sc/tag/jipipe"  rel="noopener">
+                  <i class='fa fa-comments'></i> <label>Community</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="./citation"  rel="noopener">
+                  <i class='fa fa-paragraph'></i> <label>Citation</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/" class="dd-item">
+          <a href="./">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/tutorials.html" class="dd-item haschildren
+        ">
+      <div>
+      <a href="./tutorials.html">Tutorials</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/tutorials/analysis.html" class="dd-item">
+        <div>
+          <a href="./tutorials/analysis.html">
+            Image analysis pipeline
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/tutorials/analysis_video.html" class="dd-item">
+        <div>
+          <a href="./tutorials/analysis_video.html">
+            Image analysis pipeline (Video)
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/tutorials/extension.html" class="dd-item">
+        <div>
+          <a href="./tutorials/extension.html">
+            Creating an extension
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/faq.html" class="dd-item
+        ">
+      <div>
+      <a href="./faq.html">Frequently asked questions</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/documentation.html" class="dd-item haschildren
+        ">
+      <div>
+      <a href="./documentation.html">Documentation</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/documentation/batch-pipelines.html" class="dd-item">
+        <div>
+          <a href="./documentation/batch-pipelines.html">
+            Batch pipelines
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/graph-editor.html" class="dd-item">
+        <div>
+          <a href="./documentation/graph-editor.html">
+            Pipeline editor
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/expressions.html" class="dd-item">
+        <div>
+          <a href="./documentation/expressions.html">
+            Expression parameters
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/graph-compartment.html" class="dd-item">
+        <div>
+          <a href="./documentation/graph-compartment.html">
+            Graph compartments
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/result-analysis.html" class="dd-item">
+        <div>
+          <a href="./documentation/result-analysis.html">
+            Running a pipeline
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/quick-run.html" class="dd-item">
+        <div>
+          <a href="./documentation/quick-run.html">
+            Running a single node
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/cache.html" class="dd-item">
+        <div>
+          <a href="./documentation/cache.html">
+            Data caching
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/imagej-integration.html" class="dd-item">
+        <div>
+          <a href="./documentation/imagej-integration.html">
+            ImageJ integration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/plugins.html" class="dd-item">
+        <div>
+          <a href="./documentation/plugins.html">
+            Managing plugins
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/documentation/standard-library.html" class="dd-item haschildren
+        ">
+      <div>
+      <a href="./documentation/standard-library.html">Standard library</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/documentation/standard-library/imagej-integration.html" class="dd-item">
+        <div>
+          <a href="./documentation/standard-library/imagej-integration.html">
+            ImageJ integration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/standard-library/macro-node.html" class="dd-item">
+        <div>
+          <a href="./documentation/standard-library/macro-node.html">
+            Macro node
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/standard-library/filesystem.html" class="dd-item">
+        <div>
+          <a href="./documentation/standard-library/filesystem.html">
+            Filesystem algorithms
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/standard-library/multi-parameter.html" class="dd-item">
+        <div>
+          <a href="./documentation/standard-library/multi-parameter.html">
+            Multi-parameter algorithms
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/standard-library/annotations.html" class="dd-item">
+        <div>
+          <a href="./documentation/standard-library/annotations.html">
+            Data annotation algorithms
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/standard-library/plots-tables.html" class="dd-item">
+        <div>
+          <a href="./documentation/standard-library/plots-tables.html">
+            Plots and tables
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/standard-library/python.html" class="dd-item">
+        <div>
+          <a href="./documentation/standard-library/python.html">
+            Python integration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/documentation/create-json-extensions.html" class="dd-item
+        ">
+      <div>
+      <a href="./documentation/create-json-extensions.html">Extension builder</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/documentation-json-api.html" class="dd-item haschildren
+        ">
+      <div>
+      <a href="./documentation-json-api.html">JSON API documentation</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/documentation-json-api/graph-node.html" class="dd-item">
+        <div>
+          <a href="./documentation-json-api/graph-node.html">
+            Algorithm node
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation-json-api/algorithm.html" class="dd-item">
+        <div>
+          <a href="./documentation-json-api/algorithm.html">
+            Algorithm type
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation-json-api/dependency.html" class="dd-item">
+        <div>
+          <a href="./documentation-json-api/dependency.html">
+            Dependency
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation-json-api/graph-edge.html" class="dd-item">
+        <div>
+          <a href="./documentation-json-api/graph-edge.html">
+            Graph Edge
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation-json-api/graph.html" class="dd-item">
+        <div>
+          <a href="./documentation-json-api/graph.html">
+            Graph
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation-json-api/json-extension.html" class="dd-item">
+        <div>
+          <a href="./documentation-json-api/json-extension.html">
+            Extension
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation-json-api/metadata.html" class="dd-item">
+        <div>
+          <a href="./documentation-json-api/metadata.html">
+            Metadata
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation-json-api/point.html" class="dd-item">
+        <div>
+          <a href="./documentation-json-api/point.html">
+            Point
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation-json-api/project.html" class="dd-item">
+        <div>
+          <a href="./documentation-json-api/project.html">
+            Project
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation-json-api/slot-definition.html" class="dd-item">
+        <div>
+          <a href="./documentation-json-api/slot-definition.html">
+            Slot definition
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/citation.html" class="dd-item
+        ">
+      <div>
+      <a href="./citation.html">Citation</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/tutorials.html" >
+   Tutorials</option>
+    <option value="/faq.html" >
+   Frequently asked questions</option>
+    <option value="/documentation.html" >
+   Documentation</option>
+    <option value="/documentation-json-api.html" >
+   JSON API documentation</option>
+    <option value="/citation.html" >
+   Citation</option>
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="./js/lunr.min.js"></script>
+        <script type="text/javascript" src="./js/auto-complete.js"></script>
+        <link href="./css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "";
+          
+        </script>
+        <script type="text/javascript" src="./js/search.js"></script>
+      </div>
+    
+
+    <h1></h1>
+    
+    
+    
+    <p>By <a href="https://www.leibniz-hki.de/en/applied-systems-biology.html">Applied Systems Biology, Leibniz Institute for Natural Product Research and Infection Biology – Hans Knöll Institute (HKI), Jena, Germany</a></p>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-next" href="./tutorials.html" title="Tutorials" style="margin-right: 0px;"><label>Tutorials</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+    
+
+    
+  </div>
+
+
+	<div>
+
+
+  
+    <p>By <a href="https://www.leibniz-hki.de/en/applied-systems-biology.html">Applied Systems Biology, Leibniz Institute for Natural Product Research and Infection Biology – Hans Knöll Institute (HKI), Jena, Germany</a></p>
+
+  
+
+
+
+	</div>
+</footer>
+
+<script src="./js/clipboard.min.js"></script>
+
+<link href="./css/featherlight.min.css" rel="stylesheet">
+<script src="./js/featherlight.min.js"></script>
+
+
+
+<script src="./theme-flex/script.js"></script>
+
+
+    
+
+    
+    
+
+    <script type="text/javascript" src="./js/slick.min.js"></script>
+<script type="text/javascript" src="./js/custom.js"></script>
+
+  </body>
+</html>

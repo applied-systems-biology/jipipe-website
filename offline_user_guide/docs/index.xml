@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JIPipe on JIPipe for ImageJ</title>
+    <link>/</link>
+    <description>Recent content in JIPipe on JIPipe for ImageJ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Header</title>
+      <link>/_header.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/_header.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Algorithm node</title>
+      <link>/documentation-json-api/graph-node.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation-json-api/graph-node.html</guid>
+      <description>This document describes the properties of the JSON API object. You also can access the document in JSON Schema format: algorithm-node.schema.json
+ Node in a graph   jipipe:slot-configuration:  object   [object Object]      User-defined slots. Might be ignored depending on the algorithm. The keys are the slot names. See slot-definition        jipipe:algorithm-ui-location:  object   [object Object]     Locations of this node within the UI.</description>
+    </item>
+    
+    <item>
+      <title>Batch pipelines</title>
+      <link>/documentation/batch-pipelines.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/batch-pipelines.html</guid>
+      <description>JIPipe was designed to always process data in batches, meaning that algorithms always work on multiple data sets at once. This greatly reduces the required work to upscale a processing pipeline from one or few to a large amount of data sets.
+We will use this pipeline as example:
+mermaid.initialize({startOnLoad:true}); graph LR; A[File] -- B[Load image] B -- C[Apply gaussian]  In the pipeline, a file is provided as input. Then the file is loaded as image.</description>
+    </item>
+    
+    <item>
+      <title>Image analysis pipeline</title>
+      <link>/tutorials/analysis.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/tutorials/analysis.html</guid>
+      <description>This tutorial is also available as video.   1. First start On starting JIPipe, you will see such a screen: It contains a short introduction, the graph compartment editor, an three pre-defined graph compartments Preprocessing, Analysis, and Postprocessing. As described in the graph compartment documentation, you can ignore graph graph compartments. But in this tutorial we will make use of its capabilities to clearly separate the pipeline into the mentioned tree steps.</description>
+    </item>
+    
+    <item>
+      <title>Image analysis pipeline (Video)</title>
+      <link>/tutorials/analysis_video.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/tutorials/analysis_video.html</guid>
+      <description> This tutorial is also available as text tutorial.   </description>
+    </item>
+    
+    <item>
+      <title>Algorithm type</title>
+      <link>/documentation-json-api/algorithm.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation-json-api/algorithm.html</guid>
+      <description>This document describes the properties of the JSON API object. You also can access the document in JSON Schema format: algorithm.schema.json
+ Defines a new node type   id:  string       Unique algorithm ID   metadata:  See metadata        General algorithm metadata   category:  string   org.hkijena.jipipe:miscellaneous      The category   exported-parameters:  object   [object Object]     List of parameters that will be exported to users of the node   graph:  See graph        This graph is executed when the algorithm is run   menu-path:  string       Optional menu path within the category menu   jipipe:project-type:  string  , x ∈ { graph-wrapper-algorithm  (default) }       Identifies the JSON as algorithm      Example { &amp;#34;id&amp;#34; : &amp;#34;folder-list-tif&amp;#34;, &amp;#34;metadata&amp;#34; : { &amp;#34;name&amp;#34; : &amp;#34;List TIFF files&amp;#34;, &amp;#34;description&amp;#34; : &amp;#34;Lists all TIFF files in a folder&amp;#34;, &amp;#34;authors&amp;#34; : &amp;#34;Ruman Gerst&amp;#34;, &amp;#34;website&amp;#34; : &amp;#34;&amp;#34;, &amp;#34;license&amp;#34; : &amp;#34;BSD-2&amp;#34;, &amp;#34;citation&amp;#34; : &amp;#34;&amp;#34; }, &amp;#34;category&amp;#34; : &amp;#34;Converter&amp;#34;, &amp;#34;parameter-visibilities&amp;#34; : { &amp;#34;visible-keys&amp;#34; : [ ] }, &amp;#34;graph&amp;#34; : { &amp;#34;nodes&amp;#34; : { &amp;#34;default-preprocessing-filter-files&amp;#34; : { &amp;#34;jipipe:slot-configuration&amp;#34; : { &amp;#34;Files&amp;#34; : { &amp;#34;slot-data-type&amp;#34; : &amp;#34;file&amp;#34;, &amp;#34;slot-type&amp;#34; : &amp;#34;Input&amp;#34;, &amp;#34;inherited-slot&amp;#34; : null, &amp;#34;name&amp;#34; : &amp;#34;Files&amp;#34;, &amp;#34;custom-name&amp;#34; : null, &amp;#34;inheritance-conversions&amp;#34; : { } }, &amp;#34;Filtered files&amp;#34; : { &amp;#34;slot-data-type&amp;#34; : &amp;#34;file&amp;#34;, &amp;#34;slot-type&amp;#34; : &amp;#34;Output&amp;#34;, &amp;#34;inherited-slot&amp;#34; : null, &amp;#34;name&amp;#34; : &amp;#34;Filtered files&amp;#34;, &amp;#34;custom-name&amp;#34; : null, &amp;#34;inheritance-conversions&amp;#34; : { } } }, &amp;#34;jipipe:algorithm-ui-location&amp;#34; : { &amp;#34;{Vertical}&amp;#34; : { &amp;#34;x&amp;#34; : 25, &amp;#34;y&amp;#34; : 250 } }, &amp;#34;jipipe:algorithm-type&amp;#34; : &amp;#34;file-filter&amp;#34;, &amp;#34;jipipe:algorithm-compartment&amp;#34; : &amp;#34;DEFAULT&amp;#34;, &amp;#34;name&amp;#34; : &amp;#34;Filter *.</description>
+    </item>
+    
+    <item>
+      <title>Creating an extension</title>
+      <link>/tutorials/extension.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/tutorials/extension.html</guid>
+      <description>1. Existing pipeline In this tutorial, we will create a custom algorithm extension based on parts of the pipeline created in the other tutorial. Please open the project file for the pipeline and navigate to the Preprocessing tab.    2. Selecting the algorithms Please select the following algorithms (you can either do this by holding the Shift keyboard button and clicking the nodes or dragging a selection around the nodes):  Folder list Path to annotation List files Import image  After selecting the algorithms, right-click a selected node and click Export.</description>
+    </item>
+    
+    <item>
+      <title>ImageJ integration</title>
+      <link>/documentation/standard-library/imagej-integration.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/standard-library/imagej-integration.html</guid>
+      <description>The ImageJ integration library integrates common data types from ImageJ into JIPipe:
+ Multi-dimensional images (ImagePlus). The standard output file format are TIFF files. Result tables. They are serialized to CSV files. Region of interest (ROI Manager). JIPipe handles ROI as *.zip files.  The ImageJ data types are marked as accessible from outside JIPipe, meaning that algorithms that only use those types can be executed standalone
+Image data types Various ImageJ algorithms only work on data with a specific color type, or dimensionality.</description>
+    </item>
+    
+    <item>
+      <title>Pipeline editor</title>
+      <link>/documentation/graph-editor.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/graph-editor.html</guid>
+      <description>The graph editor (pipeline editor) allows you to edit the processing steps of a graph compartment. Its user interface is separated into three sections:
+ The analysis graph contains the processing steps (also referred as algorithms) The settings panel shows the properties of the currently selected algorithms The toolbar allows you to add more algorithms into the graph, navigate to existing algorithms, change some behavior settings of the graph editor, and create screenshots  Analysis graph The analysis graph contains algorithms that are represented by rectangles.</description>
+    </item>
+    
+    <item>
+      <title>Macro node</title>
+      <link>/documentation/standard-library/macro-node.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/standard-library/macro-node.html</guid>
+      <description>The macro node allows to run existing ImageJ macros or execute algorithms that are not directly available as JIPipe nodes. You will find it in Images &amp;gt; ImageJ Macro.
+Inputs and outputs By default, the node has no inputs and outputs. Use to the + button to add them. For example, if you want to process one image and output the processed result, create one input and one output.
+By default, there are four data types that can be used as input and output:</description>
+    </item>
+    
+    <item>
+      <title>Expression parameters</title>
+      <link>/documentation/expressions.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/expressions.html</guid>
+      <description>When using nodes that filter or generate data, you might encounter a parameter type called &amp;ldquo;Expression&amp;rdquo;. This parameter allows to to write simple to complex functions that can test for one or multiple conditions or act as input for a generator node. The basic concept of this expression language is to mix string, boolean, and numeric operations into one simple but powerful language. It allows you for example to first calculate a numeric metric and use it for filtering objects within one line.</description>
+    </item>
+    
+    <item>
+      <title>Dependency</title>
+      <link>/documentation-json-api/dependency.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation-json-api/dependency.html</guid>
+      <description>This document describes the properties of the JSON API object. You also can access the document in JSON Schema format: dependency.schema.json
+ Project or extension dependency. Refers to a JIPipe extension.   metadata:  See metadata         id:  string       Unique ID of this dependency should have format  .  :       version:  string       Version of this dependency      Example { &amp;#34;metadata&amp;#34; : { &amp;#34;name&amp;#34; : &amp;#34;Filesystem types and algorithms&amp;#34;, &amp;#34;description&amp;#34; : &amp;#34;Data types and algorithms for interacting with files and folders&amp;#34;, &amp;#34;authors&amp;#34; : &amp;#34;Zoltán Cseresnyés, Ruman Gerst&amp;#34;, &amp;#34;website&amp;#34; : &amp;#34;https://applied-systems-biology.</description>
+    </item>
+    
+    <item>
+      <title>Filesystem algorithms</title>
+      <link>/documentation/standard-library/filesystem.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/standard-library/filesystem.html</guid>
+      <description>The JIPipe standard library contains data types and algorithms to apply file system operations. The common use case is to extract the list of input files for the following algorithms.
+The filesystem library has two basic data types:
+ A  File contains a path to a file A  Folder contains a path to a folder A Path contains a path to a file or folder  In the Add data menu you can define one file/folder or a list of files/folders.</description>
+    </item>
+    
+    <item>
+      <title>Graph compartments</title>
+      <link>/documentation/graph-compartment.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/graph-compartment.html</guid>
+      <description>A common issue with graphical programming languages is that large graphs are hard to navigate. JIPipe solves this issue by separating the pipeline graph into sub-graphs. Each sub-graph has a predetermined output node that is visible to other compartments. Other nodes on the other hand are not visible to other compartments.
+The difference between compartments and simple node groups is that compartments only communicate with each other via the compartment output node.</description>
+    </item>
+    
+    <item>
+      <title>Multi-parameter algorithms</title>
+      <link>/documentation/standard-library/multi-parameter.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/standard-library/multi-parameter.html</guid>
+      <description>Most algorithms allow handling of multiple parameters via an additional slot that can be optionally enabled. You can find the setting in an algorithm&amp;rsquo;s settings as Multiple parameters. On selecting the item, a new slot will appear that consumes parameter data.
+To define parameters, use the algorithms found in Add data &amp;gt; Parameters. There are currently two data source algorithms available:
+ Define parameter defines a single set of parameters Define multiple parameters lets you define a table of parameters   Use Process  Merge  Merge slots to merge multiple parameter sets.</description>
+    </item>
+    
+    <item>
+      <title>Graph Edge</title>
+      <link>/documentation-json-api/graph-edge.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation-json-api/graph-edge.html</guid>
+      <description>This document describes the properties of the JSON API object. You also can access the document in JSON Schema format: graph-edge.schema.json
+ Edge in a graph   source-node:  string       Algorithm ID of the edge source   target-node:  string       Algorithm ID of the edge target   source-slot:  string       Slot name within the edge source algorithm   target-slot:  string       Slot name within the edge target algorithm      Example { &amp;#34;source-node&amp;#34; : &amp;#34;default-preprocessing-list-files&amp;#34;, &amp;#34;target-node&amp;#34; : &amp;#34;default-preprocessing-filter-files&amp;#34;, &amp;#34;source-slot&amp;#34; : &amp;#34;Files&amp;#34;, &amp;#34;target-slot&amp;#34; : &amp;#34;Files&amp;#34; } </description>
+    </item>
+    
+    <item>
+      <title>Running a pipeline</title>
+      <link>/documentation/result-analysis.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/result-analysis.html</guid>
+      <description>JIPipe stores its results in a user-defined output folder. After clicking  Run (located at the top right corner of a project window) JIPipe will query the output folder from you. You can also generate a random folder that will be located on your operating system&amp;rsquo;s temporary directory by clicking the button.
+After confirming the settings by clicking  Run now, JIPipe will start processing the pipeline.
+ You can have as many runs as you want.</description>
+    </item>
+    
+    <item>
+      <title>Data annotation algorithms</title>
+      <link>/documentation/standard-library/annotations.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/standard-library/annotations.html</guid>
+      <description>Data annotations allow JIPipe algorithms and users to assign an unique data set to the data located in a data slot. The standard library contains various algorithms that allow to generate, manipulate, and utilize those annotations.
+We recommend to use the algorithms in Annotation &amp;gt; Generate while setting up filesystem operations or any other import step to prevent issues in following algorithm steps.</description>
+    </item>
+    
+    <item>
+      <title>Graph</title>
+      <link>/documentation-json-api/graph.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation-json-api/graph.html</guid>
+      <description>This document describes the properties of the JSON API object. You also can access the document in JSON Schema format: graph.schema.json
+ A graph   nodes:  object   [object Object]      The nodes. Keys are the unique algorithm instance IDs. See graph-node        edges:  object[]       The edges. IDs in the edge definition must be consistent to the IDs in the &#39;nodes&#39; entry See graph-edge           Example { &amp;#34;nodes&amp;#34; : { &amp;#34;default-preprocessing-filter-files&amp;#34; : { &amp;#34;jipipe:slot-configuration&amp;#34; : { &amp;#34;Files&amp;#34; : { &amp;#34;slot-data-type&amp;#34; : &amp;#34;file&amp;#34;, &amp;#34;slot-type&amp;#34; : &amp;#34;Input&amp;#34;, &amp;#34;inherited-slot&amp;#34; : null, &amp;#34;name&amp;#34; : &amp;#34;Files&amp;#34;, &amp;#34;custom-name&amp;#34; : null, &amp;#34;inheritance-conversions&amp;#34; : { } }, &amp;#34;Filtered files&amp;#34; : { &amp;#34;slot-data-type&amp;#34; : &amp;#34;file&amp;#34;, &amp;#34;slot-type&amp;#34; : &amp;#34;Output&amp;#34;, &amp;#34;inherited-slot&amp;#34; : null, &amp;#34;name&amp;#34; : &amp;#34;Filtered files&amp;#34;, &amp;#34;custom-name&amp;#34; : null, &amp;#34;inheritance-conversions&amp;#34; : { } } }, &amp;#34;jipipe:algorithm-ui-location&amp;#34; : { &amp;#34;{Vertical}&amp;#34; : { &amp;#34;x&amp;#34; : 25, &amp;#34;y&amp;#34; : 250 } }, &amp;#34;jipipe:algorithm-type&amp;#34; : &amp;#34;file-filter&amp;#34;, &amp;#34;jipipe:algorithm-compartment&amp;#34; : &amp;#34;DEFAULT&amp;#34;, &amp;#34;name&amp;#34; : &amp;#34;Filter *.</description>
+    </item>
+    
+    <item>
+      <title>Running a single node</title>
+      <link>/documentation/quick-run.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/quick-run.html</guid>
+      <description>Many algorithms require plenty of user-defined parameters to create the expected results. Finding those parameters on the other hand can be very time-consuming due to the requirement of repeating all previous and following processing steps.
+JIPipe comes with a feature termed Quick Run that makes it easier to only test a part of an analysis pipeline. You can find the testbench by selecting an algorithm in the algorithm graph and selecting the  Quick Run tab.</description>
+    </item>
+    
+    <item>
+      <title>Data caching</title>
+      <link>/documentation/cache.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/cache.html</guid>
+      <description>JIPipe has a project-wide cache for generated results. This cache can be accessed by algorithms to prevent repeating previous calculation steps.
+Load data into the cache To cache data, right click a node and click  Update cache. This will execute a Quick run and store all results into the cache.
+Accessing the cache Cache items are assigned a unique identifier ( Snapshot) that is based on relevant algorithm parameters and the processing pipeline behind the data generation.</description>
+    </item>
+    
+    <item>
+      <title>Extension</title>
+      <link>/documentation-json-api/json-extension.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation-json-api/json-extension.html</guid>
+      <description>This document describes the properties of the JSON API object. You also can access the document in JSON Schema format: json-extension.schema.json
+ An extension that can be put into the ImageJ plugin folder   id:  string       Unique ID of this extension. Should have format  .  :       version:  string       Version of this extension   metadata:  See metadata        General metadata about the extension   algorithms:  object[]       List of added algorithms See algorithm           Example { &amp;#34;id&amp;#34; : &amp;#34;org.</description>
+    </item>
+    
+    <item>
+      <title>ImageJ integration</title>
+      <link>/documentation/imagej-integration.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/imagej-integration.html</guid>
+      <description>ImageJ to JIPipe JIPipe integrates commonly used data types and popular algorithms from ImageJ. If an algorithm is not available for JIPipe, you can still run them via the Macro node. There is also a Python script node available that behaves similar to the macro node.
+JIPipe to ImageJ JIPipe algorithms and pipelines can be executed from within an ImageJ environment. There are two ways JIPipe integrates back into ImageJ:</description>
+    </item>
+    
+    <item>
+      <title>Managing plugins</title>
+      <link>/documentation/plugins.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/plugins.html</guid>
+      <description>JIPipe has its own plugin (extension) system that is independent of the one provided by ImageJ/SciJava. You can find a list of plugins in Plugins &amp;gt; Manage plugins.
+JIPipe by default supports two types of extensions:
+ Java extensions are similar to ImageJ plugins (*.jar) and are the most powerful plugin type. Just like ImageJ plugins, they are located in the plugins directory. JSON plugins are similar to ImageJ macros or scripts, as they are pure text files.</description>
+    </item>
+    
+    <item>
+      <title>Plots and tables</title>
+      <link>/documentation/standard-library/plots-tables.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/standard-library/plots-tables.html</guid>
+      <description>The standard library contains algorithms and data types that allows to manipulate tables, and create plots. The table data type is the JIPipe wrapper for the ImageJ results table (see ImageJ integration).
+Manipulating tables Table manipulation operations are located in Process &amp;gt; Tables and allow you to add, remove, or replace columns.
+Creating plots Plots can be created via the Analyze &amp;gt; Plot &amp;gt; Plot tables algorithm that processes each incoming result table and produces an automatically generated plot.</description>
+    </item>
+    
+    <item>
+      <title>Metadata</title>
+      <link>/documentation-json-api/metadata.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation-json-api/metadata.html</guid>
+      <description>This document describes the properties of the JSON API object. You also can access the document in JSON Schema format: metadata.schema.json
+ Commonly used metadata type in JIPipe.   name:  string       A name   description:  string       A description   authors:  string       Comma-separated list of authors   website:  string       Website of the project   license:  string       Name of the license   citation:  string       Citation for the publication      Example { &amp;#34;name&amp;#34; : &amp;#34;Image property annotations&amp;#34;, &amp;#34;description&amp;#34; : &amp;#34;Commonly used annotations for describing image properties&amp;#34;, &amp;#34;authors&amp;#34; : &amp;#34;Zoltán Cseresnyés, Ruman Gerst&amp;#34;, &amp;#34;website&amp;#34; : &amp;#34;https://applied-systems-biology.</description>
+    </item>
+    
+    <item>
+      <title>Python integration</title>
+      <link>/documentation/standard-library/python.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/standard-library/python.html</guid>
+      <description>The standard library contains nodes that allow to run Python scripts using the Jython library. Python scripts have access to all JIPipe and ImageJ APIs that are available at runtime.
+You can find the nodes in the Miscellaneous menu. You can find algorithms equivalent to each of the Java standard algorithms:
+   Algorithm type Purpose     JIPipeAlgorithm The base class of all algorithms. It provides no included functionality outside of absolutely necessary ones.</description>
+    </item>
+    
+    <item>
+      <title>Point</title>
+      <link>/documentation-json-api/point.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation-json-api/point.html</guid>
+      <description>This document describes the properties of the JSON API object. You also can access the document in JSON Schema format: point.schema.json
+ A point   x:  integer       X coordinate   y:  integer       Y coordinate      Example { &amp;#34;x&amp;#34; : 2900, &amp;#34;y&amp;#34; : 100 } </description>
+    </item>
+    
+    <item>
+      <title>Project</title>
+      <link>/documentation-json-api/project.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation-json-api/project.html</guid>
+      <description>This document describes the properties of the JSON API object. You also can access the document in JSON Schema format: project.schema.json
+ An analysis project   jipipe:project-type:  string  , x ∈ { project  (default) }       Used to identify this JSON as JIPipe project   metadata:  See metadata    [object Object]      General information about the project   dependencies:  object[]       Dependencies of this project See dependency        graph:  See graph    [object Object]      Contains the pipeline nodes   compartments:  object   [object Object]      For organization of compartments  compartment-graph:  See graph    [object Object]      Structural graph of compartments          Example { &amp;#34;jipipe:project-type&amp;#34; : &amp;#34;project&amp;#34;, &amp;#34;metadata&amp;#34; : { &amp;#34;name&amp;#34; : &amp;#34;Empty (3 compartments)&amp;#34;, &amp;#34;description&amp;#34; : &amp;#34;This template contains three compartments &amp;#39;Preprocessing&amp;#39;, &amp;#39;Analysis&amp;#39;, and &amp;#39;Postprocessing&amp;#39; that are connected to each other.</description>
+    </item>
+    
+    <item>
+      <title>Slot definition</title>
+      <link>/documentation-json-api/slot-definition.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation-json-api/slot-definition.html</guid>
+      <description>This document describes the properties of the JSON API object. You also can access the document in JSON Schema format: slot-definition.schema.json
+ Defines a data slot   slot-data-type:  string       The data type ID of the data stored in this slot   slot-type:  string  , x ∈ { Input  , Output  }       Determines if the slot is an input or an output   inherited-slot:  object      Only valid for output slot.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/_footer.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/_footer.html</guid>
+      <description>By Applied Systems Biology, Leibniz Institute for Natural Product Research and Infection Biology – Hans Knöll Institute (HKI), Jena, Germany</description>
+    </item>
+    
+  </channel>
+</rss>
