@@ -1,1 +1,0 @@
-By [Applied Systems Biology, Leibniz Institute for Natural Product Research and Infection Biology – Hans Knöll Institute (HKI), Jena, Germany](https://www.leibniz-hki.de/en/applied-systems-biology.html)
