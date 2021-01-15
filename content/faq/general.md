@@ -26,6 +26,19 @@ Many JIPipe extensions rely on other ImageJ plugins to work. That is why JIPipe 
 If you are sure that you have everything installed, you can disable this check at `Project > Application settings > General > Extensions`.
 Disable `Validate ImageJ dependencies`.
 
+If you do not have access to these setting (because you are offline or there are issues with the ImageJ servers), open the file `jipipe.properties.json`
+(located in your ImageJ directory) in a text editor search for a line `"extensions/validate-imagej-dependencies" : true` and replace `true` by `false`.
+
+If the file is not present, create a new file and put following text into it:
+
+```
+{
+  "extensions/validate-imagej-dependencies" : false
+}
+```
+
+JIPipe will automatically add the other settings on the first startup.
+
 ## Can I expose a set of specific parameters for collaborators?
 
 Yes. You can do this via the `Project > Project settings > Parameters`.
@@ -44,3 +57,8 @@ as the project (or in a subfolder). This allows you to compress the project and
 share it with other without breaking anything.
 
 This is the recommended way to do share your projects if you have multiple operating systems.
+
+## How can I copy / delete the global settings?
+
+JIPipe places a file `jipipe.properties.json` into your ImageJ directory. You can delete it to reset all settings
+to their defaults or copy it to another JIPipe instance.
