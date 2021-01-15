@@ -9,7 +9,7 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-The graph editor (pipeline editor) allows you to edit the processing steps of a [graph compartment](/documentation/graph-compartment).
+The graph editor (pipeline editor) allows you to edit the processing steps of a [graph compartment]({{< ref "/documentation/graph-compartment" >}}).
 Its user interface is separated into three sections:
 
 1. **The analysis graph** contains the processing steps (also referred as algorithms)
@@ -67,7 +67,7 @@ The slot context menu opened by {{< icon name="fa-chevron-up" size="medium" >}} 
 additional entries to managing connections.
 
 * {{< icon name="fa-tag" size="medium" >}} **Label this slot** allows you to give the slot a custom name without changing the internal workings of the algorithm (As many algorithms are designed to adress specific slots). On selecting the entry, you can give a custom name that is displayed in *cursive*. To remove the custom label, label it with an empty text.
-* {{< icon name="fa-search" size="medium" >}} **Find matching algorithm ...** (only output slots) opens a tool that lists all compatible algorithms that can receive the output data as input.
+* {{< icon name="fa-search" size="medium" >}} **Find matching algorithm ...** opens a tool that lists all compatible algorithms that can receive the output data as input.
 * Depending on the algorithm, you can remove a slot from within this menu
 
 # Algorithm settings
@@ -90,7 +90,7 @@ The toolbar contains functions to add new algorithms into the graph, navigate to
 * The **navigator** allows you to quickly navigate to an existing algorithm instance or create a new one. Just type one or multiple search terms into the field. On pressing the {{< icon name="fa-keyboard-o" size="medium" >}} *arrow down* key on your keyboard, the first entry is selected.
 * The **view options** control how the graph editor behaves and contains some additional utility functions.
 
-## View options
+## Additional tools
 
 * <img class="inline-image" src="/img/icons/view-horizontal.png" /> and <img class="inline-image" src="/img/icons/view-vertical.png"/> allow you to switch between horizontal and vertial view modes. This does not change the pipeline, but just how it is displayed in the editor. By default, a vertical view is enabled. If you prefer that data flows from left to right, choose the horizontal view mode.
 * <img class="inline-image" src="/img/icons/auto-layout-all.png" /> automatically aligns all nodes in the algorithm graph according to the algorithm by Sugiyama *et. al*

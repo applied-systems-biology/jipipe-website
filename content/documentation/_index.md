@@ -30,7 +30,7 @@ graph LR;
 {{< /mermaid >}}
 
 To design efficient and scalable pipelines yourself, it is a good idea to
-look into the [JIPipe data model](/documentation/batch-pipelines).
+look into the [JIPipe data model]({{< ref "/documentation/batch-pipelines" >}}).
 
 # Graph compartments
 
@@ -42,7 +42,7 @@ JIPipe solves both issues with the concept of strongly separated *graph componen
 group a set of algorithms together. Components only can interact via special interface algorithms,
 making it easier to structure the pipeline.
 
-Please take a look at our [graph compartment documentation](/documentation/graph-compartment) for more information.
+Please take a look at our [graph compartment documentation]({{< ref "/documentation/graph-compartment" >}}) for more information.
 
 # User interface overview
 
@@ -51,11 +51,9 @@ A project contains all information to run an analysis, outside of the input data
 can be saved into [JSON](https://www.json.org/json-en.html) files.
 The user interface is separated into three sections:
 
-1. **The project menu** contains all operations for the current project / window. It allows you to open/save projects, access and modify [graph compartments](/documentation/graph-compartments), manage [plugins](/documentation/plugins), and run the analysis
+1. **The project menu** contains all operations for the current project / window. It allows you to open/save projects, access and modify [graph compartments]({{< ref "/documentation/graph-compartment" >}}), manage [plugins]({{< ref "/documentation/plugins" >}}), and run the analysis
 2. **The tab bar** allows you to switch between different interfaces associated to the current project. You can close thabs by clicking the `x` icon. If a tab contains some data that will be lost after closing it, you will have to confirm the action. If no question is asked on closing a tab, you will be able to open it later again without losing data.
 3. **The current content** depends on the selected tab
-
-![User interface overview](/img/documentation/general-ui.png)
 
 {{% notice tip %}}
 You can also close a tab by clicking it with the middle mouse button.

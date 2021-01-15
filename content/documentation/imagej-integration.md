@@ -12,7 +12,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 # ImageJ to JIPipe
 
 JIPipe integrates commonly used data types and popular algorithms from ImageJ.
-If an algorithm is not available for JIPipe, you can still run them via the [Macro node](standard-library/macro-node).
+If an algorithm is not available for JIPipe, you can still run them via the [Macro node]({{< relref "standard-library/macro-node" >}}).
 There is also a Python script node available that behaves similar to the macro node.
 
 # JIPipe to ImageJ
@@ -89,8 +89,8 @@ Algorithm parameters are provided as string in [JSON](https://json.org/) format.
 The JSON data should have following structure:
 
 * (Optional) An object `parameters` that contains the algorithm parameters. They are equal to the parameters saved in an JIPipe project file. We recommend to use the `Copy command` button to obtain the parameters. If you leave out parameters, the default value is assumed.
-* (Optional) An object `add-input` that contains additional input [slot definitions](/documentation-json-api/slot-definition/). The entry keys are the slot names.
-* (Optional) An object `add-output` that contains additional output [slot definitions](/documentation-json-api/slot-definition/). The entry keys are the slot names.
+* (Optional) An object `add-input` that contains additional input [slot definitions]({{< ref "/documentation-json-api/slot-definition" >}}). The entry keys are the slot names.
+* (Optional) An object `add-output` that contains additional output [slot definitions]({{< ref "/documentation-json-api/slot-definition" >}}). The entry keys are the slot names.
 * (Optional) An object `input`. Entry keys correspond to the slot name. The entry value is a string that corresponds to the Window name that contains the data. Only required for image data types, as JIPipe accesses the global ROI manager and global result table.
 
 {{% notice tip %}}

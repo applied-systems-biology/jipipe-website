@@ -52,6 +52,10 @@ automatically applied to ally `x` and `y` values:
 (x + y) + x/y + 1
 ```
 
+{{% notice info %}}
+The expression builder shows a list of all variables. This list might be incomplete if variables are generated during the runtime (e.g., extracted from a table).
+{{% /notice %}}
+
 ## Operators
 
 The expressions understand a wide range of common operators for numeric, string, and boolean data:
