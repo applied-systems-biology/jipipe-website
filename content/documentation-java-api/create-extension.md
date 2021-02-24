@@ -98,7 +98,7 @@ Here is an example `*.pom` file that makes use of SciJava:
     <parent>
         <groupId>org.hkijena</groupId>
         <artifactId>pom-jipipe</artifactId>
-        <version>2020.11</version> <!-- Update the version accordingly -->
+        <version>2021.2</version> <!-- Update the version accordingly -->
         <relativePath/>
     </parent>
 
@@ -234,8 +234,8 @@ public class MyExtension extends JIPipeDefaultJavaExtension {
     }
 
     @Override
-    public String getDescription() {
-        return "A Java extension";
+    public HTMLText getDescription() {
+        return new HTMLText()"A Java extension");
     }
 
     @Override

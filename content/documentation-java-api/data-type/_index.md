@@ -29,6 +29,8 @@ There are two optional functions that you can override:
 
 
 ```java
+@JIPipeDocumentation(name = "My data", description = "This is some data")
+// You can use @JIPipeHidden to hide this data from data type list UIs
 public class MyData implements JIPipeData {
     String value;
 
