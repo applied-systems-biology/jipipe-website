@@ -15,7 +15,8 @@ JIPipe requires that data can be saved to a folder within the output directory. 
 recommend that you include code that can load the data back into JIPipe or ImageJ in some form.
 
 There are no requirements on the constructor of the data type.
-The only requirement is that there is a function `importFrom(Path)` that imports `JIPipeData` from a row storage folder.
+The only requirements are that there is a function `importFrom(Path)` that imports `JIPipeData` from a row storage folder, and an annotation of type
+[@JIPipeStorageDocumentation](/apidocs/org/hkijena/jipipe/core/api/data/JIPipeDataStorageDocumentation.html) that explains the structure of the storage folder.
 
 The folder that is provided in `storageFilePath` is unique to the data and empty.
 The name parameter in `storageFilePath` is usually the data slot name and can be used as template for file names. It can be ignored **undless** `forceName` is true.
@@ -30,8 +31,10 @@ There are two optional functions that you can override:
 
 ```java
 @JIPipeDocumentation(name = "My data", description = "This is some data")
+@JIPipeStorageDocumentation("Contains exactly one *.json file that stores the string value.")
 // You can use @JIPipeHidden to hide this data from data type list UIs
 public class MyData implements JIPipeData {
+
     String value;
 
     public MyData() {
