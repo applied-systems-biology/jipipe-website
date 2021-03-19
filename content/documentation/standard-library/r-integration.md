@@ -17,7 +17,7 @@ This means that you will need to install a distribution of [R](https://www.r-pro
 You will need to install R (https://www.r-project.org/) and setup JIPipe to find this installation.
 {{% /notice %}}
 
-## Setting up R
+# Setting up R
 
 If not already done, please install [R](https://www.r-project.org/). Then open JIPipe and
 navigate to `Project > Application settings > Extensions > R integration`.
@@ -29,7 +29,7 @@ please set them to the correct paths:
 * The R executable should point to R.exe (Windows) or R (RScript). Example: `C:\Program Files\R\R-4.0.4\bin\R.exe` or `/usr/bin/R`
 * The RScript executable should point to RScript.exe (Windows) or RScript (Linux). Example: `C:\Program Files\R\R-4.0.4\bin\RScript.exe` or `/usr/bin/RScript`
 
-## Included nodes
+# Included nodes
 
 You can find the R scripting nodes in the `Miscellaneous` menu. You can find algorithms equivalent
 to following Java standard algorithms:
@@ -42,7 +42,7 @@ to following Java standard algorithms:
 Both nodes share a similar R API to communicate with JIPipe - the difference being how many data items can be processed in each iteration. All nodes repeat the script for each data batch (or at least once if there is none).
 Data batches organize the data of various input slots into one bundle that should be processed.
 
-## Data I/O
+# Data I/O
 
 As R is run in a separate environment, the data is communicated by writing it to the hard drive from one process and reading it back inside the other process.
 Currently, the nodes are designed for following data types:
@@ -54,7 +54,7 @@ Currently, the nodes are designed for following data types:
 
 Other data types *are* supported, although there are no predefined utility functions to load/save them for now.
 
-### Loading results tables
+## Loading results tables
 
 Result tables can be loaded via the `JIPipe.GetInputAsDataFrame(slot, row=0)` function. The `slot` parameter must be identical to the name of the input slot.
 The `row` parameter indicates which item of the current data batch should be returned. Please note that `row` can only be zero if you are using R script (iterating).
@@ -68,7 +68,7 @@ for( i in 1:JIPipe.InputSlotRowCounts$Tables) {
 }
 ```
 
-### Writing result tables
+## Writing result tables
 
 Result tables can be written via a function `JIPipe.AddOutputDataFrame(data, slot, annotations=list())`. This will **add** a new result table to the specified output.
 Please note, that you can add *multiple* outputs.
@@ -82,7 +82,7 @@ library(datasets)
 JIPipe.AddOutputDataFrame(iris, "Tables", annotations=list("data set"="Iris"))
 ```
 
-### Writing plots or other images
+## Writing plots or other images
 
 As R does not have a dedicated data type for images, the JIPipe API will only provide means to generate a valid output file name.
 For this, two methods `JIPipe.AddOutputPNGImagePath(data, slot, annotations=list())` and `JIPipe.AddOutputTIFFImagePath(data, slot, annotations=list())`
@@ -106,7 +106,7 @@ dev.off()
 # JIPipe will automatically load the data
 ```
 
-### Reading and writing other data types
+## Reading and writing other data types
 
 Currently, only reading and writing of tables, as well as writing of image data is supported via convience functions.
 The node supports all other JIPipe data types, although import and export must be written via custom functions.
@@ -121,7 +121,7 @@ to obtain a valid path to such a folder and register the output.
 Each JIPipe data type provides information about the structure of the data folder. You can find it in [?] > Data type compendium.
 {{% /notice %}}
 
-## Script parameters
+# Script parameters
 
 Each node provides means to define R variables inside the JIPipe environment via custom parameters. Each parameter value is passed as variable into R - the name of the variable
 being determined by the unique ID of the parameter.

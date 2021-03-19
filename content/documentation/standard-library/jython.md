@@ -1,6 +1,6 @@
 +++
-title = "Python integration"
-description = "This library provides nodes that allow to run Python scripts."
+title = "Jython integration"
+description = "This library provides nodes that allow to run Python scripts via the Jython library"
 weight = 70
 type="page"
 creatordisplayname = "Ruman Gerst"
@@ -27,10 +27,10 @@ to each of the Java standard algorithms:
 
 | Node                                    | Based on                                                                                                | Purpose                                                                                                                                                                                                                         |
 | --------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Python script (multi-parameter capable) | [JIPipeParameterSlotAlgorithm](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeParameterSlotAlgorithm.html) | This algorithm allows users to run multiple parameter sets by optionally enabling an additional slot `Parameters`.                                                                                                              |
-| Python script (simple iterating)        | [JIPipeSimpleIteratingAlgorithm](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeAlgorithm.html)            | A JIPipeParameterSlotAlgorithm that has one input slot and iterates over the input rows.                                                                                                                                        |
-| Python script (iterating)               | [JIPipeIteratingAlgorithm](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeIteratingAlgorithm.html)         | A JIPipeParameterSlotAlgorithm that can have multiple input slots and match annotations of the input data to create data batches.                                                                                               |
-| Python script (merging)                 | [JIPipeMergingAlgorithm](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeMergingAlgorithm.html)             | A JIPipeParameterSlotAlgorithm that can have multiple input slots and match annotations of the input data to create data batches. The difference to JIPipeIteratingAlgorithm is that a batch can have duplicate items per slot. |
+| Jython script | [JIPipeParameterSlotAlgorithm](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeParameterSlotAlgorithm.html) | This algorithm allows users to run multiple parameter sets by optionally enabling an additional slot `Parameters`.                                                                                                              |
+| Jython script (simple iterating)        | [JIPipeSimpleIteratingAlgorithm](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeAlgorithm.html)            | A JIPipeParameterSlotAlgorithm that has one input slot and iterates over the input rows.                                                                                                                                        |
+| Jython script (iterating)               | [JIPipeIteratingAlgorithm](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeIteratingAlgorithm.html)         | A JIPipeParameterSlotAlgorithm that can have multiple input slots and match annotations of the input data to create data batches.                                                                                               |
+| Jython script (merging)                 | [JIPipeMergingAlgorithm](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeMergingAlgorithm.html)             | A JIPipeParameterSlotAlgorithm that can have multiple input slots and match annotations of the input data to create data batches. The difference to JIPipeIteratingAlgorithm is that a batch can have duplicate items per slot. |
 
 ## Common functions
 
@@ -56,5 +56,5 @@ This variable points to an instance of [JIPipeDataBatch](/apidocs/org/hkijena/ji
 Each node provides means to define Python variables inside the JIPipe environment via custom parameters. Each parameter value is passed as variable into Python - the name of the variable
 being determined by the unique ID of the parameter.
 
-All Python nodes are multi-parameter capable (including iterating and merging nodes). "Python script (multi-parameter capable)" provides a unique variable `parameter_annotations`
+All Python nodes are multi-parameter capable (including iterating and merging nodes). "Jython script (multi-parameter capable)" provides a unique variable `parameter_annotations`
 that contains any annotations of the current parameter set.
