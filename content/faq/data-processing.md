@@ -130,3 +130,8 @@ Please ensure that the wrapped nodes can handle this kind of iteration.
 
 Go to `Project > Application settings > Extensions > OMERO` and set your credentials there.
 Any OMERO node will supplement unset credentials by those settings.
+
+## Where can I find information about the formats used in JIPipe output?
+
+You will find information in the data type compendium.
+Concerning the standardized JIPipe output format, you will find information [here](/documentation/result-analysis/#using-third-party-software-for-further-analysis)

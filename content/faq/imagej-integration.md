@@ -9,7 +9,7 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-# Can I use plugins from ImageJ in JIPipe?
+## Can I use plugins from ImageJ in JIPipe?
 
 Yes. Either there is an integration available, or you just use the macro node and input the corresponding macro code that runs the plugin.
 
