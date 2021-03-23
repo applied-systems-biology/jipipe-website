@@ -101,15 +101,30 @@ For example, an `Import image` step will load **all** the images and then contin
 
 ## I have a very large data set. How can I prevent loading it at the same time?
 
+You have two options:
+
+1. Run a JIPipe project within a another
+2. Use a node group and set it to iterative mode
+
+### Nested JIPipe projects
+
 You can run JIPipe projects within other JIPipe projects. This will separate them and into individual runs that are iterated one-by-one.
 JIPipe comes with nodes to extract specific results from those outputs.
 
 Create the analysis for only one data set and export project-wide parameters via its project settings. Those parameters will be later modified and should contain anything you need for the project setup.
 Save it into a `*.jip` project.
 
-
 Then create a separate project and add the nodes `Run JIPipe project` and `Define JIPipe project parameters`.
 In both nodes, you load the main analysis projects.
+
+### Iterative group nodes
+
+Group a set of nodes that contains functions with a large memory footprint. This will create a `Group` node.
+By default group nodes will just act as simple group and pass data from its slots to the wrapped graph.
+To reduce the memory footprint, set the `Graph iteration mode` to iterate/merge, which changes the behavior of the node:
+The code now will be repeated for each data batch, which prevents loading all data at once.
+
+Please ensure that the wrapped nodes can handle this kind of iteration.
 
 ## I do not want to always put in the credentials into each OMERO node. What can I do?
 
