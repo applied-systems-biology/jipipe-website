@@ -81,11 +81,11 @@ This issue is especially prevalent in ImageJ macro algorithm nodes.
 To run the command via a macro, run:
 
 ```
-run("Run JIPipe algorithm", "algorithmId=<Algorithm>, algorithmParameters=<Parameters>")
+run("Run JIPipe algorithm", "nodeId=<Algorithm>, parameters=<Parameters>")
 ```
 
 The algorithm ID can be looked up via the plugin manager.
-Algorithm parameters are provided as string in [JSON](https://json.org/) format.
+Parameters are provided as string in [JSON](https://json.org/) format.
 The JSON data should have following structure:
 
 * (Optional) An object `parameters` that contains the algorithm parameters. They are equal to the parameters saved in an JIPipe project file. We recommend to use the `Copy command` button to obtain the parameters. If you leave out parameters, the default value is assumed.
@@ -96,3 +96,8 @@ The JSON data should have following structure:
 {{% notice tip %}}
 Use the "Copy command" button in the "Run JIPipe algorithm" GUI command to quickly create a valid macro for your parameters.
 {{% /notice %}}
+
+If you are a developer of a JIPipe node (Java only) and want to provide your node as separate entry in the ImageJ menu,
+you can use our Java API to create custom SciJava commands that provide a similar UI to the single algorithm run.
+You just have to inherit from [JIPipeRunCustomAlgorithmCommand](/apidocs/org/hkijena/jipipe/JIPipeRunCustomAlgorithmCommand.html) and provide the
+constructor with the node ID. Then add the [Plugin](https://javadoc.scijava.org/SciJava/org/scijava/plugin/Plugin.html) annotation just as with any SciJava command.
