@@ -72,3 +72,9 @@ Following JIPipe pipeline provides an example of making use of annotations to
 allow multiple inputs:
 
 ![](/img/documentation/multi-input-pipeline-example.png)
+
+# Tutorial video
+
+We created a video that illustrates how to create a batch processing pipeline:
+
+<iframe width="100%" height="80%" src="https://www.youtube-nocookie.com/embed/oUgEcFKChVA" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>

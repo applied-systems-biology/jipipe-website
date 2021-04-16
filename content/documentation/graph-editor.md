@@ -9,6 +9,12 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
+<div class="notices tip">
+  <p>
+    This guide is also available as <a href="/tutorials/guide-graph-editor">video tutorial</a>.
+  </p>
+</div>
+
 The graph editor (pipeline editor) allows you to edit the processing steps of a [graph compartment]({{< ref "/documentation/graph-compartment" >}}).
 Its user interface is separated into three sections:
 
