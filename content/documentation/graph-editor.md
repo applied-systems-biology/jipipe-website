@@ -98,9 +98,38 @@ The toolbar contains functions to add new algorithms into the graph, navigate to
 
 ## Additional tools
 
-* <img class="inline-image" src="/img/icons/view-horizontal.png" /> and <img class="inline-image" src="/img/icons/view-vertical.png"/> allow you to switch between horizontal and vertial view modes. This does not change the pipeline, but just how it is displayed in the editor. By default, a vertical view is enabled. If you prefer that data flows from left to right, choose the horizontal view mode.
+* <img class="inline-image" src="/img/icons/view-horizontal.png" /> / <img class="inline-image" src="/img/icons/view-vertical.png"/> allows you to switch between different view modes. This does not change the pipeline, but just how it is displayed in the editor. By default, a vertical view is enabled. If you prefer that data flows from left to right, choose the horizontal view mode.
 * <img class="inline-image" src="/img/icons/auto-layout-all.png" /> automatically aligns all nodes in the algorithm graph according to the algorithm by Sugiyama *et. al*
 * <img class="inline-image" src="/img/icons/cursor-arrow.png" /> allows you to change how dragging the middle mouse button changes the current view.
 * <img class="inline-image" src="/img/icons/auto-layout-connections.png" /> is enabled by default and makes it that nodes are automatically aligned on creating connections. This feature does not reorganize the whole graph, but only places the target algorithm to a location that better represents the data flow.
 * <img class="inline-image" src="/img/icons/view-restore.png" /> crops the graph area to the area taken by the algorithm nodes. Use this tool to find your nodes after scrolling too far away.
 * <img class="inline-image" src="/img/icons/filetype-image.png" /> creates a screenshot of the whole graph compartment that is currently being displayed.
+
+# View modes
+
+The graph can be displayed in different view modes. There are currently three modes integrated:
+
+* Vertical: Nodes are displayed in a way that inputs are at the top and outputs are at the bottom. This is the default mode.
+* Vertical (compact): Just like the vertical mode, but the size of each node is reduced.
+* Horizontal: Nodes are displayed, so inputs are the the left and outputs are at the right
+
+Nodes arrangements are saved for each view mode separately. Graphs will remember the current view mode.
+
+{{% notice tip %}}
+You can change the default view mode via Project > Application settings > Graph Editor > Default view mode
+{{% /notice %}}
+
+Here you will find a preview of all view modes with the same graph. The screenshots all have the same size.
+
+<table>
+  <tr>
+    <td>Vertical</td>
+    <td>Vertical (compact)</td>
+    <td>Horizontal</td>
+  </tr>
+  <tr>
+    <td><img src="/img/documentation/graph-view-mode-vertical.png?width=100%" /></td>
+    <td><img src="/img/documentation/graph-view-mode-vertical-compact.png?width=100%" /></td>
+    <td><img src="/img/documentation/graph-view-mode-horizontal.png?width=100%" /></td>
+  </tr>
+</table>
