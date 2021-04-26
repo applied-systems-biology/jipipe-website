@@ -14,6 +14,10 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 Yes, you can enable it in `Project > Application settings > UI > General > Theme`.
 Set the theme to `Modern dark` and restart JIPipe/ImageJ.
 
+## The nodes are so large. Can they be more compact?
+
+Yes, there are multiple view modes available, including a horizontal and compact vertical mode. See [here](/documentation/graph-editor/#view-modes) for more info.
+
 ## How can I make long connections without zooming out?
 
 Click the arrow button at the input/output slot. It lists all compatible sources/targets ordered by distance.

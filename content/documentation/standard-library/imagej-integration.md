@@ -39,21 +39,33 @@ ImgPlusGreyscale8U --> ImgPlusGreyscaleMask["8-bit mask (nD)"]
 ImgPlusGreyscale --> ImgPlusGreyscale16U["16-bit greyscale image (nD)"]
 ImgPlusGreyscale --> ImgPlusGreyscale32F["32-bit float greyscale image (nD)"]
 ImgPlus["Image (nD)"] --> ImgPlusColor["Color image (nD)"]
-ImgPlusColor --> ImgPlusColor8U["8-bit color image (nD)"]
 ImgPlusColor --> ImgPlusColorRGB["RGB color image (nD)"]
+ImgPlusColor --> ImgPlusColorHSB["HSB color image (nD)"]
+ImgPlusColor --> ImgPlusColorLAB["LAB color image (nD)"]
 {{< /mermaid >}}
 
 The graph above shows the structure for non-dimensional (nD) images.
 This structure is repeated for 2D, 3D, ... 5D images.
 
+## Color spaces
+
+The standard library comes with support for different color spaces and supports automated
+conversion between them.
+
+Each image stores the color space (allowing for example to remember the color space
+of a HSB image stored inside a generic image).
 Color space conversions are automatically applied (e.g. from RGB to greyscale).
 While trivial for specific color types (like RGB color), JIPipe falls back to following
 color spaces for generic colors (e.g. greyscale image):
 
-| Color space | Fallback colorspace    |
-| ----------- | ---------------------- |
-| Greyscale   | 32-bit float greyscale |
-| Color       | RGB color              |
+| Color space          | Fallback colorspace    |
+| -------------------- | ---------------------- |
+| All greyscale images | 32-bit float greyscale |
+| All colored images   | RGB color              |
+
+Please note that if the color space information is lost, RGB is used as fallback.
+Color conversion nodes in `Images > Colors > Convert`
+
 
 # Frequency space image data types
 
