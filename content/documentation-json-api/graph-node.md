@@ -1,5 +1,5 @@
 +++
-title = "Algorithm node"
+title = "Graph node"
 weight = 10
 description = "Node in a graph"
 type="page"
@@ -10,7 +10,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
 This document describes the properties of the JSON API object. You also can access
-the document in [JSON Schema](https://json-schema.org/) format: [algorithm-node.schema.json](https://applied-systems-biology.github.io/jipipe/schemas/algorithm-node.schema.json)
+the document in [JSON Schema](https://json-schema.org/) format: [algorithm-node.schema.json](https://jipipe.org/schemas/algorithm-node.schema.json)
 
 <div class="panel-body">
  <section class="json-schema-description">
@@ -53,9 +53,9 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm-node.
      </section>
     </div>
    </dd>
-   <dt data-property-name="jipipe:algorithm-ui-location">
+   <dt data-property-name="jipipe:node-ui-location">
     <span class="json-property-name">
-     jipipe:algorithm-ui-location:
+     jipipe:node-ui-location:
     </span>
     <span class="json-property-type">
      object
@@ -84,9 +84,9 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm-node.
      </section>
     </div>
    </dd>
-   <dt data-property-name="jipipe:algorithm-type">
+   <dt data-property-name="jipipe:node-info-id">
     <span class="json-property-name">
-     jipipe:algorithm-type:
+     jipipe:node-info-id:
     </span>
     <span class="json-property-type">
      string
@@ -103,24 +103,38 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm-node.
     <div class="json-inner-schema">
     </div>
    </dd>
-   <dt data-property-name="jipipe:algorithm-compartment">
+   <dt data-property-name="jipipe:graph-compartment">
     <span class="json-property-name">
-     jipipe:algorithm-compartment:
+     jipipe:graph-compartment:
     </span>
     <span class="json-property-type">
      string
     </span>
     <span class="json-property-range" title="Value limits">
     </span>
-    <span class="json-property-default-value">
-     DEFAULT
-    </span>
     <span class="json-property-required">
     </span>
    </dt>
    <dd>
     <p>
-     Compartment ID. Only important for the UI.
+     Compartment UUID. Only relevant in project graphs. Empty indicates no compartment assignment.
+    </p>
+    <div class="json-inner-schema">
+    </div>
+   </dd>
+   <dt data-property-name="jipipe:alias-id">
+    <span class="json-property-name">
+     jipipe:alias-id:
+    </span>
+    <span class="json-property-type">
+     string
+    </span>
+    <span class="json-property-range" title="Value limits">
+    </span>
+   </dt>
+   <dd>
+    <p>
+     Human-readable ID. Unique within the same graph. Can be changed by the software.
     </p>
     <div class="json-inner-schema">
     </div>
@@ -139,7 +153,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm-node.
    </dt>
    <dd>
     <p>
-     A custom name for this algorithm. Only important for the UI. If null or empty, the UI will default to the algorithm type name.
+     A custom name for this node. Only important for the UI. If null or empty, the UI will default to the node type name.
     </p>
     <div class="json-inner-schema">
     </div>
@@ -166,6 +180,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm-node.
   </dl>
  </section>
 </div>
+
 
 
 # Example

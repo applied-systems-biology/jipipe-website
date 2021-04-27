@@ -12,7 +12,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 
 
 This document describes the properties of the JSON API object. You also can access
-the document in [JSON Schema](https://json-schema.org/) format: [algorithm.schema.json](https://applied-systems-biology.github.io/jipipe/schemas/algorithm.schema.json)
+the document in [JSON Schema](https://json-schema.org/) format: [algorithm.schema.json](https://jipipe.org/schemas/algorithm.schema.json)
 
 <div class="panel-body">
  <section class="json-schema-description">
@@ -46,7 +46,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm.schem
      metadata:
     </span>
     <span class="json-property-type">
-     <a class="json-schema-ref" href="https://applied-systems-biology.github.io/jipipe/documentation-json-api/metadata">
+     <a class="json-schema-ref" href="https://jipipe.org/documentation-json-api/metadata">
       See metadata
      </a>
     </span>
@@ -109,7 +109,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [algorithm.schem
      graph:
     </span>
     <span class="json-property-type">
-     <a class="json-schema-ref" href="https://applied-systems-biology.github.io/jipipe/documentation-json-api/graph">
+     <a class="json-schema-ref" href="https://jipipe.org/documentation-json-api/graph">
       See graph
      </a>
     </span>

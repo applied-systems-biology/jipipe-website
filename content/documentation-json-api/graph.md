@@ -12,7 +12,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 
 
 This document describes the properties of the JSON API object. You also can access
-the document in [JSON Schema](https://json-schema.org/) format: [graph.schema.json](https://applied-systems-biology.github.io/jipipe/schemas/graph.schema.json)
+the document in [JSON Schema](https://json-schema.org/) format: [graph.schema.json](https://jipipe.org/schemas/graph.schema.json)
 
 <div class="panel-body">
  <section class="json-schema-description">
@@ -22,6 +22,37 @@ the document in [JSON Schema](https://json-schema.org/) format: [graph.schema.js
  </section>
  <section class="json-schema-properties">
   <dl>
+   <dt data-property-name="additional-metadata">
+    <span class="json-property-name">
+     additional-metadata:
+    </span>
+    <span class="json-property-type">
+     object
+    </span>
+    <span class="json-property-range" title="Value limits">
+    </span>
+    <span class="json-property-default-value">
+     [object Object]
+    </span>
+   </dt>
+   <dd>
+    <p>
+     Dict of additional metadata
+    </p>
+    <div class="json-inner-schema">
+     <section class="json-schema-additionalProperties">
+      <span class="json-property-type">
+       <span class="json-property-type">
+        <a class="json-schema-ref" href="/documentation-json-api/additional-metadata">
+         See additional-metadata
+        </a>
+       </span>
+       <span class="json-property-range" title="Value limits">
+       </span>
+      </span>
+     </section>
+    </div>
+   </dd>
    <dt data-property-name="nodes">
     <span class="json-property-name">
      nodes:
@@ -39,13 +70,13 @@ the document in [JSON Schema](https://json-schema.org/) format: [graph.schema.js
    </dt>
    <dd>
     <p>
-     The nodes. Keys are the unique algorithm instance IDs.
+     The nodes. Keys are the UUIDs.
     </p>
     <div class="json-inner-schema">
      <section class="json-schema-additionalProperties">
       <span class="json-property-type">
        <span class="json-property-type">
-        <a class="json-schema-ref" href="https://applied-systems-biology.github.io/jipipe/documentation-json-api/graph-node">
+        <a class="json-schema-ref" href="/documentation-json-api/graph-node">
          See graph-node
         </a>
        </span>
@@ -69,12 +100,12 @@ the document in [JSON Schema](https://json-schema.org/) format: [graph.schema.js
    </dt>
    <dd>
     <p>
-     The edges. IDs in the edge definition must be consistent to the IDs in the 'nodes' entry
+     The edges. IDs in the edge definition must be consistent to the UUIDs in the 'nodes' entry
     </p>
     <div class="json-inner-schema">
      <section class="json-schema-array-items">
       <span class="json-property-type">
-       <a class="json-schema-ref" href="https://applied-systems-biology.github.io/jipipe/documentation-json-api/graph-edge">
+       <a class="json-schema-ref" href="/documentation-json-api/graph-edge">
         See graph-edge
        </a>
       </span>
@@ -88,6 +119,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [graph.schema.js
   </dl>
  </section>
 </div>
+
 
 
 # Example

@@ -12,7 +12,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 
 
 This document describes the properties of the JSON API object. You also can access
-the document in [JSON Schema](https://json-schema.org/) format: [metadata.schema.json](https://applied-systems-biology.github.io/jipipe/schemas/metadata.schema.json)
+the document in [JSON Schema](https://json-schema.org/) format: [metadata.schema.json](https://jipipe.org/schemas/metadata.schema.json)
 
 <div class="panel-body">
  <section class="json-schema-description">
@@ -147,7 +147,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [metadata.schema
   "name" : "Image property annotations",
   "description" : "Commonly used annotations for describing image properties",
   "authors" : "Zoltán Cseresnyés, Ruman Gerst",
-  "website" : "https://applied-systems-biology.github.io/jipipe/",
+  "website" : "https://jipipe.org/",
   "license" : "BSD-2",
   "citation" : ""
 }

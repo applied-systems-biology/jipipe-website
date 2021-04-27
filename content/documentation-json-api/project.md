@@ -12,7 +12,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 
 
 This document describes the properties of the JSON API object. You also can access
-the document in [JSON Schema](https://json-schema.org/) format: [project.schema.json](https://applied-systems-biology.github.io/jipipe/schemas/project.schema.json)
+the document in [JSON Schema](https://json-schema.org/) format: [project.schema.json](https://jipipe.org/schemas/project.schema.json)
 
 <div class="panel-body">
  <section class="json-schema-description">
@@ -54,7 +54,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
      metadata:
     </span>
     <span class="json-property-type">
-     <a class="json-schema-ref" href="https://applied-systems-biology.github.io/jipipe/documentation-json-api/metadata">
+     <a class="json-schema-ref" href="https://jipipe.org/documentation-json-api/metadata">
       See metadata
      </a>
     </span>
@@ -92,7 +92,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
     <div class="json-inner-schema">
      <section class="json-schema-array-items">
       <span class="json-property-type">
-       <a class="json-schema-ref" href="https://applied-systems-biology.github.io/jipipe/documentation-json-api/dependency">
+       <a class="json-schema-ref" href="https://jipipe.org/documentation-json-api/dependency">
         See dependency
        </a>
       </span>
@@ -108,7 +108,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
      graph:
     </span>
     <span class="json-property-type">
-     <a class="json-schema-ref" href="https://applied-systems-biology.github.io/jipipe/documentation-json-api/graph">
+     <a class="json-schema-ref" href="https://jipipe.org/documentation-json-api/graph">
       See graph
      </a>
     </span>
@@ -154,7 +154,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
          compartment-graph:
         </span>
         <span class="json-property-type">
-         <a class="json-schema-ref" href="https://applied-systems-biology.github.io/jipipe/documentation-json-api/graph">
+         <a class="json-schema-ref" href="https://jipipe.org/documentation-json-api/graph">
           See graph
          </a>
         </span>
@@ -208,7 +208,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
         "last-name" : "Gerst",
         "affiliations" : "Applied Systems Biology, Leibniz Institute for Natural Product Research and Infection Biology – Hans-Knöll-Institute, Jena, Germany\nFaculty of Biological Sciences, Friedrich-Schiller-University Jena, Germany"
       } ],
-      "website" : "https://applied-systems-biology.github.io/jipipe/",
+      "website" : "https://jipipe.org/",
       "license" : "BSD 2-Clause",
       "citation" : ""
     },
@@ -227,7 +227,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
         "last-name" : "Gerst",
         "affiliations" : "Applied Systems Biology, Leibniz Institute for Natural Product Research and Infection Biology – Hans-Knöll-Institute, Jena, Germany\nFaculty of Biological Sciences, Friedrich-Schiller-University Jena, Germany"
       } ],
-      "website" : "https://applied-systems-biology.github.io/jipipe/",
+      "website" : "https://jipipe.org/",
       "license" : "BSD 2-Clause",
       "citation" : ""
     },
@@ -246,7 +246,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
         "last-name" : "Gerst",
         "affiliations" : "Applied Systems Biology, Leibniz Institute for Natural Product Research and Infection Biology – Hans-Knöll-Institute, Jena, Germany\nFaculty of Biological Sciences, Friedrich-Schiller-University Jena, Germany"
       } ],
-      "website" : "https://applied-systems-biology.github.io/jipipe/",
+      "website" : "https://jipipe.org/",
       "license" : "BSD 2-Clause",
       "citation" : ""
     },
@@ -265,7 +265,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
         "last-name" : "Gerst",
         "affiliations" : "Applied Systems Biology, Leibniz Institute for Natural Product Research and Infection Biology – Hans-Knöll-Institute, Jena, Germany\nFaculty of Biological Sciences, Friedrich-Schiller-University Jena, Germany"
       } ],
-      "website" : "https://applied-systems-biology.github.io/jipipe/",
+      "website" : "https://jipipe.org/",
       "license" : "BSD 2-Clause",
       "citation" : ""
     },
@@ -284,7 +284,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [project.schema.
         "last-name" : "Gerst",
         "affiliations" : "Applied Systems Biology, Leibniz Institute for Natural Product Research and Infection Biology – Hans-Knöll-Institute, Jena, Germany\nFaculty of Biological Sciences, Friedrich-Schiller-University Jena, Germany"
       } ],
-      "website" : "https://applied-systems-biology.github.io/jipipe/",
+      "website" : "https://jipipe.org/",
       "license" : "BSD 2-Clause",
       "citation" : ""
     },

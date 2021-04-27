@@ -1,6 +1,6 @@
 +++
 title = "Citation"
-weight = 60
+weight = 100
 type="page"
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"

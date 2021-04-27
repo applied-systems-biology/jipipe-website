@@ -12,7 +12,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 
 
 This document describes the properties of the JSON API object. You also can access
-the document in [JSON Schema](https://json-schema.org/) format: [graph-edge.schema.json](https://applied-systems-biology.github.io/jipipe/schemas/graph-edge.schema.json)
+the document in [JSON Schema](https://json-schema.org/) format: [graph-edge.schema.json](https://jipipe.org/schemas/graph-edge.schema.json)
 
 <div class="panel-body">
  <section class="json-schema-description">

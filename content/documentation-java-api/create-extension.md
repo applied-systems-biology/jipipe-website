@@ -257,7 +257,7 @@ public class MyExtension extends JIPipeDefaultJavaExtension {
 
     @Override
     public String getWebsite() {
-        return "https://applied-systems-biology.github.io/jipipe/";
+        return "https://jipipe.org/";
     }
 
     @Override

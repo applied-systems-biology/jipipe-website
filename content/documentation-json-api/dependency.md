@@ -12,7 +12,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 
 
 This document describes the properties of the JSON API object. You also can access
-the document in [JSON Schema](https://json-schema.org/) format: [dependency.schema.json](https://applied-systems-biology.github.io/jipipe/schemas/dependency.schema.json)
+the document in [JSON Schema](https://json-schema.org/) format: [dependency.schema.json](https://jipipe.org/schemas/dependency.schema.json)
 
 <div class="panel-body">
  <section class="json-schema-description">
@@ -27,7 +27,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [dependency.sche
      metadata:
     </span>
     <span class="json-property-type">
-     <a class="json-schema-ref" href="https://applied-systems-biology.github.io/jipipe/documentation-json-api/metadata">
+     <a class="json-schema-ref" href="https://jipipe.org/documentation-json-api/metadata">
       See metadata
      </a>
     </span>
@@ -100,7 +100,7 @@ the document in [JSON Schema](https://json-schema.org/) format: [dependency.sche
     "name" : "Filesystem types and algorithms",
     "description" : "Data types and algorithms for interacting with files and folders",
     "authors" : "Zoltán Cseresnyés, Ruman Gerst",
-    "website" : "https://applied-systems-biology.github.io/jipipe/",
+    "website" : "https://jipipe.org/",
     "license" : "BSD-2",
     "citation" : ""
   },
