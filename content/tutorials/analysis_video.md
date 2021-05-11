@@ -15,4 +15,4 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
   </p>
 </div>
 
-<iframe width="100%" height="80%" src="https://www.youtube-nocookie.com/embed/7uHD49Ddfwg" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+<iframe class="iframe-video" src="https://www.youtube-nocookie.com/embed/7uHD49Ddfwg" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
