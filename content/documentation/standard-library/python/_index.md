@@ -15,32 +15,18 @@ installation of Python. This means you will need to download [Python](https://ww
 
 ## Setting up Python
 
-If not already done, please install [Python](https://www.python.org/). Then open JIPipe and
-navigate to `Project > Application settings > Extensions > Python integration`.
+You have the option to either select an existing Python environment, or let JIPipe install a new
+Conda environment into a folder.
 
-Depending on the used Python distribution, you will need to put in different settings:
+To setup Python, navigate to `Project > Application settings > Extensions > Python integration`.
+There you will find a setting `Python environment` that, by default, is not set up.
 
-### Standard Python
+If you want to select an existing Python environment or let JIPipe handle the installation for you,
+choose the `Select/Install` button and select the appropriate operation. Follow the instructions provided
+in the newly opened window.
 
-If you use the global System Python from https://www.python.org/ (No virtualenv), set `Python executable` to the main Python executable (`python.exe`).
-
-Set `Python arguments` to `ARRAY(script_file)`.
-
-### Conda
-
-If you use a Python distribution provided by [Anaconda](https://www.anaconda.com/) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html), you need
-to set `Python executable` to `conda.exe`. You will find it in the Conda installation folder (e.g., `Scripts/conda.exe` on Windows).
-
-Set `Python arguments` to `ARRAY("run", "-n", "base", "python", script_file)`. Please note the that `script_file` is not quoted.
-You can replace "base" by the name of another Conda environment if needed.
-
-### virtualenv
-
-virtualenv environments do not have a way to run scripts directly (like Conda does). You can try to set `Python executable` to the Python executable contained
-in the environment (e.g., `Scripts/python.exe` on Windows). Set `Python arguments` to `ARRAY(script_file)`.
-
-If this does not work, you will need to write a wrapper script (bat/sh) file that activates the environment before running the script.
-Please ensure that `script_file` is always passed in some way.
+You can also edit existing Python environments by selecting the `Edit` button to, for example,
+setup environment variables or change command line parameters.
 
 # Included nodes
 

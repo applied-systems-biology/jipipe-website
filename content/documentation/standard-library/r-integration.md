@@ -9,8 +9,7 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-The standard library contains nodes that allow to run R scripts using
-the [RCaller](https://github.com/jbytecode/rcaller) library that allows to run any existing R installation.
+The standard library contains nodes that allow to run R scripts.
 This means that you will need to install a distribution of [R](https://www.r-project.org/).
 
 {{% notice info %}}
@@ -19,15 +18,18 @@ You will need to install R (https://www.r-project.org/) and setup JIPipe to find
 
 # Setting up R
 
-If not already done, please install [R](https://www.r-project.org/). Then open JIPipe and
-navigate to `Project > Application settings > Extensions > R integration`.
+You have the option to either select an existing R environment, or let JIPipe install a new
+R environment into a folder (only available on Windows).
 
-Here you will find two settings `Override R executable` and `Override RScript executable`.
-Check if both point to the correct R executables. If they are empty or the paths do not exist,
-please set them to the correct paths:
+To setup Python, navigate to `Project > Application settings > Extensions > R integration`.
+There you will find a setting `R environment` that, by default, is not set up.
 
-* The R executable should point to R.exe (Windows) or R (RScript). Example: `C:\Program Files\R\R-4.0.4\bin\R.exe` or `/usr/bin/R`
-* The RScript executable should point to RScript.exe (Windows) or RScript (Linux). Example: `C:\Program Files\R\R-4.0.4\bin\RScript.exe` or `/usr/bin/RScript`
+If you want to select an existing R environment or let JIPipe handle the installation for you,
+choose the `Select/Install` button and select the appropriate operation. Follow the instructions provided
+in the newly opened window.
+
+You can also edit existing R environments by selecting the `Edit` button to, for example,
+setup environment variables or change command line parameters.
 
 # Included nodes
 
