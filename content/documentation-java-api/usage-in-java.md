@@ -144,19 +144,19 @@ public static void main(String[] args) {
 
   JIPipeSimpleIteratingAlgorithm node = JIPipe.createNode("import-imagej-imgplus-from-file", JIPipeSimpleIteratingAlgorithm.class);
 
+  // The node requires a progress info 
+  JIPipeProgressInfo progress = new JIPipeProgressInfo();
+
   // Always clear the node first (allows you to re-use it)
   node.clearSlotData();
 
   // Add inputs
-  node.getFirstInputSlot().addData(new FileData(Paths.get("/data/image.tif")));
-
-  // The node requires a progress info 
-  JIPipeProgressInfo progress = new JIPipeProgressInfo();
+  node.getFirstInputSlot().addData(new FileData(Paths.get("/data/image.tif")), progress);
 
   // Run the node
   node.run(progress);
 
   // Extract the output
-  ImagePlusData image = node.getFirstOutputSlot().getData(0, ImagePlusData.class);
+  ImagePlusData image = node.getFirstOutputSlot().getData(0, ImagePlusData.class, progress);
 }
 ```

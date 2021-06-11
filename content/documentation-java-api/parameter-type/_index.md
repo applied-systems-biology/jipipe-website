@@ -24,7 +24,7 @@ a parameter if you require a list of it down the line. The list parameter inheri
 
 To create an editor UI, you have to inherit from [JIPipeParameterEditorUI](/apidocs/org/hkijena/jipipe/ui/grapheditor/settings/JIPipeParameterEditorUI.html).
 
-The UI class provides access to the [JIPipeParameterHolder](/apidocs/org/hkijena/jipipe/api/parameters/JIPipeParameterHolder.html) object and the [JIPipeParameterAccess](/apidocs/org/hkijena/jipipe/api/parameters/JIPipeParameterAccess.html) object that encapsulates the getter and setters, as well as additional annotations.
+The UI class provides access to the [JIPipeParameterCollection](/apidocs/org/hkijena/jipipe/api/parameters/JIPipeParameterCollection.html) object and the [JIPipeParameterAccess](/apidocs/org/hkijena/jipipe/api/parameters/JIPipeParameterAccess.html) object that encapsulates the getter and setters, as well as additional annotations.
 
 There is also access to the SciJava context object.
 
