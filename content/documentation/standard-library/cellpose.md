@@ -61,10 +61,10 @@ It can train from scratch, or continue training a predefined model (custom or Cy
 JIPipe automatically saves all inputs in appropriate folders and runs the training CLI according
 to the [Cellpose documentation](https://cellpose.readthedocs.io/en/latest/train.html).
 
-The inputs are provided via image-mask composite data. To create these, utilize the `Associate image and mask` (`Images > Mask > Associate image and mask`)
-and provide it with a reference image and appropriate mask.
+Cellpose requires input images annotated with their respective mask labels. To annotate masks to the 
+image, use the `Annotate with data` node.
 
-The output of this node are Cellpose model data (binary) that can be either saved to a file or
+The output of this node are Cellpose model data that can be either saved to a file or
 further processed in JIPipe.
 
 {{% notice info %}}

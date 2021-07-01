@@ -52,6 +52,7 @@ Please note that the description for a data table row ([data-table-row.schema.js
   "rows" : [ {
     "index" : 0,
     "annotations" : [ ],
+    "data-annotations": [ ],
     "true-data-type" : "imagej-imgplus-fft-2d"
   } ],
   "data-type" : "imagej-imgplus-fft-2d"
@@ -201,8 +202,36 @@ Please note that the description for a data table row ([data-table-row.schema.js
     <div class="json-inner-schema">
      <section class="json-schema-array-items">
       <span class="json-property-type">
-       <a class="json-schema-ref" href="/documentation-json-api/annotation">
+       <a class="json-schema-ref" href="https://applied-systems-biology.github.io/jipipe/documentation-json-api/annotation">
         See annotation
+       </a>
+      </span>
+      <span class="json-property-range" title="Value limits">
+      </span>
+      <div class="json-inner-schema">
+      </div>
+     </section>
+    </div>
+   </dd>
+   <dt data-property-name="data-annotations">
+    <span class="json-property-name">
+     data-annotations:
+    </span>
+    <span class="json-property-type">
+     object[]
+    </span>
+    <span class="json-property-range" title="Value limits">
+    </span>
+   </dt>
+   <dd>
+    <p>
+     Data annotations attached to the data row
+    </p>
+    <div class="json-inner-schema">
+     <section class="json-schema-array-items">
+      <span class="json-property-type">
+       <a class="json-schema-ref" href="https://applied-systems-biology.github.io/jipipe/documentation-json-api/data-annotation">
+        See data-annotation
        </a>
       </span>
       <span class="json-property-range" title="Value limits">
@@ -234,3 +263,128 @@ Please note that the description for a data table row ([data-table-row.schema.js
   </dl>
  </section>
 </div>
+
+## Annotation 
+
+<div class="panel-body">
+ <section class="json-schema-description">
+  <p>
+   An annotation
+  </p>
+ </section>
+ <section class="json-schema-properties">
+  <dl>
+   <dt data-property-name="name">
+    <span class="json-property-name">
+     name:
+    </span>
+    <span class="json-property-type">
+     string
+    </span>
+    <span class="json-property-range" title="Value limits">
+    </span>
+    <span class="json-property-required">
+    </span>
+   </dt>
+   <dd>
+    <p>
+     Name of the annotation
+    </p>
+    <div class="json-inner-schema">
+    </div>
+   </dd>
+   <dt data-property-name="value">
+    <span class="json-property-name">
+     value:
+    </span>
+    <span class="json-property-type">
+     string
+    </span>
+    <span class="json-property-range" title="Value limits">
+    </span>
+    <span class="json-property-required">
+    </span>
+   </dt>
+   <dd>
+    <p>
+     Value of the annotation
+    </p>
+    <div class="json-inner-schema">
+    </div>
+   </dd>
+  </dl>
+ </section>
+</div>
+
+
+## Data annotation
+
+<div class="panel-body">
+ <section class="json-schema-description">
+  <p>
+   A data annotation
+  </p>
+ </section>
+ <section class="json-schema-properties">
+  <dl>
+   <dt data-property-name="name">
+    <span class="json-property-name">
+     name:
+    </span>
+    <span class="json-property-type">
+     string
+    </span>
+    <span class="json-property-range" title="Value limits">
+    </span>
+    <span class="json-property-required">
+    </span>
+   </dt>
+   <dd>
+    <p>
+     Name of the annotation
+    </p>
+    <div class="json-inner-schema">
+    </div>
+   </dd>
+   <dt data-property-name="true-data-type">
+    <span class="json-property-name">
+     true-data-type:
+    </span>
+    <span class="json-property-type">
+     string
+    </span>
+    <span class="json-property-range" title="Value limits">
+    </span>
+    <span class="json-property-required">
+    </span>
+   </dt>
+   <dd>
+    <p>
+     Data type ID of the stored data annotation
+    </p>
+    <div class="json-inner-schema">
+    </div>
+   </dd>
+   <dt data-property-name="row-storage-folder">
+    <span class="json-property-name">
+     row-storage-folder:
+    </span>
+    <span class="json-property-type">
+     string
+    </span>
+    <span class="json-property-range" title="Value limits">
+    </span>
+    <span class="json-property-required">
+    </span>
+   </dt>
+   <dd>
+    <p>
+     Relative path to the current data table containing the data annotation data row
+    </p>
+    <div class="json-inner-schema">
+    </div>
+   </dd>
+  </dl>
+ </section>
+</div>
+
