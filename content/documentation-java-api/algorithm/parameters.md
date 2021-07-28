@@ -57,9 +57,55 @@ When a user sets a parameter within the UI, it goes through an instance of [JIPi
 This object is responsible for triggering the required events to notify the UI.
 
 If you set a parameter setter via code, you will notice that any open parameter UI does not respond to this change - due to the absence of the [JIPipeParameterAccess.ParameterChangedEvent](/apidocs/org/hkijena/jipipe/api/parameters/JIPipeParameterCollection.ParameterChangedEvent.html).
-To notify the UI, you can either trigger this event manually via the `EventBus` of the parameter collection, or use the 
-[parameter setter utility](/apidocs/org/hkijena/jipipe/utils/ParameterUtils.html#setParameter-org.hkijena.jipipe.api.parameters.JIPipeParameterCollection-java.lang.String-java.lang.Object-).
-This requires the unique key of the parameter, which can be different to the key defined in [@JIPipeParameter](/apidocs/org/hkijena/jipipe/api/parameters/JIPipeParameter.html) (if it is a sub-parameter).
+
+Use the provided `triggerParameterChange(key)` function to trigger the appropriate parameter change event for a parameter.
+Alternatively, you can use the `setParameter(key, value)` method to set parameters.
+
+```java
+MyAlgorithm algorithm = new MyAlgorithm(...);
+
+// This will NOT update the UI
+algorithm.setRoundness(1.0f);
+
+// Either trigger the event manually
+algorithm.setRoundness(1.0f);
+algorithm.triggerParameterChange("roundness");
+
+// Or just use the setParameter() function
+algorithm.setParameter("roundness", 1.0f);
+
+// DO NOT DO THIS EVER:
+algorithm.setRoundness(1.0f);
+algorithm.isParameterUIVisible(); // DON'T DO THIS!!! THIS WILL UPDATE THE UI, BUT NOT INFORM DEPENDENT PARAMETERS
+```
+
+You can also read parameters via their key using `getParameter()`
+
+```java
+MyAlgorithm algorithm = new MyAlgorithm(...);
+algorithm.getParameter("roundness", Float.class) // Returns 1.0 
+```
+
+## Accessing the whole parameter tree
+
+The mentioned functions `getParameter` and `setParameter` are utilities around [JIPipeParameterTree](/apidocs/org/hkijena/jipipe/api/parameters/JIPipeParameterTree.html),
+which manages the whole set of parameters and sub-parameters of a [JIPipeParameterCollection](/apidocs/org/hkijena/jipipe/api/parameters/JIPipeParameterCollection.html).
+We recommend to create such an object directly, if you want to access many parameters at once or want to read parameter metadata like names, documentation, annotations, and more.
+It also gives you more control on how parameters are accessed (for example it can force using reflection parameters), which can be helpful 
+in more special cases.
+
+```java 
+MyAlgorithm algorithm = new MyAlgorithm(...);
+JIPipeParameterTree tree = new JIPipeParameterTree(algorithm);
+
+// The access object contains the metadata
+JIPipeParameterAccess access = tree.getParameters().get("roundness");
+access.set(1.0f);
+
+// You can also access sub-parameters (by key or by object)
+JIPipeParameterTree.Node subParameterNode = tree.getSourceNode(algorithm.getSubParameter());
+subParameterNode.getDescription(); // Access to various settings
+```
 
 # Parameter settings
 
@@ -119,6 +165,11 @@ public boolean isParameterUIVisible(JIPipeParameterTree tree, JIPipeParameterCol
     return super.isParameterUIVisible(tree, subParameter);
 }
 ```
+
+{{% notice tip %}}
+Use triggerParameterUIChange() to trigger an update of the UI in the setter function if you have dependencies between parameters. 
+This will work for parameters and parameter groups.
+{{% /notice %}}
 
 # User-defined parameters
 

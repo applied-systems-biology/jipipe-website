@@ -32,7 +32,7 @@ The only difference to [JIPipeAlgorithm](/apidocs/org/hkijena/jipipe/api/nodes/J
 @JIPipeDocumentation(name = "My Algorithm", description = "Does something")
 
 // Sets the algorithm category
-@JIPipeOrganization(nodeTypeCategory = MiscellaneousNodeTypeCategory.class)
+@JIPipeNode(nodeTypeCategory = MiscellaneousNodeTypeCategory.class)
 
 // Input and output slots
 @AlgorithmInputSlot(value = ImagePlusData.class, slotName = "Input", autoCreate = true)

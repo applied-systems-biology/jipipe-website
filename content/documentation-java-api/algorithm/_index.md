@@ -24,6 +24,7 @@ JIPipe comes with different base algorithms that provide different feature sets:
 | [JIPipeSimpleIteratingAlgorithm](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeAlgorithm.html)            | A JIPipeParameterSlotAlgorithm that has one input slot and iterates over the input rows.                                                                                                                                        |
 | [JIPipeIteratingAlgorithm](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeIteratingAlgorithm.html)         | A JIPipeParameterSlotAlgorithm that can have multiple input slots and match annotations of the input data to create data batches.                                                                                               |
 | [JIPipeMergingAlgorithm](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeMergingAlgorithm.html)             | A JIPipeParameterSlotAlgorithm that can have multiple input slots and match annotations of the input data to create data batches. The difference to JIPipeIteratingAlgorithm is that a batch can have duplicate items per slot. |
+| [JIPipeSingleIterationAlgorithm](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeSingleIterationAlgorithm.html)            | A JIPipeParameterSlotAlgorithm that can have multiple inputs and acts like a [JIPipeMergingAlgorithm](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeMergingAlgorithm.html) where all data rows are always merged into one batch.                                                                                                                                        |
 
 
 Any algorithm should have the following basic structure:
@@ -33,7 +34,7 @@ Any algorithm should have the following basic structure:
 @JIPipeDocumentation(name = "My Algorithm", description = "Does something")
 
 // Sets the algorithm category
-@JIPipeOrganization(nodeTypeCategory = MiscellaneousNodeTypeCategory.class)
+@JIPipeNode(nodeTypeCategory = MiscellaneousNodeTypeCategory.class)
 
 // Input and output slots autoCreate automatically creates the slots if set to true and no slot configuration was provided
 @AlgorithmInputSlot(value = ImagePlusData.class, slotName = "Input", autoCreate = true)
