@@ -38,6 +38,14 @@ Especially on Windows, the installation of the GPU version takes a considerable 
 progress info from the Conda installation process. We cannot fix this on our end.
 {{% /notice %}}
 
+<div class="notices warning" >
+<strong>Only Nvidia GPUs:</strong>
+If you want to make use of GPU processing, you will need to install the CUDA Toolkit.
+On Ubuntu Linux, install the package <code>nvidia-cuda-toolkit</code> (please review the output of APT carefully, as nvidia-cuda-toolkit only works with specific driver versions).
+On Windows, download the CUDA toolkit from the <a href="https://developer.nvidia.com/cuda-downloads" target="_blank">Nvidia homepage</a>. Please restart JIPipe or Windows after installing the toolkit - 
+otherwise the installed files will not be found by Tensorflow.
+</div>
+
 # Segmentation with Cellpose
 
 Segmenting images with Cellpose is handled by the `Cellpose` node (`Images > Deep learning > Cellpose`).
