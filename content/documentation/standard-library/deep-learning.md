@@ -40,14 +40,30 @@ On Windows, download the CUDA toolkit from the <a href="https://developer.nvidia
 otherwise the installed files will not be found by Tensorflow.
 </div>
 
-# Segmentation
+# Training 
 
-This section is currently being prepared. Please come back later.
+To train a network from scratch, add a `Create model` node into the pipeline and set it up. It allows you to choose from 
+different architectures and setup the expected image size, the number of classes, and additional factors like the 
+learning rate. Here you also have to decide which kind of model is created: For example you can create segmentation oder 
+classification models.
 
-# Classification
+Depending on the model choice, you will need to prepare your data in different ways:
 
-This section is currently being prepared. Please come back later.
+## Segmentation models
 
-# Training
+Segmentation models are trained on labeled images, where the label is in most cases a binary mask.
+The label must be annotated as data annotation to the raw image (for example via the `Annotate with data` node).
+The data is supplied to the `Train model (labeled images)` node, which has three inputs:
 
-This section is currently being prepared. Please come back later.
+* Training data: This contains the labeled images that are used for training the network
+* Test data: This contains labeled images for evaluating the performance of the network 
+* The model (created from `Create model` or a pretrained model)
+
+**Please always ensure that there is no data shared between training and test data to prevent overfitting.**
+You can achieve this either manually or by using the `Split data randomly (percentage)` node.
+
+![Training example](/img/documentation/deep-learning-segmentation-training.png)
+
+## Classifier models
+
+Classifiers determine which kind of object is shown in the image. 

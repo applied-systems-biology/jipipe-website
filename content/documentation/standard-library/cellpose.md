@@ -77,7 +77,7 @@ further processed in JIPipe.
 
 {{% notice info %}}
 Test data is optional (that's why the triangle is grey if disconnected). We still recommend to provide both training and test data sets.
-You can use the 'Split data randomly' node to split data into two sets.
+You can use the 'Split data randomly (percentage)' node to split data into two sets.
 {{% /notice %}}
 
 ![Cellpose training](/img/documentation/cellpose-training.png)
