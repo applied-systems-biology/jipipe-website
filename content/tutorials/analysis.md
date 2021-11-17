@@ -20,7 +20,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
     <div class="tutorial-item-img"><img src="/img/tutorials/analysis/step0.png" /></div>
     <div class="tutorial-item-content">
     <h2>1. First start</h2>
-    On starting JIPipe, you will see such a screen: It contains a short introduction, the <a href="/documentation/graph-compartment">graph compartment editor</a>,
+    On starting JIPipe, you will see such a screen: It contains a short introduction, the <a href="/documentation/create-pipelines/compartments">graph compartment editor</a>,
     an three pre-defined graph compartments <i>Preprocessing</i>, <i>Analysis</i>, and <i>Postprocessing</i>. As described in the graph compartment documentation, you
     can ignore graph graph compartments. But in this tutorial we will make use of its capabilities to clearly separate the pipeline into the mentioned tree steps.
     </div>
@@ -94,7 +94,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
       <h2>6. Annotating data</h2>
       JIPipe is designed as batch processing tool, meaning that it can be always scaled from small test data up to large data sets.
       It can be helpful for you and some algorithms to know which data belongs together. JIPipe introduces the concept of <i>data annotations</i> that
-      assign data to an unique data set and are passed through the pipeline. You can find more about this in the <a href="/documentation/batch-pipelines">documentation about how JIPipe processes data</a>.
+      assign data to an unique data set and are passed through the pipeline. You can find more about this in the <a href="/documentation/basic-concepts/batch-processing">documentation about how JIPipe processes data</a>.
       <br/>In this step we add the data annotation directly at the beginning by attaching the input folder name to each folder that was passed into the pipeline.
       This is done via the <code>Annotations &gt; Generate &gt; Path to annotation</code> algorithm. Just add this algorithm into the graph.<br/>
       For more advanced projects there are plenty of other sources for annotations, like importing them from tables, or extracting and modifying annotations.

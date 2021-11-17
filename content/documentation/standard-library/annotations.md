@@ -9,7 +9,7 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-[Data annotations]({{< ref "/documentation/batch-pipelines" >}}) allow JIPipe algorithms and users to
+[Data annotations]({{< ref "/documentation/basic-concepts/batch-processing" >}}) allow JIPipe algorithms and users to
 assign an unique data set to the data located in a data slot. The standard library
 contains various algorithms that allow to generate, manipulate, and utilize those
 annotations.

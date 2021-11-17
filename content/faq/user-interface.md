@@ -16,7 +16,7 @@ Set the theme to `Modern dark` and restart JIPipe/ImageJ.
 
 ## The nodes are so large. Can they be more compact?
 
-Yes, there are multiple view modes available, including a horizontal and compact vertical mode. See [here](/documentation/graph-editor/#view-modes) for more info.
+Yes, there are multiple view modes available, including a horizontal and compact vertical mode. See [here](/documentation/create-pipelines/pipeline-editor/#view-modes) for more info.
 
 ## How can I make long connections without zooming out?
 

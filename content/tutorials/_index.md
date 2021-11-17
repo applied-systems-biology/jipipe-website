@@ -11,7 +11,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 Are you new to JIPipe? Do you want to find out what this tool is about? Then watch our
 video abstract:
 
-<iframe width="100%" height="80%" src="https://www.youtube-nocookie.com/embed/Zyl52bluWYI" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+<iframe class="iframe-video" src="https://www.youtube-nocookie.com/embed/Zyl52bluWYI" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
 
 # Tutorial list
 

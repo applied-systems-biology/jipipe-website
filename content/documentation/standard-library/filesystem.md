@@ -44,6 +44,6 @@ devices easier.
 
 # Annotation
 
-It is helpful to add [data annotations]({{< ref "/documentation/batch-pipelines" >}}) to the file data at some point.
+It is helpful to add [data annotations]({{< ref "/documentation/basic-concepts/batch-processing" >}}) to the file data at some point.
 This allows algorithms and users to assign data rows to an unique data set.
 See the [annotation standard library documentation]({{< ref "/documentation/standard-library/annotations" >}}) for more information.
