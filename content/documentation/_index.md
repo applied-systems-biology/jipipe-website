@@ -8,57 +8,15 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-This section explains the JIPipe user interface, how to create an analysis pipeline,
-and some concepts behind how analysis pipelines work.
+JIPipe is a visual programming language for <a href="https://fiji.sc/">ImageJ</a> that
+allows you to create macros <strong>without any programming </strong> by just creating a flowchart.
+In this documentation, you will find information about the basic concepts behind JIPipe, how to create an image analysis pipeline with the JIPipe graphical user interface (GUI), and
+run your pipeline and review results. You will also find guides how to connect JIPipe with ImageJ and other software.
 
-# Batch processing
+If you are not familiar with the idea behind JIPipe, we recommend to watch following video:
 
-JIPipe is a tool to create data processing workflows via a graphical language.
-A special feature of JIPipe processing is always done in *batches*, meaning that workflows
-are always designed to scale for large amounts of data without the need of external scripts or
-major changes in a pipeline.
+<iframe class="iframe-video" src="https://www.youtube-nocookie.com/embed/YRSQa31XpT0" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
 
-The JIPipe graphical language is graph-based where nodes represent data processing algorithms
-and edges represent that data is transferred from an algorithm output to another algorithm's input.
-
-An example is the application of a gaussian filter to an image after loading it:
-
-{{<mermaid align="left">}}
-graph LR;
-    A[File] --> B[Load image]
-    B --> C[Apply gaussian]
-{{< /mermaid >}}
-
-To design efficient and scalable pipelines yourself, it is a good idea to
-look into the [JIPipe data model]({{< ref "/documentation/basic-concepts/batch-processing" >}}).
-
-# Graph compartments
-
-A common issue with graphical programming languages is that larger pipelines are
-hard to navigate. Another issue with such languages is that it is hard to separate functional
-units for easier readability.
-
-JIPipe solves both issues with the concept of strongly separated *graph components* that
-group a set of algorithms together. Components only can interact via special interface algorithms,
-making it easier to structure the pipeline.
-
-Please take a look at our [graph compartment documentation]({{< ref "/documentation/create-pipelines/compartments" >}}) for more information.
-
-# User interface overview
-
-The JIPipe user interface is designed around managing an *analysis project*.
-A project contains all information to run an analysis, outside of the input data and
-can be saved into [JSON](https://www.json.org/json-en.html) files.
-The user interface is separated into three sections:
-
-1. **The project menu** contains all operations for the current project / window. It allows you to open/save projects, access and modify [graph compartments]({{< ref "/documentation/create-pipelines/compartments" >}}), manage [plugins]({{< ref "/documentation/plugins" >}}), and run the analysis
-2. **The tab bar** allows you to switch between different interfaces associated to the current project. You can close thabs by clicking the `x` icon. If a tab contains some data that will be lost after closing it, you will have to confirm the action. If no question is asked on closing a tab, you will be able to open it later again without losing data.
-3. **The current content** depends on the selected tab
-
-{{% notice tip %}}
-You can also close a tab by clicking it with the middle mouse button.
-{{% /notice %}}
-
-# Further reading
+Here you can find the topics of this documentation:
 
 {{% children description="true" %}}

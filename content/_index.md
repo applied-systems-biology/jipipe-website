@@ -13,7 +13,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 # Macro programming for everyone!
 
 <center>
-JIPipe is a graphical batch processing programming language for <a href="https://fiji.sc/">ImageJ</a> that
+JIPipe is a visual programming language for <a href="https://fiji.sc/">ImageJ</a> that
 allows you to create macros <strong>without any programming </strong> by just creating a flowchart!
 </center>
 

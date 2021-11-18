@@ -1,7 +1,7 @@
 +++
 title = "Batch processing"
 description = "Explains basic concepts about how data is processed within JIPipe. We really recommend to take a look at this documentation."
-weight = 10
+weight = 20
 type="page"
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
