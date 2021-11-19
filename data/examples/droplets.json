@@ -1,0 +1,19 @@
+{
+    "name": "Bacterial growth measured in fluid droplets",
+    "description": "Microfluidic droplets of approximately 100 micrometer diameter were filled with a solution containing E. coli bacteria and the bacterial growth was observed via brightfield transmitted light microscopy. This JIPipe workflow finds the droplets that show bacterial growth.",
+    "thumbnail": "/img/examples/example-droplets.png",
+    "buttons": [
+        {
+            "text": "Download",
+            "href": "#",
+            "style": "success",
+            "target": "_self"
+        },
+        {
+            "text": "Publication",
+            "href": "#",
+            "style": "info",
+            "target": "_self"
+        }
+    ]
+}

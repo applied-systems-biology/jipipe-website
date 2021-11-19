@@ -10,7 +10,9 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 
 To get started, you can take a look at some example pipelines and other kind of examples:
 
-<div class="examples-container">
+{{< example-gallery >}}
+
+<!-- <div class="examples-container">
   <div class="examples">
     <div>
       <img src="/img/examples/example-spores.png" />
@@ -66,57 +68,4 @@ To get started, you can take a look at some example pipelines and other kind of 
       </div>
     </div>
   </div>
-</div>
-
-<script type="text/javascript">
-$(document).ready(function(){
-  // Landing page slideshow
-  $('.examples').slick({
-    infinite: true,
-    dots: true,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    autoplay: true,
-    autoplaySpeed: 10000,
-    centerMode: true,
-    centerPadding: '5rem',
-    initialSlide: 1,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  });
-});
-
-function copyTextToClipboard(text, onsuccess) {
-  if (!navigator.clipboard) {
-    fallbackCopyTextToClipboard(text);
-    return;
-  }
- navigator.permissions.query({name:'geolocation'}).then(function(result) {
-    if (result.state == "granted" || result.state == "prompt") {
-      navigator.clipboard.writeText(text).then(function() {
-        alert(onsuccess);
-      }, function(err) {
-        console.error('Async: Could not copy text: ', err);
-      });
-    }
-    else {
-      alert("Unable to copy to clipboard! You might be using an older browser that does not support this.");
-    }
-  });
-}
-
-function copyMontageExample() {
-  var url = window.location.origin + '/examples/example-montage.json';
-  fetch(url)
-  .then(function(response) {
-    response.text().then(text => copyTextToClipboard(text, "Copied the node to clipboard! Paste it into an existing JIPipe project."));
-  });
-}
-</script>
+</div> -->

@@ -1,0 +1,19 @@
+{
+    "name": "Kidney status check via glomeruli counting",
+    "description": "This pipeline analyzes light-sheet fluorescence microscopy of whole murine kidney data. These images were generated with staining specific to glomeruli, functional units of kidney. Here, we reduced the size of the image stack from 700 to 20, which non-workstation computers can process without issues.",
+    "thumbnail": "/img/examples/example-glomeruli.png",
+    "buttons": [
+        {
+            "text": "Download",
+            "href": "#",
+            "style": "success",
+            "target": "_self"
+        },
+        {
+            "text": "Publication",
+            "href": "https://jasn.asnjournals.org/content/28/2/452.short",
+            "style": "info",
+            "target": "_blank"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "name": "Nanoparticle delivery analysis in liver",
+    "description": "Micelle nanocarriers were injected into the circulatory system of the mouse vie the tail veins. Two-photon microscopy was utilized to image the cargo delivered by the micelles to the hepatocytes, sinusoids, canaliculi and liver-sinusoidal endothelial cells.",
+    "thumbnail": "/img/examples/example-liver.png",
+    "buttons": [
+        {
+            "text": "Download",
+            "href": "#",
+            "style": "success",
+            "target": "_self"
+        },
+        {
+            "text": "Publication",
+            "href": "https://pubs.acs.org/doi/abs/10.1021/acsnano.1c04213",
+            "style": "info",
+            "target": "_blank"
+        }
+    ]
+}
