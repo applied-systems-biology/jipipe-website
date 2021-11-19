@@ -360,6 +360,11 @@ New landing page
   background-size: cover;
 }
 
+.landing-features .slick-slide .feature-description {
+  flex-grow: 1;
+  padding-right: 10px;
+}
+
 .landing-features .slick-slide span {
   opacity: 0;
   flex-grow: 1;
