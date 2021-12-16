@@ -15,20 +15,15 @@ without the need for a GUI or through ImageJ1 or ImageJ2 scripts.
 # Prerequisites
 
 To use the JIPipe API JIPipe must be initialized first. This requires an ImageJ instance
-or any other way to load SciJava plugins. The following example shows how to initialize JIPipe.
+or any other way to load SciJava plugins. The following example shows how to initialize JIPipe manually from a main function.
 
 ```java
 public static void main(String[] args) {
-  // Extract necessary SciJava variables
-  // An alternative is to create a @Plugin and execute this plugin via ImageJ
-  final ImageJ ij = new ImageJ();
-  Context context = ij.context();
+  // Just call this function before all others. It will create a new ImageJ instance and passes the context to JIPipe
+  // If JIPipe is already initialized, the function has no effect
+  JIPipe.ensureInstance();
 
-  // Execute the JIPipe registration if necessary
-  if (JIPipe.getInstance() == null) {
-      JIPipe.createInstance(context);
-      JIPipe.getInstance().initialize();
-  }
+  // If you already have a Context object: JIPipe.ensureInstance(context)
 
   // JIPipe is now ready to use
 }
