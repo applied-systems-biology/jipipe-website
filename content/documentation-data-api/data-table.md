@@ -16,11 +16,11 @@ required metadata to recover the data from the file system.
 A data table is located in a directory within the file system and contains
 following parts:
 
-* `data-table.json`, which contains all metadata and the table row definitions
-* Numeric folders starting from zero (e.g., `0`, `1`, `52`) that correspond to rows defined in `data-table.json`. These contain files & folders specific to the serialized data type.
-
-**The numeric folders are also referred as "Row folders"**. Please visit the [row folder documentation](/documentation-data-api/row-folder) for more info.
-
+| Element | Description |
+| ------ | ---- |
+| `data-table.json` | Metadata file for this data table. |
+| Data row directories | Names have following RegEx format: `\\d+` (e.g., `0`, `1`, `52`). Number corresponds to the row in the data table. **The numeric folders are also referred as "Row folders"**. Please visit the [row folder documentation](/documentation-data-api/row-folder) for more info. |
+| Data annotation column contents | Used to store data annotation [row folders](/documentation-data-api/row-folder).<br/> **Info:** No standardized naming or content. To comply to the standard, you can store row folders anywhere relative to the data table directory. <br/>**Suggested structure (Implemented in JIPipe):** Names are generated with following format: `_\\d+` (e.g., `_0`, `_1`, `_120`) to prevent collisions with data row folders. Each directory contains a data table that stores the whole column of data annotations. |
 
 Here you see an example of such a folder that stores three data rows. Here we assume that the stored data types are
 `imagej-imgplus` (ImageJ images).
