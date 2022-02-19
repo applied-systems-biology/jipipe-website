@@ -23,8 +23,8 @@ You can also load an example that shows how to use the node.
 Yes. You can use both pipelines and individual JIPipe algorithms from within ImageJ
 macros and the GUI.
 
-## Why are some JIPipe algorithms not availabe from within ImageJ?
+## Why are some JIPipe algorithms not available from within ImageJ?
 
 JIPipe has a very general data model that makes it possible to develop pipelines for processing **any** kind of data.
-The communication between JIPipe's data types and ImageJ is handled by adaptors that will handle the "translation" back & forth.
-For some of such data types, there is no adaptor. The reason behind this is that ImageJ might not have an equivalent data type or feature.
+The communication between JIPipe's data types and ImageJ is handled by adapters that will handle the "translation" back & forth.
+For some of such data types, there is no adapter. The reason behind this is that ImageJ might not have an equivalent data type or feature.
