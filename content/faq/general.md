@@ -23,21 +23,8 @@ Yes. By default, JIPipe creates a backup every 3 minutes. You can recover it via
 ## Can I make the startup faster?
 
 Many JIPipe extensions rely on other ImageJ plugins to work. That is why JIPipe always checks if all necessary ImageJ plugins are available.
-If you are sure that you have everything installed, you can disable this check at `Project > Application settings > General > Extensions`.
-Disable `Validate ImageJ dependencies`.
-
-If you do not have access to these setting (because you are offline or there are issues with the ImageJ servers), open the file `jipipe.properties.json`
-(located in your ImageJ directory) in a text editor search for a line `"extensions/validate-imagej-dependencies" : true` and replace `true` by `false`.
-
-If the file is not present, create a new file and put following text into it:
-
-```
-{
-  "extensions/validate-imagej-dependencies" : false
-}
-```
-
-JIPipe will automatically add the other settings on the first startup.
+This will only happen during the first startup, or if the ImageJ plugin database is not present/corrupt.
+If you have persisting issues, run the ImageJ updater from within ImageJ/Fiji or via `Plugins > Run ImageJ updater`
 
 ## Can I expose a set of specific parameters for collaborators?
 
