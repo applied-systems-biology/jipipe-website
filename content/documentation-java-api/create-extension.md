@@ -281,7 +281,7 @@ public class MyExtension extends JIPipeDefaultJavaExtension {
     }
 
     @Override
-    public void register() {
+    public void register(JIPipe jiPipe, Context context, JIPipeProgressInfo progressInfo) {
         // Content is registered here
     }
 }

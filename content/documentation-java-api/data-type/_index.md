@@ -15,11 +15,21 @@ JIPipe requires that data can be saved to a folder within the output directory. 
 recommend that you include code that can load the data back into JIPipe or ImageJ in some form.
 
 There are no requirements on the constructor of the data type.
-The only requirements are that there is a function `importFrom(Path)` that imports `JIPipeData` from a row storage folder, and an annotation of type
-[@JIPipeStorageDocumentation](/apidocs/org/hkijena/jipipe/core/api/data/JIPipeDataStorageDocumentation.html) that explains the structure of the storage folder.
+The only requirements are that there is a function `importFrom(Path, JIPipeProgressInfo)` that imports `JIPipeData` from a row storage folder, and an annotation of type
+[@JIPipeStorageDocumentation](/apidocs/org/hkijena/jipipe/core/api/data/JIPipeDataStorageDocumentation.html) that explains the structure of the storage folder. This documentation must include a human-readable description of the items contained in the storage directory, as well as a URL to a [JSON Schema](https://www.json-schema.org/) that describes the structure of the directory, including any nested JSON data (if possible). You can build your schema based on following examples:
+
+* Single text file (`*.txt`): https://jipipe.org/schemas/datatypes/string-data.schema.json
+* One of multiple image files: https://jipipe.org/schemas/datatypes/imageplus-data.schema.json
+* Single JSON file with known structure: https://jipipe.org/schemas/datatypes/path-data.schema.json
+* Multiple image files plus JSON metadata with known structure: https://jipipe.org/schemas/datatypes/imageplus-fft-data.schema.json
+* Multiple CSV files plus JSON metadata with known structure: https://jipipe.org/schemas/datatypes/plot-data.schema.json
+
+{{% notice tip %}}
+Feel free to re-use schemata for different types if the structure matches.
+{{% /notice %}}
 
 The folder that is provided in `storageFilePath` is unique to the data and empty.
-The name parameter in `storageFilePath` is usually the data slot name and can be used as template for file names. It can be ignored **undless** `forceName` is true.
+The name parameter in `storageFilePath` is usually the data slot name and can be used as template for file names. It can be ignored **unless** `forceName` is true.
 The reason behind this is that then the name is pre-generated in a unique way for saving the data at a non-standard location (e.g. exporting the data).
 In such cases **all file or folder names** within the storage path should contain the name in some way, **even if the import function cannot load the exported data anymore**.
 
@@ -30,8 +40,13 @@ There are two optional functions that you can override:
 
 
 ```java
+// Documentation for this data type (for the GUI)
 @JIPipeDocumentation(name = "My data", description = "This is some data")
-@JIPipeStorageDocumentation("Contains exactly one *.json file that stores the string value.")
+
+// Human-readable description plus a JSON Schema that describe the structure of a storage folder 
+@JIPipeStorageDocumentation(humanReadableDescription = "Contains exactly one *.json file that stores the string value.", 
+jsonSchemaURL = "https://jipipe.org/schemas/datatypes/jipipe-json-data.schema.json")
+
 // You can use @JIPipeHidden to hide this data from data type list UIs
 public class MyData implements JIPipeData {
 
@@ -104,7 +119,7 @@ public class MyData implements JIPipeData {
     }
 
     // Do not forget to add this method or JIPipe will refuse to start
-    public static MyData importFrom(Path rowStorageFolder) {
+    public static MyData importFrom(Path rowStorageFolder, JIPipeProgressInfo progress) {
         // You can use the PathUtils
         Path targetFile = PathUtils.findFileByExtensionIn(storageFilePath, ".json");
         return fromJson(targetFile);

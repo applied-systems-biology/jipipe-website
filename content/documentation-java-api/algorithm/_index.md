@@ -84,7 +84,7 @@ public class MyExtension extends JIPipeDefaultJavaExtension {
 
     // ... See previous tutorial for other methods
     @Override
-    public void register() {
+    public void register(JIPipe jiPipe, Context context, JIPipeProgressInfo progressInfo) {
         // Registers our algorithm with a unique ID and an icon
         registerNodeType("my-algorithm", MyAlgorithm.class, UIUtils.getIconURLFromResources("actions/viewimage.png"));
     }
