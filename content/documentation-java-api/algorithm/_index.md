@@ -37,8 +37,8 @@ Any algorithm should have the following basic structure:
 @JIPipeNode(nodeTypeCategory = MiscellaneousNodeTypeCategory.class)
 
 // Input and output slots autoCreate automatically creates the slots if set to true and no slot configuration was provided
-@AlgorithmInputSlot(value = ImagePlusData.class, slotName = "Input", autoCreate = true)
-@AlgorithmOutputSlot(value = ImagePlusData.class, slotName = "Output", autoCreate = true)
+@JIPipeInputSlot(value = ImagePlusData.class, slotName = "Input", autoCreate = true)
+@JIPipeOutputSlot(value = ImagePlusData.class, slotName = "Output", autoCreate = true)
 
 // You can add multiple JIPipeCitation annotations to provide citations for this node only
 @JIPipeCitation("Additional citation")

@@ -8,7 +8,7 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-In the previous examples, we used the [@AlgorithmInputSlot](/apidocs/org/hkijena/jipipe/api/nodes/AlgorithmInputSlot.html) and [@AlgorithmOutputSlot](/apidocs/org/hkijena/jipipe/api/nodes/AlgorithmOutputSlot.html) annotations with `autoCreate = true`
+In the previous examples, we used the [@JIPipeInputSlot](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeInputSlot.html) and [@JIPipeOutputSlot](/apidocs/org/hkijena/jipipe/api/nodes/JIPipeOutputSlot.html) annotations with `autoCreate = true`
 to automatically configure the slots.
 
 This is not sufficient for more complicated algorithms that require
