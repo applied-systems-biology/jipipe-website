@@ -98,7 +98,7 @@ allows you to create macros <strong>without any programming </strong> by just cr
 </div>
 </div>
 
-<div class="landing-page-try">
+<!-- <div class="landing-page-try">
   <h1>Do you want to try it?</h1>
   <span>
   You can try JIPipe right now in three simple steps!
@@ -111,7 +111,7 @@ allows you to create macros <strong>without any programming </strong> by just cr
   <span>
   After starting JIPipe, we recommend you to follow our <a href="/tutorials/analysis">tutorial</a> or load an <a href="/examples">example pipeline</a>.
   </span>
-</div>
+</div> -->
 
 <div class="landing-page-contact">
   <h1>Do you have a question or require some help?</h1>
