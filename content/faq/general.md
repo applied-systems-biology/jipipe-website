@@ -9,9 +9,9 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-## Where do I find documentations?
+## Where do I find documentation?
 
-You can find all documentations in the {{< icon name="fa-question-circle" size="large" >}} menu at the top right.
+You can find all documentation pages in the Help {{< icon name="fa-question-circle" size="large" >}} menu at the top right.
 
 There are also context-based documentations available if you select a node in the graph.
 Hover your mouse over a parameter to show documentations for this parameter only.
@@ -25,6 +25,15 @@ Yes. By default, JIPipe creates a backup every 3 minutes. You can recover it via
 Many JIPipe extensions rely on other ImageJ plugins to work. That is why JIPipe always checks if all necessary ImageJ plugins are available.
 This will only happen during the first startup, or if the ImageJ plugin database is not present/corrupt.
 If you have persisting issues, run the ImageJ updater from within ImageJ/Fiji or via `Plugins > Run ImageJ updater`
+
+## Can I remember the settings of one or multiple nodes for later re-use?
+
+Yes. Select the nodes of interest, right-click a node and select `Create node template`. You can save the parameters and even connections if you have multiple nodes into the current project or globally. 
+You can find them in the `Node templates` list.
+
+## Can I bookmark specific nodes?
+
+Yes. Right-click the node and set it as bookmark. The list is available in any project graph editor and in the project info screen.
 
 ## Can I expose a set of specific parameters for collaborators?
 
