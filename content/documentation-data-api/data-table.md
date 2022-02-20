@@ -19,8 +19,8 @@ following parts:
 | Element | Description |
 | ------ | ---- |
 | `data-table.json` | Metadata file for this data table. |
-| Data row directories | Names have following RegEx format: `\\d+` (e.g., `0`, `1`, `52`). Number corresponds to the row in the data table. **The numeric folders are also referred as "Row folders"**. Please visit the [row folder documentation](/documentation-data-api/row-folder) for more info. |
-| Data annotation column contents | Used to store data annotation [row folders](/documentation-data-api/row-folder).<br/> **Info:** No standardized naming or content. To comply to the standard, you can store row folders anywhere relative to the data table directory. <br/>**Suggested structure (Implemented in JIPipe):** Names are generated with following format: `_\\d+` (e.g., `_0`, `_1`, `_120`) to prevent collisions with data row folders. Each directory contains a data table that stores the whole column of data annotations. |
+| `<data row index>` | Stores the main [data](/documentation-data-api/row-folder) for this row. Names have following RegEx format: `\\d+` (e.g., `0`, `1`, `52`). Number corresponds to the row in the data table. |
+| `data-annotations/<data row index>/<data annotation column name>` | Used to store the data annotation `<data annotation column name>` for the table row `<data row index>`. `<data annotation column name>` directories contain [data](/documentation-data-api/row-folder) standard. **Please note that data annotation names are not necessarily file system compatible. Use string manipulation methods to generate approximations if required!** |
 
 Here you see an example of such a folder that stores three data rows. Here we assume that the stored data types are
 `imagej-imgplus` (ImageJ images).
@@ -34,6 +34,16 @@ Root --> R2["2/"];
 R0 --> R0Img["data.tif"];
 R1 --> R1Img["data.tif"];
 R2 --> R2Img["data.tif"];
+Root --> DataAnnotations["data-annotations"];
+DataAnnotations --> DR0["0/"];
+DataAnnotations --> DR1["1/"];
+DataAnnotations --> DR2["2/"];
+DR0 --> Label0["Label"];
+DR1 --> Label1["Label"];
+DR2 --> Label2["Label"];
+Label0 --> Label0Img["data.tif"];
+Label1 --> Label1Img["data.tif"];
+Label2 --> Label2Img["data.tif"];
 {{< /mermaid >}}
 
 # data-table.json
