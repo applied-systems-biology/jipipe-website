@@ -26,7 +26,7 @@ The data API is modular due to the different uses. It incorporates following ele
 
 Additionally, the data API incorporates elements from the JSON API to store metadata.
 
-The following graph gives an overview how these relate to tech other.
+The following graph gives an overview how these relate to tech other:
 
 {{<mermaid align="left">}}
 graph LR;
@@ -34,6 +34,8 @@ DataTable["Data table"] --> DataTableRow["Data table row"];
 PipelineOutput["Pipeline output"] --> DataTable;
 ExportedCache["Exported cache"] --> DataTable;
 {{< /mermaid >}}
+
+The smallest unit is the *data table row*. It stores the files of a data type in its own standardized way. Please use the 
 
 # Detailed descriptions
 

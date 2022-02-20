@@ -1,6 +1,6 @@
 +++
 title = "Pipeline output"
-weight = 30
+weight = 50
 type="page"
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
