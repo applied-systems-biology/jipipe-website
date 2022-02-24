@@ -56,6 +56,39 @@ automatically applied to ally `x` and `y` values:
 The expression builder shows a list of all variables. This list might be incomplete if variables are generated during the runtime (e.g., extracted from a table).
 {{% /notice %}}
 
+You can also set variables to re-use them in more complicated calculations by introducing multiple statements:
+
+```
+SET_VARIABLE("x", 5); PRINT("x=", x); SET_VARIABLE("y", x + 5); PRINT("y=", y); y + 15
+```
+
+The code above will run the operations from left to right and print into your console:
+
+```
+x=5
+y=10
+```
+
+The return value will always be the right-most operation (here `15`)
+
+{{% notice info %}}
+Statements are technically operators and therefore are affected by brackets. 
+We recommend to not put statement operators into brackets and only use them to make multiple lines of code.
+{{% /notice %}}
+
+As you can use new-lines in expression editors, we recommend to put each statement into a new line: 
+
+```
+SET_VARIABLE("x", 5); 
+PRINT("x=", x); 
+SET_VARIABLE("y", x + 5); 
+PRINT("y=", y); y + 15
+```
+
+{{% notice info %}}
+You can end the code with semi-colons, e.g. PRINT(5);;;;;. These will be ignored.
+{{% /notice %}}
+
 ## Operators
 
 The expressions understand a wide range of common operators for numeric, string, and boolean data:
@@ -126,6 +159,7 @@ Textual operators require spaces to be separated. For example you cannot write `
 
 | Operator                                                       | Description                                                                                                                                                                                                                               | Usage                                           |
 | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| Statement                                                      | Returns the last value of the statement chain.                                                                                                                                                                                            | `SET_VARIABLE("x", 5); PRINT(x)`                |
 | Logical AND                                                    | Returns TRUE if both operands are TRUE                                                                                                                                                                                                    | `x AND y` or `x & y`                            |
 | Logical OR                                                     | Returns TRUE if one of the operands is TRUE                                                                                                                                                                                               | `x OR y` or `x | y`                             |
 | Logical XOR                                                    | Returns TRUE if exactly one operand is TRUE                                                                                                                                                                                               | `x XOR y`                                       |
@@ -154,24 +188,24 @@ The operators are ordered according to a precedence table. You might need to use
 
 The higher the number is the more the operator is preferred.
 
-| 1   | 2   | 3   | 4   | 5                              | 6                              | 7                          | 8   | 9                        | 10                     |
-| --- | --- | --- | --- | ------------------------------ | ------------------------------ | -------------------------- | --- | ------------------------ | ---------------------- |
-| OR  | AND | NOT |     |                                |                                |                            |     |                          |                        |
-|     | XOR |     |     |                                |                                |                            |     |                          |                        |
-|     |     |     |     |                                | Subtraction (x - y)            | Divide (x / y)             |     | Power (x^y)              | Negate (-x)            |
-|     |     |     |     |                                |                                | Modulo (x % y)             |     |                          |                        |
-|     |     |     |     |                                |                                | Multiply (x * y)           |     |                          |                        |
-|     |     |     |     | Greater than or equal (x >= y) |                                |                            |     |                          |                        |
-|     |     |     |     | Greater than (x > y)           |                                |                            |     |                          |                        |
-|     |     |     |     | Less than or equal (x <= y)    |                                |                            |     |                          |                        |
-|     |     |     |     | Less than (x < y)              |                                |                            |     |                          |                        |
-|     |     |     |     | Equal (x == y)                 |                                |                            |     |                          |                        |
-|     |     |     |     | Unequal (x != y)               |                                |                            |     |                          |                        |
-|     |     |     |     |                                | String contains (x IN y)       |                            |     |                          |                        |
-|     |     |     |     |                                | Addition (x + y)               |                            |     |                          |                        |
-|     |     |     |     |                                | String contains (x CONTAINS y) |                            |     |                          |                        |
-|     |     |     |     |                                |                                | Variable exists (x EXISTS) |     |                          |                        |
-|     |     |     |     |                                |                                |                            |     | Array/Map access (x @ y) | Variable resolve ($ x) |
+| -99999 | 1   | 2   | 3   | 4   | 5                              | 6                              | 7                          | 8   | 9                        | 10                     |
+| ---    |  --- | --- | --- | --- | ------------------------------ | ------------------------------ | -------------------------- | --- | ------------------------ | ---------------------- |
+| Statement (;)| OR  | AND | NOT |     |                                |                                |                            |     |                          |                        |
+| |     | XOR |     |     |                                |                                |                            |     |                          |                        |
+| |     |     |     |     |                                | Subtraction (x - y)            | Divide (x / y)             |     | Power (x^y)              | Negate (-x)            |
+| |     |     |     |     |                                |                                | Modulo (x % y)             |     |                          |                        |
+| |     |     |     |     |                                |                                | Multiply (x * y)           |     |                          |                        |
+| |     |     |     |     | Greater than or equal (x >= y) |                                |                            |     |                          |                        |
+| |     |     |     |     | Greater than (x > y)           |                                |                            |     |                          |                        |
+| |     |     |     |     | Less than or equal (x <= y)    |                                |                            |     |                          |                        |
+| |     |     |     |     | Less than (x < y)              |                                |                            |     |                          |                        |
+| |     |     |     |     | Equal (x == y)                 |                                |                            |     |                          |                        |
+| |     |     |     |     | Unequal (x != y)               |                                |                            |     |                          |                        |
+| |     |     |     |     |                                | String contains (x IN y)       |                            |     |                          |                        |
+| |     |     |     |     |                                | Addition (x + y)               |                            |     |                          |                        |
+| |     |     |     |     |                                | String contains (x CONTAINS y) |                            |     |                          |                        |
+| |     |     |     |     |                                |                                | Variable exists (x EXISTS) |     |                          |                        |
+| |     |     |     |     |                                |                                |                            |     | Array/Map access (x @ y) | Variable resolve ($ x) |
 
 
 ## Compatible types
@@ -180,6 +214,7 @@ Not all operators are compatible to all types. See following table for the opera
 
 | Operator                         | Number                      | Boolean                     | String                                           | Array                         | Map                                                     |
 | -------------------------------- | --------------------------- | --------------------------- | ------------------------------------------------ | ----------------------------- | ------------------------------------------------------- |
+| Statement (;)                    | OK                          | OK                          | OK                                               | OK                            | OK                                                      |
 | AND                              | Error                       | OK                          | Error                                            | Error                         | Error                                                   |
 | NOT                              | Error                       | OK                          | Error                                            | Error                         | Error                                                   |
 | OR                               | Error                       | OK                          | Error                                            | Error                         | Error                                                   |
@@ -199,3 +234,5 @@ Not all operators are compatible to all types. See following table for the opera
 | Variable exists (x EXISTS)       | Works (Converted to string) | Works (Converted to string) | OK                                               | Error                         | Error                                                   |
 | Variable resolve ($ x)           | Works (Converted to string) | Works (Converted to string) | OK                                               | Error                         | Error                                                   |
 | Get item in array or map (x @ y) | Error                       | Error                       | Error                                            | OK                            | OK                                                      |
+
+Note that statements are compatible to any type, as they are structural parameters.
