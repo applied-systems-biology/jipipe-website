@@ -85,7 +85,7 @@ public class MyExtension extends JIPipeDefaultJavaExtension {
     public void register() {
         // The two null parameters will be handled in the next tutorials
         // You can leave them null if you want. This is valid.
-        registerDataType("my-data", MyData.class, ResourceUtils.getPluginResource("/icons/data-types/data-type.png"), null, null);
+        registerDataType("my-data", MyData.class, ResourceUtils.getPluginResource("/icons/data-types/data-type.png"));
     }
 
 }
