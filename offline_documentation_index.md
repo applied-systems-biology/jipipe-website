@@ -8,7 +8,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
 
-<img src="/img/logo-content.svg" style="width: 40%;"/>
+<img src="/img/logo-content.svg" class="jipipe-logo-index" style="width: 40%;"/>
 
 # Macro programming for everyone!
 

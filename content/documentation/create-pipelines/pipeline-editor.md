@@ -60,7 +60,7 @@ A connection is shows as line between the connected slots. The color of the line
 the data types of the source and target.
 
 * A **black** line indicates that the data types match exactly.
-* A <span style="color: blue;"><strong>blue</strong></span> line indicates that the types dont match exactly, but can be converted by JIPipe
+* A <span style="color: blue;"><strong>blue</strong></span> line indicates that the types don't match exactly, but can be converted by JIPipe
 * A <span style="color: red;"><strong>red</strong></span> line indicates that the types are incompatible. You will probably get an error message during the calculation.
 
 {{% notice tip %}}
@@ -94,7 +94,7 @@ The toolbar contains functions to add new algorithms into the graph, navigate to
 
 * On the left-hand side you can find a menu containing all **available algorithms**. On selecting an entry, the corresponding algorithm is added to the graph.
 * The **navigator** allows you to quickly navigate to an existing algorithm instance or create a new one. Just type one or multiple search terms into the field. On pressing the {{< icon name="fa-keyboard-o" size="medium" >}} *arrow down* key on your keyboard, the first entry is selected.
-* The **view options** control how the graph editor behaves and contains some additional utility functions.
+* The **graph menu** contains some additional utility functions and settings.
 
 ## Additional tools
 
