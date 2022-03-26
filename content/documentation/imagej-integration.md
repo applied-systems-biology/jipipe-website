@@ -23,7 +23,7 @@ There are two ways JIPipe integrates back into ImageJ:
 1. You can run a pipeline project from a macro/command
 2. You can run JIPipe algorithms from a macro/command if the slot data types are supported by ImageJ
 
-## Running a pipeline
+# Running a pipeline
 
 You can run an JIPipe pipeline via the command `Plugins > JIPipe > Run JIPipe project`. It will ask you
 the project file and the output directory.
@@ -49,24 +49,79 @@ You can also run JIPipe in headless-mode just like any ImageJ2 algorithm:
 While JIPipe works in Headless-mode, some ImageJ algorithms don't. You will get an error message if an algorithm requires a graphical environment.
 {{% /notice %}}
 
-## Running a single algorithm
+# Running a single node
 
 JIPipe algorithms can be run from ImageJ macros/commands if the slot data types are compatible with ImageJ.
 By default, this includes any image data type, result tables, and regions of interest (via ROIManager).
-If you run the command `Plugins > JIPipe > Run JIPipe algorithm`, a dialog with all available algorithms,
-parameters, and more information is shown.
-
-A difference to the parameter panel of an algorithm within the graph editor UI is that you have to select the
-input image.
+On running the command `Plugins > JIPipe > Run JIPipe algorithm`, a dialog will open that will let you select a JIPipe node 
+and run it within ImageJ.
 
 ![Single algorithm setup dialog](/img/documentation/run-single-algorithm.png)
+
+## Providing inputs
+
+The JIPipe node is provided with inputs via an *importer* that transforms non-JIPipe data into items that can be handled by JIPipe. 
+We advise to review the settings by selecting the **Data inputs/outputs** tab and switching to the **Inputs** view. The editor will display a preview of the JIPipe node and a list of inputs and related settings.
+
+You can change the importer by clicking the edit (pen) button at the top right corner of each input. Based on the selected importer, the settings within the box change to, for example, allow to select an image window. 
+
+{{% notice info %}}
+If you want to specify more advanced data with text and data annotations, choose the "Data table import" option. You have to provide a path to a valid data table directory in the "Name" field.
+{{% /notice %}}
+
+![Single algorithm setup dialog](/img/documentation/run-single-algorithm-input.png)
 
 Output data is created according to the *slot name*. For example if the output slot name is `Output`,
 the created image window will also be named `Output`.
 
+## Exporting outputs
+
+Any JIPipe output is exported back into ImageJ.
+Outputs are managed in a similar manner to inputs by switching to the **Outputs** tab. Here, you can select the type of exporter and change various export parameters.
+
 {{% notice info %}}
-Just as in a graph, images are converted automatically to the data type specified by the algorithm.
+If you want to export data as JIPipe data table, select the "Data table export" exporter item. If the name contains an absolute path, the data table will be written into it. Otherwise, JIPipe will create a temporary directory where outputs are written. The temporary directory is changeable in the JIPipe settings.
 {{% /notice %}}
+
+![Single algorithm setup dialog](/img/documentation/run-single-algorithm-output.png)
+
+## Adding/removing slots
+
+Some nodes allow the modification of their slots. To add new slots, click the **+** button in the node preview at the bottom view. 
+To edit or delete a slot, click the arrow button next to the slot and select the appropriate operation.
+
+![Single algorithm setup dialog](/img/documentation/run-single-algorithm-edit-nodes.png)
+
+## ImageJ macro support
+
+To run the command via a macro, run:
+
+```
+run("Run JIPipe algorithm", "nodeId=<Algorithm>, parameters=<Parameters>, inputs=<Inputs>, outputs=<Outputs>")
+```
+
+The algorithm ID can be looked up via the plugin manager.
+ are provided as string in [JSON](https://json.org/) format.
+The JSON data should have following structure:
+
+The parameters, inputs, and outputs are provided in JSON format:
+
+* `parameters` contains the node parameters. These can be obtained by copying a node into the clipboard. You can leave out unused parameters to let JIPipe fill in the default value
+* `inputs` assigns to each input slot the importer parameters
+* `outputs` assigns to each output the output parameters
+
+{{% notice tip %}}
+Use the "Copy command" button in the "Run JIPipe algorithm" GUI command to quickly create a valid macro for your parameters.
+{{% /notice %}}
+
+## Creating an ImageJ menu entry for a node
+
+If you are a developer of a JIPipe node (Java only) and want to provide your node as separate entry in the ImageJ menu,
+you can use our Java API to create custom SciJava commands that provide a similar UI to the single algorithm run.
+You just have to inherit from [JIPipeRunCustomAlgorithmCommand](/apidocs/org/hkijena/jipipe/JIPipeRunCustomAlgorithmCommand.html) and provide the
+constructor with the node ID. Then add the [Plugin](https://javadoc.scijava.org/SciJava/org/scijava/plugin/Plugin.html) annotation just as with any SciJava command.
+
+## Currently known issues
 
 {{% notice warning %}}
 There may be issues if multiple ROI or result table outputs are generated.
@@ -77,27 +132,3 @@ JIPipe will merge multiple ROI List data items into one Results Table.
 There can be issues using the macro recorder depending on which ImageJ algorithm is executed.
 This issue is especially prevalent in ImageJ macro algorithm nodes.
 {{% /notice %}}
-
-To run the command via a macro, run:
-
-```
-run("Run JIPipe algorithm", "nodeId=<Algorithm>, parameters=<Parameters>")
-```
-
-The algorithm ID can be looked up via the plugin manager.
-Parameters are provided as string in [JSON](https://json.org/) format.
-The JSON data should have following structure:
-
-* (Optional) An object `parameters` that contains the algorithm parameters. They are equal to the parameters saved in an JIPipe project file. We recommend to use the `Copy command` button to obtain the parameters. If you leave out parameters, the default value is assumed.
-* (Optional) An object `add-input` that contains additional input [slot definitions]({{< ref "/documentation-json-api/slot-definition" >}}). The entry keys are the slot names.
-* (Optional) An object `add-output` that contains additional output [slot definitions]({{< ref "/documentation-json-api/slot-definition" >}}). The entry keys are the slot names.
-* (Optional) An object `input`. Entry keys correspond to the slot name. The entry value is a string that corresponds to the Window name that contains the data. Only required for image data types, as JIPipe accesses the global ROI manager and global result table.
-
-{{% notice tip %}}
-Use the "Copy command" button in the "Run JIPipe algorithm" GUI command to quickly create a valid macro for your parameters.
-{{% /notice %}}
-
-If you are a developer of a JIPipe node (Java only) and want to provide your node as separate entry in the ImageJ menu,
-you can use our Java API to create custom SciJava commands that provide a similar UI to the single algorithm run.
-You just have to inherit from [JIPipeRunCustomAlgorithmCommand](/apidocs/org/hkijena/jipipe/JIPipeRunCustomAlgorithmCommand.html) and provide the
-constructor with the node ID. Then add the [Plugin](https://javadoc.scijava.org/SciJava/org/scijava/plugin/Plugin.html) annotation just as with any SciJava command.
