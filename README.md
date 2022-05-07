@@ -35,8 +35,38 @@ To preview the website during development, run following command:
 hugo server
 ```
 
+# Generating the final website
+
 To generate the final website, run following command:
 
 ```bash
 hugo
 ```
+
+The output will be located in `docs`.
+
+# Offline user guide
+
+The offline user guide is intended to be uploaded to be uploaded to the GitHub release page.
+It does not contain the API docs and developer documentation.
+
+To generate it, run
+
+```bash
+./generate_offline_user_guide.sh
+```
+
+The output will be located in `offline_user_guide`. The contents of this directory must be packaged into a *.zip file for the upload.
+
+# Offline documentation
+
+An offline version of the website, including the API docs and developer documentation.
+
+To generate it, run
+
+```bash
+./generate_offline_documentation.sh
+```
+
+The output will be located in `offline`.
+
