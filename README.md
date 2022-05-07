@@ -45,18 +45,6 @@ hugo
 
 The output will be located in `docs`.
 
-# Offline user guide
-
-The offline user guide is intended to be uploaded to be uploaded to the GitHub release page.
-It does not contain the API docs and developer documentation.
-
-To generate it, run
-
-```bash
-./generate_offline_user_guide.sh
-```
-
-The output will be located in `offline_user_guide`. The contents of this directory must be packaged into a *.zip file for the upload.
 
 # Offline documentation
 
@@ -68,5 +56,6 @@ To generate it, run
 ./generate_offline_documentation.sh
 ```
 
-The output will be located in `offline`.
+The output will be located in `offline/docs`.
+A *.zip file is generated at `offline/jipipe_offline_documentation.zip`.
 
