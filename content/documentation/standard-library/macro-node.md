@@ -55,22 +55,30 @@ rename("Output");
 
 ## Results table
 
-**As input:** The table data is opened as the main "Results" table. We recommend to have only one results table input, as the conversion overwrites the current table.
+**As input:** The table is opened as ImageJ table window with the same name as the slot. If you set the slot name to `Results`, the special "Results" table is utilized.
 
-**As output:** The table data is extracted from the main "Results" table.
+**As output:** The table data is extracted from the table with the same name as the slot. If the slot name is `Results`, the special "Results" table is extracted. Please ensure that you use `table.rename(old, new)` to rename the output table to the slot name.
 
-{{% notice warning %}}
-You should only have one results table input, as only the latest input is used. If you want to merge tables, use JIPipe nodes for this.
-{{% /notice %}}
+```C
+// The input is created as window "Input"
+selectWindow("Input");
+run("Gaussian Blur...", "sigma=2");
+run("Auto Threshold", "method=Default white");
+run("Analyze Particles...", "display clear include summarize add");
+
+// Results table output "Results"
+// Results table output "Summary"
+// ROI list output "ROIs"
+```
 
 ## ROI data
 
-**As input:** The ROI are added to the ROI manager. Like with the results table data, the existing ROI manager is cleared.
+**As input:** The ROI are added to the ROI manager. The existing ROI manager is cleared.
 
 **As output:** The ROI are extracted from the ROI manager.
 
-{{% notice warning %}}
-You should only have one results ROI List data input, as only the latest input is used.
+{{% notice info %}}
+ImageJ currently only supports one ROI Manager. JIPipe cannot work around this issue.
 {{% /notice %}}
 
 ## Path data
@@ -89,6 +97,7 @@ The most important parameters are
 
 1. The macro code
 2. The list of variables
+3. Importer/exporter configurations
 
 ![](/img/documentation/macro_node_parameters.png)
 
@@ -147,3 +156,18 @@ rename("Output");
 {{% notice info %}}
 Path inputs are converted in a similar way.
 {{% /notice %}}
+
+## Importer/export configurations
+
+JIPipe provides standardized components for the data exchange with ImageJ that support multiple options. These are also utilized in the macro node and can be configured in the `ImageJ to JIPipe` and `JIPipe to ImageJ` parameter sections.
+
+For each input and output, one item is generated that supports two options:
+
+* Clicking the button or the "Edit" icon allows to change the importer/exporter type
+* Clicking the configuration button allows to override the parameters passed to the importer/exporter
+
+{{% notice info %}}
+Override the name to transfer data independent of the slot name.
+{{% /notice %}}
+
+![](/img/documentation/macro_node_importers_exporters.png)
