@@ -15,9 +15,7 @@ cp -v offline_documentation_config.toml ./offline/config.toml
 
 pushd offline 
 hugo
-pushd docs
-zip -r ../jipipe_offline_documentation.zip .
-popd
+zip -r jipipe_offline_documentation.zip docs
 for content in content static themes resources layouts archetypes; do
     rm -rv $content
 done
