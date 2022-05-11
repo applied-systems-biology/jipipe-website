@@ -64,7 +64,7 @@ weight = 11
 
 [[menu.shortcuts]]
 name = "<i class='fa fa-comments'></i> <label>Community</label>"
-url = "https://forum.image.sc/tag/jipipe"
+url = "https://forum.image.sc/"
 weight = 12
 
 [[menu.shortcuts]]
