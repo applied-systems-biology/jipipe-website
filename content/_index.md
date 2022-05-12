@@ -41,7 +41,7 @@ allows you to create macros <strong>without any programming </strong> by just cr
   <div>
     <div class="feature-description">
       <h2>Find and manage nodes</h2>
-      <span>JIPipe helps you to learn about the over 600 available nodes by organizing them into searchable menus and by integrating the <strong>Algorithm finder</strong> that guides you in creating a pipeline by offering compatible processing steps for your current data. All documentation, including relevant papers are accessible within JIPipe. </span>
+      <span>JIPipe helps you to learn about the over 1000 available nodes by organizing them into searchable menus and by integrating the <strong>Algorithm finder</strong> that guides you in creating a pipeline by offering compatible processing steps for your current data. All documentation, including relevant papers are accessible within JIPipe. </span>
     </div>
     <img src="/img/features/algorithm_finder_2.png" />
   </div>  
