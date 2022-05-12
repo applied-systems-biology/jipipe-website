@@ -11,7 +11,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 Please cite following publication if you use our framework:
 
 {{% panel %}}
-Marc Figge, Ruman Gerst, Zoltan Cseresnyes et al. JIPipe: Visual batch processing for ImageJ, 11 May 2022, PREPRINT (Version 1) available at Research Square [https://doi.org/10.21203/rs.3.rs-1641739/v1]
+Ruman Gerst, Zoltan Cseresnyes, Marc Thilo Figge. JIPipe: Visual batch processing for ImageJ, 11 May 2022, PREPRINT (Version 1) available at Research Square [https://doi.org/10.21203/rs.3.rs-1641739/v1]
 {{% /panel %}}
 
 **Thanks!**
