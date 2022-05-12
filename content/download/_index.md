@@ -67,7 +67,6 @@ Please choose how you want to install JIPipe
     </ol>
     <strong><i class="fa fa-warning"></i> Info:</strong> We only have limited capabilities to test software on Apple computers. If you experience any issues, try to install JIPipe via the ImageJ update site.</i><br/>
     <strong><i class="fa fa-warning"></i> Info:</strong> We are aware of some issues regarding the integration of external software (Python, R, Cellpose, ...). We are open to contributions to resolve these problems.</i><br/>
-    <strong><i class="fa fa-info"></i> Info:</strong> The installer requires an <strong>online</strong> connection.</i><br/>
     <strong><i class="fa fa-info"></i> Info:</strong> Please do not install the app globally (using administrator rights). This can prevent ImageJ updates.</i><br/>
   </div>
   <div class="download-panel-content" id="download-jar-content">
