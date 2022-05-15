@@ -8,7 +8,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
 
-<img src="/img/logo-content.svg" class="jipipe-logo-index" style="width: 40%;"/>
+<img src="/img/logo-content.svg" class="jipipe-logo-index"/>
 
 <div class="jipipe-slogan-index"><span>Macro programming for everyone!</span></div>
 
@@ -16,11 +16,11 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 JIPipe is a visual programming language for <a href="https://fiji.sc/">ImageJ</a> that
 allows you to create macros <strong>without any programming </strong> by just creating a flowchart!
 </center>
-<div style="display: flex; justify-content: center; margin-top: 4rem;">
-  <a class="btn btn-info btn-lg" style="display: flex; align-items: center; gap: 1em;" type="button" href="https://doi.org/10.21203/rs.3.rs-1641739/v1" target="_blank"> <img style="height: 32px; margin: 1em;" src="https://www.researchsquare.com/static/img/logos/logo-rs.svg" /> Read the current preprint <i class="fa fa-external-link"></i> </a>
+<div class="button-row">
+  <a class="btn btn-info btn-lg" style="display: flex; align-items: center; align-content: center; gap: 1em; flex-wrap: wrap;" type="button" href="https://doi.org/10.21203/rs.3.rs-1641739/v1" target="_blank"> <img style="height: 32px; margin: 1em;" src="https://www.researchsquare.com/static/img/logos/logo-rs.svg" /> Read the current preprint <i class="fa fa-external-link"></i> </a>
 </div>
 
-<div style="display: flex; justify-content: center; margin-top: 4rem; gap: 1em;">
+<div class="button-row">
   <a class="btn btn-success btn-large" type="button" href="/download"> <i class="fa fa-windows"></i><i class="fa fa-linux"></i><i class="fa fa-apple"></i> Download now </a>
   <a class="btn btn-default btn-large" type="button" href="/tutorials"> <i class="fa fa-graduation-cap"></i> Learn how to use it </a>
   <a class="btn btn-default btn-large" type="button" href="/examples"> <i class="fa fa-flask"></i> Show examples </a>
@@ -119,7 +119,7 @@ allows you to create macros <strong>without any programming </strong> by just cr
   Please do not hesitate to contact us! You can always contact the JIPipe developers via the community, or via E-Mail.
   If you find a bug, you can also report it directly on GitHub.
   </span>
-  <center>
+  <div class="button-row">
   <a class="btn btn-success btn-large" type="button" href="https://forum.image.sc/tag/jipipe" target="_blank"> <i class="fa fa-comments"></i> Community </a>
   <a class="btn btn-success btn-large" type="button" href="mailto:thilo.figge@leibniz-hki.de"> <i class="fa fa-envelope"></i> Send E-Mail </a>
   <a class="btn btn-info btn-large" type="button" href="https://github.com/applied-systems-biology/jipipe/issues" target="_blank"> <i class="fa fa-bug"></i> Report a bug </a>
