@@ -362,7 +362,16 @@ New landing page
 
 .landing-features .slick-slide .feature-description {
   flex-grow: 1;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 60px;
+  text-align: justify;
+}
+
+@media screen and (max-width: 600px){
+  .landing-features .slick-slide .feature-description {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .landing-features .slick-slide span {
@@ -399,7 +408,7 @@ New landing page
 }
 
 .landing-page-try {
-  margin-top: 10rem;
+  margin-top: 4em;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -408,13 +417,13 @@ New landing page
 }
 
 .landing-page-try ol {
-  font-size: 2rem;
+  font-size: 2em;
   font-size: 2vw;
   list-style: none;
 }
 
 .landing-page-try ol li {
-  margin-top: 1rem;
+  margin-top: 1em;
   margin-top: 3vh;
   counter-increment: landing-page-try;
 }
@@ -422,8 +431,8 @@ New landing page
 .landing-page-try ol li::before {
   content: counter(landing-page-try);
   color: #5cb85c;
-  margin-top: 1.5rem;
-  margin-right: 1rem;
+  margin-top: 1.5em;
+  margin-right: 1em;
 }
 
 .landing-page-contact {
@@ -548,7 +557,28 @@ Examples page
   }
 }
 
+@keyframes slogan-land {
+  0% {
+    opacity: 0;
+    transform: scale(1.0);
+  }
+  10% {
+    opacity: 0;
+    transform: scale(1.0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.0);
+  }
+}
+
+
 .jipipe-logo-index {
+  max-width: 600px;
   opacity: 0;
   transform: scale(1.5);
   animation-timing-function: ease-out;
@@ -556,4 +586,29 @@ Examples page
   animation-duration: 10s;
   animation-fill-mode: forwards;
   animation-name: logo-land;
+}
+
+.jipipe-slogan-index {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+  font-size: 3em;
+  font-size: min(4vw,3em);
+  white-space: nowrap;
+  color: #4d4d4d;
+  opacity: 0;
+  transform: scale(1.5);
+  animation-timing-function: ease-out;
+  animation-delay: 0.5s;
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
+  animation-name: slogan-land;
+}
+
+.button-row {
+  display: flex; 
+  justify-content: center;
+  gap: 1em; 
+  margin-top: 4rem;
+  flex-wrap: wrap;
 }
