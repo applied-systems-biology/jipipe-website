@@ -98,7 +98,7 @@ Here is an example `*.pom` file that makes use of SciJava:
     <parent>
         <groupId>org.hkijena</groupId>
         <artifactId>pom-jipipe</artifactId>
-        <version>2021.2</version> <!-- Update the version accordingly -->
+        <version>1.72.3</version> <!-- Update the version accordingly, see https://maven.scijava.org/#nexus-search;quick~pom-jipipe -->
         <relativePath/>
     </parent>
 
