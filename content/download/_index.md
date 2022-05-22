@@ -20,8 +20,8 @@ Please choose how you want to install JIPipe
       <label for="download-windows-package"> <i class="fa fa-windows"></i> Windows package (x64)</label>
       <input type="radio" value="download-linux-package" id="download-linux-package" name="download-options"/>
       <label for="download-linux-package"> <i class="fa fa-linux"></i> Linux package (x64)</label>
-      <input type="radio" value="download-osx-package" id="download-osx-package" name="download-options"/>
-      <label for="download-osx-package"> <i class="fa fa-apple"></i> MacOS package (beta)</label>
+      <!--<input type="radio" value="download-osx-package" id="download-osx-package" name="download-options"/>
+      <label for="download-osx-package"> <i class="fa fa-apple"></i> MacOS package (beta)</label>-->
       <input type="radio" value="download-jar" id="download-jar" name="download-options"/>
       <label for="download-jar"> <i class="fa fa-windows"></i> <i class="fa fa-linux"></i> <i class="fa fa-apple"></i> JAR files</label>
     </form>
