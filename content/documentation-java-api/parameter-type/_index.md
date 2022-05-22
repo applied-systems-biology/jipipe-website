@@ -12,6 +12,10 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 JIPipe requires you to register custom parameter types, where they are assigned an unique
 identifier. This is done to allow future refactoring without breaking a user's project.
 
+{{% notice info %}}
+If you just want custom lists of compound parameters, consider the usage of ParameterCollectionList (since JIPipe 1.73.0)
+{{% /notice %}}
+
 A custom parameter type must be JSON-serializable via the [Jackson](https://github.com/FasterXML/jackson) library.
 It is associated to an editor UI that is responsible for updating the parameter value from the GUI.
 

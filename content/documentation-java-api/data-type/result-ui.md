@@ -1,5 +1,5 @@
 +++
-title = "Result view"
+title = "Displaying data"
 weight = 10
 type="page"
 creatordisplayname = "Ruman Gerst"
@@ -20,17 +20,17 @@ There are two ways to modify the user interface:
 
 # Adding custom operations
 
-JIPipe already comes with some default operations, such as opening the containing folder.
-Any other operation must be added manually to each data type.
+JIPipe already comes with some default operations, including as opening the containing folder. There are two types of operations: one for importing data written into a results folder, and one for displaying already loaded data from memory.
 
-There are two types of operations: one for importing data written into a results folder, and one
-for displaying already loaded data from memory.
-The corresponding interfaces are [JIPipeDataImportOperation](/apidocs/org/hkijena/jipipe/api/data/JIPipeDataImportOperation.html) and [JIPipeDataDisplayOperation](/apidocs/org/hkijena/jipipe/api/data/JIPipeDataDisplayOperation.html).
+{{% notice info %}}
+Change in JIPipe 1.73.0: Display operations (the operations available in the cache browser) are automatically made available as 
+import operation. We recommend to just create a JIPipeDataDisplayOperation unless you require operations on the output files.
+{{% /notice %}}
 
-You can implement one or both interfaces as shown here:
+To add an operation on already loaded data, implement [JIPipeDataDisplayOperation](/apidocs/org/hkijena/jipipe/api/data/JIPipeDataDisplayOperation.html):
 
 ```java
-public class MyOperation implements JIPipeDataImportOperation, JIPipeDataDisplayOperation {
+public class MyDisplayOperation implements JIPipeDataDisplayOperation {
     @Override
     public void display(JIPipeData data, String displayName, JIPipeWorkbench workbench) {
         // Here you can pu a custom display function
@@ -38,6 +38,37 @@ public class MyOperation implements JIPipeDataImportOperation, JIPipeDataDisplay
         data.display(displayName, workbench);
     }
 
+    @Override
+    public String getName() {
+        // Name as shown in the menu
+        // The name should be unique
+        return "Open in JIPipe";
+    }
+
+    @Override
+    public String getDescription() {
+        return "Opens the table in JIPipe";
+    }
+
+    @Override
+    public int getOrder() {
+        // The lower the order the higher it is placed in the menu
+        // The lowest ist used as default
+        return 100;
+    }
+
+    @Override
+    public Icon getIcon() {
+        return UIUtils.getIconFromResources("apps/jipipe.png");
+    }
+}
+```
+
+With JIPipe 1.73.0 all display operations are automatically made available as import operation. If you want to create an operation on the output files, inherit from [JIPipeDataImportOperation](/apidocs/org/hkijena/jipipe/api/data/JIPipeDataImportOperation.html):
+
+```java
+public class MyImportOperation implements JIPipeDataImportOperation {
+  
     @Override
     public String getName() {
         // Name as shown in the menu
@@ -78,6 +109,10 @@ public class MyOperation implements JIPipeDataImportOperation, JIPipeDataDisplay
     }
 }
 ```
+
+{{% notice warning %}}
+We do not recommend to inherit both from JIPipeDataImportOperation and JIPipeDataDisplayOperation due to the automated import introduced in JIPipe version 1.73.0
+{{% /notice %}}
 
 The operations must be registered in [JIPipeJavaExtension](/apidocs/org/hkijena/jipipe/JIPipeJavaExtension.html) either via the data type ID or when registering a new data type.
 
