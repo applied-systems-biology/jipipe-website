@@ -42,7 +42,7 @@ Please choose how you want to install JIPipe
   <div class="download-panel-content" id="download-windows-package-content">
     You can download a package that provides an existing <a href="https://fiji.sc/" target="_blank">Fiji</a> installation plus all necessary files for JIPipe.
     <ol>
-      <li><a class="btn btn-default" type="button" href="https://github.com/applied-systems-biology/jipipe/releases/download/v1.72.0/jipipe-full-1.72.0-win.zip"> <i class="fa fa-download"></i> Download </a> the package</li>
+      <li><a class="btn btn-default" type="button" href="https://github.com/applied-systems-biology/jipipe/releases/download/v1.73.0/jipipe-full-1.72.0-win.zip"> <i class="fa fa-download"></i> Download </a> the package</li>
       <li>Extract the *.zip file</li>
       <li>Run ImageJ-win64.exe</li>
       <li>Go to Plugins/JIPipe/JIPipe GUI</li>
@@ -52,7 +52,7 @@ Please choose how you want to install JIPipe
   <div class="download-panel-content" id="download-linux-package-content">
     You can download a package that provides an existing <a href="https://fiji.sc/" target="_blank">Fiji</a> installation plus all necessary files for JIPipe.
     <ol>
-      <li><a class="btn btn-default" type="button" href="https://github.com/applied-systems-biology/jipipe/releases/download/v1.72.0/jipipe-full-1.72.0-linux.zip"> <i class="fa fa-download"></i> Download </a> the package</li>
+      <li><a class="btn btn-default" type="button" href="https://github.com/applied-systems-biology/jipipe/releases/download/v1.73.0/jipipe-full-1.72.0-linux.zip"> <i class="fa fa-download"></i> Download </a> the package</li>
       <li>Extract the *.zip file</li>
       <li>Run ImageJ-win64</li>
       <li>Go to Plugins/JIPipe/JIPipe GUI</li>
