@@ -173,7 +173,7 @@ This will work for parameters and parameter groups.
 
 # User-defined parameters
 
-If you want to make it possible for users to create custom parameters, create an [JIPipeDynamicParameterHolder](/apidocs/org/hkijena/jipipe/api/parameters/JIPipeDynamicParameterHolder.html) as sub-parameter.
+If you want to make it possible for users to create custom parameters, create an [JIPipeDynamicParameterCollection](/apidocs/org/hkijena/jipipe/api/parameters/JIPipeDynamicParameterCollection.html) as sub-parameter.
 You can control the list of allowed parameter types and other settings.
 
 ```java
@@ -198,7 +198,7 @@ public JIPipeDynamicParameterCollection getScriptParameters() {
 ```
 
 {{% notice warning %}}
-Do not forget to deep-copy the JIPipeDynamicParameterHolder. The class has a copy constructor for
+Do not forget to deep-copy the JIPipeDynamicParameterCollection. The class has a copy constructor for
 such an operation.
 {{% /notice %}}
 {{% notice warning %}}
@@ -212,4 +212,4 @@ de-serializing the parameter and lose all settings.
 
 # Full control
 
-You can inherit from [JIPipeCustomParameterHolder](/apidocs/org/hkijena/jipipe/api/parameters/JIPipeCustomParameterHolder.html) to define all parameters manually without the need for an [JIPipeDynamicParameterHolder](/apidocs/org/hkijena/jipipe/api/parameters/JIPipeDynamicParameterHolder.html) or annotations.
+You can inherit from [JIPipeCustomParameterCollection](/apidocs/org/hkijena/jipipe/api/parameters/JIPipeCustomParameterCollection.html) to define all parameters manually without the need for an [JIPipeDynamicParameterCollection](/apidocs/org/hkijena/jipipe/api/parameters/JIPipeDynamicParameterCollection.html) or annotations.
