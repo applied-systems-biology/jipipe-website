@@ -126,17 +126,28 @@ Here is an example `*.pom` file that makes use of SciJava:
             <groupId>org.scijava</groupId>
             <artifactId>scijava-log-slf4j</artifactId>
         </dependency>
-        <!-- JIPipe core library -->
+        <!-- JIPipe core library (mandatory) -->
         <dependency>
             <groupId>org.hkijena</groupId>
             <artifactId>jipipe-core</artifactId>
         </dependency>
-        <!-- ImageJ integration -->
+        <!-- ImageJ integration (if you need ImageJ data types) -->
         <dependency>
             <groupId>org.hkijena</groupId>
             <artifactId>jipipe-ij</artifactId>
         </dependency>
+        <!-- ImageJ integration (if you need ImageJ1 algorithms) -->
+        <dependency>
+            <groupId>org.hkijena</groupId>
+            <artifactId>jipipe-ij-algorithms</artifactId>
+        </dependency>
         <!-- Add more JIPipe libraries if you need -->
+
+        <!-- If you want to have all JIPipe standard libraries in your runtime, add the following dependency: -->
+        <!-- <dependency>
+            <groupId>org.hkijena</groupId>
+            <artifactId>jipipe-launcher</artifactId>
+        </dependency> -->
     </dependencies>
 
     <properties>
@@ -218,6 +229,10 @@ Here is an example `*.pom` file that makes use of SciJava:
 JIPipe uses the SciJava plugin API to register Java extensions. In your project,
 you can create as many extensions as you want.
 
+{{% notice tip %}}
+Extensions can register multiple nodes and data types, so you can greatly simplify your projects by merging multiple functions into a single extension.
+{{% /notice %}}
+
 Java extension inherit from [JIPipeJavaExtension](/apidocs/org/hkijena/jipipe/JIPipeJavaExtension.html) and require a [@Plugin](https://javadoc.scijava.org/SciJava/org/scijava/plugin/Plugin.html) annotation.
 
 We recommend to inherit from [JIPipeDefaultJavaExtension](/apidocs/org/hkijena/jipipe/JIPipeDefaultJavaExtension.html) that comes with some convenience-functions.
@@ -235,20 +250,21 @@ public class MyExtension extends JIPipeDefaultJavaExtension {
 
     @Override
     public HTMLText getDescription() {
-        return new HTMLText()"A Java extension");
+        return new HTMLText("A Java extension");
     }
 
     @Override
     public String getDependencyId() {
         // We recommend the following structure: <groupId>.<artifactId>:<dependencyId>
-        // (!) The dependency Id should be unique for your plugin (!)
+        // (!) The dependency Id should be unique for each extension @Plugin (!)
         return "org.hkijena.jipipe:my-extension";
     }
 
-    @Override
-    public String getDependencyVersion() {
-        return "1.0.0";
-    }
+    // You can optionally override the version.
+    // @Override
+    // public String getDependencyVersion() {
+    //    return "1.0.0";
+    // }
 
     @Override
     public String getAuthors() {
@@ -265,13 +281,22 @@ public class MyExtension extends JIPipeDefaultJavaExtension {
         return "BSD-2";
     }
 
-    @Override
-    public URL getLogo() {
-        // This code loads the default JIPipe logo from JIPipe resources
-        // You can replace it with your own logo if you want
-        // Just do not use JIPipe's ResourceUtils for this, as its always pointing to JIPipe resource directories
-        return ResourceUtils.getPluginResource("logo-400.png");
-    }
+    // Optional logo for future use
+    // @Override
+    // public URL getLogo() {
+    //    // This code loads the default JIPipe logo from JIPipe resources
+    //    // You can replace it with your own logo if you want
+    //    // Just do not use JIPipe's ResourceUtils for this, as its always pointing to JIPipe resource directories
+    //    return ResourceUtils.getPluginResource("logo-400.png");
+    // }
+
+    // You can add one more multiple logos on the JIPipe splash screen
+    // They must be 32x32 in size
+    // Please do not add too many of them to not fill up all the space
+    // @Override
+    // public List<ImageIcon> getSplashIcons() {
+    //     return Collections.singletonList(new ImageIcon(getClass().getResource("org/hkijena/jipipe/extensions/myextension/icon-32.png")));
+    // }
 
     @Override
     public String getCitation() {
@@ -283,6 +308,7 @@ public class MyExtension extends JIPipeDefaultJavaExtension {
     @Override
     public void register(JIPipe jiPipe, Context context, JIPipeProgressInfo progressInfo) {
         // Content is registered here
+        // You can have multiple registerNodeType, registerDataType etc. in this place
     }
 }
 ```

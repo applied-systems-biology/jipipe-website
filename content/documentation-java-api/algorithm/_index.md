@@ -29,6 +29,11 @@ JIPipe comes with different base algorithms that provide different feature sets:
 
 Any algorithm should have the following basic structure:
 
+{{% notice warning %}}
+Commonly, you would utilize more higher-order algorithm classes instead of JIPipeAlgorithm.
+Usually you would choose a JIPipeSimpleIteratingAlgorithm (for single inputs), JIPipeIteratingAlgorithm (for multiple inputs), or JIPipeMergingAlgorithm (for merging single/multiple inputs). These classes provide the automated organization of data, multiple parameters, adaptive parameters, and more.
+{{% /notice %}}
+
 ```java
 // Annotates documentation to the algorithm
 @JIPipeDocumentation(name = "My Algorithm", description = "Does something")
@@ -37,8 +42,8 @@ Any algorithm should have the following basic structure:
 @JIPipeNode(nodeTypeCategory = MiscellaneousNodeTypeCategory.class)
 
 // Input and output slots autoCreate automatically creates the slots if set to true and no slot configuration was provided
-@JIPipeInputSlot(value = ImagePlusData.class, slotName = "Input", autoCreate = true)
-@JIPipeOutputSlot(value = ImagePlusData.class, slotName = "Output", autoCreate = true)
+@JIPipeInputSlot(value = ImagePlusData.class, slotName = "Input", description="The input", autoCreate = true)
+@JIPipeOutputSlot(value = ImagePlusData.class, slotName = "Output", description="The input", autoCreate = true)
 
 // You can add multiple JIPipeCitation annotations to provide citations for this node only
 @JIPipeCitation("Additional citation")

@@ -26,8 +26,8 @@ The only difference to [JIPipeAlgorithm](/apidocs/org/hkijena/jipipe/api/nodes/J
 @JIPipeNode(nodeTypeCategory = MiscellaneousNodeTypeCategory.class)
 
 // Input and output slots
-@JIPipeInputSlot(value = ImagePlusData.class, slotName = "Input", autoCreate = true)
-@JIPipeOutputSlot(value = ImagePlusData.class, slotName = "Output", autoCreate = true)
+@JIPipeInputSlot(value = ImagePlusData.class, slotName = "Input", description="The input", autoCreate = true)
+@JIPipeOutputSlot(value = ImagePlusData.class, slotName = "Output", description="The output", autoCreate = true)
 public class MyAlgorithm extends JIPipeMergingAlgorithm {
 
     /*
