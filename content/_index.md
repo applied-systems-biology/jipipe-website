@@ -18,8 +18,8 @@ allows you to create macros <strong>without any programming </strong> by just cr
 </center>
 <div class="button-row">
   <a class="btn btn-info btn-lg" style="display: flex; align-items: center; align-content: center; gap: 1em; flex-wrap: wrap;" type="button" href="https://doi.org/10.21203/rs.3.rs-1641739/v1" target="_blank"> <img style="height: 32px; margin: 1em;" src="https://www.researchsquare.com/static/img/logos/logo-rs.svg" /> Read the current preprint <i class="fa fa-external-link"></i> </a>
+  <a class="btn btn-info btn-lg" style="display: flex; align-items: center; align-content: center; gap: 1em; flex-wrap: wrap;" type="button" href="/supplementary-information" target="_blank">  Supplementary information </a>
 </div>
-
 <div class="button-row">
   <a class="btn btn-success btn-large" type="button" href="/download"> <i class="fa fa-windows"></i><i class="fa fa-linux"></i><i class="fa fa-apple"></i> Download now </a>
   <a class="btn btn-default btn-large" type="button" href="/tutorials"> <i class="fa fa-graduation-cap"></i> Learn how to use it </a>
