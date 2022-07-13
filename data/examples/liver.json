@@ -5,13 +5,13 @@
     "buttons": [
         {
             "text": "Project + Data (797 MB)",
-            "href": "https://asbdata.hki-jena.de/GerstCseresnyesEtAl2022_JIPipe/examples/protocols_only/Liver.zip",
+            "href": "https://figshare.com/ndownloader/files/36265161",
             "style": "success",
             "target": "_self"
         },
         {
             "text": "Project + Data + Outputs (4 GB)",
-            "href": "https://asbdata.hki-jena.de/GerstCseresnyesEtAl2022_JIPipe/examples/protocols_and_outputs/Liver.zip",
+            "href": "https://figshare.com/ndownloader/files/35058976",
             "style": "success",
             "target": "_self"
         },

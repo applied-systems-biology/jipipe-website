@@ -5,13 +5,13 @@
     "buttons": [
         {
             "text": "Project + Data (44 MB)",
-            "href": "https://asbdata.hki-jena.de/GerstCseresnyesEtAl2022_JIPipe/examples/protocols_only/Confrontation Assay.zip",
+            "href": "https://figshare.com/ndownloader/files/36263622",
             "style": "success",
             "target": "_self"
         },
         {
             "text": "Project + Data + Outputs (293 MB)",
-            "href": "https://asbdata.hki-jena.de/GerstCseresnyesEtAl2022_JIPipe/examples/protocols_and_outputs/Confrontation Assay.zip",
+            "href": "https://figshare.com/ndownloader/files/35059000",
             "style": "success",
             "target": "_self"
         },
