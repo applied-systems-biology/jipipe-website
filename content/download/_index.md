@@ -93,6 +93,9 @@ Please choose how you want to install JIPipe
 The software is Open Source and licensed under [BSD-2-Clause](https://opensource.org/licenses/BSD-2-Clause).
 You can find the source code on GitHub at https://github.com/applied-systems-biology/jipipe.
 
+# Logos
+
+If you need the JIPipe logo for presentations, posters, or publications, feel free to download the [logo package](https://github.com/applied-systems-biology/jipipe/releases/download/current/JIPipe-Logos.zip). It contains the JIPipe logos (text plus logo, square logo) in PNG and SVG formats.
 
 <script type="text/javascript">
 // Download page menus
