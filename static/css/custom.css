@@ -612,3 +612,9 @@ Examples page
   margin-top: 4rem;
   flex-wrap: wrap;
 }
+
+div.notices.info {
+  border-top: 30px solid #7eb7f1;
+  background: #f5fafe;
+  color: rgba(38, 94, 150, 0.995) !important;
+}
