@@ -2,6 +2,7 @@
 title = "Setup R integration"
 weight = 3
 type="page"
+summary="Explains the setup of JIPipe's R integration"
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
 lastmodifierdisplayname = "Ruman Gerst"
