@@ -17,6 +17,8 @@ The dependency installation was revised in JIPipe version *1.74.0*. Please follo
 
 # JIPipe 1.74.x or newer
 
+{{< jipipe-info "1.74.x+" "This guide was written for JIPipe version 1.74.0 or newer" >}}
+
 <div class=tutorial-list>
   <div class="tutorial-item">
     <div class="tutorial-item-img"><img src="/img/installation/missing_dependencies_new.png" /></div>
@@ -35,6 +37,8 @@ The dependency installation was revised in JIPipe version *1.74.0*. Please follo
 </div>
 
 # JIPipe 1.73.x or older
+
+{{< jipipe-info "<=1.73.x" "This guide was written for JIPipe version 1.73.x or older" >}}
 
 <div class=tutorial-list>
   <div class="tutorial-item">

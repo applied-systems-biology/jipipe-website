@@ -8,13 +8,7 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-JIPipe can be installed in multiple ways:
-
-1. Install JIPipe via the ImageJ update manager **(Recommended)**
-2. Use our pre-packaged JIPipe distributions
-3. Install JIPipe manually
-
-After a successful installation, JIPipe will warn you about [third-party software](/installation/#third-party-software) (Python, R, ...).
+{{< toc >}}
 
 # Installation with the update manager
 
@@ -29,6 +23,7 @@ Internet access is required during the installation.
 5. Click **Apply changes**
 6. Restart ImageJ
 7. You can find JIPipe here: `Plugins > JIPipe > JIPipe GUI` (or use the search)
+8. Please read about [the additional steps after the installation](#post-installation)
 
 # Pre-packaged JIPipe distributions
 
@@ -38,6 +33,7 @@ Internet access is required during the installation.
 4. **Linux:** Run ImageJ-linux64
 5. **MacOS:** Run the Fiji app
 6. You can find JIPipe here: `Plugins > JIPipe > JIPipe GUI` (or use the search)
+7. Please read about [the additional steps after the installation](#post-installation)
 
 {{% notice info %}}
 We currently have only limited capabilities of testing the MacOS version and appreciate any help of creating a smooth experience. Feel free to contact us!
@@ -56,5 +52,12 @@ We **strongly** recommend to update ImageJ (via `Help > Update...`) before insta
 6. Copy the contents of `dependencies` into the ImageJ `jars` directory (you can click "Skip" if there are existing files)
 7. Start ImageJ
 8. Run `Plugins > JIPipe > JIPipe GUI` (or use the search) to open the JIPipe GUI
+9. Please read about [the additional steps after the installation](#post-installation)
 
-JIPipe might complain about missing plugins and show a list of missing dependencies. You can find a guide on how to install the missing libraries [here](/installation/dependencies).
+# Post installation
+
+Depending on your ImageJ installation and the selection of available/activated JIPipe extensions, the following additional steps will be required to install all functionality:
+
+* Various JIPipe extensions require the presence of specific ImageJ plugins. You will be prompted to install the [ImageJ dependencies](/installation/dependencies) if JIPipe detects missing ones.
+* Some extensions integrate third-party tools (e.g., Cellpose) that are not available as ImageJ plugin. JIPipe will [notify you to install these tools](/installation/third-party) and/or configure their usage within JIPipe. 
+* The default installation of JIPipe leaves some functionality deactivated to reduce the number of dependencies. You will be [notified about these extensions](/installation/extensions).

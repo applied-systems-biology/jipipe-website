@@ -34,7 +34,7 @@ Please choose how you want to install JIPipe
       <li>Click <i>Manage update sites</i> and select <code>JIPipe</code>. <strong>If JIPipe is not available, click <i>Add update site</i> and add a new site with the name <code>JIPipe</code> and the URL <code>https://sites.imagej.net/JIPipe/</code></strong></li>
       <li>Click <i>Apply changes</i> and wait until all downloads have been finished
       <li>Restart ImageJ and go to Plugins/JIPipe/JIPipe GUI</li>
-      <li>On the first start, JIPipe will most likely detect missing dependencies. Just click <i>Resolve</i> and follow the instructions.</li>
+      <li>On the first start, JIPipe will most likely detect missing dependencies. You can find information about this feature <a href="/installation/dependencies/">here</a></li>
     </ol>
     <strong><i class="fa fa-windows"></i> <i class="fa fa-linux"></i> Tip:</strong> If you want a desktop shortcut (Windows) or an entry in your application menu (Linux), open JIPipe and run <i>Tools &gt; Create launchers</i><br/>
     <strong><i class="fa fa-apple"></i> Info:</strong> We have only limited capabilities to test software on Apple computers and are aware of issues regarding the integration of external software (Python, R, Cellpose, ...). We are open to contributions to resolve these problems.<br/>
@@ -82,6 +82,7 @@ Please choose how you want to install JIPipe
       </dl>
       <li>Open the *.zip file you downloaded and extract its contents into the plugins folder.</li>
       <li>Start ImageJ. You can find the JIPipe GUI inside the plugin menu</li>
+      <li>On the first start, JIPipe will most likely detect missing dependencies. You can find information about this feature <a href="/installation/dependencies/">here</a></li>
     </ol>
     <strong><i class="fa fa-windows"></i> <i class="fa fa-linux"></i> Tip:</strong> If you want a desktop shortcut (Windows) or an entry in your application menu (Linux), open JIPipe and run <i>Tools &gt; Create launchers</i>
   </div>
