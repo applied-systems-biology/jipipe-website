@@ -13,9 +13,9 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 
 {{< jipipe-info "1.74.x+" "This guide was written for JIPipe version 1.74.0 or newer" >}}
 
-# Introduction
+# Quick setup
 
-JIPipe features an integration of the [R](https://www.r-project.org) scripting language. This software is not part of ImageJ and its update site ecosystem and thus requires **additional installation steps**. These steps are generally only necessary if JIPipe [notifies](/installation/third-party) you about the missing installation of the third-party software.
+JIPipe features an (experimental and still under heavy development) integration of the [R](https://www.r-project.org) script language. This software is not part of ImageJ and its update site ecosystem and thus requires **additional installation steps**. These steps are generally only necessary if JIPipe [notifies](/installation/third-party) you about the missing installation of the third-party software.
 
 <div class="notices info" >
     <strong>MacOS/Linux:</strong> If you are using Linux or MacOS, JIPipe should automatically detected the installed R version by searching for <code>/usr/bin/R</code> and <code>/usr/bin/RScript</code> (Since JIPipe 1.74.x also <code>/usr/local/bin/R</code> and <code>/usr/local/bin/RScript</code>).<br/>It thus should be sufficient to just install R (Ubuntu/Debian: <code>sudo apt install r-base</code>, MacOS: <a href="https://www.r-project.org" target="_blank">https://www.r-project.org</a> (for example via the <a href="https://cran.rstudio.com" target="_blank">RStudio mirror</a>)). If the paths of these binaries is different, please configure the R integration manually (see below).
@@ -32,7 +32,7 @@ JIPipe features an integration of the [R](https://www.r-project.org) scripting l
     If "Install R" is not available or if you wish to select an existing installation of R, please follow the instructions below.
     </div>
     <div class="notices info" >
-    You can always access the settings of the R integration via <code>Project &gt; Application settings &gt; Extensions &gt; R integration</code> if you clicked away the notification or if you want to make further changes.
+    You can always change the R environment by navigating to <code>Project &gt; Application settings &gt; Extensions &gt; R integration</code> if you clicked away the notification or if you want to make further changes.
     </div>
     </div>
   </div>
@@ -57,7 +57,7 @@ JIPipe features an integration of the [R](https://www.r-project.org) scripting l
     <div class="tutorial-item-content">
     <h2>1. Open the R integration settings</h2>
     Unless you clicked "Configure R" in the notification panel, navigate to <code>Project &gt; Application settings &gt; Extensions &gt; R integration</code>.
-    <strong>Click the "Edit button" in the "R environment" setting.</strong>
+    <strong>Click the "Edit" button in the "R environment" setting.</strong>
     </div>
   </div>
   <div class="tutorial-item">
