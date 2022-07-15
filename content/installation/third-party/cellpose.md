@@ -19,21 +19,27 @@ JIPipe features an integration of [Cellpose](https://www.cellpose.org). This sof
 
 <div class=tutorial-list>
   <div class="tutorial-item">
-    <div class="tutorial-item-img"><img src="/img/installation/third_party_python_notification.png" /></div>
+    <div class="tutorial-item-img"><img src="/img/installation/third_party_cellpose_notification.png" /></div>
     <div class="tutorial-item-content">
-    <h2>Notification: Python not configured</h2>
-    If JIPipe was not yet configured with a Python environment, you will be notified on opening the application. 
-    <strong>Click the notifications button and select the "Install Python" option and follow the instructions or choose "Configure Python".</strong>
+    <h2>Notification: Cellpose not configured</h2>
+    If JIPipe was not yet configured with a Cellpose Python environment, you will be notified on opening the application. 
+    <strong>Click the notifications button and select the "Install Cellpose" option and follow the instructions or choose "Configure Python".</strong>
     <div class="notices info" >
-    You can always change the Python environment by navigating to <code>Project &gt; Application settings &gt; Extensions &gt; Python integration</code> if you clicked away the notification or if you want to make further changes.
+    You can always change the Python environment by navigating to <code>Project &gt; Application settings &gt; Extensions &gt; Cellpose</code> if you clicked away the notification or if you want to make further changes.
     </div>
     </div>
   </div>
   <div class="tutorial-item">
-    <div class="tutorial-item-img"><img src="/img/installation/third_party_python_easyinstall.png" /></div>
+    <div class="tutorial-item-img"><img src="/img/installation/third_party_cellpose_easyinstall.png" /></div>
     <div class="tutorial-item-content">
-    <h2>Install Python</h2>
-    On selecting the "Install Python" option, JIPipe will provide you with a pre-made environment that is installed into the ImageJ directory. Choose any of the supported packages. If you already have existing Python environments, please follow the other tutorials on this page.
+    <h2>Install Cellpose (prepackaged)</h2>
+    On selecting the "Install Cellpose" option, JIPipe will provide you with a pre-made environment that is installed into the ImageJ directory. Choose any of the supported packages. If you already have existing Python environments with Cellpose installed, please follow the other tutorials on this page.
+    <div class="notices info" >
+      <strong>MacOS:</strong> We were not yet successful in generating a pre-packaged GPU-accelerated version of Cellpose for MacOS.
+    </div>
+    <div class="notices warning" >
+      <strong>GPU accelerated versions:</strong> We created the packages with Pytorch for CUDA 10.2. Your system might require a different setup (see <a href="https://pytorch.org/get-started/locally/" target="_blank">pytorch documentation</a>). In this case, please <a href="#installing-cellpose-from-scratch-automatically">install Cellpose via our automated installer</a> or follow the <a href="https://github.com/mouseland/cellpose" target="_blank">official Cellpose installation tutorial</a> to create a Conda environment that can be <a href="#selecting-an-existing-conda-environment)">selected within JIPipe</a>.
+    </div>
     </div>
   </div>
 </div>
