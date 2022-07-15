@@ -9,6 +9,12 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
+{{< toc >}}
+
+{{< jipipe-info "1.74.x+" "This guide was written for JIPipe version 1.74.0 or newer" >}}
+
+# Introduction
+
 JIPipe features an integration of the [R](https://www.r-project.org) scripting language. This software is not part of ImageJ and its update site ecosystem and thus requires **additional installation steps**. These steps are generally only necessary if JIPipe [notifies](/installation/third-party) you about the missing installation of the third-party software.
 
 <div class="notices info" >
@@ -22,9 +28,6 @@ JIPipe features an integration of the [R](https://www.r-project.org) scripting l
     <h2>Notification: R not configured</h2>
     If R is missing, you will be notified on opening the application. 
     <strong>Click the notifications button and select the "Install R" option (if available) and follow the instructions or choose "Configure R"</strong>
-    <div class="notices info" >
-    "Install R" on Windows: the installation procedure might request administration privileges on certain systems. We are unable to change this behavior.
-    </div>
     <div class="notices info" >
     If "Install R" is not available or if you wish to select an existing installation of R, please follow the instructions below.
     </div>

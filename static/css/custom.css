@@ -618,3 +618,54 @@ div.notices.info {
   background: #f5fafe;
   color: rgba(38, 94, 150, 0.995) !important;
 }
+
+.jipipe-info {
+  display: flex;
+}
+
+.jipipe-info-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid gray;
+  border-radius: 3px;
+  padding: 0.5em;
+}
+
+.jipipe-info .jipipe-info-short-text {
+  font-weight: bold;
+}
+
+.jipipe-info .jipipe-info-text {
+  margin-left: 10px;
+}
+
+.jipipe-info .jipipe-info-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid gray;
+}
+
+.jipipe-info .jipipe-info-logo img {
+  width: 64px!important;
+  height: 64px!important;
+  margin: 0 10px 0 10px!important;
+}
+
+.toc {
+  border-left: 1px solid gray;
+  padding: 0.5em;
+  margin-bottom: 4em;
+}
+
+.toc h2 {
+  margin: 0!important;
+}
+
+.toc ul {
+  list-style: none;
+}
+
+.toc li {
+}
