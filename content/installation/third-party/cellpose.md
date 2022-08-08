@@ -15,7 +15,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 
 # Quick setup
 
-JIPipe features an integration of [Cellpose](https://www.cellpose.org). This software is not part of ImageJ and its update site ecosystem and thus requires **additional installation steps**. These steps are generally only necessary if JIPipe [notifies](/installation/third-party) you about the missing installation of the third-party software.
+JIPipe features an integration of [Cellpose](https://www.cellpose.org) version 2.x. This software is not part of ImageJ and its update site ecosystem and thus requires **additional installation steps**. These steps are generally only necessary if JIPipe [notifies](/installation/third-party) you about the missing installation of the third-party software.
 
 <div class=tutorial-list>
   <div class="tutorial-item">
