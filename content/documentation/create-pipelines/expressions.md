@@ -1,5 +1,5 @@
 +++
-title = "Expression parameters"
+title = "Mathematical expressions"
 description = "Explains the expression parameter type language that is often used for filtering or generating numbers."
 weight = 20
 type="page"
@@ -22,8 +22,8 @@ There are always four components you will interact with:
 1. Literals like numbers (`0.5`), strings (`"hello world"`), and boolean values (`TRUE`, `FALSE`)
 2. Variables that are supplied from the node itself like `x`, `y`, or `Area`
 3. Functions that process literals or variables like `MIN(x, 5)`, `STRING_EQUALS("abc", "abc")`. Parameters are separated by commas.
-5. Operators that do something with the literals, variables, or function results, like subtraction, concatentation, or conditions
-6. **New in 1.74.0**: The `$` operator has a second function: escaping expressions into strings.
+4. Operators that do something with the literals, variables, or function results, like subtraction, concatentation, or conditions
+5. **New in 1.74.0**: The `$` operator has a second function: escaping expressions into strings.
 
 The expression language is interpreted as **one line** and you cannot write own variables. The result of the one expression is supplied to the node for processing.
 
