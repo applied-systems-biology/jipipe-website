@@ -9,6 +9,8 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
+{{< toc >}}
+
 When using nodes that filter or generate data, you might encounter a parameter type called "Expression".
 This parameter allows to to write simple to complex functions that can test for one or multiple conditions or
 act as input for a generator node.
@@ -21,6 +23,7 @@ There are always four components you will interact with:
 2. Variables that are supplied from the node itself like `x`, `y`, or `Area`
 3. Functions that process literals or variables like `MIN(x, 5)`, `STRING_EQUALS("abc", "abc")`. Parameters are separated by commas.
 5. Operators that do something with the literals, variables, or function results, like subtraction, concatentation, or conditions
+6. **New in 1.74.0**: The `$` operator has a second function: escaping expressions into strings.
 
 The expression language is interpreted as **one line** and you cannot write own variables. The result of the one expression is supplied to the node for processing.
 
@@ -56,6 +59,8 @@ automatically applied to ally `x` and `y` values:
 The expression builder shows a list of all variables. This list might be incomplete if variables are generated during the runtime (e.g., extracted from a table).
 {{% /notice %}}
 
+## Statements
+
 You can also set variables to re-use them in more complicated calculations by introducing multiple statements:
 
 ```
@@ -89,6 +94,34 @@ PRINT("y=", y); y + 15
 You can end the code with semi-colons, e.g. PRINT(5);;;;;. These will be ignored.
 {{% /notice %}}
 
+## Pairs
+
+{{< jipipe-info "1.74.x+" "The pair operator and SET_VARIABLES were introduced in JIPipe 1.74.0" >}}
+
+
+
+## Escaping expressions
+
+{{< jipipe-info "1.74.x+" "Expression escaping requires JIPipe 1.74.0 or newer" >}}
+
+There are various functions that require the input of a "sub-expression" that for example is executed for each item:
+
+```
+MAKE_SEQUENCE_EXPR("item + 1", ARRAY(1,2,3))
+```
+
+The `item` is a variable that is set for each array item.
+The result that is generated is an array `[2,3,4]`.
+
+It can be complicated to provide more advanced expressions as string parameter. This is the reason behind the **escape expression** operator `${ }`.
+All parts within the braces are not evaluated and instead converted into an appropriate string.
+
+Example usage:
+
+```
+MAKE_SEQUENCE_EXPR(${item + 1}, ARRAY(1,2,3))
+```
+
 ## Operators
 
 The expressions understand a wide range of common operators for numeric, string, and boolean data:
@@ -112,6 +145,30 @@ To find files, it can be useful to utilize a Glob-filter that can reliably test 
 ```
 STRING_MATCHES_GLOB(name, "*.tif") AND ("data" IN name)
 ```
+
+## User functions
+
+{{< jipipe-info "1.74.x+" "This type of user-created function was introduced in JIPipe 1.74.0" >}}
+
+You can create custom functions to be utilized within the current expression via the `FUNCTION(name, expression)` function.
+The function then can be executed via `RUN_FUNCTION(name, parameter 1, parameter 2, ...)`. The parameters must correspond to the expected variable names inside the function and must be provided via `PAIR(name, value)`, `ARRAY(name, value)`, or `name: value` (pair operator).
+
+**Example**
+```
+FUNCTION("ADD_ONE", ${ x + 1 });
+RUN_FUNCTION("ADD_ONE", "x": 1)
+```
+
+The output will be 2
+
+**Example 2**
+```
+FUNCTION("ADD", ${x + y});
+RUN_FUNCTION("ADD", "x": 1, "y": 2)
+```
+
+The output will be 3
+
 
 # Data types
 
@@ -137,6 +194,8 @@ Example: `ARRAY(1,2,3,4) @ 2` will return `3`.
 
 Example: `ARRAY(1,2,3,4) @ ARRAY(0,1)` will return an array with `1` and `2`
 
+A special case are arrays with two entries (pairs) that can be also created via `PAIR(a, b)` or the colon operator `a: b`.
+
 ## Maps
 
 Maps are collections of values where each value is given a unique name. They are defined via the `MAP(...)` function that should be provided with 2-item arrays (there is a `PAIR(key, value)` function for this). You can get an array of all keys via the `KEYS()` function and can access elements via the `@` operator.
@@ -160,6 +219,7 @@ Textual operators require spaces to be separated. For example you cannot write `
 | Operator                                                       | Description                                                                                                                                                                                                                               | Usage                                           |
 | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
 | Statement                                                      | Returns the last value of the statement chain.                                                                                                                                                                                            | `SET_VARIABLE("x", 5); PRINT(x)`                |
+| Pair                                                           | Array with the two operands.                                                                                                                                                                                                              | `"x": 10`                                       |
 | Logical AND                                                    | Returns TRUE if both operands are TRUE                                                                                                                                                                                                    | `x AND y` or `x & y`                            |
 | Logical OR                                                     | Returns TRUE if one of the operands is TRUE                                                                                                                                                                                               | `x OR y` or `x | y`                             |
 | Logical XOR                                                    | Returns TRUE if exactly one operand is TRUE                                                                                                                                                                                               | `x XOR y`                                       |
@@ -180,6 +240,7 @@ Textual operators require spaces to be separated. For example you cannot write `
 | Contains                                                       | Returns TRUE if the one string is contained in the other one (both operands are strings), or if an array contains an item, or a map contains a values                                                                                     | `x IN y` or `y CONTAINS x`                      |
 | Variable exists                                                | Returns TRUE if the a variable with the name exists                                                                                                                                                                                       | `x EXISTS`                                      |
 | Resolve variable                                               | Returns the value of the variable with name. Useful for variables that have spaces in their names or special characters.                                                                                                                  | `$ x` (Alternative function: `GET_VARIABLE(x)`) |
+| Escape expression                                              | Prevents the evaluation of all text within the braces and returns the content as string.                                                                                                                                                  | `${ x + y * SIN(10) }`                          |
 | Get item in array/map                                          | Returns the array item(s) or string characters of the left operands. The right-hand side can be a number (the index starting from 0) or an array of indices. If the left operand is a map, the indices are whatever the map uses as index | `x @ y` or `x AT y`                             |
 
 ## Precedence
@@ -188,24 +249,24 @@ The operators are ordered according to a precedence table. You might need to use
 
 The higher the number is the more the operator is preferred.
 
-| -99999 | 1   | 2   | 3   | 4   | 5                              | 6                              | 7                          | 8   | 9                        | 10                     |
-| ---    |  --- | --- | --- | --- | ------------------------------ | ------------------------------ | -------------------------- | --- | ------------------------ | ---------------------- |
-| Statement (;)| OR  | AND | NOT |     |                                |                                |                            |     |                          |                        |
-| |     | XOR |     |     |                                |                                |                            |     |                          |                        |
-| |     |     |     |     |                                | Subtraction (x - y)            | Divide (x / y)             |     | Power (x^y)              | Negate (-x)            |
-| |     |     |     |     |                                |                                | Modulo (x % y)             |     |                          |                        |
-| |     |     |     |     |                                |                                | Multiply (x * y)           |     |                          |                        |
-| |     |     |     |     | Greater than or equal (x >= y) |                                |                            |     |                          |                        |
-| |     |     |     |     | Greater than (x > y)           |                                |                            |     |                          |                        |
-| |     |     |     |     | Less than or equal (x <= y)    |                                |                            |     |                          |                        |
-| |     |     |     |     | Less than (x < y)              |                                |                            |     |                          |                        |
-| |     |     |     |     | Equal (x == y)                 |                                |                            |     |                          |                        |
-| |     |     |     |     | Unequal (x != y)               |                                |                            |     |                          |                        |
-| |     |     |     |     |                                | String contains (x IN y)       |                            |     |                          |                        |
-| |     |     |     |     |                                | Addition (x + y)               |                            |     |                          |                        |
-| |     |     |     |     |                                | String contains (x CONTAINS y) |                            |     |                          |                        |
-| |     |     |     |     |                                |                                | Variable exists (x EXISTS) |     |                          |                        |
-| |     |     |     |     |                                |                                |                            |     | Array/Map access (x @ y) | Variable resolve ($ x) |
+| -99999        | -1000    | 1   | 2   | 3   | 4   | 5                              | 6                              | 7                          | 8   | 9                        | 10                     |
+| ------------- | -------- | --- | --- | --- | --- | ------------------------------ | ------------------------------ | -------------------------- | --- | ------------------------ | ---------------------- |
+| Statement (;) | Pair (:) | OR  | AND | NOT |     |                                |                                |                            |     |                          |                        |
+|               |          |     | XOR |     |     |                                |                                |                            |     |                          |                        |
+|               |          |     |     |     |     |                                | Subtraction (x - y)            | Divide (x / y)             |     | Power (x^y)              | Negate (-x)            |
+|               |          |     |     |     |     |                                |                                | Modulo (x % y)             |     |                          |                        |
+|               |          |     |     |     |     |                                |                                | Multiply (x * y)           |     |                          |                        |
+|               |          |     |     |     |     | Greater than or equal (x >= y) |                                |                            |     |                          |                        |
+|               |          |     |     |     |     | Greater than (x > y)           |                                |                            |     |                          |                        |
+|               |          |     |     |     |     | Less than or equal (x <= y)    |                                |                            |     |                          |                        |
+|               |          |     |     |     |     | Less than (x < y)              |                                |                            |     |                          |                        |
+|               |          |     |     |     |     | Equal (x == y)                 |                                |                            |     |                          |                        |
+|               |          |     |     |     |     | Unequal (x != y)               |                                |                            |     |                          |                        |
+|               |          |     |     |     |     |                                | String contains (x IN y)       |                            |     |                          |                        |
+|               |          |     |     |     |     |                                | Addition (x + y)               |                            |     |                          |                        |
+|               |          |     |     |     |     |                                | String contains (x CONTAINS y) |                            |     |                          |                        |
+|               |          |     |     |     |     |                                |                                | Variable exists (x EXISTS) |     |                          |                        |
+|               |          |     |     |     |     |                                |                                |                            |     | Array/Map access (x @ y) | Variable resolve ($ x) |
 
 
 ## Compatible types
@@ -215,6 +276,7 @@ Not all operators are compatible to all types. See following table for the opera
 | Operator                         | Number                      | Boolean                     | String                                           | Array                         | Map                                                     |
 | -------------------------------- | --------------------------- | --------------------------- | ------------------------------------------------ | ----------------------------- | ------------------------------------------------------- |
 | Statement (;)                    | OK                          | OK                          | OK                                               | OK                            | OK                                                      |
+| Pair (:)                         | OK                          | OK                          | OK                                               | OK                            | OK                                                      |
 | AND                              | Error                       | OK                          | Error                                            | Error                         | Error                                                   |
 | NOT                              | Error                       | OK                          | Error                                            | Error                         | Error                                                   |
 | OR                               | Error                       | OK                          | Error                                            | Error                         | Error                                                   |
