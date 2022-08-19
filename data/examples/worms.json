@@ -1,7 +1,9 @@
 {
+    "id": "worms",
     "name": "Track analysis of unlabeled nematodes",
     "description": "Live worms of the species C. elegans were recorded via transmitted light microscopy. The resulting time-series images are analyzed by a JIPipe pipeline.",
     "thumbnail": "/img/examples/example-worms.png",
+    "tags": ["large size", "nematodes", "real data", "published", "complex"],
     "buttons": [
         {
             "text": "Project + Data (5 GB)",

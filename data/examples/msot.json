@@ -1,7 +1,9 @@
 {
+    "id": "msot",
     "name": "Training of a fully automated pipeline for detecting tissue in MSOT data",
     "description": "For our 'MSOT cluster analysis toolkit' (MCAT), we developed a deep-learning-based approach for detecting the mouse tissue. The training was applied in JIPipe via our Cellpose nodes.",
     "thumbnail": "/img/examples/example-msot.png",
+    "tags": ["large size", "msot", "real data", "published", "cellpose", "complex"],
     "buttons": [
         {
             "text": "Project + Data (2 GB)",

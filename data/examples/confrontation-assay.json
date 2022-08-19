@@ -1,7 +1,9 @@
 {
+    "id": "confrontation-assay",
     "name": "Host-pathogen interactions",
     "description": "Alveolar macrophages were confronted with various species of fungi, including <i>Aspergillus fumigatus</i> and various <i>Lichtheimia</i> species, followed either directly by microscopy, or first by tissue fixation and fluorescence labeling, and then confocal microscopy.",
     "thumbnail": "/img/examples/example-confrontation-assay.png",
+    "tags": ["large size", "fluorescence", "confocal", "cellpose", "complex"],
     "buttons": [
         {
             "text": "Project + Data (44 MB)",

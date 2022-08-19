@@ -1,0 +1,15 @@
+{
+    "id": "labels-rois",
+    "name": "Conversion between ROIs and labels",
+    "description": "A small example showcasing nodes for conversion between labels and ROIs and vice versa.",
+    "thumbnail": "/changelog/1.73.0/labels-rois.png",
+    "tags": ["small size", "simple", "tutorial"],
+    "buttons": [
+        {
+            "text": "Project + Data",
+            "href": "/changelog/1.73.0/roi-labels-test.zip",
+            "style": "success",
+            "target": "_self"
+        }
+    ]
+}

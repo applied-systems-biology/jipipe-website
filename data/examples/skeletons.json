@@ -1,0 +1,15 @@
+{
+    "id": "skeletons",
+    "name": "Using the Analyze skeleton 2D/3D",
+    "description": "A small example showcasing how to utilize the Analyze skeleton 2D/3D node.",
+    "thumbnail": "/changelog/1.73.0/skeletons.png",
+    "tags": ["small size", "simple", "tutorial"],
+    "buttons": [
+        {
+            "text": "Project + Data",
+            "href": "/changelog/1.73.0/skeleton-example.zip",
+            "style": "success",
+            "target": "_self"
+        }
+    ]
+}

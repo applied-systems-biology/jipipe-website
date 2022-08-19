@@ -1,0 +1,21 @@
+{
+    "id": "weka",
+    "name": "Using the Weka segmentation nodes",
+    "description": "A small example showcasing how to utilize the Trainable Weka Segmentation nodes.",
+    "thumbnail": "/changelog/1.73.0/weka.png",
+    "tags": ["small size", "weka", "simple", "tutorial"],
+    "buttons": [
+        {
+            "text": "Project + Data",
+            "href": "/changelog/1.73.0/bird-weka-test.zip",
+            "style": "success",
+            "target": "_self"
+        },
+        {
+            "text": "Dataset",
+            "href": "https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/bsds/BSDS300/html/dataset/images/color/42049.html",
+            "style": "info",
+            "target": "_blank"
+        }
+    ]
+}
