@@ -710,6 +710,7 @@ div.notices.info {
   padding: 3px;
   margin: 1px;
   border-radius: 3px;
+  font-size: 12px;
 }
 
 .text-icon-improved {
@@ -718,6 +719,26 @@ div.notices.info {
 }
 
 .text-icon-new {
-  background: #2ec27eff;
+  background: #2ec27e;
+  color: white;
+}
+
+.text-icon-fixed {
+  background: #57e389;
+  color: white;
+}
+
+.text-icon-deprecated {
+  background: #ed333b;
+  color: white;
+}
+
+.text-icon-removed {
+  background: #ed333b;
+  color: white;
+}
+
+.text-icon-issue {
+  background: #edbb33;
   color: white;
 }
