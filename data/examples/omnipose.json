@@ -1,0 +1,21 @@
+{
+    "id": "omnipose",
+    "name": "Using the Omnipose segmentation nodes",
+    "description": "A small example showcasing how to utilize the Omnipose nodes.",
+    "thumbnail": "/changelog/1.74.0/omnipose-example.png",
+    "tags": ["small size", "segmentation", "deep learning", "simple", "tutorial"],
+    "buttons": [
+        {
+            "text": "Project + Data",
+            "href": "/changelog/1.74.0/omnipose-example.zip",
+            "style": "success",
+            "target": "_self"
+        },
+        {
+            "text": "Dataset",
+            "href": "http://www.cellpose.org/dataset_omnipose",
+            "style": "info",
+            "target": "_blank"
+        }
+    ]
+}

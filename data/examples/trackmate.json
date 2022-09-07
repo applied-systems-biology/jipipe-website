@@ -1,0 +1,21 @@
+{
+    "id": "trackmate",
+    "name": "Using the TrackMate nodes",
+    "description": "A small example showcasing how to utilize the TrackMate nodes.",
+    "thumbnail": "/changelog/1.74.0/trackmate-example.png",
+    "tags": ["small size", "tracking", "simple", "tutorial"],
+    "buttons": [
+        {
+            "text": "Project + Data",
+            "href": "/changelog/1.74.0/trackmate-example.zip",
+            "style": "success",
+            "target": "_self"
+        },
+        {
+            "text": "Dataset",
+            "href": "https://imagej.net/plugins/trackmate/getting-started",
+            "style": "info",
+            "target": "_blank"
+        }
+    ]
+}

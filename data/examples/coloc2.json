@@ -1,0 +1,21 @@
+{
+    "id": "coloc2",
+    "name": "Using the Coloc2 nodes",
+    "description": "A small example showcasing how to utilize the Coloc2 nodes.",
+    "thumbnail": "/changelog/1.74.0/coloc2-example.png",
+    "tags": ["small size", "colocalization", "simple", "tutorial"],
+    "buttons": [
+        {
+            "text": "Project + Data",
+            "href": "/changelog/1.74.0/coloc2-example.zip",
+            "style": "success",
+            "target": "_self"
+        },
+        {
+            "text": "Dataset",
+            "href": "hhttps://forum.image.sc/t/colocalization-analysis-using-coloc2-help/22742",
+            "style": "info",
+            "target": "_blank"
+        }
+    ]
+}
