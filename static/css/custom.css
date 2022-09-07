@@ -687,6 +687,41 @@ div.notices.info {
   margin: 0 10px 0 10px!important;
 }
 
+.extension-info {
+  display: flex;
+}
+
+.extension-info-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid gray;
+  border-radius: 3px;
+  padding: 0.5em;
+}
+
+.extension-info .extension-info-short-text {
+  font-weight: bold;
+  margin: 10px;
+}
+
+.extension-info .extension-info-text {
+  margin-left: 10px;
+}
+
+.extension-info .extension-info-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid gray;
+}
+
+.extension-info .extension-info-logo img {
+  width: 64px!important;
+  height: 64px!important;
+  margin: 0 10px 0 10px!important;
+}
+
 .toc {
   border-left: 1px solid gray;
   padding: 0.5em;
@@ -715,6 +750,11 @@ div.notices.info {
 
 .text-icon-improved {
   background: #7eb7f1;
+  color: white;
+}
+
+.text-icon-info {
+  background: #7ecdf1;
   color: white;
 }
 
