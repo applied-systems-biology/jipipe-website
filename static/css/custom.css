@@ -1,3 +1,19 @@
+@font-face {
+  font-family: 'NotoSans';
+  font-weight: 400;
+  src: local("NotoSans Regular"), local("NotoSans-Regular"), url("../fonts/Noto_Sans/NotoSans-Regular.ttf") format("truetype"); 
+}
+
+html {
+  font-family: 'NotoSans', sans-serif;
+  font-size: 1rem; 
+}
+
+body {
+  line-height: 1.7;
+  color: #212529;
+}
+
 .inline-image {
   display: inline!important;
   margin: 0!important;

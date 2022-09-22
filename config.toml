@@ -68,7 +68,7 @@ url = "https://forum.image.sc/"
 weight = 12
 
 [[menu.shortcuts]]
-name = "<i class='fa fa-paragraph'></i> <label>Citation</label>"
+name = "<i class='fa fa-book'></i> <label>Citation</label>"
 url = "/citation"
 weight = 30
 

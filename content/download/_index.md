@@ -8,14 +8,14 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-<center style="font-size: 2rem;">
+<div style="font-size: 2rem;">
 Please choose how you want to install JIPipe
-</center>
+</div>
 
 <div class="download-panel">
   <div class="download-panel-selection">
       <input type="radio" value="download-via-update-site" id="download-via-update-site" name="download-options"/>
-      <label for="download-via-update-site"> <i class="fa fa-windows"></i> <i class="fa fa-linux"></i> <i class="fa fa-apple"></i> ImageJ update site</label>
+      <label for="download-via-update-site"> <i class="fa fa-windows"></i> <i class="fa fa-linux"></i> <i class="fa fa-apple"></i> ImageJ update site (Recommended)</label>
       <input type="radio" value="download-windows-package" id="download-windows-package" name="download-options"/>
       <label for="download-windows-package"> <i class="fa fa-windows"></i> Windows package (x64)</label>
       <input type="radio" value="download-linux-package" id="download-linux-package" name="download-options"/>
