@@ -40,6 +40,11 @@ Please choose how you want to install JIPipe
     <strong><i class="fa fa-apple"></i> Info:</strong> We have only limited capabilities to test software on Apple computers and are aware of issues regarding the integration of external software (Python, R, Cellpose, ...). We are open to contributions to resolve these problems.<br/>
   </div>
   <div class="download-panel-content" id="download-windows-package-content">
+    <div class="notices info">
+      <p>
+        Please note that this package might contain an older version of Fiji and JIPipe. We recommend to use the ImageJ update site to install JIPipe.
+      </p>
+    </div>
     You can download a package that provides an existing <a href="https://fiji.sc/" target="_blank">Fiji</a> installation plus all necessary files for JIPipe.
     <ol>
       <li><a class="btn btn-default" type="button" href="https://github.com/applied-systems-biology/jipipe/releases/download/v1.73.0/jipipe-full-1.72.0-win.zip"> <i class="fa fa-download"></i> Download </a> the package</li>
@@ -50,6 +55,11 @@ Please choose how you want to install JIPipe
     <strong>Tip:</strong> If you want a desktop shortcut, open JIPipe and run <i>Tools &gt; Create launchers</i>
   </div>
   <div class="download-panel-content" id="download-linux-package-content">
+      <div class="notices info">
+      <p>
+        Please note that this package might contain an older version of Fiji and JIPipe. We recommend to use the ImageJ update site to install JIPipe.
+      </p>
+    </div>
     You can download a package that provides an existing <a href="https://fiji.sc/" target="_blank">Fiji</a> installation plus all necessary files for JIPipe.
     <ol>
       <li><a class="btn btn-default" type="button" href="https://github.com/applied-systems-biology/jipipe/releases/download/v1.73.0/jipipe-full-1.72.0-linux.zip"> <i class="fa fa-download"></i> Download </a> the package</li>
@@ -60,6 +70,11 @@ Please choose how you want to install JIPipe
     <strong>Tip:</strong> If you want an application menu entry, open JIPipe and run <i>Tools &gt; Create launchers</i>
   </div>
   <div class="download-panel-content" id="download-osx-package-content">
+      <div class="notices info">
+      <p>
+        Please note that this package might contain an older version of Fiji and JIPipe. We recommend to use the ImageJ update site to install JIPipe.
+      </p>
+    </div>
     You can download a package that provides an existing <a href="https://fiji.sc/" target="_blank">Fiji</a> installation plus all necessary files for JIPipe.
     <ol>
       <li><a class="btn btn-default" type="button" href="https://github.com/applied-systems-biology/jipipe/releases/download/v1.72.0/jipipe-full-1.72.0-macos.zip"> <i class="fa fa-download"></i> Download </a> the package</li>
