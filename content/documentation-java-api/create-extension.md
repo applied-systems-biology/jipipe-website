@@ -9,6 +9,8 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
+{{< jipipe-info "1.74.x+" "This guide was written for JIPipe version 1.74.0 or newer" >}}
+
 # Prerequisities
 
 * Java 8 (Java 9+ are not working)
@@ -35,194 +37,9 @@ plugins.
 JIPipe is based on [SciJava](https://scijava.org) and requires libraries provided
 by the [SciJava Maven repository](https://maven.scijava.org/).
 
-Here is an example `*.pom` file that makes use of SciJava:
+Here is an example `*.pom` file that you can adapt for your project: 
+https://github.com/applied-systems-biology/jipipe/blob/master/jipipe-strings/pom.xml
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns="http://maven.apache.org/POM/4.0.0"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
-    <groupId><!-- Please insert a value --></groupId>
-    <artifactId><!-- Please insert a value --></artifactId>
-    <version><!-- Please insert a value --></version>
-    <name><!-- Please insert a value --></name>
-    <description><!-- Please insert a value --></description>
-    <url><!-- Please insert a value --></url>
-    <inceptionYear>2020</inceptionYear>
-    <organization>
-        <name><!-- Please insert a value --></name>
-        <url><!-- Please insert a value --></url>
-    </organization>
-    <licenses>
-        <license>
-            <name><!-- Please insert a value --></name>
-            <url><!-- Please insert a value --></url>
-            <distribution><!-- Please insert a value --></distribution>
-        </license>
-    </licenses>
-    <developers>
-        <developer>
-            <id><!-- Please insert a value --></id>
-            <name><!-- Please insert a value --></name>
-            <url><!-- Please insert a value --></url>
-        </developer>
-    </developers>
-    <contributors>
-        <contributor>
-            <name><!-- Please insert a value --></name>
-        </contributor>
-    </contributors>
-    <mailingLists>
-        <mailingList>
-            <name><!-- Please insert a value --></name>
-            <archive><!-- Please insert a value --></archive>
-        </mailingList>
-    </mailingLists>
-    <scm>
-        <connection><!-- Please insert a value --></connection>
-        <developerConnection><!-- Please insert a value --></developerConnection>
-        <tag><!-- Please insert a value --></tag>
-        <url><!-- Please insert a value --></url>
-    </scm>
-    <issueManagement>
-        <system><!-- Please insert a value --></system>
-        <url><!-- Please insert a value --></url>
-    </issueManagement>
-    <ciManagement>
-        <system><!-- Please insert a value --></system>
-        <url><!-- Please insert a value --></url>
-    </ciManagement>
-
-    <parent>
-        <groupId>org.hkijena</groupId>
-        <artifactId>pom-jipipe</artifactId>
-        <version>1.72.3</version> <!-- Update the version accordingly, see https://maven.scijava.org/#nexus-search;quick~pom-jipipe -->
-        <relativePath/>
-    </parent>
-
-    <repositories>
-        <repository>
-            <id>imagej.public</id>
-            <url>http://maven.imagej.net/content/groups/public</url>
-        </repository>
-    </repositories>
-
-    <dependencies>
-        <dependency>
-            <groupId>net.imagej</groupId>
-            <artifactId>imagej</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>net.imglib2</groupId>
-            <artifactId>imglib2-ij</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>net.imagej</groupId>
-            <artifactId>imagej-legacy</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.scijava</groupId>
-            <artifactId>scijava-log-slf4j</artifactId>
-        </dependency>
-        <!-- JIPipe core library (mandatory) -->
-        <dependency>
-            <groupId>org.hkijena</groupId>
-            <artifactId>jipipe-core</artifactId>
-        </dependency>
-        <!-- ImageJ integration (if you need ImageJ data types) -->
-        <dependency>
-            <groupId>org.hkijena</groupId>
-            <artifactId>jipipe-ij</artifactId>
-        </dependency>
-        <!-- ImageJ integration (if you need ImageJ1 algorithms) -->
-        <dependency>
-            <groupId>org.hkijena</groupId>
-            <artifactId>jipipe-ij-algorithms</artifactId>
-        </dependency>
-        <!-- Add more JIPipe libraries if you need -->
-
-        <!-- If you want to have all JIPipe standard libraries in your runtime, add the following dependency: -->
-        <!-- <dependency>
-            <groupId>org.hkijena</groupId>
-            <artifactId>jipipe-launcher</artifactId>
-        </dependency> -->
-    </dependencies>
-
-    <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <license.licenseName><!-- Please insert a value --></license.licenseName>
-        <license.copyrightOwners>N/A</license.copyrightOwners>
-        <license.projectName><!-- Please insert a value --></license.projectName>
-    </properties>
-
-    <build>
-        <plugins>
-           <!-- This plugin can be useful to create a manually-installable package -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <version>3.1.1</version>
-                <executions>
-                    <execution>
-                        <id>copy-dependencies</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>copy-dependencies</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${project.build.directory}/dependencies</outputDirectory>
-                            <overWriteReleases>false</overWriteReleases>
-                            <overWriteSnapshots>false</overWriteSnapshots>
-                            <overWriteIfNewer>true</overWriteIfNewer>
-                            <excludeGroupIds>net.imagej, net.imglib2, org.scijava, com.google.code.gson,
-                                com.google.guava, org.swinglabs, ome
-                            </excludeGroupIds>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.scijava</groupId>
-                <artifactId>scijava-maven-plugin</artifactId>
-                <version>1.1.0</version>
-                <executions>
-                    <execution>
-                        <id>set-rootdir</id>
-                        <phase>validate</phase>
-                        <goals>
-                            <goal>set-rootdir</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>copy-jars</id>
-                        <phase>install</phase>
-                        <goals>
-                            <goal>copy-jars</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>attach-javadocs</id>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
-
-</project>
-
-```
 
 # Creating an extension service
 
@@ -243,6 +60,19 @@ A minimal extension can be found here:
 @Plugin(type = JIPipeJavaExtension.class)
 public class MyExtension extends JIPipeDefaultJavaExtension {
 
+    // We recommend to create a static AS_DEPENDENCY variable that contains the dependency ID, name, and version of the extension
+    // This simplifies the usage in getDependencies() for extensions that are based on your library
+    public static final JIPipeDependency AS_DEPENDENCY = new JIPipeMutableDependency("CHANGEME", "1.0.0", "My extension");
+
+    // If you have custom icons, thumbnails etc., create a JIPipeResourceManager instance that points towards the root directory of your resources
+    // Please read the documentation of JIPipeResourceManager for more information on how to structure the resources directory 
+    public static final JIPipeResourceManager RESOURCES = new JIPipeResourceManager(MyExtension.class, "resource/directory/of/my/extension");
+
+    public MyExtension() {
+        getMetadata().addCategories(PluginCategoriesEnumParameter.CATEGORY_SCRIPTING); // You can annotate your extension with ImageJ Wiki categories (Optional)
+        getMetadata().setThumbnail(new ImageParameter(RESOURCES.getResourceURL("thumbnail.png"))); // Set the thumbnail from the extension's resources (Optional)
+    }
+
     @Override
     public String getName() {
         return "My extension";
@@ -257,7 +87,7 @@ public class MyExtension extends JIPipeDefaultJavaExtension {
     public String getDependencyId() {
         // We recommend the following structure: <groupId>.<artifactId>:<dependencyId>
         // (!) The dependency Id should be unique for each extension @Plugin (!)
-        return "org.hkijena.jipipe:my-extension";
+        return "CHANGEME";
     }
 
     // You can optionally override the version.
@@ -281,15 +111,6 @@ public class MyExtension extends JIPipeDefaultJavaExtension {
         return "BSD-2";
     }
 
-    // Optional logo for future use
-    // @Override
-    // public URL getLogo() {
-    //    // This code loads the default JIPipe logo from JIPipe resources
-    //    // You can replace it with your own logo if you want
-    //    // Just do not use JIPipe's ResourceUtils for this, as its always pointing to JIPipe resource directories
-    //    return ResourceUtils.getPluginResource("logo-400.png");
-    // }
-
     // You can add one more multiple logos on the JIPipe splash screen
     // They must be 32x32 in size
     // Please do not add too many of them to not fill up all the space
@@ -310,6 +131,11 @@ public class MyExtension extends JIPipeDefaultJavaExtension {
         // Content is registered here
         // You can have multiple registerNodeType, registerDataType etc. in this place
     }
+
+    // Optional: run code after this and other extensions are registered (for example to create notifications; see https://github.com/applied-systems-biology/jipipe/blob/master/jipipe-python/src/main/java/org/hkijena/jipipe/extensions/python/PythonExtension.java)
+    // @Override
+    // public void postprocess() {
+    // }
 }
 ```
 

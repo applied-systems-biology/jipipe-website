@@ -13,6 +13,8 @@ will also appear within a node's context menu.
 They can be used for multiple purposes such as loading example data, applying
 an auto-configuration, opening websites, or displaying documentation or data in a new tab.
 
+{{< jipipe-info "1.74.x+" "We do no anymore recommend the creation of context actions to implement examples. Instead, register node examples within the extension." >}}
+
 ![Example of a context action](/img/documentation/context-actions.png)
 
 To create one, annotate a public function with [@JIPipeDocumentation](/apidocs/org/hkijena/jipipe/api/JIPipeDocumentation.html)
