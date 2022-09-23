@@ -121,7 +121,7 @@ allows you to create macros <strong>without any programming </strong> by just cr
   </span>
   <div class="button-row">
   <a class="btn btn-success btn-large" type="button" href="https://forum.image.sc/tag/jipipe" target="_blank"> <i class="fa fa-comments"></i> Community </a>
-  <a class="btn btn-success btn-large" type="button" href="mailto:thilo.figge@leibniz-hki.de"> <i class="fa fa-envelope"></i> Send E-Mail </a>
+  <a class="btn btn-success btn-large" type="button" href="mailto:thilo.figge@leibniz-hki.de"> <i class="fa fa-envelope"></i> Send us an E-Mail </a>
   <a class="btn btn-info btn-large" type="button" href="https://github.com/applied-systems-biology/jipipe/issues" target="_blank"> <i class="fa fa-bug"></i> Report a bug </a>
   </center>
 </div>
@@ -133,10 +133,12 @@ JIPipe was developed by <a href="https://www.leibniz-hki.de/en/applied-systems-b
 Leibniz Institute for Natural Product Research and Infection Biology - Hans Knöll Insitute (HKI)</br>
 Adolf-Reichwein-Straße 23, 07745 Jena, Germany
 </div>
+<div>
 <a href="https://www.leibniz-hki.de/en/" target="_blank"><img src="/img/credits/hki.png" style="height: 4em; display: inline;"/></a>
 <a href="https://www.ilrs.de/" target="_blank"><img src="/img/credits/ilrs.svg" style="height: 6em; display: inline;"/></a>
 <a href="https://www.uni-jena.de/en/" target="_blank"><img src="/img/credits/uni-jena.png" style="height: 7em; display: inline;"/></a>
 <a href="https://www.polytarget.uni-jena.de/" target="_blank"><img src="/img/credits/PolyTarget_logo.png" style="height: 6em; display: inline;"/></a>
+<div>
 </div>
 
 <script type="text/javascript">

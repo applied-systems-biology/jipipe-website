@@ -729,6 +729,7 @@ div.notices.info {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   border-right: 1px solid gray;
 }
 

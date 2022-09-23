@@ -1,5 +1,5 @@
 +++
-title = "JIPipe for ImageJ users (Video)"
+title = "JIPipe for ImageJ users"
 description = "This video explains the basics of creating pipelines in JIPipe - aimed towards users already familiar with ImageJ."
 weight = 20
 type="page"

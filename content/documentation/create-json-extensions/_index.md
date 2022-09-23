@@ -14,7 +14,7 @@ the need for writing Java code. We recommend starting from
 a functional pipeline project and export the whole pipeline or a part of it into a **JSON Extension**.
 Alternatively, you can create custom algorithms from scratch within the extension builder.
 
-If you want a step-by-step guideline on how to create a custom algorithm, please check out our [tutorial]({{< ref "/tutorials/extension" >}}).
+If you want a step-by-step guideline on how to create a custom algorithm, please check out our [tutorial]({{< ref "/tutorials/old/extension" >}}).
 
 # Exporting from an existing pipeline
 
