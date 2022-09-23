@@ -10,7 +10,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
 
-{{< jipipe-info "<1.73.x" "The video tutorials were designed for older versions of JIPipe. Please be aware that some GUI components have changed." >}}
+{{< jipipe-info "<1.73.x" "The tutorials were designed for older versions of JIPipe. Please be aware that some GUI components have changed." >}}
 
 
 {{% children description="true" %}}
