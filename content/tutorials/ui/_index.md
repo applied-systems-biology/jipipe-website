@@ -1,6 +1,7 @@
 +++
 title = "UI"
 weight = 10
+description = "Tutorials that explain the graphical user interface of JIPipe"
 type="page"
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"

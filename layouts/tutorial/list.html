@@ -1,4 +1,5 @@
 {{ define "main" }}
+    {{- $currentNode := . }}
     {{- .Scratch.Set "pages" .Pages }}
     {{- if .Sections}}
     {{- .Scratch.Set "pages" (.Pages | union .Sections) }}
@@ -9,7 +10,11 @@
         <nav id="TableOfContents">
             <ul>
                 {{- range $index, $item := $pages.ByWeight }}
+                {{- if $item.Params.enumerated}}
                 <li><a href="#step-{{ add $index 1 }}" class="highlight" >{{ add $index 1 }}. {{ $item.Params.title }}</a></li>
+                {{- else}}
+                <li><a href="#step-{{ add $index 1 }}" class="highlight" >{{ $item.Params.title }}</a></li>
+                {{- end}}
                 {{- end}}
             </ul>
         </nav>
@@ -18,9 +23,13 @@
     <div class=tutorial-list>       
         {{- range $index, $item := $pages.ByWeight }}
           <div class="tutorial-item">
-            <div class="tutorial-item-img"><img src="{{ $item.Params.image }}" /></div>
+            <div class="tutorial-item-img"><img src="{{ $item.Params.tutorial_image }}" alt="Illustration of the tutorial step" /></div>
             <div class="tutorial-item-content">
+            {{- if $currentNode.Params.enumerated}}
             <h2 id="step-{{ add $index 1 }}">{{ add $index 1 }}. {{ $item.Params.title }}</h2>
+            {{- else}}
+            <h2 id="step-{{ add $index 1 }}">{{ $item.Params.title }}</h2>
+            {{- end}}
             {{ $item.Content }}
             </div>
           </div>  

@@ -321,6 +321,7 @@ a.json-property-read-only:before:hover, a.json-property-read-only:before:focus {
   flex-wrap: wrap;
   flex-direction: row;
   gap: 1em;
+
 }
 
 .tutorial-item-img {
@@ -345,6 +346,17 @@ a.json-property-read-only:before:hover, a.json-property-read-only:before:focus {
   .tutorial-item-content {
     flex: 1 1 auto;
   }
+}
+
+.tutorial-list > .tutorial-item::before {
+  content: "";
+  background-color:  #C9C9C9;
+  height: 1px;
+  width: 100%;
+}
+
+.tutorial-list > .tutorial-item:first-of-type::before {
+  height: 0;  
 }
 
 /*
@@ -800,4 +812,33 @@ div.notices.info {
 .text-icon-issue {
   background: #edbb33;
   color: white;
+}
+
+ul.children {
+  border: 1px solid #C9C9C9;
+  border-left: 10px solid #C9C9C9;
+  border-radius: 3px;
+}
+
+ul.children p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #5a5a5a;
+}
+
+ul.children li {
+  list-style: none;
+}
+
+ul.children li::before {
+  content: "";
+  display: block;
+  background-color:  #C9C9C9;
+  height: 1px;
+  margin-left: -1.5em;
+  margin-right: -1.5em;
+}
+
+ul.children li:first-of-type::before {
+  height: 0;
 }
