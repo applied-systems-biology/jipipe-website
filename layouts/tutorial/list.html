@@ -5,6 +5,8 @@
     {{- .Scratch.Set "pages" (.Pages | union .Sections) }}
     {{- end}}
     {{- $pages := (.Scratch.Get "pages") }}
+    {{ .Content }}
+    <div style="margin-bottom:2rem"></div>
     <div class="toc">
         <h2>Table Of Contents</h2>
         <nav id="TableOfContents">
@@ -18,8 +20,7 @@
                 {{- end}}
             </ul>
         </nav>
-    </div>
-    {{ .Content }}
+    </div>    
     <div class=tutorial-list>       
         {{- range $index, $item := $pages.ByWeight }}
           <div class="tutorial-item">

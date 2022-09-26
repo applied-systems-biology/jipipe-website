@@ -842,3 +842,23 @@ ul.children li::before {
 ul.children li:first-of-type::before {
   height: 0;
 }
+
+.link-box {
+  border: 1px solid #C9C9C9;
+  border-left: 10px solid #C9C9C9;
+  border-radius: 3px;
+}
+
+.link-box .link-description {
+  font-size: 0.9rem;
+  color: #5a5a5a;
+}
+
+.link-box .link {
+  padding-left: 1.5em;
+  border-top: 1px solid #C9C9C9;
+}
+
+.link-box .link:first-of-type {
+  border: none;
+}

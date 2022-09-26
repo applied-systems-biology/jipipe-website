@@ -1,0 +1,11 @@
+{{- $href := .Get "href" -}}
+{{- $text := .Get "text" -}}
+{{- $description := .Get "description" -}}
+<div class="link">
+    <a href="{{ $href }}">{{ $text }}</a>
+    {{- if $description }}
+    <div class="link-description">
+        {{ $description }}
+    </div>
+    {{- end }}
+</div>

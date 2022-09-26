@@ -1,5 +1,5 @@
 +++
-title = "Starting a new project (multiple compartments)"
+title = "Starting a new project II"
 description = "Guides through the process of creating a new project. The pipeline contains multiple compartments and is thus a good starting point if a specific structure is expected."
 weight = 20
 type="tutorial"
@@ -9,3 +9,7 @@ creatoremail = "ruman.gerst@leibniz-hki.de"
 lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
+
+{{< link-box >}}
+    {{< link-box-link href="/tutorials/ui/project-new-single-compartment/" text="Related tutorial: Alternative option" description="Creating a project with a single compartment (recommended for beginners)" >}}
+{{< /link-box >}}
