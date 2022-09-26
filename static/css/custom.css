@@ -319,15 +319,17 @@ a.json-property-read-only:before:hover, a.json-property-read-only:before:focus {
   display: flex;
   flex-grow: 0;
   flex-wrap: wrap;
+  flex-direction: row;
+  gap: 1em;
 }
 
 .tutorial-item-img {
-  flex: 50%;
+  flex: 45%;
 }
 
 .tutorial-item-content {
   padding-top: 25px;
-  flex: 50%;
+  flex: 45%;
 }
 
 .tutorial-item-content .thumbnail {

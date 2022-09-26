@@ -1,0 +1,29 @@
+{{ define "main" }}
+    {{- .Scratch.Set "pages" .Pages }}
+    {{- if .Sections}}
+    {{- .Scratch.Set "pages" (.Pages | union .Sections) }}
+    {{- end}}
+    {{- $pages := (.Scratch.Get "pages") }}
+    <div class="toc">
+        <h2>Table Of Contents</h2>
+        <nav id="TableOfContents">
+            <ul>
+                {{- range $index, $item := $pages.ByWeight }}
+                <li><a href="#step-{{ add $index 1 }}" class="highlight" >{{ add $index 1 }}. {{ $item.Params.title }}</a></li>
+                {{- end}}
+            </ul>
+        </nav>
+    </div>
+    {{ .Content }}
+    <div class=tutorial-list>       
+        {{- range $index, $item := $pages.ByWeight }}
+          <div class="tutorial-item">
+            <div class="tutorial-item-img"><img src="{{ $item.Params.image }}" /></div>
+            <div class="tutorial-item-content">
+            <h2 id="step-{{ add $index 1 }}">{{ add $index 1 }}. {{ $item.Params.title }}</h2>
+            {{ $item.Content }}
+            </div>
+          </div>  
+        {{- end}}
+    </div>
+{{ end }}
