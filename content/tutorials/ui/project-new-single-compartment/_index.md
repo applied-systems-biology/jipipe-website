@@ -13,3 +13,5 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 {{< link-box >}}
     {{< link-box-link href="/tutorials/ui/project-new-three-compartments/" text="Related tutorial: Alternative option" description="Creating a project with multiple compartments" >}}
 {{< /link-box >}}
+
+{{< jipipe-info "1.74.x+" "This guide was written for JIPipe version 1.74.0 or newer" >}}

@@ -485,7 +485,7 @@ Download page
 .download-panel {
   margin-top: 2rem;
   padding: 1rem;
-  border: 1px solid gray;
+  border: 1px solid #C9C9C9;
   border-radius: 4px;
 }
 
@@ -542,7 +542,7 @@ Examples page
   margin: 0!important;
   background-size: cover;
   background-position: center;
-  border: 1px solid gray;
+  border: 1px solid #C9C9C9;
   border-radius: 4px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
@@ -553,7 +553,7 @@ Examples page
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  border: 1px solid gray;
+  border: 1px solid #C9C9C9;
   border-radius: 4px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -684,6 +684,8 @@ div.notices.info {
 }
 
 .jipipe-info {
+  margin-top: 1em;
+  margin-bottom: 1em;
   display: flex;
 }
 
@@ -691,7 +693,7 @@ div.notices.info {
   display: flex;
   flex-direction: row;
   align-items: center;
-  border: 1px solid gray;
+  border: 1px solid #C9C9C9;
   border-radius: 3px;
   padding: 0.5em;
 }
@@ -708,7 +710,7 @@ div.notices.info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-right: 1px solid gray;
+  border-right: 1px solid #C9C9C9;
 }
 
 .jipipe-info .jipipe-info-logo img {
@@ -725,7 +727,7 @@ div.notices.info {
   display: flex;
   flex-direction: row;
   align-items: center;
-  border: 1px solid gray;
+  border: 1px solid #C9C9C9;
   border-radius: 3px;
   padding: 0.5em;
 }
@@ -744,7 +746,7 @@ div.notices.info {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border-right: 1px solid gray;
+  border-right: 1px solid #C9C9C9;
 }
 
 .extension-info .extension-info-logo img {
@@ -754,7 +756,7 @@ div.notices.info {
 }
 
 .toc {
-  border-left: 1px solid gray;
+  border-left: 1px solid #C9C9C9;
   padding: 0.5em;
   margin-bottom: 4em;
 }

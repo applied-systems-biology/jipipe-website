@@ -10,9 +10,6 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 
 # Tutorial categories
 
-You will find text and video tutorials in the following list.
-All tutorials are also available as [playlist on YouTube](https://www.youtube.com/playlist?list=PL-b5b09600_mCAZ8ex5ded29YxMttxFL6).
-
 {{% children description="true" %}}
 
 # What is JIPipe?
@@ -20,6 +17,8 @@ All tutorials are also available as [playlist on YouTube](https://www.youtube.co
 Are you new to JIPipe? Do you want to find out what this tool is about? Then watch our
 video abstract:
 
-<iframe class="iframe-video" src="https://www.youtube-nocookie.com/embed/Zyl52bluWYI" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+{{< jipipe-info "<1.73.x" "The video was designed for older versions of JIPipe. Please be aware that some GUI components have changed." >}}
+
+<iframe style="margin-top: 1em;" class="iframe-video" src="https://www.youtube-nocookie.com/embed/Zyl52bluWYI" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
 
 

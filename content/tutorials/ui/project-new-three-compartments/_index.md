@@ -13,3 +13,5 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 {{< link-box >}}
     {{< link-box-link href="/tutorials/ui/project-new-single-compartment/" text="Related tutorial: Alternative option" description="Creating a project with a single compartment (recommended for beginners)" >}}
 {{< /link-box >}}
+
+{{< jipipe-info "1.74.x+" "This guide was written for JIPipe version 1.74.0 or newer" >}}

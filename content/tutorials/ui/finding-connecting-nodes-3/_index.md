@@ -15,3 +15,5 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
     {{< link-box-link href="/tutorials/ui/finding-connecting-nodes-1/" text="Related tutorial: Alternative option 1" description="Finding and adding nodes using the algorithm finder" >}}
     {{< link-box-link href="/tutorials/ui/finding-connecting-nodes-2/" text="Related tutorial: Alternative option 2" description="Finding and adding nodes using search bar" >}}
 {{< /link-box >}}
+
+{{< jipipe-info "1.74.x+" "This guide was written for JIPipe version 1.74.0 or newer" >}}
