@@ -1,19 +1,19 @@
 {
     "id": "tutorial-b10",
-    "name": "Tutorial: Importing a directory of images II",
-    "description": "Accompanying data and project for the tutorial 'Importing a directory of images II'.",
+    "name": "Tutorial: andling multi-channel images I",
+    "description": "Accompanying data and project for the tutorial 'andling multi-channel images I'.",
     "thumbnail": "/tutorials/ui/b10/step9.png",
     "tags": ["small size", "simple", "tutorial"],
     "buttons": [
         {
             "text": "Project + Data",
-            "href": "/tutorials/ui/b10/Tutorial_B10.zip",
+            "href": "/tutorials/ui/b11/Tutorial_B11.zip",
             "style": "success",
             "target": "_self"
         },
         {
             "text": "Tutorial",
-            "href": "/tutorials/basic/importing-multiple-images-2/",
+            "href": "/tutorials/basic/multi-channel-images-1/",
             "style": "default",
             "target": "_self"
         }

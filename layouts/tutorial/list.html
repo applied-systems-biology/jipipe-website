@@ -5,6 +5,8 @@
     {{- .Scratch.Set "pages" (.Pages | union .Sections) }}
     {{- end}}
     {{- $pages := (.Scratch.Get "pages") }}
+    <p>{{ .Params.description }}</p>
+    <hr/>
     {{ .Content }}
     <div style="margin-bottom:2rem"></div>
     <div class="toc">
