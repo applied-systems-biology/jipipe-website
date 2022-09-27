@@ -1,0 +1,21 @@
+{
+    "id": "tutorial-b12",
+    "name": "Tutorial: Creating node groups",
+    "description": "Accompanying data and project for the tutorial 'Creating node groups I/II'.",
+    "thumbnail": "/tutorials/ui/b12/step2.png",
+    "tags": ["small size", "simple", "tutorial"],
+    "buttons": [
+        {
+            "text": "Project + Data",
+            "href": "/tutorials/ui/b12/Tutorial_B12.zip",
+            "style": "success",
+            "target": "_self"
+        },
+        {
+            "text": "Tutorial",
+            "href": "/tutorials/intermediate/create-node-groups-1/",
+            "style": "default",
+            "target": "_self"
+        }
+    ]
+}
