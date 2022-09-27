@@ -3,15 +3,11 @@ title = "Step 1"
 weight = 1
 hidden = true
 type="tutorial-step"
-tutorial_image = "/tutorials/ui/b12-1/step1.png"
+tutorial_image = "/tutorials/ui/b13/step1.png"
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
 lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-{{< notice info >}}
-This guide assumes that you have followed the tutorial "Creating node groups I/II"
-{{< /notice>}}
-
-In order to save the new group node for later use (both for this project and for others), select it (red arrow 1) and after right-click, choose the create node template option (red arrow 2). 
+Nodes with a specific set of parameters, or nodes that are formed into a Group (see previous tutorial) can be saved as Templates, in order to make them available for easy reuse. The template nodes can be made accessible either globally (i.e., by other projects as well), or locally, where only the current project can have access to them. 
