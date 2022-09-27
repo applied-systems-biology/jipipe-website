@@ -10,4 +10,4 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-To connect the Import node to the File node, simply draw a line with the mouse, left button pushed, to connect the bottom white zone of the File node (red arrow 1) to the top white zone of the Import node (red arrow 2).
+To connect the Import node to the `File` node, simply draw a line with the mouse, left button pushed, to connect the bottom white zone of the `File` node (red arrow 1) to the top white zone of the `Import image` node (red arrow 2).

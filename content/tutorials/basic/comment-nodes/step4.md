@@ -22,4 +22,4 @@ Red: F-Actin stained with Texas Red X-Phalloidin
 </em>
 </blockquote>
 
-We can add this information as a comment to the pipeline. Use the search bar (red arrow 1) to find the Comment node (red arrow 2)
+We can add this information as a comment to the pipeline. Use the search bar (red arrow 1) to find the `Comment` node (red arrow 2)

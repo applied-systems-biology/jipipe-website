@@ -14,6 +14,10 @@ body {
   color: #212529;
 }
 
+code {
+  color: #d63384;
+}
+
 .inline-image {
   display: inline!important;
   margin: 0!important;

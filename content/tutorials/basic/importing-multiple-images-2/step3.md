@@ -10,4 +10,4 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-Go to Parameters of the new node (red arrow 1)and check “Recursive” (red arrow 2). Run the node (red arrow 3) with "Update cache".
+Go to Parameters of the new node (red arrow 1)and check `Recursive` (red arrow 2). Run the node (red arrow 3) with `Update cache`.

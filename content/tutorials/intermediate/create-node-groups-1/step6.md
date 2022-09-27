@@ -10,4 +10,4 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-Move the duplicated node (red arrow 1) below the group node and connect them (red arrow 2). Now select the Folder list node (red arrow 3) and connect it to the group nodes (red arrow 4).  
+Move the duplicated node (red arrow 1) below the group node and connect them (red arrow 2). Now select the `Folder list` node (red arrow 3) and connect it to the group nodes (red arrow 4).  

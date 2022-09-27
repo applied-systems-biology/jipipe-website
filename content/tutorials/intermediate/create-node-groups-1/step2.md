@@ -10,4 +10,4 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-Right-click anywhere in the white area of the GUI (red arrow 1) and select the Group option (red arrow 2.)
+Right-click anywhere in the white area of the GUI (red arrow 1) and select the `Group` option (red arrow 2.)

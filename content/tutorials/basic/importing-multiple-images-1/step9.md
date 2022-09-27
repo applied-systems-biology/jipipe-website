@@ -10,4 +10,4 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-To fix this issue, go back to the Parameters tab (red arrow 1) of the node and activate the checkbox “Recursive” (red arrow 2).
+To fix this issue, go back to the `Parameters` tab (red arrow 1) of the node and activate the checkbox `Recursive` (red arrow 2).

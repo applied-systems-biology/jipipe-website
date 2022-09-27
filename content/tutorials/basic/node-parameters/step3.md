@@ -10,4 +10,6 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-Click on the Gaussian node to activate it (red arrow 1), and select the Parameters tab on the right (red arrow 2). The Parameter surface will show the Sigma parameters of the Gaussian blur, separately for X and Y (red arrows 3 and 4, respectively). 
+Click on the `Gaussian Blur 2D` node to activate it (red arrow 1), and select the `Parameters` tab on the right (red arrow 2). 
+
+The interface will show the Sigma parameters of the Gaussian blur, separately for X and Y (red arrows 3 and 4, respectively). 

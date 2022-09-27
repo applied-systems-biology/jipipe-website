@@ -10,4 +10,4 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-The search option works based on keywords, providing the closest matches. Using “import image” (red arrow 1) will produce the proper node close to the top results (red arrow 2), from where the node can simply be dragged to the GUII with the mouse, left button down (red arrow 3). 
+The search option works based on keywords, providing the closest matches. Using `Import image` (red arrow 1) will produce the proper node close to the top results (red arrow 2), from where the node can simply be dragged to the GUI with the mouse, left button down (red arrow 3). 

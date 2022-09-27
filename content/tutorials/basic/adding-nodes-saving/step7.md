@@ -10,4 +10,4 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-The result will be shown on the right side, under the Cache browser tab (red arrow 1), where the newly loaded file name and full path will be listed (red arrow 2)
+The result will be shown on the right side, under the `Cache browser` tab (red arrow 1), where the newly loaded file name and full path will be listed (red arrow 2)

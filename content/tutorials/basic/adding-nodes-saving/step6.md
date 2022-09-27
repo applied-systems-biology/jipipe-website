@@ -10,4 +10,4 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-... and then selecting one of the top two options “Update cash” or “Cache intermediate results”.
+... and then selecting one of the top two options `Update cache` or `Cache intermediate results`.

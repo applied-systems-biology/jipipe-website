@@ -10,4 +10,4 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-Importing a template JSON file is done similarly: in the Manage menu, choose Import  from file (red arrow 1). 
+Importing a template JSON file is done similarly: in the `Manage` menu, choose `Import from file` (red arrow 1). 

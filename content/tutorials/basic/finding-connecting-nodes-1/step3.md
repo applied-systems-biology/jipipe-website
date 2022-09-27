@@ -10,4 +10,4 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-This will show a list of compatible nodes, i.e., nodes that can accept the datatype from the active node. In this example node, which provides an image file location, the 2nd hit is the proper choice: “Import image” (red arrow 1)
+This will show a list of compatible nodes, i.e., nodes that can accept the datatype from the active node. In this example node, which provides an image file location, the 2nd hit is the proper choice: `Import image` (red arrow 1)

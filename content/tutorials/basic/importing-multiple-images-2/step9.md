@@ -10,4 +10,4 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-Double click on one of the images (red arrow 1) to observe it in a separate Viewer window (red arrow 2)
+Double click on one of the images (red arrow 1) to observe it in a separate viewer window (red arrow 2)

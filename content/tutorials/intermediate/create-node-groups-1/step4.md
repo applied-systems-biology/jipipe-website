@@ -10,4 +10,4 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-Select the new group node (red arrow 1), go to Parameters (red arrow 2) and change the name from the original “Group” to a more meaningful name (red arrow 3).
+Select the new group node (red arrow 1), go to `Parameters` (red arrow 2) and change the name from the original `Group` to a more meaningful name (red arrow 3).

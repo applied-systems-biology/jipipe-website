@@ -10,4 +10,6 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-The template node(s) can be exported and imported between projects, or between various JIPipe instances; this way the nodes can be shared easy, e.g. during teaching sessions. As an example, select two nodes from the list (red arrow 1 and 2), click on the  Manage button (red arrow 3) and select Export selection to file (red arrow 4).
+The template node(s) can be exported and imported between projects, or between various JIPipe instances; this way the nodes can be shared easy, e.g. during teaching sessions.
+
+As an example, select two nodes from the list (red arrow 1 and 2), click on the `Manage` button (red arrow 3) and select `Export selection to file` (red arrow 4).

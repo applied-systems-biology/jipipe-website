@@ -10,4 +10,4 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-Run the node(red arrow 1) and check the Cache (red arrow 2). Now the #Filename annotation (red arrow 3) is part of the image database.
+Run the node (red arrow 1) and check the `Cache` (red arrow 2). Now the `#Filename` annotation (red arrow 3) is part of the image database.

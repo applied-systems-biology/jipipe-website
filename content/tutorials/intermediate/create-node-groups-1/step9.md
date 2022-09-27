@@ -10,4 +10,4 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-After having run the Split channels node (red arrow 1)^, observing the cache will show the resulting three channels (red line 2).
+After having run the `Split channels` node (red arrow 1), observing the cache will show the resulting three channels (red line 2).

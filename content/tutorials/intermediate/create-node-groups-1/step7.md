@@ -10,4 +10,4 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-Run the Split channels node (red arrows 1 and 2). 
+Run the `Split channels` node (red arrows 1 and 2). 

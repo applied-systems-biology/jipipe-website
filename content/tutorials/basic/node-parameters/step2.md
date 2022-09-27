@@ -10,4 +10,4 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-Connect the new node to Import image (red arrow 1)
+Connect the new node to `Import image` (red arrow 1)

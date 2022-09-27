@@ -10,4 +10,4 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-To save the project, go to the Project tab (red arrow 1) and select the saving mode, e.g. Save As (red arrow 2)
+To save the project, go to the `Project` tab (red arrow 1) and select the saving mode, e.g. `Save As` (red arrow 2)

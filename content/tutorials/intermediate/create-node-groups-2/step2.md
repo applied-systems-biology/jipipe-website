@@ -12,6 +12,10 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 
 Parameters that belong to the member nodes of the group can be made accessible directly. 
 
-Activate the group node (red arrow 1), go to Parameters (red arrow 2) and select Edit parameter references (red arrow 3). 
+Activate the group node (red arrow 1), go to Parameters (red arrow 2) and select E`dit parameter references` (red arrow 3). 
 
-In the new `Edit parameters` window (red arrow 4) select Add (red arrow 5 and choose Empty group (red arrow 6; note: the second option, Node as group, will add all exportable parameters to the list). 
+In the new `Edit parameters` window (red arrow 4) select Add (red arrow 5 and choose Empty group (red arrow 6). 
+
+{{< notice info >}}
+The second option, `Node as group`, will add all exportable parameters to the list. So, please be aware that there can be many parameters.
+{{< /notice >}}
