@@ -1,0 +1,21 @@
+{
+    "id": "tutorial-b04",
+    "name": "Tutorial: Adding and running nodes",
+    "description": "Accompanying data and project for the tutorial 'Adding and running nodes'.",
+    "thumbnail": "/tutorials/ui/b04/step2.png",
+    "tags": ["small size", "simple", "tutorial"],
+    "buttons": [
+        {
+            "text": "Project + Data",
+            "href": "/tutorials/ui/b04/Tutorial_B04.zip",
+            "style": "success",
+            "target": "_self"
+        },
+        {
+            "text": "Tutorial",
+            "href": "/tutorials/basic/adding-nodes-saving/",
+            "style": "default",
+            "target": "_self"
+        }
+    ]
+}

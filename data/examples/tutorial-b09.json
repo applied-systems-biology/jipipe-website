@@ -1,0 +1,21 @@
+{
+    "id": "tutorial-b09",
+    "name": "Tutorial: Importing a directory of images",
+    "description": "Accompanying data and project for the tutorial 'Importing a directory of images'.",
+    "thumbnail": "/tutorials/ui/b09/step4.png",
+    "tags": ["small size", "simple", "tutorial"],
+    "buttons": [
+        {
+            "text": "Project + Data",
+            "href": "/tutorials/ui/b09/Tutorial_B09.zip",
+            "style": "success",
+            "target": "_self"
+        },
+        {
+            "text": "Tutorial",
+            "href": "/tutorials/basic/importing-multiple-images/",
+            "style": "default",
+            "target": "_self"
+        }
+    ]
+}

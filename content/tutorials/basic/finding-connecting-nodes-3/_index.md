@@ -16,4 +16,6 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
     {{< link-box-link href="/tutorials/basic/finding-connecting-nodes-2/" text="Related tutorial: Alternative option 2" description="Finding and adding nodes using search bar" >}}
 {{< /link-box >}}
 
+{{< example-gallery only_id="tutorial-b05" >}}
+
 {{< jipipe-info "1.74.x+" "This guide was written for JIPipe version 1.74.0 or newer" >}}

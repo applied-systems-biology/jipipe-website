@@ -11,7 +11,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
 {{< link-box >}}
-    {{< link-box-link href="/tutorials/ui/node-parameters/" text="👉 Related tutorial: Changing node parameters" description="This guide is a followup of another tutorial." >}}
+    {{< link-box-link href="/tutorials/basic/node-parameters/" text="👉 Related tutorial: Changing node parameters" description="This guide is a followup of another tutorial." >}}
 {{< /link-box >}}
 
 {{< jipipe-info "1.74.x+" "This guide was written for JIPipe version 1.74.0 or newer" >}}

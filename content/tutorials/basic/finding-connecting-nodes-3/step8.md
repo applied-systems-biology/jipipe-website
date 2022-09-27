@@ -1,6 +1,6 @@
 +++
-title = "Step 8"
-weight = 8
+title = "Step 6"
+weight = 6
 hidden = true
 type="tutorial-step"
 tutorial_image = "/tutorials/ui/b05-1/step8.png"
