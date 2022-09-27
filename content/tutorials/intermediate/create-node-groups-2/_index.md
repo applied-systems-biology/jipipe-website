@@ -12,7 +12,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 
 {{< link-box >}}
     {{< link-box-link href="/tutorials/intermediate/create-node-groups-1/" text="👉 Related tutorial: Creating node groups I" description="This guide is a followup of another tutorial" >}}
-    {{< link-box-link href="/tutorials/intermediate/create-node-templates/" text="Followup: Creating node templates" description="We recommend to look at this tutorial after the current one" >}}
+    {{< link-box-link href="/tutorials/intermediate/create-node-templates-1/" text="Followup: Creating node templates I" description="We recommend to look at this tutorial after the current one" >}}
 {{< /link-box >}}
 
 {{< example-gallery only_id="tutorial-b12" >}}
