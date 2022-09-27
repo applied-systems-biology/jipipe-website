@@ -1,13 +1,13 @@
 +++
-title = "Step 5"
-weight = 5
+title = "Step 9"
+weight = 9
 hidden = true
 type="tutorial-step"
-tutorial_image = "/tutorials/ui/b06/step5.png"
+tutorial_image = "/tutorials/ui/b09/step9.png"
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
 lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-... and run the project as described [before](/tutorials/basic/adding-nodes-saving/) (red arrows 1 and 2). 
+To fix this issue, go back to the Parameters tab (red arrow 1) of the node and activate the checkbox “Recursive” (red arrow 2).

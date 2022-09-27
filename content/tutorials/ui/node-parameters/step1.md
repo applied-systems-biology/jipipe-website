@@ -10,4 +10,4 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-Add a new node to the pipeline to carry out Gaussian blurring. E.g., use the search bar as described [before](/tutorials/ui/finding-connecting-nodes-2/) (red arrow 1) and choose the proper node `Gaussian Blur 2D` (red arrow 2). 
+Add a new node to the pipeline to carry out Gaussian blurring. E.g., use the search bar as described [before](/tutorials/basic/finding-connecting-nodes-2/) (red arrow 1) and choose the proper node `Gaussian Blur 2D` (red arrow 2). 

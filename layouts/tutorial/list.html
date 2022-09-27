@@ -5,7 +5,7 @@
     {{- .Scratch.Set "pages" (.Pages | union .Sections) }}
     {{- end}}
     {{- $pages := (.Scratch.Get "pages") }}
-    {{ .Content }}
+    {{ .Content | safeHTML | markdownify }}
     <div style="margin-bottom:2rem"></div>
     <div class="toc">
         <h2>Table Of Contents</h2>
@@ -31,7 +31,7 @@
             {{- else}}
             <h2 id="step-{{ add $index 1 }}">{{ $item.Params.title }}</h2>
             {{- end}}
-            {{ $item.Content }}
+            {{ $item.Content | safeHTML | markdownify }}
             </div>
           </div>  
         {{- end}}

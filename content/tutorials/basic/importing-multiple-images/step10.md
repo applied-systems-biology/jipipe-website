@@ -1,13 +1,13 @@
 +++
-title = "Step 5"
-weight = 5
+title = "Step 10"
+weight = 10
 hidden = true
 type="tutorial-step"
-tutorial_image = "/tutorials/ui/b06/step5.png"
+tutorial_image = "/tutorials/ui/b09/step10.png"
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
 lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-... and run the project as described [before](/tutorials/basic/adding-nodes-saving/) (red arrows 1 and 2). 
+Run the node and observe that now we have all 4 subfolders listed, together with the main folder (red line 1). 

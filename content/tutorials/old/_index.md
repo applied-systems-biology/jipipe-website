@@ -1,7 +1,7 @@
 +++
 title = "Old tutorials"
 description = "Tutorials that will be updated/replaced"
-weight = 100
+weight = 200
 type="page"
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"

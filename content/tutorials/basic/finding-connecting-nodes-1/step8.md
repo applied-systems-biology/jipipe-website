@@ -10,4 +10,4 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-As described [before](/tutorials/ui/adding-nodes-saving/), double-clicking on the cache element (red arrow 1) will open it in a viewer (red arrow 2)
+As described [before](/tutorials/basic/adding-nodes-saving/), double-clicking on the cache element (red arrow 1) will open it in a viewer (red arrow 2)

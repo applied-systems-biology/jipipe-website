@@ -1,7 +1,7 @@
 +++
-title = "UI"
-weight = 50
-description = "Guides that explain specific features of the JIPipe user interface."
+title = "Basic"
+weight = 10
+description = "Tutorials that explain the basic features of JIPipe 👉 Beginners start here"
 type="page"
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
@@ -11,6 +11,6 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 
 {{< jipipe-info "1.74.x+" "The guides were written for JIPipe version 1.74.0 or newer" >}}
 
-Here you can find a list of tutorials that explain the JIPipe user interface, ranging from basic to advanced functions.
+Here you can find a list of tutorials that explain the basic features of JIPipe.
 
 {{% children description="true" %}}
