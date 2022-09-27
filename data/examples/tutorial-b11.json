@@ -1,8 +1,8 @@
 {
-    "id": "tutorial-b10",
-    "name": "Tutorial: andling multi-channel images I",
-    "description": "Accompanying data and project for the tutorial 'andling multi-channel images I'.",
-    "thumbnail": "/tutorials/ui/b10/step9.png",
+    "id": "tutorial-b11",
+    "name": "Tutorial: Handling multi-channel images I",
+    "description": "Accompanying data and project for the tutorial 'Handling multi-channel images I'.",
+    "thumbnail": "/tutorials/ui/b11/step3.png",
     "tags": ["small size", "simple", "tutorial"],
     "buttons": [
         {
