@@ -15,7 +15,7 @@ Go to the `Parameters` tab and examine the filter expression in the category `Fi
 The figure shows an expression (by default the expression is empty)
 
 ```
-TO_NUMBER($"Image composite channel count" == 3)
+TO_NUMBER($"Image composite channel count") == 3
 ```
 
 This text is called an [expression](/documentation/create-pipelines/expressions/) and determines the filter conditions that determine wether an input data item is pass through the output.

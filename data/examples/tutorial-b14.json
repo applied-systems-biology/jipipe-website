@@ -1,8 +1,8 @@
 {
     "id": "tutorial-b14",
-    "name": "Tutorial: Annotations I",
-    "description": "Accompanying data and project for the tutorial 'Annotations I'.",
-    "thumbnail": "/tutorials/ui/b12/step2.png",
+    "name": "Tutorial: Annotations I (Filtering)",
+    "description": "Accompanying data and project for the tutorial 'Annotations I: Filtering'.",
+    "thumbnail": "/tutorials/ui/b14/step12.png",
     "tags": ["small size", "simple", "tutorial"],
     "buttons": [
         {

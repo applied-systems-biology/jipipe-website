@@ -1,5 +1,5 @@
 +++
-title = "Annotations I"
+title = "Annotations I: Filtering"
 description = "Explains the processes of annotating with image properties, and filtering based on annotations"
 weight = 140
 type="tutorial"
