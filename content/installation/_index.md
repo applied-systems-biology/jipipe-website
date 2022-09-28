@@ -8,6 +8,10 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
+{{< notice tip >}}
+If you do not know where to start, we recommend to follow the guide "[Installation with the update manager](#installation-with-the-update-manager)"
+{{< /notice >}}
+
 {{< toc >}}
 
 # Installation with the update manager
