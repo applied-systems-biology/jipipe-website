@@ -17,3 +17,7 @@ To set up the `Split channels` node, we need to add three output channels, corre
 click on the ➕ sign to add a new slot to the `Split channels` node (red arrow 1). This will open the `Add slot` window (red arrow 2), where we search for `image` as data type (red arrow 3). 
 
 It’s not necessary to be more specific about the image format, the general `Image` type (red arrow 4) will take care of any conversion automatically. We name the first channel `Red` (red arrow 5) and add the new slot (red arrow 6). 
+
+{{< notice info >}}
+The `Split channels` node has a configurable outputs; each corresponding to one output channel. There are various nodes that have configurable inputs and/or outputs.
+{{< /notice >}}

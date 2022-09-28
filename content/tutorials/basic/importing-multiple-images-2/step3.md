@@ -11,3 +11,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
 Go to Parameters of the new node (red arrow 1)and check `Recursive` (red arrow 2). Run the node (red arrow 3) with `Update cache`.
+
+{{< notice info >}}
+By default, the node will only list the direct children of the current path. `Recursive` ensures that also the N-th children are detected.
+{{< /notice >}}
