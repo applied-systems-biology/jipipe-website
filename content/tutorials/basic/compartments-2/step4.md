@@ -11,3 +11,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
 A simple segmentation can achieved by automatic thresholding. We search for such node e.g., via the `Find matching algorithms` option (red arrow 1)  and searching for `auto threshold` (red arrow 2). Choose the matching node (`Auto threshold 2D`, red arrow 3) and add it to the pipeline (red arrow 4). 
+
+{{< notice info >}}
+The `Auto threshold 2D` node is the JIPipe equivalent of the ImageJ command `Image > Adjust > Auto threshold`.
+{{< /notice >}}
