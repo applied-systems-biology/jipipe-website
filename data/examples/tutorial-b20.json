@@ -1,19 +1,19 @@
 {
-    "id": "tutorial-b19",
-    "name": "Tutorial: ROI processing",
+    "id": "tutorial-b20",
+    "name": "Tutorial: Image properties and LUT",
     "description": "Accompanying data and project for the tutorial 'ROI processing'.",
-    "thumbnail": "/tutorials/b19/step7.png",
+    "thumbnail": "/tutorials/b20/step13.png",
     "tags": ["small size", "simple", "tutorial"],
     "buttons": [
         {
             "text": "Project + Data + Node templates",
-            "href": "/tutorials/b19/Tutorial_B19.zip",
+            "href": "/tutorials/b20/Tutorial_B20.zip",
             "style": "success",
             "target": "_self"
         },
         {
             "text": "Tutorial",
-            "href": "/tutorials/basic/image-roi-processing/",
+            "href": "/tutorials/basic/image-physical-dimensions/",
             "style": "default",
             "target": "_self"
         }
