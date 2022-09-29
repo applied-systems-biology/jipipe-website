@@ -1,0 +1,21 @@
+{
+    "id": "tutorial-b19",
+    "name": "Tutorial: Image properties and LUT",
+    "description": "Accompanying data and project for the tutorial 'Image properties and LUT'.",
+    "thumbnail": "/tutorials/b18/step8.png",
+    "tags": ["small size", "simple", "tutorial"],
+    "buttons": [
+        {
+            "text": "Project + Data + Node templates",
+            "href": "/tutorials/b19/Tutorial_B19.zip",
+            "style": "success",
+            "target": "_self"
+        },
+        {
+            "text": "Tutorial",
+            "href": "/tutorials/basic/image-physical-dimensions/",
+            "style": "default",
+            "target": "_self"
+        }
+    ]
+}

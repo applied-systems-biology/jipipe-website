@@ -13,6 +13,7 @@ Here you can find all example projects and results. If you do not know what to d
 {{< link-box >}}
     {{< link-box-link href="/examples/how-to-load-projects/" text="👉 Tutorial: How to load projects" description="Please take a look at this tutorial if you don't know what to do with downloaded example projects." >}}
     {{< link-box-link href="/examples/how-to-browse-results/" text="👉 Tutorial: How to browse results" description="Please take a look at this tutorial if you don't know what to do with downloaded project + data packages." >}}
+    {{< link-box-link href="/examples/how-to-import-node-templates/" text="👉 Tutorial: How to import node templates" description="Please take a look at this tutorial if you don't know what to do if a package comes with a Template.json file (Project + Data + Node templates)." >}}
 {{< /link-box >}}
 
 
