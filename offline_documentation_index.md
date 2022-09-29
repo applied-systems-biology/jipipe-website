@@ -8,19 +8,22 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
 
-<img src="/img/logo-content.svg" class="jipipe-logo-index" style="width: 40%;"/>
+<img src="/img/logo-content.svg" class="jipipe-logo-index"/>
 
-# Macro programming for everyone!
+<div class="jipipe-slogan-index"><span>Macro programming for everyone!</span></div>
 
 <center>
-JIPipe is a graphical batch processing programming language for <a href="https://fiji.sc/">ImageJ</a> that
+JIPipe is a visual programming language for <a href="https://fiji.sc/">ImageJ</a> that
 allows you to create macros <strong>without any programming </strong> by just creating a flowchart!
 </center>
-
-<center style="margin-top: 4rem;">
-<a class="btn btn-info btn-large" type="button" href="{{< ref "/tutorials" >}}"> <i class="fa fa-graduation-cap"></i> Learn how to use it </a>
-<a class="btn btn-default btn-large" type="button" href="https://www.jipipe.org/examples"> <i class="fa fa-flask"></i> Show examples </a>
-</center>
+<div class="button-row">
+  <a class="btn btn-info btn-lg" style="display: flex; align-items: center; align-content: center; gap: 1em; flex-wrap: wrap;" type="button" href="https://doi.org/10.21203/rs.3.rs-1641739/v1" target="_blank"> <img style="height: 32px; margin: 1em;" src="https://www.researchsquare.com/static/img/logos/logo-rs.svg" /> Read the current preprint <i class="fa fa-external-link"></i> </a>
+  <a class="btn btn-info btn-lg" style="display: flex; align-items: center; align-content: center; gap: 1em; flex-wrap: wrap;" type="button" href="/supplementary-information">  Supplementary information </a>
+</div>
+<div class="button-row"> 
+  <a class="btn btn-default btn-large" type="button" href="/tutorials"> <i class="fa fa-graduation-cap"></i> Learn how to use it </a>
+  <a class="btn btn-default btn-large" type="button" href="/examples"> <i class="fa fa-flask"></i> Show examples </a>
+</div>
 
 <div class="landing-page-contact">
   <h1>Do you have a question or require some help?</h1>
