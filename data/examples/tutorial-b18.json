@@ -1,0 +1,21 @@
+{
+    "id": "tutorial-b18",
+    "name": "Tutorial: Cache I (Generating and viewing)",
+    "description": "Accompanying data and project for the tutorial 'Cache I: Generating and viewing'.",
+    "thumbnail": "/tutorials/b18/step8.png",
+    "tags": ["small size", "simple", "tutorial"],
+    "buttons": [
+        {
+            "text": "Project + Data",
+            "href": "/tutorials/b18/Tutorial_B18.zip",
+            "style": "success",
+            "target": "_self"
+        },
+        {
+            "text": "Tutorial",
+            "href": "/tutorials/basic/cache-1/",
+            "style": "default",
+            "target": "_self"
+        }
+    ]
+}

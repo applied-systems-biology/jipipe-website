@@ -2,12 +2,12 @@
     "id": "tutorial-b05",
     "name": "Tutorial: Importing an image I/II/III",
     "description": "Accompanying data and project for the tutorial series 'Importing an image'.",
-    "thumbnail": "/tutorials/ui/b05-1/step8.png",
+    "thumbnail": "/tutorials/b05-1/step8.png",
     "tags": ["small size", "simple", "tutorial"],
     "buttons": [
         {
             "text": "Project + Data",
-            "href": "/tutorials/ui/b05-1/Tutorial_B05.zip",
+            "href": "/tutorials/b05-1/Tutorial_B05.zip",
             "style": "success",
             "target": "_self"
         },

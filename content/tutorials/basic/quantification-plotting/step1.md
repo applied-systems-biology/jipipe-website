@@ -3,14 +3,14 @@ title = "Step 1"
 weight = 1
 hidden = true
 type="tutorial-step"
-tutorial_image = "/tutorials/ui/b17/step1.png"
+tutorial_image = "/tutorials/b17/step1.png"
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
 lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-Load the [example pipeline](/tutorials/ui/b17/Tutorial_B17.zip). 
+Load the [example pipeline](/tutorials/b17/Tutorial_B17.zip). 
 
 In the `Processing` compartment, disconnect the output node from the `Auto threshold 2D` node (red arrow 1). 
 

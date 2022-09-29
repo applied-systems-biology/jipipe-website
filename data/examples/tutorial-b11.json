@@ -2,12 +2,12 @@
     "id": "tutorial-b11",
     "name": "Tutorial: Handling multi-channel images I",
     "description": "Accompanying data and project for the tutorial 'Handling multi-channel images I'.",
-    "thumbnail": "/tutorials/ui/b11/step3.png",
+    "thumbnail": "/tutorials/b11/step3.png",
     "tags": ["small size", "simple", "tutorial"],
     "buttons": [
         {
             "text": "Project + Data",
-            "href": "/tutorials/ui/b11/Tutorial_B11.zip",
+            "href": "/tutorials/b11/Tutorial_B11.zip",
             "style": "success",
             "target": "_self"
         },

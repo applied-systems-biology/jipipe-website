@@ -2,12 +2,12 @@
     "id": "tutorial-b17",
     "name": "Tutorial: Quantification and plotting",
     "description": "Accompanying data and project for the tutorial 'Quantification and plotting'.",
-    "thumbnail": "/tutorials/ui/b17/step10.png",
+    "thumbnail": "/tutorials/b17/step10.png",
     "tags": ["small size", "simple", "tutorial"],
     "buttons": [
         {
             "text": "Project + Data",
-            "href": "/tutorials/ui/b17/Tutorial_B17.zip",
+            "href": "/tutorials/b17/Tutorial_B17.zip",
             "style": "success",
             "target": "_self"
         },

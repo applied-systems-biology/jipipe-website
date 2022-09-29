@@ -2,12 +2,12 @@
     "id": "tutorial-b14",
     "name": "Tutorial: Annotations I (Filtering)",
     "description": "Accompanying data and project for the tutorial 'Annotations I: Filtering'.",
-    "thumbnail": "/tutorials/ui/b14/step12.png",
+    "thumbnail": "/tutorials/b14/step12.png",
     "tags": ["small size", "simple", "tutorial"],
     "buttons": [
         {
             "text": "Project + Data",
-            "href": "/tutorials/ui/b14/Tutorial_B14.zip",
+            "href": "/tutorials/b14/Tutorial_B14.zip",
             "style": "success",
             "target": "_self"
         },

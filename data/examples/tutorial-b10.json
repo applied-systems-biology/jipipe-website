@@ -2,12 +2,12 @@
     "id": "tutorial-b10",
     "name": "Tutorial: Importing a directory of images II",
     "description": "Accompanying data and project for the tutorial 'Importing a directory of images II'.",
-    "thumbnail": "/tutorials/ui/b10/step9.png",
+    "thumbnail": "/tutorials/b10/step9.png",
     "tags": ["small size", "simple", "tutorial"],
     "buttons": [
         {
             "text": "Project + Data",
-            "href": "/tutorials/ui/b10/Tutorial_B10.zip",
+            "href": "/tutorials/b10/Tutorial_B10.zip",
             "style": "success",
             "target": "_self"
         },

@@ -2,12 +2,12 @@
     "id": "tutorial-b13",
     "name": "Tutorial: Creating node templates",
     "description": "Accompanying data and project for the tutorial 'Creating node templates'.",
-    "thumbnail": "/tutorials/ui/b12/step2.png",
+    "thumbnail": "/tutorials/b12/step2.png",
     "tags": ["small size", "simple", "tutorial"],
     "buttons": [
         {
             "text": "Project + Data",
-            "href": "/tutorials/ui/b13/Tutorial_B13.zip",
+            "href": "/tutorials/b13/Tutorial_B13.zip",
             "style": "success",
             "target": "_self"
         },

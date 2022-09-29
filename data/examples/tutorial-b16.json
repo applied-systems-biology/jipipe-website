@@ -2,12 +2,12 @@
     "id": "tutorial-b16",
     "name": "Tutorial: Compartments I (Creating and connecting)",
     "description": "Accompanying data and project for the tutorial 'Compartments I: Creating and connecting'.",
-    "thumbnail": "/tutorials/ui/b16/step8.png",
+    "thumbnail": "/tutorials/b16/step8.png",
     "tags": ["small size", "simple", "tutorial"],
     "buttons": [
         {
             "text": "Project + Data",
-            "href": "/tutorials/ui/b16/Tutorial_B16.zip",
+            "href": "/tutorials/b16/Tutorial_B16.zip",
             "style": "success",
             "target": "_self"
         },

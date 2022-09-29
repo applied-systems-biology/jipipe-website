@@ -3,14 +3,14 @@ title = "Step 1"
 weight = 1
 hidden = true
 type="tutorial-step"
-tutorial_image = "/tutorials/ui/b14/step1.png"
+tutorial_image = "/tutorials/b14/step1.png"
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
 lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-Load the [project file](/tutorials/ui/b14/Tutorial_B14.zip) of this tutorial into JIPipe. 
+Load the [project file](/tutorials/b14/Tutorial_B14.zip) of this tutorial into JIPipe. 
 
 Select the `Import image` node (red arrow 1), we will use the image properties provided by this node to annotate the data. Use the `Annotations` tab (red arrow 2) to seek the necessary node in the `Annotations > Generate` menu (red arrow 3). 
 
