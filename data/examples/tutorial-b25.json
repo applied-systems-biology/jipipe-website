@@ -1,0 +1,21 @@
+{
+    "id": "tutorial-b25",
+    "name": "Tutorial: ImageJ macros",
+    "description": "Accompanying data and project for the tutorial 'ImageJ macros'.",
+    "thumbnail": "/tutorials/b25/step3.png",
+    "tags": ["small size", "simple", "tutorial"],
+    "buttons": [
+        {
+            "text": "Project + Data + Node templates",
+            "href": "/tutorials/b25/Tutorial_B25.zip",
+            "style": "success",
+            "target": "_self"
+        },
+        {
+            "text": "Tutorial",
+            "href": "/tutorials/advanced/imagej-macros/",
+            "style": "default",
+            "target": "_self"
+        }
+    ]
+}
