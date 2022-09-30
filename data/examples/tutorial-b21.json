@@ -1,0 +1,21 @@
+{
+    "id": "tutorial-b21",
+    "name": "Tutorial: Table processing",
+    "description": "Accompanying data and project for the tutorial 'Table processing'.",
+    "thumbnail": "/tutorials/b21/step8.png",
+    "tags": ["small size", "simple", "tutorial"],
+    "buttons": [
+        {
+            "text": "Project + Data + Node templates",
+            "href": "/tutorials/b21/Tutorial_B21.zip",
+            "style": "success",
+            "target": "_self"
+        },
+        {
+            "text": "Tutorial",
+            "href": "/tutorials/basic/table-processing/",
+            "style": "default",
+            "target": "_self"
+        }
+    ]
+}

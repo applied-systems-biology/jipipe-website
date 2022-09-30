@@ -1,7 +1,7 @@
 {
     "id": "tutorial-b20",
     "name": "Tutorial: Image properties and LUT",
-    "description": "Accompanying data and project for the tutorial 'ROI processing'.",
+    "description": "Accompanying data and project for the tutorial 'Image properties and LUT'.",
     "thumbnail": "/tutorials/b20/step13.png",
     "tags": ["small size", "simple", "tutorial"],
     "buttons": [
