@@ -1,0 +1,21 @@
+{
+    "id": "tutorial-b26",
+    "name": "Tutorial: Loops",
+    "description": "Accompanying data and project for the tutorial 'Loops'.",
+    "thumbnail": "/tutorials/b26/step1.png",
+    "tags": ["small size", "simple", "tutorial"],
+    "buttons": [
+        {
+            "text": "Project + Data + Node templates",
+            "href": "/tutorials/b26/Tutorial_B26.zip",
+            "style": "success",
+            "target": "_self"
+        },
+        {
+            "text": "Tutorial",
+            "href": "/tutorials/advanced/loops/",
+            "style": "default",
+            "target": "_self"
+        }
+    ]
+}
