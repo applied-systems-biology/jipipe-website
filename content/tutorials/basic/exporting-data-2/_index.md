@@ -14,6 +14,6 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
     {{< link-box-link href="/tutorials/basic/cache-2/" text="👉 Related tutorial: Cache II (Managing and exporting)" description="This guide is a followup of other tutorials." >}}
 {{< /link-box >}}
 
-{{< example-gallery only_id="tutorial-b22" >}}
+{{< example-gallery only_id="tutorial-b22-2" >}}
 
 {{< jipipe-info "1.74.x+" "This guide was written for JIPipe version 1.74.0 or newer" >}}
