@@ -1,0 +1,21 @@
+{
+    "id": "tutorial-b22-2",
+    "name": "Tutorial: Exporting data II (Human-readable)",
+    "description": "Accompanying data and project for the tutorial 'Exporting data II: Human-readable'.",
+    "thumbnail": "/tutorials/b21/step8.png",
+    "tags": ["small size", "simple", "tutorial"],
+    "buttons": [
+        {
+            "text": "Project + Data + Node templates + Exports",
+            "href": "/tutorials/b22-2/Tutorial_B22-2.zip",
+            "style": "success",
+            "target": "_self"
+        },
+        {
+            "text": "Tutorial",
+            "href": "/tutorials/basic/exporting-data-2/",
+            "style": "default",
+            "target": "_self"
+        }
+    ]
+}

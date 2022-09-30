@@ -1,0 +1,21 @@
+{
+    "id": "tutorial-b22-1",
+    "name": "Tutorial: Exporting data I (Machine-readable)",
+    "description": "Accompanying data and project for the tutorial 'Exporting data I: Machine-readable'.",
+    "thumbnail": "/tutorials/b22-1/step5.png",
+    "tags": ["small size", "simple", "tutorial"],
+    "buttons": [
+        {
+            "text": "Project + Data + Node templates + Exports",
+            "href": "/tutorials/b22-1/Tutorial_B22-1.zip",
+            "style": "success",
+            "target": "_self"
+        },
+        {
+            "text": "Tutorial",
+            "href": "/tutorials/basic/exporting-data-1/",
+            "style": "default",
+            "target": "_self"
+        }
+    ]
+}
