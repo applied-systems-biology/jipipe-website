@@ -1,0 +1,21 @@
+{
+    "id": "tutorial-b29",
+    "name": "Tutorial: Cellpose I (Segmentation)",
+    "description": "Accompanying data and project for the tutorial 'Cellpose I: Segmentation'.",
+    "thumbnail": "/tutorials/b29/step5.png",
+    "tags": ["small size", "simple", "tutorial"],
+    "buttons": [
+        {
+            "text": "Project + Data + Node templates",
+            "href": "/tutorials/b29/Tutorial_B29.zip",
+            "style": "success",
+            "target": "_self"
+        },
+        {
+            "text": "Tutorial",
+            "href": "/tutorials/features/cellpose-1/",
+            "style": "default",
+            "target": "_self"
+        }
+    ]
+}
