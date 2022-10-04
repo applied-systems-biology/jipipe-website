@@ -1,0 +1,21 @@
+{
+    "id": "tutorial-b15-1",
+    "name": "Tutorial: Annotations III (Modifying and merging)",
+    "description": "Accompanying data and project for the tutorial 'Annotations III: Modifying and merging'.",
+    "thumbnail": "/tutorials/b15-1/step7.png",
+    "tags": ["small size", "simple", "tutorial"],
+    "buttons": [
+        {
+            "text": "Project",
+            "href": "/tutorials/b15-1/Tutorial_B15-1.zip",
+            "style": "success",
+            "target": "_self"
+        },
+        {
+            "text": "Tutorial",
+            "href": "/tutorials/basic/annotations-3/",
+            "style": "default",
+            "target": "_self"
+        }
+    ]
+}
