@@ -4,6 +4,7 @@ description = "Explains how to read and modify physical image dimensions. Additi
 weight = 190
 type="tutorial"
 enumerated = false
+withtoc = false
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
 lastmodifierdisplayname = "Ruman Gerst"

@@ -4,6 +4,7 @@ description = "Illustrates how to cache node results to the memory and how to br
 weight = 180
 type="tutorial"
 enumerated = false
+withtoc = false
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
 lastmodifierdisplayname = "Ruman Gerst"

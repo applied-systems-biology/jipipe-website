@@ -4,6 +4,7 @@ description = "Explains how to export data into a machine-readable formats"
 weight = 220
 type="tutorial"
 enumerated = false
+withtoc = false
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
 lastmodifierdisplayname = "Ruman Gerst"

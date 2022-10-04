@@ -4,6 +4,7 @@ description = "Explains how to apply multiple parameter sets per node"
 weight = 240
 type="tutorial"
 enumerated = false
+withtoc = false
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
 lastmodifierdisplayname = "Ruman Gerst"

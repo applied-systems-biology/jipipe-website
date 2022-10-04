@@ -9,6 +9,7 @@
     <hr/>
     {{ .Content }}
     <div style="margin-bottom:2rem"></div>
+    {{- if .Params.withtoc | default true }}
     <div class="toc">
         <h2>Table Of Contents</h2>
         <nav id="TableOfContents">
@@ -23,6 +24,7 @@
             </ul>
         </nav>
     </div>    
+    {{- end }}
     <div class=tutorial-list>       
         {{- range $index, $item := $pages.ByWeight }}
           <div class="tutorial-item">

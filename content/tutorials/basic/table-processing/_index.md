@@ -4,6 +4,7 @@ description = "Illustrates how to use some table processing capabilities include
 weight = 210
 type="tutorial"
 enumerated = false
+withtoc = false
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
 lastmodifierdisplayname = "Ruman Gerst"

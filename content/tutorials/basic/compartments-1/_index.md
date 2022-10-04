@@ -4,6 +4,7 @@ description = "Explains how to segment pipelines into compartments and transfer 
 weight = 160
 type="tutorial"
 enumerated = false
+withtoc = false
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
 lastmodifierdisplayname = "Ruman Gerst"

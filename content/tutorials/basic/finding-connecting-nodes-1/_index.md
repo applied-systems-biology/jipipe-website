@@ -4,6 +4,7 @@ description = "Explains how to add new nodes via the algorithm finder into a pro
 weight = 50
 type="tutorial"
 enumerated = false
+withtoc = false
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
 lastmodifierdisplayname = "Ruman Gerst"

@@ -4,6 +4,7 @@ description = "Explains how to manage the cache and export cached data into the 
 weight = 180
 type="tutorial"
 enumerated = false
+withtoc = false
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
 lastmodifierdisplayname = "Ruman Gerst"

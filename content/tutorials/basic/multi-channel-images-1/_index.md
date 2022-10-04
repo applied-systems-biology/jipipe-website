@@ -4,6 +4,7 @@ description = "Explains the process of splitting channels, RGB conversion, chann
 weight = 110
 type="tutorial"
 enumerated = false
+withtoc = false
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
 lastmodifierdisplayname = "Ruman Gerst"

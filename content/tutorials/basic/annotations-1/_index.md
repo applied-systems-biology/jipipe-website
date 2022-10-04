@@ -4,6 +4,7 @@ description = "Explains the processes of annotating with image properties, and f
 weight = 140
 type="tutorial"
 enumerated = false
+withtoc = false
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
 lastmodifierdisplayname = "Ruman Gerst"

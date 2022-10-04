@@ -4,6 +4,7 @@ description = "Explains the particle finder, functions for measuring particles, 
 weight = 170
 type="tutorial"
 enumerated = false
+withtoc = false
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
 lastmodifierdisplayname = "Ruman Gerst"

@@ -4,6 +4,7 @@ description = "Provides instructions on how to change the parameters of an algor
 weight = 60
 type="tutorial"
 enumerated = false
+withtoc = false
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
 lastmodifierdisplayname = "Ruman Gerst"

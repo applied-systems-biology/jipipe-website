@@ -4,6 +4,7 @@ description = "Explains the basics of ROI processing in JIPipe."
 weight = 200
 type="tutorial"
 enumerated = false
+withtoc = false
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
 lastmodifierdisplayname = "Ruman Gerst"

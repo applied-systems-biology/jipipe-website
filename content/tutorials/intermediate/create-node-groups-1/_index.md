@@ -4,6 +4,7 @@ description = "Explains how to group a set of nodes into a single group node"
 weight = 120
 type="tutorial"
 enumerated = false
+withtoc = false
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
 lastmodifierdisplayname = "Ruman Gerst"

@@ -4,6 +4,7 @@ description = "Explains further detail about filtering by annotations, including
 weight = 150
 type="tutorial"
 enumerated = false
+withtoc = false
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
 lastmodifierdisplayname = "Ruman Gerst"

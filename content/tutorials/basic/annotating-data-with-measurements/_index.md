@@ -4,6 +4,7 @@ description = "Explains how to annotate data with measurements for the usage in 
 weight = 215
 type="tutorial"
 enumerated = false
+withtoc = false
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
 lastmodifierdisplayname = "Ruman Gerst"

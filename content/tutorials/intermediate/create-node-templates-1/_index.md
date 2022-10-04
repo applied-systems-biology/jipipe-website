@@ -4,6 +4,7 @@ description = "Explains how to save one or multiple nodes into a custom node tem
 weight = 125
 type="tutorial"
 enumerated = false
+withtoc = false
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
 lastmodifierdisplayname = "Ruman Gerst"

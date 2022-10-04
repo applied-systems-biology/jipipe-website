@@ -4,6 +4,7 @@ description = "Explains how to apply basic image segmentation on a compartmental
 weight = 161
 type="tutorial"
 enumerated = false
+withtoc = false
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
 lastmodifierdisplayname = "Ruman Gerst"

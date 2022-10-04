@@ -4,6 +4,7 @@ description = "Explains how to add new nodes via the search bar into a project a
 weight = 51
 type="tutorial"
 enumerated = false
+withtoc = false
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
 lastmodifierdisplayname = "Ruman Gerst"

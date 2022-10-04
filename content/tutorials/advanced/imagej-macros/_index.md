@@ -4,6 +4,7 @@ description = "Explains how to integrate ImageJ macros."
 weight = 250
 type="tutorial"
 enumerated = false
+withtoc = false
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
 lastmodifierdisplayname = "Ruman Gerst"

@@ -4,6 +4,7 @@ description = "Explains how to add comments with additional information into a p
 weight = 115
 type="tutorial"
 enumerated = false
+withtoc = false
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
 lastmodifierdisplayname = "Ruman Gerst"
