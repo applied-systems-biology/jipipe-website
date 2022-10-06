@@ -1,0 +1,21 @@
+{
+    "id": "tutorial-b30",
+    "name": "Tutorial: Cellpose II (Training)",
+    "description": "Accompanying data and project for the tutorial 'Cellpose II: Training'.",
+    "thumbnail": "/tutorials/b29/step5.png",
+    "tags": ["small size", "simple", "tutorial"],
+    "buttons": [
+        {
+            "text": "Project + Data + Node templates + Model",
+            "href": "/tutorials/b30/Tutorial_B30.zip",
+            "style": "success",
+            "target": "_self"
+        },
+        {
+            "text": "Tutorial",
+            "href": "/tutorials/features/cellpose-2/",
+            "style": "default",
+            "target": "_self"
+        }
+    ]
+}
