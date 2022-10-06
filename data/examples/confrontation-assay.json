@@ -6,14 +6,14 @@
     "tags": ["large size", "fluorescence", "confocal", "cellpose", "complex"],
     "buttons": [
         {
-            "text": "Project + Data (44 MB)",
-            "href": "https://figshare.com/ndownloader/files/36263622",
+            "text": "Project + Data (42 MB)",
+            "href": "https://figshare.com/ndownloader/files/37768794",
             "style": "success",
             "target": "_self"
         },
         {
-            "text": "Project + Data + Outputs (293 MB)",
-            "href": "https://figshare.com/ndownloader/files/35059000",
+            "text": "Project + Data + Outputs (91 MB)",
+            "href": "https://figshare.com/ndownloader/files/37768827",
             "style": "success",
             "target": "_self"
         },

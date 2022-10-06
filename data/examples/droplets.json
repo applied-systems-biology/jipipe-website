@@ -6,14 +6,14 @@
     "tags": ["medium size", "droplets", "cellpose", "complex"],
     "buttons": [
         {
-            "text": "Project + Data (92 MB)",
-            "href": "https://figshare.com/ndownloader/files/36263613",
+            "text": "Project + Data (89 MB)",
+            "href": "https://figshare.com/ndownloader/files/37768791",
             "style": "success",
             "target": "_self"
         },
         {
-            "text": "Project + Data + Outputs (186 MB)",
-            "href": "https://figshare.com/ndownloader/files/35058979",
+            "text": "Project + Data + Outputs (229 MB)",
+            "href": "https://figshare.com/ndownloader/files/37768824",
             "style": "success",
             "target": "_self"
         },

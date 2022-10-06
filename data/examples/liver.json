@@ -6,14 +6,14 @@
     "tags": ["large size", "liver", "published", "complex"],
     "buttons": [
         {
-            "text": "Project + Data (797 MB)",
-            "href": "https://figshare.com/ndownloader/files/36265161",
+            "text": "Project + Data (274 MB)",
+            "href": "https://figshare.com/ndownloader/files/37768785",
             "style": "success",
             "target": "_self"
         },
         {
-            "text": "Project + Data + Outputs (4 GB)",
-            "href": "https://figshare.com/ndownloader/files/35058976",
+            "text": "Project + Data + Outputs (2.74 GB)",
+            "href": "https://figshare.com/ndownloader/files/37768815",
             "style": "success",
             "target": "_self"
         },
