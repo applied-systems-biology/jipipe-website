@@ -1,6 +1,6 @@
 +++
 title = "Third party software"
-weight = 2
+weight = 20
 type="page"
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"

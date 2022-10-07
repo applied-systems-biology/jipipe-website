@@ -1,6 +1,6 @@
 +++
 title = "ImageJ Dependencies"
-weight = 1
+weight = 10
 type="page"
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
