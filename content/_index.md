@@ -109,7 +109,7 @@ allows you to create macros <strong>without any programming </strong> by just cr
     <li>Run the JIPipe GUI from within the plugin menu</li>
   </ol>
   <span>
-  After starting JIPipe, we recommend you to follow our <a href="/tutorials/analysis">tutorial</a> or load an <a href="/examples">example pipeline</a>.
+  After starting JIPipe, we recommend you to follow our <a href="/tutorials/">tutorial series</a> or load an <a href="/examples">example pipeline</a>.
   </span>
 </div>
 
