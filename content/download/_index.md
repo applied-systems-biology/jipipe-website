@@ -47,7 +47,7 @@ Please choose how you want to install JIPipe
     </div> -->
     You can download a package that provides an existing <a href="https://fiji.sc/" target="_blank">Fiji</a> installation plus all necessary files for JIPipe.
     <ol>
-      <li><a class="btn btn-default" type="button" href="https://github.com/applied-systems-biology/jipipe/releases/download/pom-jipipe-1.75.1/JIPipe-1.75.1-Prepackaged-Win64.zip"> <i class="fa fa-download"></i> Download </a> the package</li>
+      <li><a class="btn btn-default" type="button" href="https://github.com/applied-systems-biology/jipipe/releases/download/pom-jipipe-1.75.2/JIPipe-1.75.2-Prepackaged-Win64.zip"> <i class="fa fa-download"></i> Download </a> the package</li>
       <li>Extract the *.zip file</li>
       <li>Run ImageJ-win64.exe</li>
       <li>Go to Plugins/JIPipe/JIPipe GUI</li>
@@ -62,7 +62,7 @@ Please choose how you want to install JIPipe
     </div> -->
     You can download a package that provides an existing <a href="https://fiji.sc/" target="_blank">Fiji</a> installation plus all necessary files for JIPipe.
     <ol>
-      <li><a class="btn btn-default" type="button" href="https://github.com/applied-systems-biology/jipipe/releases/download/pom-jipipe-1.75.1/JIPipe-1.75.1-Prepackaged-Linux64.zip"> <i class="fa fa-download"></i> Download </a> the package</li>
+      <li><a class="btn btn-default" type="button" href="https://github.com/applied-systems-biology/jipipe/releases/download/pom-jipipe-1.75.2/JIPipe-1.75.2-Prepackaged-Linux64.zip"> <i class="fa fa-download"></i> Download </a> the package</li>
       <li>Extract the *.zip file</li>
       <li>Run ImageJ-win64</li>
       <li>Go to Plugins/JIPipe/JIPipe GUI</li>
@@ -87,7 +87,7 @@ Please choose how you want to install JIPipe
   <div class="download-panel-content" id="download-jar-content">
     JIPipe is available as standalone ImageJ plugin in *.jar format that you can install into an existing installation of ImageJ.
     <ol>
-      <li><a class="btn btn-default" type="button" href="https://github.com/applied-systems-biology/jipipe/releases/download/pom-jipipe-1.75.1/JIPipe-1.75.1.zip"> <i class="fa fa-download"></i> Download </a> the package</li>
+      <li><a class="btn btn-default" type="button" href="https://github.com/applied-systems-biology/jipipe/releases/download/pom-jipipe-1.75.2/JIPipe-1.75.2.zip"> <i class="fa fa-download"></i> Download </a> the package</li>
       <li><a href="https://fiji.sc/" target="_blank">Download</a> ImageJ if you have no ImageJ installation, then open the ImageJ plugin folder</li>
       <dl>
         <dt><i class="fa fa-windows"></i> <i class="fa fa-linux"></i> Windows/Linux</dt>
